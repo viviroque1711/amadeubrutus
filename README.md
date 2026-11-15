@@ -49,3 +49,20 @@ A autorização em `robots.txt` é uma diretiva de rastreamento, não um control
 - SEO técnico inicial em implementação.
 - Importação pela Hostinger ainda não autorizada/concluída.
 - Páginas de agenda e lançamentos mantêm conteúdo provisório até receberem informações confirmadas.
+
+
+## Implantação na Hostinger — site estático
+
+A estrutura atual é um site estático convencional. Os arquivos HTML estão na raiz e os recursos estão em `public/`. Não existe etapa de compilação identificada e não é necessário criar um `package.json` apenas para satisfazer o instalador.
+
+Configuração de implantação:
+- Método: importar o repositório Git e escolher **Implantar como estático**.
+- Branch: `main`.
+- Diretório de publicação/raiz do site: raiz do repositório (diretório `/`).
+- Comando de build: nenhum / deixar vazio.
+- Diretório de saída: raiz / nenhum diretório de build.
+- Preservar a estrutura de diretórios, especialmente `public/images/`, `public/audio/` e `public/videos/`.
+
+Antes de conectar o domínio, validar a URL de pré-visualização fornecida pela Hostinger, as três páginas, imagens, áudio, caminhos de mídia e versão mobile. A importação não altera por si só a decisão de DNS: nameservers, registros DNS e e-mail devem permanecer intactos até a etapa de conexão de domínio, que será tratada separadamente.
+
+Consulte também [HOSTINGER_DEPLOYMENT.md](HOSTINGER_DEPLOYMENT.md) para o checklist operacional.
