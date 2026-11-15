@@ -58,6 +58,12 @@ Allow: /
 User-agent: meta-webindexer
 Allow: /
 
+User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 User-agent: Amazonbot
 Allow: /
 
