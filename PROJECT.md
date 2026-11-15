@@ -132,3 +132,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - O arquivo oficial do logotipo da Roque Business Evolution não está no repositório Amadeu Brutus e não foi possível confirmar um asset público exato. Não foi criado nem substituído por uma versão improvisada; inserir o logo oficial permanece pendente de recebimento do arquivo.
 - Commit: `345771e1bf03fa084da61d387fc463337d21d58b`.
 - A atualização está registrada no GitHub `main`. A implantação automática/atualização da hospedagem e a validação visual dos efeitos no domínio de produção ainda precisam ser confirmadas.
+
+## Correção da primeira dobra — aplicação da referência v6
+
+- A pedido da proprietária, a abertura intermediária foi substituída pela referência mais recente recuperada: `Amadeu-Brutus-holofotes-v6.html`.
+- Aplicada ao `index.html` a sequência visual da v6: quatro luminárias no topo, feixes cênicos laterais e alternativos em pulsos rápidos, entrada de “AMADEU” contornado e “BRUTUS” preenchido pela fotografia aprovada.
+- A imagem incorporada no protótipo v6 foi identificada como `public/images/WhatsApp Image 2026-11-15 at 11.35.46 AM (1).jpeg` e referenciada pelo caminho versionado no Git, sem duplicar o arquivo.
+- Preservados os links de agenda e lançamentos, o controle manual de áudio, as seções inferiores e o crédito textual da Roque Business Evolution no rodapé.
+- Arquivo alterado: `index.html`.
+- Commit: `516427f2c2b1fc31a0c24c97e12ae70f6d0b20dd`.
+- A atualização foi gravada no GitHub `main`. A confirmação de novo deploy automático da Hostinger e a inspeção visual pós-deploy ainda estão pendentes.
+- O PNG enviado nesta conversa é o logotipo da Roque Business Evolution; ele ainda não foi incorporado como imagem no rodapé. O arquivo oficial do logotipo do Amadeu para favicon também não foi fornecido nesta conversa, portanto não foi inventado nem substituído por uma marca improvisada.
