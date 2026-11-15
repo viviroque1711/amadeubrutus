@@ -122,3 +122,13 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Implantação em produção confirmada pela Hostinger e conteúdo da home observado no navegador.
 - Ainda pendente: validar as duas subpáginas, funcionamento real do áudio e mídia, responsividade visual desktop/mobile, links, HTTPS/redirecionamento canônico, robots.txt, sitemap.xml, headers/cache e indexação em Search Console/Bing.
 - DNS e configuração de e-mail não foram alterados.
+
+## Ajustes pós-publicação — holofotes e crédito institucional
+
+- Solicitação: restaurar/fortalecer os efeitos de holofotes na primeira dobra e inserir crédito da empresa responsável no rodapé.
+- Em `index.html`, os elementos de feixe de luz já existiam, mas eram estreitos, com pouca presença e dependiam da animação para ficarem visíveis. A regra de movimento foi substituída por cones de luz mais amplos, com varredura suave; a camada de sombreamento foi posicionada acima dos feixes para dar profundidade.
+- Para usuários com `prefers-reduced-motion`, os holofotes permanecem visíveis em posição estática, em vez de desaparecerem.
+- Rodapé atualizado com “Desenvolvido por Roque Business Evolution”, link para `https://roquebusinessevolution.com/`, abrindo em nova aba.
+- O arquivo oficial do logotipo da Roque Business Evolution não está no repositório Amadeu Brutus e não foi possível confirmar um asset público exato. Não foi criado nem substituído por uma versão improvisada; inserir o logo oficial permanece pendente de recebimento do arquivo.
+- Commit: `345771e1bf03fa084da61d387fc463337d21d58b`.
+- A atualização está registrada no GitHub `main`. A implantação automática/atualização da hospedagem e a validação visual dos efeitos no domínio de produção ainda precisam ser confirmadas.
