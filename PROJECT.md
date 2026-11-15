@@ -143,3 +143,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Commit: `516427f2c2b1fc31a0c24c97e12ae70f6d0b20dd`.
 - A atualização foi gravada no GitHub `main`. A confirmação de novo deploy automático da Hostinger e a inspeção visual pós-deploy ainda estão pendentes.
 - O PNG enviado nesta conversa é o logotipo da Roque Business Evolution; ele ainda não foi incorporado como imagem no rodapé. O arquivo oficial do logotipo do Amadeu para favicon também não foi fornecido nesta conversa, portanto não foi inventado nem substituído por uma marca improvisada.
+
+## Ajuste da primeira dobra e navegação principal — 15/11/2026
+
+- A primeira dobra tinha uma sequência CSS que fazia as duas palavras desaparecerem ao fim do ciclo de 9,8 s, deixando a abertura visualmente vazia em parte da repetição.
+- Corrigida a sequência: AMADEU entra primeiro e desaparece; BRUTUS entra em seguida e permanece visível. Os fachos laterais passam a varrer a cena continuamente, com movimento reduzido respeitado.
+- Criado cabeçalho responsivo com navegação: Shows, Lançamentos, Discografia, Galeria, Contato e The Voice Brasil 2026.
+- Shows e Lançamentos apontam para páginas existentes. Os demais itens apontam para seções de destino criadas na home, com conteúdo inicial neutro e sem inventar informações biográficas ou de participação.
+- Menu mobile com botão acessível, estado `aria-expanded` e fechamento ao selecionar item.
+- Controle de áudio e restante do conteúdo da home preservados.
+- Commit: `46f097c2e922db04b88085fc5f6607335e5aa7e6`.
+- Pendente: integrar o arquivo de imagem do logotipo oficial do Amadeu ao cabeçalho e favicon; a versão gráfica recebida ainda não foi adicionada ao repositório nesta alteração. Confirmar atualização automática da Hostinger e validar a sequência visual no domínio de produção.
