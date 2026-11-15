@@ -68,24 +68,19 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
 .fold{position:relative;min-height:100svh;overflow:hidden;isolation:isolate}
 .hero{display:grid;place-items:center;background:#030305}
-.topline{position:absolute;z-index:5;top:0;left:0;width:100%;padding:26px 5vw;display:flex;justify-content:space-between;letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:#d9d9dc}
+.topline{position:absolute;z-index:6;top:0;left:0;width:100%;padding:26px 5vw;display:flex;justify-content:space-between;letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:#d9d9dc}
 .brand{font-weight:900;color:#fff}
 .sequence{position:relative;z-index:2;width:min(94vw,1300px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:0}
 .word{margin:0;font-family:Impact,'Arial Narrow',sans-serif;font-stretch:condensed;font-weight:1000;letter-spacing:-.055em;line-height:.78;font-size:clamp(5rem,18vw,17rem);white-space:nowrap}
-.amadeu{color:transparent;display:flex;flex-direction:column;align-items:center;-webkit-text-stroke:2px #f5f5f5;text-shadow:0 0 22px #ffffff35;animation:arrive 1.2s ease both}
-.brutus{display:block;margin-top:.12em;color:transparent;background-image:url('public/images/WhatsApp%20Image%202026-11-15%20at%2011.35.45%20AM.jpeg');background-size:cover;background-position:center 35%;background-clip:text;-webkit-background-clip:text;-webkit-text-stroke:1px #ffffff45;filter:drop-shadow(0 8px 28px #000);animation:arrive 1.3s .45s ease both}
-.hero-caption{margin-top:34px;letter-spacing:.34em;text-transform:uppercase;font-size:clamp(9px,1.2vw,13px);color:#d9d9dc}
-.shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 10%,#0303059c 78%),linear-gradient(180deg,#030305 0%,transparent 24%,#030305 100%)}
-.beam{position:absolute;z-index:0;top:-12%;height:112%;width:clamp(150px,20vw,320px);margin-left:clamp(-160px,-10vw,-75px);transform-origin:50% 0;clip-path:polygon(47% 0,53% 0,100% 100%,0 100%);background:linear-gradient(180deg,#fff9 0%,#fff5 12%,#e9d4ad38 48%,#e9d4ad08 82%,transparent 100%);filter:blur(13px);opacity:.12;pointer-events:none;animation:spotlightSweep 8s ease-in-out infinite alternate}
-.beam:nth-child(1){left:15%;--angle:18deg;--sweep:13deg;animation-delay:-1s}.beam:nth-child(2){left:40%;--angle:-12deg;--sweep:16deg;animation-delay:-3s}.beam:nth-child(3){left:68%;--angle:13deg;--sweep:15deg;animation-delay:-5s}.beam:nth-child(4){left:88%;--angle:-17deg;--sweep:12deg;animation-delay:-7s}
-@keyframes spotlightSweep{0%{opacity:.12;transform:rotate(calc(var(--angle) - var(--sweep)))}50%{opacity:.48}100%{opacity:.16;transform:rotate(calc(var(--angle) + var(--sweep)))}}
+
+.hero-caption{position:absolute;z-index:5;top:calc(50% + clamp(90px,13vw,190px));margin-top:0;letter-spacing:.34em;text-transform:uppercase;font-size:clamp(9px,1.2vw,13px);color:#d9d9dc}
 @keyframes arrive{from{opacity:0;transform:translateY(24px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
-.scrollhint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#bbb;white-space:nowrap}
-.music-toggle{position:absolute;right:28px;bottom:25px;z-index:6;background:#ffffff10;border:1px solid #ffffff65;color:#fff;padding:12px 16px;border-radius:2px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
+.scrollhint{position:absolute;z-index:6;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#bbb;white-space:nowrap}
+.music-toggle{position:absolute;right:28px;bottom:25px;z-index:7;background:#ffffff10;border:1px solid #ffffff65;color:#fff;padding:12px 16px;border-radius:2px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
 .music-toggle:hover{background:#ffffff24}
 :where(a,button):focus-visible{outline:3px solid var(--yellow);outline-offset:5px;box-shadow:0 0 0 3px #030305,0 0 0 6px #ffd52a99}
 .hero-link:focus-visible,.music-toggle:focus-visible{position:relative;z-index:10}
-.hero-actions{position:relative;z-index:4;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:clamp(28px,4vh,48px);width:min(92vw,760px)}
+.hero-actions{position:absolute;top:calc(50% + clamp(130px,18vw,250px));z-index:6;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:clamp(28px,4vh,48px);width:min(92vw,760px)}
 .hero-link{display:inline-flex;align-items:center;justify-content:center;min-width:min(300px,42vw);padding:17px 24px;border:1.5px solid var(--red);border-radius:18px;color:var(--red);text-decoration:none;text-transform:uppercase;font-weight:800;letter-spacing:.13em;font-size:clamp(10px,1.1vw,13px);background:#050509cc;box-shadow:inset 0 0 0 4px #ff263d18,0 0 18px #ff263d22;transition:transform .25s,box-shadow .25s}
 .hero-link.secondary{border-color:var(--blue);color:var(--yellow);box-shadow:inset 0 0 0 4px #168cff18,0 0 18px #168cff22}
 .hero-link:hover{transform:translateY(-3px);box-shadow:0 0 24px #ff263d55}.hero-link.secondary:hover{box-shadow:0 0 24px #168cff66}
@@ -100,7 +95,7 @@
 .trajectory-copy .eyebrow{color:var(--red)}
 .trajectory-copy h2{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3rem,8vw,8rem);line-height:.9;letter-spacing:-.035em;text-transform:uppercase;margin:22px 0;color:#fff;max-width:900px}
 .trajectory-copy p{max-width:720px;color:#c5c5c8;line-height:1.9;font-size:clamp(14px,1.3vw,17px)}
-@media(max-width:700px){.hero-actions{gap:12px;margin-top:28px}.hero-link{width:min(88vw,420px);min-width:0;padding:16px 18px;border-radius:16px}.trajectory-copy{padding:72px 8vw 30px}.ticker{padding:15px 0}.ticker-group{gap:28px;padding-right:28px}}
+@media(max-width:700px){.hero-actions{top:calc(50% + 105px);gap:12px;margin-top:0}.hero-link{width:min(88vw,420px);min-width:0;padding:16px 18px;border-radius:16px}.trajectory-copy{padding:72px 8vw 30px}.ticker{padding:15px 0}.ticker-group{gap:28px;padding-right:28px}}
 @media(prefers-reduced-motion:reduce){.ticker-track{animation:none!important}}
 .second{display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch;background:#080809;min-height:100svh}
 .second-photo{position:relative;min-height:100svh;background:url('public/images/WhatsApp%20Image%202026-10-20%20at%205.12.11%20PM.jpeg') center/cover no-repeat}
@@ -115,16 +110,48 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .footer-credit{display:inline-flex;align-items:center;gap:6px;color:#aaa;text-decoration:none;letter-spacing:.12em;transition:color .2s}
 .footer-credit strong{color:#f5f4f2;font-weight:700}
 .footer-credit:hover{color:var(--yellow)}.footer-credit:hover strong{color:var(--yellow)}
-@media(max-width:700px){.beam{width:34vw;margin-left:-17vw;filter:blur(16px)}footer{gap:12px;padding:24px 6vw}.topline{padding:18px 5vw;font-size:9px}.word{font-size:clamp(4rem,18vw,8rem)}.hero-caption{letter-spacing:.18em;margin-top:24px}.beam{filter:blur(12px)}.music-toggle{right:14px;bottom:16px;padding:10px 12px;font-size:9px}.scrollhint{bottom:76px}.second{grid-template-columns:1fr}.second-photo{min-height:72svh;grid-row:1;background-position:center 30%}.second-photo:after{background:linear-gradient(0deg,#080809 0%,transparent 36%)}.second-copy{padding:10vw 8vw 16vw;min-height:48svh}.second-copy:before{top:0;bottom:auto;left:8vw;width:72px;height:1px;background:linear-gradient(90deg,#d6a35d99,transparent)}.second h2{font-size:clamp(3.8rem,15vw,6rem);margin:18px 0 22px}.second p{font-size:15px}}
+@media(max-width:700px){.beam{width:34vw;margin-left:-17vw;filter:blur(16px)}footer{gap:12px;padding:24px 6vw}.topline{padding:18px 5vw;font-size:9px}.word{font-size:clamp(4rem,18vw,8rem)}.hero-caption{top:calc(50% + 78px);letter-spacing:.18em;margin-top:0}.beam{filter:blur(12px)}.music-toggle{right:14px;bottom:16px;padding:10px 12px;font-size:9px}.scrollhint{bottom:76px}.second{grid-template-columns:1fr}.second-photo{min-height:72svh;grid-row:1;background-position:center 30%}.second-photo:after{background:linear-gradient(0deg,#080809 0%,transparent 36%)}.second-copy{padding:10vw 8vw 16vw;min-height:48svh}.second-copy:before{top:0;bottom:auto;left:8vw;width:72px;height:1px;background:linear-gradient(90deg,#d6a35d99,transparent)}.second h2{font-size:clamp(3.8rem,15vw,6rem);margin:18px 0 22px}.second p{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.beam{animation:none!important;opacity:.28;transform:rotate(var(--angle))}*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+
+/* Abertura cinematográfica — versão final de referência: holofotes v6 */
+.hero{position:relative;display:grid;place-items:center;background:#020205;isolation:isolate}
+.hero .ambient{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 48%,#171116 0%,#070609 42%,#010103 78%);z-index:0;pointer-events:none}
+.hero .spot{position:absolute;z-index:1;top:36px;width:58vw;height:130%;opacity:0;filter:blur(3px);mix-blend-mode:screen;transform-origin:50% 0;pointer-events:none}
+.hero .spot.left{left:-17%;transform:rotate(34deg);background:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.48) 12%,rgba(255,255,255,.12) 48%,transparent 82%);clip-path:polygon(42% 0,58% 0,100% 100%,0 100%)}
+.hero .spot.right{right:-17%;transform:rotate(-34deg);background:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.48) 12%,rgba(255,255,255,.12) 48%,transparent 82%);clip-path:polygon(42% 0,58% 0,100% 100%,0 100%)}
+.hero .spot.alt{width:42vw;filter:blur(7px)}
+.hero .fixture{position:absolute;z-index:4;top:18px;width:34px;height:24px;border-radius:7px 7px 12px 12px;background:linear-gradient(180deg,#34343a,#09090c 70%);border:1px solid #777;box-shadow:0 2px 12px #000;opacity:.95;pointer-events:none}
+.hero .fixture:before{content:"";position:absolute;top:-8px;left:10px;width:12px;height:10px;border-radius:4px 4px 0 0;background:#24242a;border:1px solid #666}
+.hero .fixture i{position:absolute;left:8px;right:8px;bottom:3px;height:5px;border-radius:50%;background:#fff;box-shadow:0 0 5px 2px #fff,0 0 14px 5px rgba(255,255,255,.8)}
+.hero .f1{left:9%}.hero .f2{left:32%}.hero .f3{right:32%}.hero .f4{right:9%}
+.hero.play .fixture i{animation:lampPulse 9.8s infinite}
+.hero .f2 i{animation-delay:.12s!important}.hero .f3 i{animation-delay:.24s!important}.hero .f4 i{animation-delay:.36s!important}
+@keyframes lampPulse{0%,3%,8%,13%,18%,23%,28%,100%{opacity:.18;box-shadow:0 0 2px 1px #777}1%,5%,10%,15%,20%,25%{opacity:1;box-shadow:0 0 8px 4px #fff,0 0 22px 9px rgba(255,255,255,.95)}2%,6%,11%,16%,21%,26%{opacity:.3;box-shadow:0 0 3px 1px #aaa}}
+.hero .word{position:absolute;z-index:3;width:100%;padding:0 3vw;text-align:center;line-height:.82;text-transform:uppercase;font-family:Impact,'Arial Narrow',sans-serif;font-weight:1000;opacity:0;transform:scale(.88);white-space:nowrap;pointer-events:none;margin:0}
+.hero .amadeu{font-size:clamp(4.8rem,18vw,18rem);letter-spacing:-.035em;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:2.5px rgba(255,255,255,.98);text-shadow:0 0 22px rgba(255,255,255,.24)}
+.hero .brutus{z-index:3;font-size:clamp(5.5rem,21vw,22rem);letter-spacing:-.055em;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.2);background-image:linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.08)),url('public/images/WhatsApp%20Image%202026-11-15%20at%2011.35.46%20AM%20(1).jpeg');background-size:cover;background-position:center 42%;background-clip:text;-webkit-background-clip:text;filter:drop-shadow(0 7px 0 #050505) drop-shadow(0 0 18px rgba(255,255,255,.2))}
+.hero.play .spot.left{animation:spotPulse 9.8s infinite}
+.hero.play .spot.right{animation:spotPulse 9.8s infinite .08s}
+.hero.play .spot.alt.left{animation:spotPulseAlt 9.8s infinite .18s}
+.hero.play .spot.alt.right{animation:spotPulseAlt 9.8s infinite .26s}
+.hero.play .amadeu{animation:amadeuIn 9.8s infinite}
+.hero.play .brutus{animation:brutusIn 9.8s infinite}
+@keyframes spotPulse{0%,3%,8%,13%,18%,23%,28%,100%{opacity:0}1%,5%,10%,15%,20%,25%{opacity:.9}2%,6%,11%,16%,21%,26%{opacity:.12}4%,9%,14%,19%,24%{opacity:0}}
+@keyframes spotPulseAlt{0%,4%,9%,14%,19%,24%,29%,100%{opacity:0}2%,7%,12%,17%,22%,27%{opacity:.7}3%,8%,13%,18%,23%,28%{opacity:.08}}
+@keyframes amadeuIn{0%,28%{opacity:0;transform:scale(.88);filter:blur(9px)}32%{opacity:.25;transform:scale(1.02);filter:blur(3px)}39%{opacity:1;transform:scale(1);filter:blur(0)}42%,57%{opacity:1;transform:scale(1);filter:blur(0)}62%,100%{opacity:0;transform:scale(1.025);filter:blur(6px)}}
+@keyframes brutusIn{0%,62%{opacity:0;transform:scale(.9);filter:blur(10px)}67%{opacity:.25;transform:scale(1.02);filter:blur(4px)}75%{opacity:1;transform:scale(1);filter:blur(0)}78%,97%{opacity:1;transform:scale(1);filter:drop-shadow(0 7px 0 #050505) drop-shadow(0 0 18px rgba(255,255,255,.22))}100%{opacity:0;transform:scale(1.02);filter:blur(5px)}}
+@media(max-width:600px){.hero .amadeu{font-size:clamp(3.2rem,17vw,7rem);-webkit-text-stroke:1.8px}.hero .brutus{font-size:clamp(3.8rem,20vw,8rem)}.hero .spot{width:76vw}}
+@media(prefers-reduced-motion:reduce){.hero.play .spot,.hero.play .word{animation:none!important}.hero .amadeu,.hero .brutus{opacity:1;transform:scale(1)}}
+
 </style>
 </head>
 <body>
 <main>
-<section class="fold hero" id="inicio" aria-label="Abertura de Amadeu Brutus">
-<div class="beam"></div><div class="beam"></div><div class="beam"></div><div class="beam"></div><div class="shade"></div>
+<section class="fold hero play" id="inicio" aria-label="Abertura de Amadeu Brutus">
+<div class="ambient"></div><div class="spot left"></div><div class="spot right"></div><div class="spot alt left"></div><div class="spot alt right"></div>
+<div class="fixture f1"><i></i></div><div class="fixture f2"><i></i></div><div class="fixture f3"><i></i></div><div class="fixture f4"><i></i></div>
 <header class="topline"><span class="brand">AMADEU BRUTUS</span><span>Voz · Música · Palco</span></header>
-<div class="sequence"><h1 class="word amadeu"><span class="brand-first">AMADEU</span><span class="word brutus">BRUTUS</span></h1><div class="hero-caption">Amadeu Brutus · Música e presença de palco</div></div>
+<h1 class="hero-title" aria-label="Amadeu Brutus"><span class="word amadeu">AMADEU</span><span class="word brutus">BRUTUS</span></h1><div class="hero-caption">Amadeu Brutus · Música e presença de palco</div>
 <nav class="hero-actions" aria-label="Acessos principais">
 <a class="hero-link" href="shows.html">★ Próximos shows</a>
 <a class="hero-link secondary" href="lancamentos.html">Últimos lançamentos　›</a>
