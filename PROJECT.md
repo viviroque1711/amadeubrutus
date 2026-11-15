@@ -154,3 +154,12 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Controle de áudio e restante do conteúdo da home preservados.
 - Commit: `46f097c2e922db04b88085fc5f6607335e5aa7e6`.
 - Pendente: integrar o arquivo de imagem do logotipo oficial do Amadeu ao cabeçalho e favicon; a versão gráfica recebida ainda não foi adicionada ao repositório nesta alteração. Confirmar atualização automática da Hostinger e validar a sequência visual no domínio de produção.
+
+## Hotfix emergencial da primeira dobra — 15/11/2026
+
+- Usuária reportou quebra visual grave após o commit `46f097c`: palavra do artista deslocada para o canto, composição descentrada e flashes de palco ausentes.
+- Causa técnica identificada: elementos `.word` com `position:absolute` não tinham coordenadas de centralização explícitas; animações sobrescritas também trocaram flashes intermitentes por fachos contínuos de baixa intensidade.
+- Hotfix em `index.html`: wrapper `.hero-title` ocupa a primeira dobra; palavras posicionadas no centro com `left:50%`, `top:50%` e `translate(-50%,-50%)`; keyframes preservam essa translação durante a entrada sequencial.
+- Restaurados flashes rápidos e alternados nos fachos de luz; mantida a fotografia real de preenchimento de BRUTUS; removida a legenda adicional da abertura, em conformidade com a especificação aprovada.
+- Commit hotfix: `b66dcc37d1ba3125f6088b52991efacf58bbcde3`.
+- Estado: código corrigido e enviado ao GitHub `main`; ainda é necessário confirmar a implantação da Hostinger e fazer validação visual real em desktop e mobile antes de declarar a primeira dobra recuperada.
