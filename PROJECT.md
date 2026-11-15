@@ -80,3 +80,23 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Adicionados canonical, Open Graph, Twitter Cards e dados estruturados JSON-LD.
 - Corrigida a documentação do projeto e padronizada a identidade “Amadeu Brutus”.
 - Importação Hostinger permanece pendente; DNS não foi alterado.
+
+
+## Acessibilidade e preparação estática — 15/11/2026
+
+- Removido `aria-hidden="true"` do trecho visual “BRUTUS” dentro do H1; o nome completo “AMADEU BRUTUS” fica disponível à tecnologia assistiva.
+- Adicionado indicador de foco visível para links e botões via `:focus-visible`, com contorno amarelo coerente com a paleta aprovada.
+- Reposicionado o indicador “Conheça o artista” no mobile para evitar sobreposição com o controle de áudio.
+- Revisão do inventário Git: mídia distribuída em `public/images/`, `public/audio/` e `public/videos/`; há uma cópia idêntica (mesmo blob Git) de um vídeo na raiz e em `public/videos/`. Ambos foram preservados para não eliminar asset sem autorização.
+- O áudio usado pela home está em `public/audio/amadeubrutus autoral.mp4`; o caminho existe. A compatibilidade de codec e a reprodução real ainda precisam de teste em navegador/produção.
+- Arquitetura confirmada como site estático: HTML, CSS e JavaScript no cliente; não há framework ou etapa de compilação identificada nos arquivos de entrada. Não criar `package.json` artificial.
+- Preparação Hostinger: publicar a raiz do repositório como site estático; sem comando de build e sem diretório de saída de build. Manter os diretórios `public/` no mesmo nível dos HTML.
+- Não houve alteração de DNS, configuração de e-mail, importação ou deploy.
+
+## Registro de mudança
+- Data: 15/11/2026.
+- Solicitação: corrigir acessibilidade, revisar mídia e preparar importação estática.
+- Arquivo alterado nesta etapa: `index.html`.
+- Commit de acessibilidade: 79cb8db28bb54bd343b6a83e6f2512ec80b5d7dc.
+- Validação: alteração de markup/CSS gravada no GitHub; revisão final do HTML e dos caminhos de mídia em andamento.
+- Pendências: teste de teclado e leitor de tela em navegador; teste de áudio e imagens após importação; validação visual desktop/mobile; teste de performance; publicação e DNS.
