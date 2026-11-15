@@ -173,6 +173,32 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .site-section h2{margin:0 0 16px;font:clamp(2.4rem,6vw,5rem) Impact,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:-.02em}
 .site-section p{max-width:650px;color:#c5c5c8;line-height:1.8}
 
+
+/* HOTFIX CRÍTICO — centralização da sequência e retorno dos flashes de palco */
+.hero{min-height:100svh;height:100svh;position:relative;overflow:hidden}
+.hero-title{position:absolute!important;inset:0!important;width:100%;height:100%;margin:0!important;padding:0!important;display:block!important;z-index:3}
+.hero .word{position:absolute!important;left:50%!important;top:50%!important;width:max-content!important;max-width:96vw;padding:0!important;margin:0!important;text-align:center;transform:translate(-50%,-50%) scale(.88)!important}
+.hero .amadeu{font-size:clamp(4.2rem,15vw,15rem)!important;letter-spacing:-.035em!important}
+.hero .brutus{font-size:clamp(4.8rem,18vw,18rem)!important;letter-spacing:-.055em!important;max-width:98vw!important;background-position:center 42%!important}
+@keyframes amadeuEntrance{0%,17%{opacity:0;transform:translate(-50%,-50%) scale(.88)!important;filter:blur(12px)}32%{opacity:1;transform:translate(-50%,-50%) scale(1)!important;filter:blur(0)}55%{opacity:1;transform:translate(-50%,-50%) scale(1)!important;filter:blur(0)}65%,100%{opacity:0;transform:translate(-50%,-50%) scale(1.02)!important;filter:blur(5px)}}
+@keyframes brutusEntrance{0%,52%{opacity:0;transform:translate(-50%,-50%) scale(.92)!important;filter:blur(12px)}68%{opacity:1;transform:translate(-50%,-50%) scale(1)!important;filter:blur(0)}100%{opacity:1;transform:translate(-50%,-50%) scale(1)!important;filter:blur(0)}}
+/* Fachos com pulsos rápidos e flashes, além do movimento lateral */
+.hero .spot{top:24px!important;height:140%!important;mix-blend-mode:screen;filter:blur(5px)!important}
+.hero .spot.left{left:-10%!important;width:64vw!important}
+.hero .spot.right{right:-10%!important;width:64vw!important}
+.hero .spot.alt.left{left:14%!important;width:38vw!important}
+.hero .spot.alt.right{right:14%!important;width:38vw!important}
+.hero.play .spot.left{animation:stageFlashLeft 5.2s linear infinite!important}
+.hero.play .spot.right{animation:stageFlashRight 5.2s linear infinite .12s!important}
+.hero.play .spot.alt.left{animation:stageFlashAlt 5.2s linear infinite .24s!important}
+.hero.play .spot.alt.right{animation:stageFlashAlt 5.2s linear infinite .36s!important}
+@keyframes stageFlashLeft{0%,8%,17%,26%,35%,44%,53%,62%,71%,80%,89%,100%{opacity:.04;transform:rotate(27deg) translateX(-3vw)}2%,11%,20%,29%,38%,47%,56%,65%,74%,83%,92%{opacity:.96;transform:rotate(12deg) translateX(4vw)}5%,14%,23%,32%,41%,50%,59%,68%,77%,86%,95%{opacity:.18;transform:rotate(18deg) translateX(0)}}
+@keyframes stageFlashRight{0%,8%,17%,26%,35%,44%,53%,62%,71%,80%,89%,100%{opacity:.03;transform:rotate(-27deg) translateX(3vw)}2%,11%,20%,29%,38%,47%,56%,65%,74%,83%,92%{opacity:.9;transform:rotate(-12deg) translateX(-4vw)}5%,14%,23%,32%,41%,50%,59%,68%,77%,86%,95%{opacity:.14;transform:rotate(-18deg) translateX(0)}}
+@keyframes stageFlashAlt{0%,12%,24%,36%,48%,60%,72%,84%,100%{opacity:0}4%,16%,28%,40%,52%,64%,76%,88%{opacity:.72}8%,20%,32%,44%,56%,68%,80%,92%{opacity:.08}}
+.hero-caption{display:none!important}
+@media(max-width:700px){.hero .amadeu{font-size:clamp(3.4rem,16vw,7rem)!important;-webkit-text-stroke:1.8px!important}.hero .brutus{font-size:clamp(3.6rem,17vw,7.6rem)!important}.hero .spot.left,.hero .spot.right{width:88vw!important}.hero .spot.alt.left,.hero .spot.alt.right{width:54vw!important}}
+@media(prefers-reduced-motion:reduce){.hero .amadeu{opacity:0!important}.hero .brutus{opacity:1!important;transform:translate(-50%,-50%)!important}.hero .spot{animation:none!important;opacity:.22!important}}
+
 </style>
 </head>
 <body>
