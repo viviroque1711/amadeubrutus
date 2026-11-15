@@ -83,6 +83,8 @@
 .scrollhint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#bbb;white-space:nowrap}
 .music-toggle{position:absolute;right:28px;bottom:25px;z-index:6;background:#ffffff10;border:1px solid #ffffff65;color:#fff;padding:12px 16px;border-radius:2px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
 .music-toggle:hover{background:#ffffff24}
+:where(a,button):focus-visible{outline:3px solid var(--yellow);outline-offset:5px;box-shadow:0 0 0 3px #030305,0 0 0 6px #ffd52a99}
+.hero-link:focus-visible,.music-toggle:focus-visible{position:relative;z-index:10}
 .hero-actions{position:relative;z-index:4;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:clamp(28px,4vh,48px);width:min(92vw,760px)}
 .hero-link{display:inline-flex;align-items:center;justify-content:center;min-width:min(300px,42vw);padding:17px 24px;border:1.5px solid var(--red);border-radius:18px;color:var(--red);text-decoration:none;text-transform:uppercase;font-weight:800;letter-spacing:.13em;font-size:clamp(10px,1.1vw,13px);background:#050509cc;box-shadow:inset 0 0 0 4px #ff263d18,0 0 18px #ff263d22;transition:transform .25s,box-shadow .25s}
 .hero-link.secondary{border-color:var(--blue);color:var(--yellow);box-shadow:inset 0 0 0 4px #168cff18,0 0 18px #168cff22}
@@ -110,7 +112,7 @@
 .second p{max-width:34rem;color:#c5c5c8;line-height:1.9;font-size:clamp(14px,1.25vw,17px);margin:0}
 .second .signature{margin-top:34px;color:#f5f4f2;font-size:10px;letter-spacing:.28em;text-transform:uppercase}
 footer{padding:25px 5vw;background:#030305;color:#777;text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
-@media(max-width:700px){.topline{padding:18px 5vw;font-size:9px}.word{font-size:clamp(4rem,18vw,8rem)}.hero-caption{letter-spacing:.18em;margin-top:24px}.beam{filter:blur(12px)}.music-toggle{right:14px;bottom:16px;padding:10px 12px;font-size:9px}.scrollhint{bottom:20px}.second{grid-template-columns:1fr}.second-photo{min-height:72svh;grid-row:1;background-position:center 30%}.second-photo:after{background:linear-gradient(0deg,#080809 0%,transparent 36%)}.second-copy{padding:10vw 8vw 16vw;min-height:48svh}.second-copy:before{top:0;bottom:auto;left:8vw;width:72px;height:1px;background:linear-gradient(90deg,#d6a35d99,transparent)}.second h2{font-size:clamp(3.8rem,15vw,6rem);margin:18px 0 22px}.second p{font-size:15px}}
+@media(max-width:700px){.topline{padding:18px 5vw;font-size:9px}.word{font-size:clamp(4rem,18vw,8rem)}.hero-caption{letter-spacing:.18em;margin-top:24px}.beam{filter:blur(12px)}.music-toggle{right:14px;bottom:16px;padding:10px 12px;font-size:9px}.scrollhint{bottom:76px}.second{grid-template-columns:1fr}.second-photo{min-height:72svh;grid-row:1;background-position:center 30%}.second-photo:after{background:linear-gradient(0deg,#080809 0%,transparent 36%)}.second-copy{padding:10vw 8vw 16vw;min-height:48svh}.second-copy:before{top:0;bottom:auto;left:8vw;width:72px;height:1px;background:linear-gradient(90deg,#d6a35d99,transparent)}.second h2{font-size:clamp(3.8rem,15vw,6rem);margin:18px 0 22px}.second p{font-size:15px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -119,7 +121,7 @@ footer{padding:25px 5vw;background:#030305;color:#777;text-align:center;font-siz
 <section class="fold hero" id="inicio" aria-label="Abertura de Amadeu Brutus">
 <div class="beam"></div><div class="beam"></div><div class="beam"></div><div class="beam"></div><div class="shade"></div>
 <header class="topline"><span class="brand">AMADEU BRUTUS</span><span>Voz · Música · Palco</span></header>
-<div class="sequence"><h1 class="word amadeu"><span class="brand-first">AMADEU</span><span class="word brutus" aria-hidden="true">BRUTUS</span></h1><div class="hero-caption">Amadeu Brutus · Música e presença de palco</div></div>
+<div class="sequence"><h1 class="word amadeu"><span class="brand-first">AMADEU</span><span class="word brutus">BRUTUS</span></h1><div class="hero-caption">Amadeu Brutus · Música e presença de palco</div></div>
 <nav class="hero-actions" aria-label="Acessos principais">
 <a class="hero-link" href="shows.html">★ Próximos shows</a>
 <a class="hero-link secondary" href="lancamentos.html">Últimos lançamentos　›</a>
