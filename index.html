@@ -32,14 +32,17 @@
 .scrollhint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#bbb;white-space:nowrap}
 .music-toggle{position:absolute;right:28px;bottom:25px;z-index:6;background:#ffffff10;border:1px solid #ffffff65;color:#fff;padding:12px 16px;border-radius:2px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
 .music-toggle:hover{background:#ffffff24}
-.second{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;background:#080809;min-height:100svh}
-.second-photo{min-height:100svh;background:url('public/images/WhatsApp%20Image%202026-10-20%20at%205.12.11%20PM.jpeg') center/cover no-repeat}
-.second-copy{display:flex;flex-direction:column;justify-content:center;padding:9vw 8vw}
-.eyebrow{color:var(--gold);font-size:11px;letter-spacing:.3em;text-transform:uppercase}
-.second h2{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,8vw,8rem);line-height:.88;letter-spacing:-.04em;margin:22px 0}
-.second p{max-width:34rem;color:#c5c5c8;line-height:1.8;font-size:clamp(14px,1.3vw,17px)}
+.second{display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch;background:#080809;min-height:100svh}
+.second-photo{position:relative;min-height:100svh;background:url('public/images/WhatsApp%20Image%202026-10-20%20at%205.12.11%20PM.jpeg') center/cover no-repeat}
+.second-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 58%,#080809 100%),linear-gradient(0deg,#08080955,transparent 35%)}
+.second-copy{position:relative;display:flex;flex-direction:column;justify-content:center;padding:9vw 8vw 9vw 5vw}
+.second-copy:before{content:"";position:absolute;left:0;top:18%;bottom:18%;width:1px;background:linear-gradient(transparent,#d6a35d99,transparent)}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:.34em;text-transform:uppercase}
+.second h2{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,7.2vw,7.6rem);line-height:.88;letter-spacing:-.04em;margin:24px 0 26px;text-transform:uppercase}
+.second p{max-width:34rem;color:#c5c5c8;line-height:1.9;font-size:clamp(14px,1.25vw,17px);margin:0}
+.second .signature{margin-top:34px;color:#f5f4f2;font-size:10px;letter-spacing:.28em;text-transform:uppercase}
 footer{padding:25px 5vw;background:#030305;color:#777;text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
-@media(max-width:700px){.topline{padding:18px 5vw;font-size:9px}.word{font-size:clamp(4rem,18vw,8rem)}.hero-caption{letter-spacing:.18em;margin-top:24px}.beam{filter:blur(12px)}.music-toggle{right:14px;bottom:16px;padding:10px 12px;font-size:9px}.scrollhint{bottom:20px}.second{grid-template-columns:1fr}.second-photo{min-height:68svh;grid-row:1}.second-copy{padding:13vw 8vw;min-height:45svh}.second h2{font-size:clamp(3.8rem,16vw,6rem)}}
+@media(max-width:700px){.topline{padding:18px 5vw;font-size:9px}.word{font-size:clamp(4rem,18vw,8rem)}.hero-caption{letter-spacing:.18em;margin-top:24px}.beam{filter:blur(12px)}.music-toggle{right:14px;bottom:16px;padding:10px 12px;font-size:9px}.scrollhint{bottom:20px}.second{grid-template-columns:1fr}.second-photo{min-height:72svh;grid-row:1;background-position:center 30%}.second-photo:after{background:linear-gradient(0deg,#080809 0%,transparent 36%)}.second-copy{padding:10vw 8vw 16vw;min-height:48svh}.second-copy:before{top:0;bottom:auto;left:8vw;width:72px;height:1px;background:linear-gradient(90deg,#d6a35d99,transparent)}.second h2{font-size:clamp(3.8rem,15vw,6rem);margin:18px 0 22px}.second p{font-size:15px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -53,9 +56,14 @@ footer{padding:25px 5vw;background:#030305;color:#777;text-align:center;font-siz
 <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">♪ Ativar música</button>
 <audio id="siteMusic" preload="none" loop src="public/audio/amadeubrutus%20autoral.mp4"></audio>
 </section>
-<section class="fold second" id="musica" aria-label="Amadeu Brutus com violão">
+<section class="fold second" id="o-artista" aria-label="O artista Amadeu Brutus">
 <div class="second-photo" role="img" aria-label="Amadeu Brutus com violão apoiado no ombro"></div>
-<div class="second-copy"><span class="eyebrow">Música autoral · Identidade</span><h2>ALÉM DO<br>PALCO.</h2><p>Uma voz, uma história e canções que carregam identidade. Conheça o universo musical de Amadeu Brutus.</p></div>
+<div class="second-copy">
+<span class="eyebrow">O artista</span>
+<h2>A VOZ TEM<br>UMA HISTÓRIA.</h2>
+<p>A música não começa quando as luzes se acendem. Ela nasce da entrega, ganha forma na interpretação e encontra seu caminho em cada canção. É nesse encontro entre voz, sentimento e presença que conhecemos Amadeu Brutus.</p>
+<div class="signature">Amadeu Brutus · Música e identidade</div>
+</div>
 </section>
 </main>
 <footer>Amadeu Brutus · Música e presença de palco</footer>
