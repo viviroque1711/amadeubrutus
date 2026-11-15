@@ -61,3 +61,22 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Últimas mudanças de SEO gravadas em commits no GitHub `main`.
 - Importação Git na Hostinger ainda não executada.
 - Nenhuma alteração de DNS autorizada ou executada.
+
+## Auditoria estática — 15/11/2026
+
+- `index.html`, `shows.html` e `lancamentos.html`: cada página tem um único título HTML, uma URL canônica, um bloco JSON-LD válido e não contém meta robots noindex.
+- Página inicial: H1 contém semanticamente o nome completo “AMADEU BRUTUS”.
+- Links internos entre as três páginas conferidos no código.
+- Caminhos de mídia referenciados pela página inicial encontrados no repositório.
+- JSON-LD parseado como JSON válido nas três páginas.
+- `robots.txt`: grupos explícitos para Google, Bing, OpenAI, Anthropic, Perplexity, Apple, Meta, Amazon, Mistral e Common Crawl; regra geral também permite rastreamento.
+- `sitemap.xml`: contém as três URLs canônicas e está referenciado no robots.txt.
+- Inventário de mídia: 32 arquivos, aproximadamente 97,5 MB. Existem vídeos e outros assets que não são usados pelas páginas atuais; foram preservados, sem exclusão.
+- Validação visual real, validação em produção, status HTTP, Search Console e indexação permanecem pendentes porque o site ainda não foi publicado.
+
+## Histórico recente de alterações
+- Removida a diretiva `noindex,nofollow` das três páginas públicas.
+- Criados `robots.txt` e `sitemap.xml`.
+- Adicionados canonical, Open Graph, Twitter Cards e dados estruturados JSON-LD.
+- Corrigida a documentação do projeto e padronizada a identidade “Amadeu Brutus”.
+- Importação Hostinger permanece pendente; DNS não foi alterado.
