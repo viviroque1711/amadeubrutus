@@ -1,0 +1,77 @@
+# Política pública de rastreamento — Amadeu Brutus
+# Permissão explícita para buscadores e plataformas de IA.
+# Allow autoriza rastreamento; não é controle de segurança nem garantia de indexação.
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Token de controle do Google para uso em Gemini; não é um crawler separado.
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Token de controle de uso da Apple; não é um crawler separado.
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-webindexer
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: MistralAI-Training
+Allow: /
+
+User-agent: MistralAI-Index
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+# Demais crawlers não bloqueados por regras específicas também podem rastrear.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.amadeubrutus.com.br/sitemap.xml
