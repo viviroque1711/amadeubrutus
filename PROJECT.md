@@ -112,3 +112,13 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Configuração indicada: deploy estático da raiz, branch `main`, sem build command e sem output directory separado.
 - Últimos commits: acessibilidade `79cb8db28bb54bd343b6a83e6f2512ec80b5d7dc`; ficha `7aa29e80127cf6f877dc09dfbc256ca3fdeab6c9`; README `2bb63044065a2216e7cf772c9c75207c959b9ffa`; checklist Hostinger `fa9148503566cbbc29b603bd85c8c2d683e57a07`.
 - Estado: repositório preparado tecnicamente para importação estática. Ainda não importado, não publicado e sem alterações de DNS.
+
+## Publicação em produção — 15/11/2026
+
+- Hostinger exibiu a confirmação “Implantação concluída!” para o repositório `viviroque1711/amadeubrutus`, branch `main`, no domínio `amadeubrutus.com.br`.
+- A configuração de publicação indicou o diretório raiz `public_html`.
+- A aba de produção aberta em `https://www.amadeubrutus.com.br/` foi lida após a implantação; o conteúdo da home foi entregue, incluindo hero “AMADEU BRUTUS”, links para `shows.html` e `lancamentos.html`, seção de apresentação e controle manual de áudio.
+- O repositório GitHub continua como fonte de verdade do código; metadados do repositório confirmam branch padrão `main`.
+- Implantação em produção confirmada pela Hostinger e conteúdo da home observado no navegador.
+- Ainda pendente: validar as duas subpáginas, funcionamento real do áudio e mídia, responsividade visual desktop/mobile, links, HTTPS/redirecionamento canônico, robots.txt, sitemap.xml, headers/cache e indexação em Search Console/Bing.
+- DNS e configuração de e-mail não foram alterados.
