@@ -13,7 +13,7 @@
 <meta property="og:description" content="Voz, música e presença de palco.">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-:root{color-scheme:dark;--bg:#030305;--white:#f5f4f2;--gold:#d6a35d}
+:root{color-scheme:dark;--bg:#030305;--white:#f5f4f2;--gold:#d6a35d;--red:#ff263d;--blue:#168cff;--yellow:#ffd52a}
 *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
 .fold{position:relative;min-height:100svh;overflow:hidden;isolation:isolate}
 .hero{display:grid;place-items:center;background:#030305}
@@ -32,6 +32,23 @@
 .scrollhint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#bbb;white-space:nowrap}
 .music-toggle{position:absolute;right:28px;bottom:25px;z-index:6;background:#ffffff10;border:1px solid #ffffff65;color:#fff;padding:12px 16px;border-radius:2px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
 .music-toggle:hover{background:#ffffff24}
+.hero-actions{position:relative;z-index:4;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:clamp(28px,4vh,48px);width:min(92vw,760px)}
+.hero-link{display:inline-flex;align-items:center;justify-content:center;min-width:min(300px,42vw);padding:17px 24px;border:1.5px solid var(--red);border-radius:18px;color:var(--red);text-decoration:none;text-transform:uppercase;font-weight:800;letter-spacing:.13em;font-size:clamp(10px,1.1vw,13px);background:#050509cc;box-shadow:inset 0 0 0 4px #ff263d18,0 0 18px #ff263d22;transition:transform .25s,box-shadow .25s}
+.hero-link.secondary{border-color:var(--blue);color:var(--yellow);box-shadow:inset 0 0 0 4px #168cff18,0 0 18px #168cff22}
+.hero-link:hover{transform:translateY(-3px);box-shadow:0 0 24px #ff263d55}.hero-link.secondary:hover{box-shadow:0 0 24px #168cff66}
+.trajectory{position:relative;background:#050509;padding:0 0 8vw;overflow:hidden}
+.ticker{border-top:1px solid var(--red);border-bottom:1px solid var(--blue);overflow:hidden;padding:20px 0;background:#08080d}
+.ticker-track{display:flex;width:max-content;animation:marquee 34s linear infinite;will-change:transform}
+.ticker-group{display:flex;align-items:center;gap:42px;padding-right:42px;white-space:nowrap}
+.ticker-item{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(22px,3vw,42px);letter-spacing:.04em;color:#f5f4f2;text-transform:uppercase}
+.ticker-item strong{color:var(--yellow);font-weight:900}.ticker-item em{font-style:normal;color:var(--red)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.trajectory-copy{max-width:1100px;margin:auto;padding:clamp(70px,10vw,140px) 7vw 40px}
+.trajectory-copy .eyebrow{color:var(--red)}
+.trajectory-copy h2{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3rem,8vw,8rem);line-height:.9;letter-spacing:-.035em;text-transform:uppercase;margin:22px 0;color:#fff;max-width:900px}
+.trajectory-copy p{max-width:720px;color:#c5c5c8;line-height:1.9;font-size:clamp(14px,1.3vw,17px)}
+@media(max-width:700px){.hero-actions{gap:12px;margin-top:28px}.hero-link{width:min(88vw,420px);min-width:0;padding:16px 18px;border-radius:16px}.trajectory-copy{padding:72px 8vw 30px}.ticker{padding:15px 0}.ticker-group{gap:28px;padding-right:28px}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none!important}}
 .second{display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch;background:#080809;min-height:100svh}
 .second-photo{position:relative;min-height:100svh;background:url('public/images/WhatsApp%20Image%202026-10-20%20at%205.12.11%20PM.jpeg') center/cover no-repeat}
 .second-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 58%,#080809 100%),linear-gradient(0deg,#08080955,transparent 35%)}
@@ -55,6 +72,18 @@ footer{padding:25px 5vw;background:#030305;color:#777;text-align:center;font-siz
 <div class="scrollhint">Conheça o artista ↓</div>
 <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">♪ Ativar música</button>
 <audio id="siteMusic" preload="none" loop src="public/audio/amadeubrutus%20autoral.mp4"></audio>
+</section>
+<section class="trajectory" id="trajetoria" aria-label="Trajetória musical">
+<div class="ticker" aria-label="Faixa de trajetória musical">
+<div class="ticker-track">
+<div class="ticker-group"><span class="ticker-item"><strong>VOZ</strong> · <em>MÚSICA</em> · PALCO · INTERPRETAÇÃO · TRAJETÓRIA ·</span><span class="ticker-item"><strong>VOZ</strong> · <em>MÚSICA</em> · PALCO · INTERPRETAÇÃO · TRAJETÓRIA ·</span></div>
+<div class="ticker-group" aria-hidden="true"><span class="ticker-item"><strong>VOZ</strong> · <em>MÚSICA</em> · PALCO · INTERPRETAÇÃO · TRAJETÓRIA ·</span><span class="ticker-item"><strong>VOZ</strong> · <em>MÚSICA</em> · PALCO · INTERPRETAÇÃO · TRAJETÓRIA ·</span></div>
+</div></div>
+<div class="trajectory-copy">
+<span class="eyebrow">Uma história construída no palco</span>
+<h2>MÚSICA QUE SE TRANSFORMA EM ENCONTRO.</h2>
+<p>Cada apresentação é parte de uma trajetória feita de voz, presença e conexão com o público. Este espaço vai reunir os momentos, os palcos e os encontros musicais que ajudam a contar a história de Amadeu Brutus.</p>
+</div>
 </section>
 <section class="fold second" id="o-artista" aria-label="O artista Amadeu Brutus">
 <div class="second-photo" role="img" aria-label="Amadeu Brutus com violão apoiado no ombro"></div>
