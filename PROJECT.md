@@ -100,3 +100,15 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Commit de acessibilidade: 79cb8db28bb54bd343b6a83e6f2512ec80b5d7dc.
 - Validação: alteração de markup/CSS gravada no GitHub; revisão final do HTML e dos caminhos de mídia em andamento.
 - Pendências: teste de teclado e leitor de tela em navegador; teste de áudio e imagens após importação; validação visual desktop/mobile; teste de performance; publicação e DNS.
+
+
+## Fechamento da preparação estática — 15/11/2026
+
+- Revisão final confirmou no HTML: H1 com nome completo acessível, foco visível, espaçamento mobile do indicador de rolagem e respeito a `prefers-reduced-motion`.
+- Inventário atualizado via árvore Git: 32 arquivos de mídia, 102,23 MB no checkout (imagens: 3,34 MB; áudio: 13,92 MB; vídeos: 70,04 MB; cópia de vídeo na raiz: 14,92 MB).
+- O vídeo `WhatsApp Video 2026-11-15 at 11.33.56 AM.mp4` aparece na raiz e em `public/videos/` com o mesmo blob Git. Os dois caminhos foram preservados; o clone/checkout contém os dois arquivos.
+- Áudio e vídeo permanecem com extensão MP4. Sem inspeção do codec/stream e reprodução em navegador, não se certifica compatibilidade do áudio; teste está previsto na URL de preview.
+- Criado `HOSTINGER_DEPLOYMENT.md` com parâmetros e checklist. README atualizado.
+- Configuração indicada: deploy estático da raiz, branch `main`, sem build command e sem output directory separado.
+- Últimos commits: acessibilidade `79cb8db28bb54bd343b6a83e6f2512ec80b5d7dc`; ficha `7aa29e80127cf6f877dc09dfbc256ca3fdeab6c9`; README `2bb63044065a2216e7cf772c9c75207c959b9ffa`; checklist Hostinger `fa9148503566cbbc29b603bd85c8c2d683e57a07`.
+- Estado: repositório preparado tecnicamente para importação estática. Ainda não importado, não publicado e sem alterações de DNS.
