@@ -143,6 +143,36 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(max-width:600px){.hero .amadeu{font-size:clamp(3.2rem,17vw,7rem);-webkit-text-stroke:1.8px}.hero .brutus{font-size:clamp(3.8rem,20vw,8rem)}.hero .spot{width:76vw}}
 @media(prefers-reduced-motion:reduce){.hero.play .spot,.hero.play .word{animation:none!important}.hero .amadeu,.hero .brutus{opacity:1;transform:scale(1)}}
 
+
+/* Cabeçalho institucional e navegação responsiva */
+.site-header{position:absolute;z-index:20;top:0;left:0;width:100%;min-height:88px;padding:12px clamp(18px,4vw,64px);display:flex;align-items:center;justify-content:space-between;gap:24px;background:linear-gradient(180deg,rgba(2,2,5,.88),rgba(2,2,5,.08));}
+.site-brand{display:flex;flex-direction:column;align-items:flex-start;gap:0;color:#fff;text-decoration:none;font-family:Impact,'Arial Narrow',sans-serif;line-height:.78;letter-spacing:.02em;flex:0 0 auto}
+.site-brand span{font-size:clamp(17px,2vw,24px);color:#fff;-webkit-text-stroke:.5px #fff}
+.site-brand strong{font-size:clamp(22px,2.5vw,31px);color:#fff;letter-spacing:-.03em}
+.primary-nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,2vw,30px)}
+.primary-nav a{color:#f4f2ef;text-decoration:none;text-transform:uppercase;font-size:clamp(9px,.85vw,12px);font-weight:700;letter-spacing:.12em;white-space:nowrap;transition:color .2s ease,text-shadow .2s ease}
+.primary-nav a:hover,.primary-nav a:focus-visible{color:var(--yellow);text-shadow:0 0 14px #ffd52a66}
+.primary-nav .voice-link{border:1px solid var(--gold);padding:11px 14px;color:#f2d6aa}
+.menu-toggle{display:none;background:#08080dcc;border:1px solid #ffffff66;color:#fff;padding:10px 12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:900px){.site-header{min-height:76px;padding:10px 18px}.menu-toggle{display:inline-flex;align-items:center;gap:10px;position:relative;z-index:22}.primary-nav{display:none;position:absolute;top:100%;left:0;right:0;padding:18px;background:rgba(3,3,5,.97);border-top:1px solid #ffffff22;flex-direction:column;align-items:stretch;gap:0}.primary-nav.is-open{display:flex}.primary-nav a{padding:14px 8px;border-bottom:1px solid #ffffff16;font-size:11px}.primary-nav .voice-link{margin-top:10px;text-align:center;border:1px solid var(--gold)}}
+@media(min-width:901px) and (max-width:1100px){.primary-nav{gap:10px}.primary-nav a{letter-spacing:.07em;font-size:9px}}
+/* Abertura: sequência de entrada uma única vez; depois BRUTUS permanece em cena */
+.hero .amadeu{animation:amadeuEntrance 8s ease-out forwards!important}
+.hero .brutus{animation:brutusEntrance 8s ease-out forwards!important}
+.hero .spot.left{animation:spotSweepLeft 5.8s ease-in-out infinite!important}
+.hero .spot.right{animation:spotSweepRight 6.2s ease-in-out infinite!important}
+.hero .spot.alt.left{animation:spotSweepLeft 7s ease-in-out -2s infinite!important}
+.hero .spot.alt.right{animation:spotSweepRight 7.4s ease-in-out -3s infinite!important}
+@keyframes amadeuEntrance{0%,17%{opacity:0;transform:scale(.9);filter:blur(12px)}32%{opacity:1;transform:scale(1);filter:blur(0)}55%{opacity:1;transform:scale(1);filter:blur(0)}65%,100%{opacity:0;transform:scale(1.02);filter:blur(5px)}}
+@keyframes brutusEntrance{0%,52%{opacity:0;transform:scale(.94);filter:blur(12px)}68%{opacity:1;transform:scale(1);filter:blur(0)}100%{opacity:1;transform:scale(1);filter:blur(0)}}
+@keyframes spotSweepLeft{0%,100%{opacity:.12;transform:rotate(24deg) translateX(-4vw)}50%{opacity:.78;transform:rotate(8deg) translateX(5vw)}}
+@keyframes spotSweepRight{0%,100%{opacity:.1;transform:rotate(-24deg) translateX(4vw)}50%{opacity:.72;transform:rotate(-8deg) translateX(-5vw)}}
+@media(prefers-reduced-motion:reduce){.hero .amadeu{opacity:0!important;animation:none!important}.hero .brutus{opacity:1!important;animation:none!important;transform:none!important}.hero .spot{animation:none!important;opacity:.3!important}}
+/* As âncoras do menu permanecem visíveis e acessíveis */
+.site-section{min-height:38vh;padding:90px 8vw;background:#080809;border-top:1px solid #ffffff12;scroll-margin-top:30px}
+.site-section h2{margin:0 0 16px;font:clamp(2.4rem,6vw,5rem) Impact,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:-.02em}
+.site-section p{max-width:650px;color:#c5c5c8;line-height:1.8}
+
 </style>
 </head>
 <body>
@@ -150,7 +180,18 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 <section class="fold hero play" id="inicio" aria-label="Abertura de Amadeu Brutus">
 <div class="ambient"></div><div class="spot left"></div><div class="spot right"></div><div class="spot alt left"></div><div class="spot alt right"></div>
 <div class="fixture f1"><i></i></div><div class="fixture f2"><i></i></div><div class="fixture f3"><i></i></div><div class="fixture f4"><i></i></div>
-<header class="topline"><span class="brand">AMADEU BRUTUS</span><span>Voz · Música · Palco</span></header>
+<header class="site-header">
+  <a class="site-brand" href="index.html" aria-label="Amadeu Brutus — página inicial"><span>AMADEU</span><strong>BRUTUS</strong></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">☰</span></button>
+  <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
+    <a href="shows.html">Shows</a>
+    <a href="lancamentos.html">Lançamentos</a>
+    <a href="#discografia">Discografia</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+    <a class="voice-link" href="#thevoicebrasil2026">The Voice Brasil 2026</a>
+  </nav>
+</header>
 <h1 class="hero-title" aria-label="Amadeu Brutus"><span class="word amadeu">AMADEU</span><span class="word brutus">BRUTUS</span></h1><div class="hero-caption">Amadeu Brutus · Música e presença de palco</div>
 <nav class="hero-actions" aria-label="Acessos principais">
 <a class="hero-link" href="shows.html">★ Próximos shows</a>
@@ -181,9 +222,16 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 <div class="signature">Amadeu Brutus · Música e identidade</div>
 </div>
 </section>
+<section class="site-section" id="discografia"><h2>Discografia</h2><p>O catálogo oficial de lançamentos será apresentado aqui.</p></section>
+<section class="site-section" id="galeria"><h2>Galeria</h2><p>Fotos e registros oficiais de Amadeu Brutus.</p></section>
+<section class="site-section" id="contato"><h2>Contato</h2><p>Para contato profissional, acompanhe os canais oficiais de Amadeu Brutus.</p><p><a href="https://www.instagram.com/amadeubrutus/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.youtube.com/@AmadeuBrutus" target="_blank" rel="noopener noreferrer">YouTube</a></p></section>
+<section class="site-section" id="thevoicebrasil2026"><h2>The Voice Brasil 2026</h2><p>Espaço dedicado aos registros oficiais da participação de Amadeu Brutus no The Voice Brasil 2026.</p></section>
 </main>
 <footer><span>Amadeu Brutus · Música e presença de palco</span><a class="footer-credit" href="https://roquebusinessevolution.com/" target="_blank" rel="noopener noreferrer">Desenvolvido por <strong>Roque Business Evolution</strong></a></footer>
 <script>
+const menuToggle=document.querySelector('.menu-toggle'),primaryNav=document.getElementById('primary-nav');
+menuToggle?.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')==='true';menuToggle.setAttribute('aria-expanded',String(!open));primaryNav.classList.toggle('is-open',!open);});
+primaryNav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{primaryNav.classList.remove('is-open');menuToggle?.setAttribute('aria-expanded','false');}));
 const audio=document.getElementById('siteMusic'),button=document.getElementById('musicToggle');
 button.addEventListener('click',async()=>{if(audio.paused){try{await audio.play();button.textContent='♪ Silenciar música';button.setAttribute('aria-pressed','true')}catch(e){button.textContent='Áudio indisponível';}}else{audio.pause();button.textContent='♪ Ativar música';button.setAttribute('aria-pressed','false')}});
 </script>
