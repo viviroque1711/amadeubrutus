@@ -481,3 +481,13 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - As fotos sem uso identificado no HTML receberam nomes neutros numerados (`foto-amadeu-XX`), sem atribuir conteúdo visual que não foi verificado.
 - Os registros históricos anteriores deste documento foram mantidos como histórico; os caminhos atuais são os listados no inventário do repositório.
 - Validação pendente após o commit: busca por referências antigas em todos os arquivos ativos e confirmação do deploy na Hostinger.
+
+
+## Correção da convenção de nomes — marca AMADEU BRUTUS — 16/11/2026
+
+- Correção solicitada pela proprietária: a comunicação pública e a identificação dos arquivos devem usar sempre o nome artístico completo **Amadeu Brutus**, nunca “Amadeu” isoladamente.
+- Corrigidos os 17 nomes genéricos `foto-amadeu-XX.jpeg` para `foto-amadeu-brutus-XX.jpeg` (01 a 17).
+- Atualizadas as referências correspondentes nos arquivos HTML ativos (`index.html`, `shows.html` e `lancamentos.html`).
+- A alteração é exclusivamente de nomenclatura e referências: os arquivos de imagem mantêm o mesmo conteúdo binário, formato e qualidade.
+- Convenção obrigatória daqui em diante: quando o nome do artista aparecer no nome de um arquivo, usar **amadeu-brutus** como identificador completo. Nomes técnicos genéricos sem referência ao artista (por exemplo, favicon e efeitos de luz) podem permanecer genéricos.
+- Validação: confirmar ausência de `foto-amadeu-` sem `-brutus` nos caminhos atuais e verificar todas as referências locais dos HTML.
