@@ -358,3 +358,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `dd997d704224f988cf1b09c65b7258321c8eb248`.
 - Código atualizado no GitHub `main`. Conferir carregamento do iframe e aparência em dispositivos reais após atualização da hospedagem.
+
+
+## Consolidação das dobras “A carreira” e “O artista” — 16/11/2026
+
+- A proprietária identificou repetição de mensagem entre a terceira dobra (`#trajetoria`, “A carreira”) e a quarta (`#o-artista`, “A voz tem uma história”).
+- Removida a dobra redundante `#o-artista`; a dobra “A carreira” permanece como a apresentação única da trajetória e identidade artística.
+- A dobra de Spotify passa a ocupar a quarta posição e seu rótulo editorial foi alterado para “Últimos lançamentos”.
+- Mantido o ID `#ultimos-lancamentos`, preservando links existentes do menu e dos botões.
+- Arquivo alterado: `index.html`.
+- Commit: `018ae5a43ad25e0da3c3092e7b116c510323b77d`.
+- Código atualizado no GitHub `main`; validar a sequência e o espaçamento das dobras no desktop/mobile após atualização da hospedagem.
