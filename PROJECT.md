@@ -391,3 +391,16 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `7d9b617d9436eddd4ecbf839b51ff6a651fcf067`.
 - Código atualizado no GitHub `main`; conferir enquadramento, qualidade e responsividade após deploy.
+
+
+## Otimização inicial de SEO — 16/11/2026
+
+- Posicionamento orgânico principal: “Amadeu Brutus | Cantor, Músico e Compositor”.
+- Atualizado o `<title>` da página inicial e a meta description, com descrição objetiva da atuação artística e referências à trajetória, apresentações ao vivo e participação no The Voice Brasil 2026.
+- Alinhados Open Graph e Twitter Cards ao mesmo posicionamento e à descrição revisada.
+- Enriquecido o JSON-LD existente: entidade `Person` passa a declarar `jobTitle` (Cantor, Músico e Compositor), descrição e perfil oficial do Spotify em `sameAs`. O tipo `WebSite` e a estrutura `WebPage` foram preservados.
+- Canonical e URL oficial preservados. Não foram adicionadas palavras-chave artificiais nem alterados conteúdo visual, navegação ou primeira dobra.
+- Arquivo alterado: `index.html`.
+- Commit: `fd8a67fe315d5a1c4a909373d160db16801411a6`.
+- Estado: alteração registrada no GitHub `main`. Ainda é necessário validar o HTML estruturado e metadados em ferramentas de inspeção, confirmar o deploy Hostinger e solicitar nova indexação no Google Search Console, se a propriedade estiver configurada.
+- Próximas etapas recomendadas: revisar conteúdo textual indexável das seções, conferir sitemap.xml e robots.txt, validar dados estruturados e acompanhar cobertura/indexação no Search Console.
