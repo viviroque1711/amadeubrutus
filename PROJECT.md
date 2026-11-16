@@ -380,3 +380,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `c95f855ea0151d173e56466cf4f6ddf9887e031e`.
 - Código atualizado no GitHub `main`; conferir visualmente após deploy.
+
+
+## Dobra “Fotos oficiais” — 16/11/2026
+
+- A seção antes identificada como “Galeria” foi renomeada para “Fotos oficiais”; o link de navegação também foi atualizado para `#fotos-oficiais`.
+- Estrutura visual criada como galeria editorial responsiva, com fundo escuro, acentos magenta/ameixa, título condensado e imagens em composição assimétrica no desktop e empilhadas no mobile.
+- Utilizados somente dois arquivos de imagem já existentes no repositório: `public/brand/amadeu-palco.webp` e `public/brand/amadeu-voz.webp`. Nenhuma foto foi gerada ou alterada.
+- Legendas e textos são descritivos e não atribuem eventos, datas ou contextos não confirmados.
+- Arquivo alterado: `index.html`.
+- Commit: `7d9b617d9436eddd4ecbf839b51ff6a651fcf067`.
+- Código atualizado no GitHub `main`; conferir enquadramento, qualidade e responsividade após deploy.
