@@ -258,6 +258,23 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .discography-equalizer i:nth-child(1){--bar:35%}.discography-equalizer i:nth-child(2){--bar:70%}.discography-equalizer i:nth-child(3){--bar:100%}.discography-equalizer i:nth-child(4){--bar:58%}.discography-equalizer i:nth-child(5){--bar:82%}.discography-equalizer i:nth-child(6){--bar:45%}.discography-equalizer i:nth-child(7){--bar:66%}
 @media(max-width:760px){.discography-fold{min-height:100svh;padding:84px 7vw 72px}.discography-inner{grid-template-columns:1fr;gap:30px}.discography-copy h2{font-size:clamp(3.4rem,13vw,5.3rem);margin:18px 0 18px}.discography-copy p{font-size:15px;line-height:1.65}.spotify-cta{margin-top:24px;padding:15px 20px}.spotify-frame-wrap{padding:9px;border-radius:16px}.spotify-embed{height:500px}.discography-equalizer{right:4%;top:9%;height:115px;opacity:.13}}
 
+
+/* Fotos oficiais — galeria editorial com imagens aprovadas */
+.official-photos-fold{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;padding:clamp(76px,9vw,116px) clamp(22px,7.5vw,110px);color:#f8f4fa;background:radial-gradient(ellipse at 12% 80%,rgba(111,29,101,.2),transparent 40%),linear-gradient(145deg,#09080d,#151018 58%,#08070b)}
+.official-photos-heading{width:min(100%,1160px);margin:0 auto 38px}
+.official-photos-kicker{color:#f02c91;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase}
+.official-photos-heading h2{margin:16px 0 10px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.4rem,7vw,6.5rem);line-height:.92;font-weight:400;text-transform:uppercase}
+.official-photos-heading h2 em{color:#d6a2d0;font-style:normal}
+.official-photos-heading p{margin:0;color:#bdb5c1;font-size:16px;line-height:1.6}
+.official-photos-grid{width:min(100%,1160px);margin:0 auto;display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
+.official-photo{position:relative;min-width:0;margin:0;overflow:hidden;border:1px solid rgba(230,210,230,.2);border-radius:18px;background:#17121a;box-shadow:0 24px 65px rgba(0,0,0,.34)}
+.official-photo img{display:block;width:100%;height:100%;min-height:390px;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s}
+.official-photo:hover img{transform:scale(1.035);filter:saturate(1.08)}
+.official-photo--large img{object-position:center 35%}
+.official-photo--portrait img{object-position:center 25%}
+.official-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:42px 22px 18px;color:#fff;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;background:linear-gradient(transparent,rgba(0,0,0,.78))}
+@media(max-width:760px){.official-photos-fold{min-height:100svh;padding:82px 7vw 64px}.official-photos-heading{margin-bottom:25px}.official-photos-heading h2{font-size:clamp(3.2rem,13vw,5rem)}.official-photos-grid{grid-template-columns:1fr;gap:14px}.official-photo img{min-height:0;height:auto;aspect-ratio:4/5}.official-photo--portrait img{aspect-ratio:4/5}}
+
 </style>
 </head>
 <body>
@@ -284,7 +301,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     <a href="#proximos-shows">Próximos Shows</a>
     <a href="#discografia">Uma viagem no tempo</a>
     <a href="#ultimos-lancamentos">Últimos lançamentos</a>
-    <a href="#galeria">Galeria</a>
+    <a href="#fotos-oficiais">Fotos oficiais</a>
     <a href="#contato">Contato</a>
     <a class="voice-link" href="#thevoicebrasil2026">The Voice Brasil 2026</a>
   </nav>
@@ -388,7 +405,23 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <h2 id="latest-releases-title">Últimos lançamentos</h2>
   <p>As novidades musicais de Amadeu Brutus terão aqui seu próprio espaço.</p>
 </section>
-<section class="site-section" id="galeria"><h2>Galeria</h2><p>Fotos e registros oficiais de Amadeu Brutus.</p></section>
+<section class="official-photos-fold" id="fotos-oficiais" aria-labelledby="official-photos-title">
+  <div class="official-photos-heading">
+    <span class="official-photos-kicker">Imagem & presença</span>
+    <h2 id="official-photos-title">Fotos <em>oficiais</em></h2>
+    <p>Registros de Amadeu Brutus em imagens.</p>
+  </div>
+  <div class="official-photos-grid">
+    <figure class="official-photo official-photo--large">
+      <img src="public/brand/amadeu-palco.webp" alt="Amadeu Brutus em apresentação no palco" loading="lazy" decoding="async">
+      <figcaption>Amadeu Brutus · Ao vivo</figcaption>
+    </figure>
+    <figure class="official-photo official-photo--portrait">
+      <img src="public/brand/amadeu-voz.webp" alt="Retrato oficial de Amadeu Brutus" loading="lazy" decoding="async">
+      <figcaption>Amadeu Brutus · Retrato</figcaption>
+    </figure>
+  </div>
+</section>
 <section class="site-section" id="contato"><h2>Contato</h2><p>Para contato profissional, acompanhe os canais oficiais de Amadeu Brutus.</p><p><a href="https://www.instagram.com/amadeubrutus/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.youtube.com/@AmadeuBrutus" target="_blank" rel="noopener noreferrer">YouTube</a></p></section>
 <section class="site-section" id="thevoicebrasil2026"><h2>The Voice Brasil 2026</h2><p>Espaço dedicado aos registros oficiais da participação de Amadeu Brutus no The Voice Brasil 2026.</p></section>
 </main>
