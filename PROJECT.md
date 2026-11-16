@@ -163,3 +163,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Restaurados flashes rápidos e alternados nos fachos de luz; mantida a fotografia real de preenchimento de BRUTUS; removida a legenda adicional da abertura, em conformidade com a especificação aprovada.
 - Commit hotfix: `b66dcc37d1ba3125f6088b52991efacf58bbcde3`.
 - Estado: código corrigido e enviado ao GitHub `main`; ainda é necessário confirmar a implantação da Hostinger e fazer validação visual real em desktop e mobile antes de declarar a primeira dobra recuperada.
+
+## Primeira dobra refeita — holofotes em batidas e logo oficial — 15/11/2026
+
+- Pedido da proprietária: fundo preto, holofotes de luz natural saindo dos cantos em batidas rápidas ("pá, pá, pá") e mirando a marca; entrada AMADEU, depois BRUTUS, e a marca fica em cena.
+- Logo oficial (`public/images/WhatsApp Image 2026-10-20 at 5.09.58 PM (1).jpeg`) recortado com fundo transparente em `public/brand/` (logo da abertura, logo do cabeçalho e ícones 32/180/512 px). Arquivo original preservado.
+- CSS antigo da abertura (camadas v6, hotfix e sobrescritas com !important) removido e substituído por um bloco único.
+- Seis refletores (quatro cantos e dois no alto) com fachos de luz branca quente; o JavaScript calcula o ângulo de cada facho até o centro do logo e recalcula ao redimensionar.
+- Sequência: oito batidas alternando cantos, corrigindo a mira a cada batida (cerca de 2,8 por segundo, abaixo do limite de 3 flashes/s); AMADEU entra e sai; BRUTUS entra e sai; todos os holofotes acertam juntos e o logo AMADEU BRUTUS aparece e permanece. Depois, balanço leve dos fachos e nova rodada de batidas a cada 9 s (pausa com a aba oculta).
+- H1 continua com o texto "Amadeu Brutus" para buscadores e leitores de tela; logo da abertura é decorativo dentro do H1.
+- Sem JavaScript ou com movimento reduzido: cena final estática (fachos acesos na marca, logo visível).
+- Validação local: desktop 1440 px e celular 390 px, sem erros de JavaScript e sem rolagem horizontal.
