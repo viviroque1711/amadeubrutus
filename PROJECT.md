@@ -224,3 +224,11 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `fd222570b7fbcc1b159419c9edde4a57594270ed`.
 - Publicação visual na hospedagem ainda precisa ser confirmada.
+
+## Holofotes realistas — 16/11/2026
+
+- Pedido: holofote com cara de real, não artificial/"cara de IA".
+- Fachos em CSS (cones chapados com borda dura, estrelas de brilho nas lentes) substituídos por uma textura de feixe volumétrico gerada por código em `public/brand/feixe.webp` (transparente): miolo mais forte, borda macia, perda de intensidade ao longo do feixe e fumaça/haze irregular, como luz atravessando névoa de palco.
+- Refletores agora parecem aparelhos: corpo escuro com aro e lente quente acesa, sem estrelas.
+- Batidas mais secas (acende de uma vez e decai), sem varredura exagerada; fachos parados no artista com oscilação mínima.
+- Validação local: desktop 1440 px e celular 390 px, sem erros de JavaScript.
