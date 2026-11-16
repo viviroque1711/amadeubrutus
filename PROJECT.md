@@ -290,3 +290,12 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Bug: no celular, a regra `.hero .amadeu{-webkit-text-stroke:1.8px}` redefinia a cor do contorno para a cor do texto (quase transparente), e a palavra AMADEU da entrada sumia. Corrigido para contorno branco de 2 px.
 - Animações de entrada sem `filter: blur` (Safari pode não desenhar texto contornado com filtro animado); AMADEU final com leve preenchimento e tamanho maior no celular.
 - Luz intensificada: feixe prata mais denso e mais largo, opacidade dos fachos e das lentes maior nas batidas e na cena final.
+
+
+## Ajuste fino do logotipo inferior direito — 16/11/2026
+
+- A pedido da proprietária, o logotipo “Brutus” no canto inferior direito foi girado mais 30 graus no sentido anti-horário.
+- Rotação-base atualizada de `135deg` para `105deg`; o ponto final da animação passou de `132deg` para `102deg`, preservando o movimento sutil sem alterar a orientação solicitada.
+- Arquivo alterado: `index.html`.
+- Commit: `f1fd759c99306d2604cb70682ab876117e1a1419`.
+- Código atualizado no GitHub `main`; conferir a renderização após a atualização da hospedagem.
