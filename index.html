@@ -202,6 +202,30 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
  .show-info p{font-size:13px}
 }
 
+
+/* SEGUNDA DOBRA EDITORIAL — trajetória de Amadeu Brutus */
+.career-fold{background:#050509;padding:clamp(76px,9vw,132px) clamp(24px,7vw,110px);overflow:hidden}
+.career-inner{width:min(100%,1280px);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(250px,.75fr);gap:clamp(36px,6vw,100px);align-items:center}
+.career-copy{min-width:0}
+.career-eyebrow{display:block;color:#e21f69;font-size:clamp(12px,1.15vw,15px);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.career-copy h2{max-width:850px;margin:28px 0 42px;color:#f8f7f8;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,7.2vw,7rem);font-weight:400;line-height:.96;letter-spacing:-.025em;text-transform:uppercase}
+.career-story{max-width:790px}
+.career-story p{margin:0 0 22px;color:#a9a6ae;font-family:Arial,Helvetica,sans-serif;font-size:clamp(15px,1.22vw,18px);font-weight:400;line-height:1.82}
+.career-story strong{color:#f7f6f7;font-weight:700}
+.career-closing{margin:30px 0 0;color:#f7f6f7;font-family:Arial,Helvetica,sans-serif;font-size:clamp(16px,1.35vw,19px);font-weight:700;line-height:1.6}
+.career-mark{display:flex;align-items:center;justify-content:center;min-width:0;perspective:900px}
+.career-mark img{display:block;width:min(100%,430px);height:auto;object-fit:contain;transform:rotate(-7deg);transform-origin:center;filter:drop-shadow(0 18px 28px rgba(0,0,0,.5));animation:careerLogoFloat 7s ease-in-out infinite;will-change:transform}
+@keyframes careerLogoFloat{0%,100%{transform:translate3d(0,0,0) rotate(-7deg)}50%{transform:translate3d(0,-11px,0) rotate(-5deg)}}
+@media(max-width:760px){
+ .career-fold{padding:76px 8vw 88px}
+ .career-inner{grid-template-columns:1fr;gap:26px}
+ .career-copy h2{font-size:clamp(3.2rem,14vw,5.5rem);margin:20px 0 30px;line-height:.94}
+ .career-story p{font-size:15px;line-height:1.78;margin-bottom:19px}
+ .career-mark{justify-content:flex-end;margin-top:4px;padding-right:2vw}
+ .career-mark img{width:min(62vw,270px)}
+}
+@media(prefers-reduced-motion:reduce){.career-mark img{animation:none!important;transform:rotate(-7deg)}}
+
 </style>
 </head>
 <body>
@@ -286,17 +310,24 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     <p class="shows-note">Agenda sujeita a atualizações. Consulte os canais oficiais para confirmações.</p>
   </div>
 </section>
-<section class="trajectory" id="trajetoria" aria-label="Trajetória musical">
-<div class="ticker" aria-label="Faixa de trajetória musical">
-<div class="ticker-track">
-<div class="ticker-group"><span class="ticker-item"><strong>VOZ</strong> · <em>MÚSICA</em> · PALCO · INTERPRETAÇÃO · TRAJETÓRIA ·</span><span class="ticker-item"><strong>VOZ</strong> · <em>MÚSICA</em> · PALCO · INTERPRETAÇÃO · TRAJETÓRIA ·</span></div>
-<div class="ticker-group" aria-hidden="true"><span class="ticker-item"><strong>VOZ</strong> · <em>MÚSICA</em> · PALCO · INTERPRETAÇÃO · TRAJETÓRIA ·</span><span class="ticker-item"><strong>VOZ</strong> · <em>MÚSICA</em> · PALCO · INTERPRETAÇÃO · TRAJETÓRIA ·</span></div>
-</div></div>
-<div class="trajectory-copy">
-<span class="eyebrow">Uma história construída no palco</span>
-<h2>MÚSICA QUE SE TRANSFORMA EM ENCONTRO.</h2>
-<p>Cada apresentação é parte de uma trajetória feita de voz, presença e conexão com o público. Este espaço vai reunir os momentos, os palcos e os encontros musicais que ajudam a contar a história de Amadeu Brutus.</p>
-</div>
+<section class="trajectory career-fold" id="trajetoria" aria-labelledby="career-title">
+  <div class="career-inner">
+    <div class="career-copy">
+      <span class="career-eyebrow">A carreira</span>
+      <h2 id="career-title">Uma história de talento e esforço.</h2>
+      <div class="career-story">
+        <p>Com raízes no <strong>pop e rock brasileiro</strong>, Amadeu Brutus começou a construir sua trajetória musical em meados dos anos 2000, à frente da banda <strong>Visionários S.A.</strong> Desde então, a música deixou de ser apenas uma paixão e se tornou parte essencial da sua vida.</p>
+        <p>Ao longo dos anos, entre apresentações, composições autorais e a experiência de compartilhar seu conhecimento musical como professor, Amadeu construiu uma carreira marcada pelo <strong>talento, esforço e dedicação aos palcos</strong>, além da conexão com o público.</p>
+        <p>Dos botecos e casas de shows de São Paulo aos palcos de grandes produções, sua voz e presença artística únicas foram conquistando espaço. Nessa caminhada, realizou aberturas de shows e dividiu experiências com importantes nomes da música brasileira, como <strong>Titãs, Ana Carolina e Roupa Nova</strong>.</p>
+        <p>Em 2026, uma nova oportunidade levou sua voz ainda mais longe. Amadeu chegou ao palco do <strong>The Voice Brasil</strong>, integrando o <strong>Time Lauana Prado</strong> e, na sequência, migrando para o <strong>Time Paulo Ricardo</strong>, apresentando seu talento a um público ainda maior.</p>
+        <p>Mas essa história não começou diante de grandes públicos. Ela vem de anos de esforço, dedicação, música, estrada e sonhos que nunca deixaram de ser perseguidos.</p>
+      </div>
+      <p class="career-closing">E este é apenas o começo de um novo capítulo.</p>
+    </div>
+    <div class="career-mark" aria-label="Logotipo Amadeu Brutus">
+      <img src="public/brand/amadeubrutus-logo.png" alt="Amadeu Brutus" loading="lazy" decoding="async">
+    </div>
+  </div>
 </section>
 <section class="fold second" id="o-artista" aria-label="O artista Amadeu Brutus">
 <div class="second-photo" role="img" aria-label="Amadeu Brutus com violão apoiado no ombro"></div>
