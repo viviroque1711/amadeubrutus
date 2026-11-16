@@ -491,3 +491,13 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - A alteração é exclusivamente de nomenclatura e referências: os arquivos de imagem mantêm o mesmo conteúdo binário, formato e qualidade.
 - Convenção obrigatória daqui em diante: quando o nome do artista aparecer no nome de um arquivo, usar **amadeu-brutus** como identificador completo. Nomes técnicos genéricos sem referência ao artista (por exemplo, favicon e efeitos de luz) podem permanecer genéricos.
 - Validação: confirmar ausência de `foto-amadeu-` sem `-brutus` nos caminhos atuais e verificar todas as referências locais dos HTML.
+
+
+## Padronização dos nomes dos vídeos com a marca Amadeu Brutus — 16/11/2026
+
+- A pedido da proprietária, os sete arquivos de vídeo foram renomeados para iniciar pelo nome artístico completo: `amadeu-brutus-video`.
+- Vídeos numerados: `public/videos/amadeu-brutus-video-01.mp4` a `public/videos/amadeu-brutus-video-06.mp4`.
+- Cópia original na raiz: `amadeu-brutus-video-original.mp4`.
+- Atualizadas as referências encontradas nos arquivos HTML ativos.
+- Conteúdo binário, extensão e qualidade dos vídeos preservados; operação realizada por reutilização dos mesmos blobs Git.
+- Convenção: arquivos que identificam o artista devem conter o nome completo `amadeu-brutus`; a marca deve vir antes do tipo de mídia e da descrição.
