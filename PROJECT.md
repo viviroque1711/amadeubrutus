@@ -543,3 +543,9 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Layout da seção atualizado para fundo preto e fluxo vertical (uma matéria por linha), com imagem em destaque, título, subtítulo, descrição integral e link para a matéria original. Responsividade mobile preservada.
 - Arquivo alterado: `index.html`. Documento de governança atualizado sem remover registros anteriores.
 - A atualização foi registrada no GitHub `main`; ainda é necessário conferir a renderização no domínio publicado após a atualização da hospedagem. As imagens são carregadas diretamente do servidor de mídia do SBT, portanto a exibição depende de disponibilidade externa desse servidor.
+
+## Imagens das Últimas notícias — 16/11/2026
+
+- Problema relatado: as fotos dos cards de notícia (The Voice Brasil/SBT) não apareciam.
+- Diagnóstico: o site usava os arquivos originais do SBT (5000 × 3331 px e 3000 × 2000 px, vários MB), carregados sob demanda; em celular demoram ou falham.
+- Correção: as imagens usam as versões redimensionadas que o próprio SBT publica (large_ 1000 px e medium_ 750 px) com `srcset`, largura/altura declaradas e, se o SBT falhar, troca automática por uma foto do Amadeu hospedada no site (`public/brand/amadeu-brutus-cantor-no-palco.webp`).
