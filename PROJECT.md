@@ -232,3 +232,11 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Refletores agora parecem aparelhos: corpo escuro com aro e lente quente acesa, sem estrelas.
 - Batidas mais secas (acende de uma vez e decai), sem varredura exagerada; fachos parados no artista com oscilação mínima.
 - Validação local: desktop 1440 px e celular 390 px, sem erros de JavaScript.
+
+## Refletores fresnel reais e luz prata — 16/11/2026
+
+- Pedido: substituir os círculos pelos holofotes da foto enviada (fresnel com abas), que acompanham o movimento das luzes; cor da luz prata.
+- Foto enviada recortada do fundo e convertida para prata em `public/brand/refletor.webp`; cada refletor gira junto com o seu facho (mesmo ângulo nas batidas e no balanço) e é espelhado nos lados direitos para manter a alça para cima.
+- Refletores fora do menu: cantos de cima a 17% da altura, dois intermediários a 14%; ficam abaixo do cabeçalho e dos botões.
+- Feixes e clarão em prata (antes branco quente).
+- Celular: só os quatro refletores dos cantos (os do meio cobriam o rosto).
