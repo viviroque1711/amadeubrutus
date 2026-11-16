@@ -345,3 +345,16 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `c3f5f935fb5fc3c1728eea287edd8e652f039639`.
 - Código atualizado no GitHub `main`; confirmar a renderização no mobile após atualização da hospedagem.
+
+
+## Dobra Discografia — estética vintage e Spotify — 16/11/2026
+
+- A seção provisória “Últimos lançamentos” foi transformada em uma dobra editorial de discografia, mantendo o identificador `#ultimos-lancamentos` para preservar os links do menu e dos botões existentes.
+- Direção visual baseada na referência mobile enviada: fundo ameixa/roxo escuro, textura discreta, acentos magenta, tipografia condensada de alto impacto e apresentação editorial retrô, evocando a estética do álbum de 2002 sem inventar capa ou metadados.
+- Título: “Ouça agora no Spotify”; texto introdutório e CTA externo para o perfil oficial informado pela proprietária.
+- Incorporado o player oficial do Spotify para o artista `0eRoINMstkO2cT60xL0uzo`, em iframe responsivo com título acessível.
+- O link fornecido é de perfil de artista, não de álbum específico. Por isso, o embed abre o perfil do artista; não foi presumido nem fabricado um URI de álbum.
+- Layout responsivo: texto e player lado a lado em telas largas; empilhados no mobile.
+- Arquivo alterado: `index.html`.
+- Commit: `dd997d704224f988cf1b09c65b7258321c8eb248`.
+- Código atualizado no GitHub `main`. Conferir carregamento do iframe e aparência em dispositivos reais após atualização da hospedagem.
