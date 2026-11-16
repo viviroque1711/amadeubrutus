@@ -452,3 +452,18 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Validações técnicas executadas: extração dos metadados das três páginas, contagem de H1, leitura de canonical, parsing dos três blocos JSON-LD, leitura do robots.txt e leitura das URLs do sitemap.
 - Pendências externas: deploy Hostinger, teste HTTP do domínio, acesso ao Google Search Console e validação visual/real de carregamento.
 - Prioridade recomendada: (1) confirmar deploy; (2) validar robots/sitemap no domínio; (3) decidir indexabilidade das páginas placeholder `shows.html` e `lancamentos.html`; (4) revisar dimensão/CLS das imagens; (5) enviar sitemap e acompanhar indexação.
+
+
+## Otimização de nomes e referências de imagens — 16/11/2026
+
+- Renomeados quatro arquivos de imagem com nomes descritivos, em minúsculas e separados por hífens, sem alterar o conteúdo binário das imagens:
+  - `public/brand/amadeu-palco.webp` → `public/brand/amadeu-brutus-apresentacao-ao-vivo.webp`.
+  - `public/brand/amadeu-voz.webp` → `public/brand/amadeu-brutus-cantor-no-palco.webp`.
+  - `public/images/WhatsApp Image 2026-10-20 at 5.12.11 PM.jpeg` → `public/images/amadeu-brutus-foto-oficial-destaque.jpeg`.
+  - `public/images/WhatsApp Image 2026-11-15 at 11.35.45 AM.jpeg` → `public/images/amadeu-brutus-foto-agenda-de-shows.jpeg`.
+- Atualizadas todas as referências encontradas em `index.html`: imagem principal, pré-carregamento, CSS de fundo, Open Graph, Twitter Card e JSON-LD Person.
+- Mantidos os textos ALT descritivos já existentes para a imagem principal e para a galeria oficial; elementos puramente decorativos continuam com ALT vazio/ocultos para tecnologias assistivas.
+- Imagens decorativas, logotipos, ícones, textura do título e arquivos de vídeo/áudio não foram renomeados, pois seus nomes não melhorariam a descoberta de imagens ou poderiam sugerir conteúdo incorreto.
+- As imagens não foram recomprimidas nem convertidas. A mudança trata de nomenclatura e referências, não de tamanho/velocidade de carregamento.
+- Alterações preparadas em um único commit atômico para evitar caminhos quebrados entre commits.
+- Deploy Hostinger e validação visual no domínio continuam pendentes.
