@@ -501,3 +501,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Atualizadas as referências encontradas nos arquivos HTML ativos.
 - Conteúdo binário, extensão e qualidade dos vídeos preservados; operação realizada por reutilização dos mesmos blobs Git.
 - Convenção: arquivos que identificam o artista devem conter o nome completo `amadeu-brutus`; a marca deve vir antes do tipo de mídia e da descrição.
+
+
+## Reorganização das dobras — lançamentos e notícias — 16/11/2026
+
+- Sequência aprovada para o início da página: 1ª dobra Abertura; 2ª Próximos Shows; 3ª Últimos lançamentos; 4ª Últimas notícias.
+- A seção “Últimos lançamentos” foi movida para imediatamente depois de “Próximos Shows”, sem alterar seu identificador `#ultimos-lancamentos` nem seu conteúdo atual.
+- Criada a seção “Últimas notícias” com identificador `#ultimas-noticias` logo após lançamentos. O texto é um espaço editorial provisório; nenhuma notícia foi inventada.
+- A trajetória, a discografia histórica (“Uma viagem ao passado”), as fotos oficiais, contato e The Voice permanecem preservados depois dessas quatro primeiras dobras.
+- Menu principal reorganizado e atualizado com o novo link “Últimas notícias”.
+- Arquivo alterado: `index.html`.
+- Validação técnica: verificar ordem dos IDs, unicidade dos IDs e destino dos links de navegação. A validação visual desktop/mobile e o deploy Hostinger permanecem pendentes.
