@@ -299,3 +299,12 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `f1fd759c99306d2604cb70682ab876117e1a1419`.
 - Código atualizado no GitHub `main`; conferir a renderização após a atualização da hospedagem.
+
+
+## Novo ajuste angular do logotipo inferior direito — 16/11/2026
+
+- A pedido da proprietária, o logotipo inferior direito foi girado mais 45 graus no sentido anti-horário para deixar de parecer quase deitado.
+- Rotação-base atualizada de `105deg` para `60deg`; ponto final da animação atualizado de `102deg` para `57deg`.
+- Arquivo alterado: `index.html`.
+- Commit: `e2a8f8cd26b9da6168f39413146e04d27c8f535a`.
+- Código atualizado no GitHub `main`; conferir a renderização após a atualização da hospedagem.
