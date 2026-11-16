@@ -188,3 +188,11 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `035d27f7071942d44d3d14061038993054c9003c`.
 - Estado: alteração gravada no GitHub `main`; confirmar implantação automática da Hostinger e fazer validação visual em desktop/mobile antes de considerar a dobra aprovada em produção.
+## Ajuste da primeira dobra — artista em cena e brilho nos refletores — 15/11/2026
+
+- Pedido: entrada AMADEU, depois BRUTUS, e ficam os dois juntos; logo apenas no cabeçalho; foto do artista na primeira dobra; mais brilho nas luzes.
+- Logo removido da abertura (permanece no cabeçalho e no ícone da aba).
+- Foto `public/images/WhatsApp Image 2026-10-20 at 5.10.01 PM.jpeg` recortada do fundo de estúdio para `public/brand/amadeu-palco.webp` (original preservado). O artista surge do escuro no golpe final e os holofotes miram o rosto/peito.
+- Cena final: "AMADEU" contornado sobre "BRUTUS" sólido, como H1 em texto real.
+- Refletores: lentes brancas com halo e estrela de brilho em camada acima do cabeçalho; fachos com núcleo de luz mais intenso; cabeçalho sem faixa escura sobre o palco (menu com sombra no texto).
+- Validação local: desktop 1440 px e celular 390 px, sem erros de JavaScript e sem rolagem horizontal.
