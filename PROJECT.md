@@ -202,3 +202,13 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - A pedido da proprietária, entre duas opções (cantando no palco do The Voice, em close; e tocando violão em palco escuro, de óculos), escolhida a foto cantando: rosto e emoção legíveis, luz de palco e ligação com The Voice Brasil 2026.
 - Arquivo: `public/images/WhatsApp Image 2026-11-15 at 11.35.46 AM (1).jpeg` recortado sem a barra de status do celular em `public/brand/amadeu-voz.webp` (original preservado). Bordas da foto se dissolvem no preto do palco.
 - Limite: a imagem tem 590 × 1280 px (captura de tela); no computador ela aparece ampliada. Uma versão em alta resolução da mesma foto melhora a nitidez.
+
+
+## Correção da navegação por âncoras — 15/11/2026
+
+- Menu principal atualizado para apontar às seções da página inicial: `Próximos Shows` → `#proximos-shows`; `Últimos lançamentos` → `#ultimos-lancamentos`.
+- Botões da primeira dobra alinhados aos mesmos destinos internos.
+- Identificador da seção anteriormente nomeada `discografia` renomeado para `ultimos-lancamentos`.
+- Nenhum desses acessos deve direcionar para `shows.html` ou `lancamentos.html` a partir da navegação principal da home.
+- Arquivo alterado: `index.html`.
+- Commit: `563d6d16fe786a4ec62fe54afa4a6b5f1526eb97`.
