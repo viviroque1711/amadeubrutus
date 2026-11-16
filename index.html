@@ -279,38 +279,31 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(max-width:760px){.official-photos-fold{min-height:100svh;padding:82px 7vw 64px}.official-photos-heading{margin-bottom:25px}.official-photos-heading h2{font-size:clamp(3.2rem,13vw,5rem)}.official-photos-grid{grid-template-columns:1fr;gap:14px}.official-photo img{min-height:0;height:auto;aspect-ratio:4/5}.official-photo--portrait img{aspect-ratio:4/5}}
 
 
-/* Últimas notícias — cards editoriais com links para a imprensa oficial */
-.latest-news-fold{position:relative;isolation:isolate;overflow:hidden;min-height:78svh;padding:clamp(78px,9vw,116px) clamp(22px,7.5vw,110px);color:#f8f8f8;background:#000}
-.latest-news-inner{width:min(100%,980px);margin:0 auto}
-.latest-news-heading{max-width:760px;margin:0 auto clamp(32px,5vw,58px);text-align:center}
-.latest-news-kicker{color:#d6a35d;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase}
-.latest-news-heading h2{margin:18px 0 14px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:400;line-height:.9;letter-spacing:-.025em;text-transform:uppercase}
-.latest-news-heading h2 em{color:#d6a35d;font-style:normal}
-.latest-news-heading p{max-width:640px;margin:0 auto;color:#c4c4c4;font-size:clamp(14px,1.25vw,17px);line-height:1.7}
-.latest-news-grid{display:flex;flex-direction:column;gap:42px}
-.news-card{position:relative;display:flex;flex-direction:column;overflow:hidden;border:0;border-bottom:1px solid #ffffff35;border-radius:0;background:#000;box-shadow:none}
-.news-card-image{display:block;width:100%;height:auto;max-height:560px;aspect-ratio:16/9;object-fit:cover;object-position:center 38%;background:#111}
-.news-card-topline{display:flex;align-items:center;justify-content:space-between;padding:16px 0 8px;color:#d6a35d;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
-.news-card-topline span:first-child{font-family:Impact,'Arial Narrow',sans-serif;font-size:23px;letter-spacing:0}
-.news-card-content{display:flex;flex-direction:column;align-items:flex-start;padding:12px 0 34px}
-.news-source{color:#d6a35d;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
-.news-card h3{margin:14px 0 10px;color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;line-height:1.02;letter-spacing:.005em;text-transform:uppercase}
-.news-card p{max-width:850px;margin:0 0 12px;color:#d0d0d0;font-size:15px;line-height:1.8}
-.news-card a{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:13px 18px;border:1px solid #d6a35d;border-radius:2px;color:#fff;text-decoration:none;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;transition:background .2s,color .2s}
-.news-card a:hover{background:#d6a35d;color:#000}
-.latest-news-footnote{margin:24px 0 0;color:#999;text-align:center;font-size:11px;letter-spacing:.06em}
-@media(max-width:760px){.latest-news-fold{min-height:0;padding:82px 7vw 68px}.latest-news-heading{margin-bottom:28px;text-align:left}.latest-news-heading h2{font-size:clamp(3.2rem,13vw,5.2rem)}.latest-news-heading p{font-size:14px}.latest-news-grid{gap:30px}.news-card-image{aspect-ratio:4/3;max-height:none}.news-card-content{padding:10px 0 26px}.news-card h3{font-size:clamp(1.8rem,8vw,2.45rem)}.news-card p{font-size:14px}.latest-news-footnote{text-align:left;line-height:1.6}}
-@media(prefers-reduced-motion:reduce){.news-card,.news-card a{transition:none!important}}
-
-
-/* Ajuste solicitado: notícias com fotografias reais do artista e fundo preto */
-.latest-news-fold{background:#000!important}
-.latest-news-fold:before{display:none}
-.news-card{background:#050505;border-color:rgba(255,255,255,.2)}
-.news-card-image{display:block;width:100%;height:clamp(190px,25vw,290px);object-fit:cover;object-position:center 32%;filter:saturate(.92);border-bottom:1px solid rgba(255,255,255,.16)}
-.news-card-content{background:#050505}
-.news-card-topline{background:#050505}
-@media(max-width:760px){.news-card-image{height:230px}}
+/* Últimas notícias — duas matérias lado a lado, foto + texto, numa dobra só */
+.latest-news-fold{--vermelho:#ff263d;--azul:#168cff;position:relative;isolation:isolate;min-height:100svh;display:flex;align-items:center;padding:clamp(84px,9vh,110px) clamp(20px,5vw,80px) clamp(48px,6vh,72px);color:#f8f8f8;background:#000}
+.latest-news-inner{width:min(100%,1320px);margin:0 auto}
+.latest-news-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin:0 0 clamp(22px,3.5vh,36px);text-align:left}
+.latest-news-kicker{display:block;color:var(--vermelho);font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase}
+.latest-news-heading h2{margin:10px 0 0;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(2.8rem,5.6vw,5.4rem);font-weight:400;line-height:.9;letter-spacing:-.02em;text-transform:uppercase}
+.latest-news-heading h2 em{color:var(--vermelho);font-style:normal}
+.latest-news-heading p{max-width:440px;margin:0;color:#bdbdbd;font-size:14px;line-height:1.6}
+.latest-news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.news-card{display:grid;grid-template-columns:minmax(0,46%) minmax(0,1fr);min-height:clamp(300px,46vh,420px);overflow:hidden;background:#070708;border:1px solid rgba(255,38,61,.35);border-radius:4px;transition:border-color .25s,transform .25s}
+.news-card:hover{border-color:var(--vermelho);transform:translateY(-3px)}
+.news-card-image{display:block;width:100%;height:100%;min-height:0;object-fit:cover;object-position:center 30%;background:#111}
+.news-card-body{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:clamp(18px,2vw,28px)}
+.news-card-topline{display:flex;align-items:center;gap:12px}
+.news-card-topline .news-num{font-family:Impact,'Arial Narrow',sans-serif;font-size:26px;line-height:1;color:var(--vermelho)}
+.news-card-topline .news-etapa{color:#cfcfcf;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.news-source{display:inline-block;padding:6px 10px;border:1px solid var(--azul);border-radius:2px;color:#fff;background:rgba(22,140,255,.14);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.news-card h3{margin:4px 0 0;color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.45rem,2.1vw,2.1rem);font-weight:400;line-height:1.02;text-transform:uppercase}
+.news-card .news-subtitle{margin:0;color:#cfcfcf;font-size:14px;line-height:1.6}
+.news-card a{display:inline-flex;align-items:center;gap:10px;margin-top:auto;padding:12px 16px;border:1px solid var(--vermelho);border-radius:2px;color:#fff;text-decoration:none;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;transition:background .2s}
+.news-card a:hover,.news-card a:focus-visible{background:var(--vermelho)}
+.latest-news-footnote{margin:18px 0 0;color:#8d8d8d;font-size:11px;letter-spacing:.05em}
+@media(max-width:1100px){.latest-news-grid{grid-template-columns:1fr}.news-card{min-height:clamp(240px,30vh,300px);grid-template-columns:minmax(0,40%) minmax(0,1fr)}.latest-news-fold{min-height:0}}
+@media(max-width:620px){.latest-news-fold{padding:76px 6vw 56px}.latest-news-heading p{font-size:13px}.news-card{grid-template-columns:1fr;min-height:0}.news-card-image{height:auto;aspect-ratio:16/10}.news-card h3{font-size:clamp(1.5rem,7vw,2rem)}}
+@media(prefers-reduced-motion:reduce){.news-card,.news-card a{transition:none}.news-card:hover{transform:none}}
 
 </style>
 </head>
@@ -405,32 +398,26 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 <section class="latest-news-fold" id="ultimas-noticias" aria-labelledby="latest-news-title">
   <div class="latest-news-inner">
     <header class="latest-news-heading">
-      <span class="latest-news-kicker">Na imprensa · The Voice Brasil 2026</span>
-      <h2 id="latest-news-title">Últimas <em>notícias</em></h2>
+      <div><span class="latest-news-kicker">Na imprensa · The Voice Brasil 2026</span>
+      <h2 id="latest-news-title">Últimas <em>notícias</em></h2></div>
       <p>Momentos marcantes da trajetória de Amadeu Brutus no palco do The Voice Brasil, em matérias oficiais do programa.</p>
     </header>
     <div class="latest-news-grid">
       <article class="news-card">
-        <img class="news-card-image" src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg" srcset="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/medium_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg 750w, https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg 1000w" sizes="(max-width: 760px) 86vw, 980px" width="1000" height="666" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'" alt="Amadeu Brutus cantando no palco do The Voice Brasil durante as Audições às Cegas. Foto: Ricardo Bufolin/SBT." loading="lazy" decoding="async">
-        <div class="news-card-topline"><span>01</span><span>Audições às Cegas</span></div>
-        <div class="news-card-content">
+        <img class="news-card-image" src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg" srcset="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/medium_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg 750w, https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg 1000w" sizes="(max-width: 620px) 88vw, (max-width: 1100px) 40vw, 30vw" width="1000" height="666" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'" alt="Amadeu Brutus cantando no palco do The Voice Brasil durante as Audições às Cegas. Foto: Ricardo Bufolin/SBT." loading="lazy" decoding="async">
+        <div class="news-card-body"><div class="news-card-topline"><span class="news-num">01</span><span class="news-etapa">Audições às Cegas</span></div>
           <span class="news-source">The Voice Brasil · SBT</span>
           <h3>Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas</h3>
           <p class="news-subtitle">Cantor interpretou “Ordinary”, conquistou duas cadeiras e escolheu seguir na competição com Lauana Prado.</p>
-          <p>Amadeu Brutus subiu ao palco do The Voice Brasil 2026 para interpretar “Ordinary” e chamou a atenção dos técnicos com sua voz rouca e potente. Com uma apresentação marcante, o cantor mostrou personalidade nas Audições às Cegas e conquistou duas cadeiras.</p>
-          <p>Diogo Nogueira e Lauana Prado viraram para Amadeu, que teve a oportunidade de escolher entre os dois times. Ao final, ele decidiu seguir na competição com Lauana e passou a integrar o #TimeLauana.</p>
           <a href="https://thevoicebrasil.sbt.com.br/noticias/amadeu-brutus-conquista-diogo-e-lauana-nas-audicoes-as-cegas/" target="_blank" rel="noopener noreferrer" aria-label="Ler no site do The Voice Brasil: Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas">Ler notícia completa <span aria-hidden="true">↗</span></a>
         </div>
       </article>
       <article class="news-card">
-        <img class="news-card-image" src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg" srcset="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/medium_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg 750w, https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg 1000w" sizes="(max-width: 760px) 86vw, 980px" width="1000" height="667" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'" alt="Amadeu Brutus e Damatta durante a Batalha do The Voice Brasil. Foto: Ricardo Bufolin/SBT." loading="lazy" decoding="async">
-        <div class="news-card-topline"><span>02</span><span>As Batalhas</span></div>
-        <div class="news-card-content">
+        <img class="news-card-image" src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg" srcset="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/medium_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg 750w, https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg 1000w" sizes="(max-width: 620px) 88vw, (max-width: 1100px) 40vw, 30vw" width="1000" height="667" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'" alt="Amadeu Brutus e Damatta durante a Batalha do The Voice Brasil. Foto: Ricardo Bufolin/SBT." loading="lazy" decoding="async">
+        <div class="news-card-body"><div class="news-card-topline"><span class="news-num">02</span><span class="news-etapa">As Batalhas</span></div>
           <span class="news-source">The Voice Brasil · SBT</span>
           <h3>Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho</h3>
           <p class="news-subtitle">Participantes do Time Lauana encararam um dos grandes sucessos da música brasileira nas Batalhas.</p>
-          <p>Um clássico de Zé Ramalho ganhou espaço nas Batalhas do The Voice Brasil 2026 com a apresentação de Damatta e Amadeu Brutus. Representando o Time Lauana, os participantes dividiram os vocais em “Chão de Giz”, canção que atravessa gerações e faz parte da história da música popular brasileira.</p>
-          <p>Após acompanhar o duelo, Lauana Prado sofreu para escolher, mas decidiu continuar com Damatta em sua equipe. Amadeu Brutus, por sua vez, recebeu uma nova oportunidade no reality: Paulo Ricardo apertou o botão “Peguei!” e resgatou o cantor, que agora passa a integrar o time do técnico.</p>
           <a href="https://thevoicebrasil.sbt.com.br/noticias/damatta-e-amadeu-brutus-dao-novas-vozes-ao-classico-de-ze-ramalho/" target="_blank" rel="noopener noreferrer" aria-label="Ler no site do The Voice Brasil: Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho">Ler notícia completa <span aria-hidden="true">↗</span></a>
         </div>
       </article>
