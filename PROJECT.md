@@ -275,3 +275,12 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `e2f28f94b6a786dc0b56834c73e43bf68e555e5b`.
 - Código no GitHub `main`; deploy Hostinger e validação visual ainda pendentes.
+
+
+## Correção de orientação dos logotipos — 16/11/2026
+
+- A captura mobile enviada pela proprietária mostrou que os dois logotipos decorativos da dobra “A carreira” continuavam orientados para fora; o inferior também aparecia invertido.
+- Ajustadas as rotações no desktop e no mobile: canto superior esquerdo para `-45deg`; canto inferior direito para `135deg`. Os keyframes foram atualizados para manter essas orientações durante a animação, sem inverter novamente os elementos.
+- Arquivo alterado: `index.html`.
+- Commit: `e3853945e912a68c11c7e08e0765ae4472b1c668`.
+- Código atualizado no GitHub `main`. A captura fornecida orientou a correção; a versão publicada e a renderização pós-deploy ainda precisam ser conferidas no site.
