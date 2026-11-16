@@ -467,3 +467,17 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - As imagens não foram recomprimidas nem convertidas. A mudança trata de nomenclatura e referências, não de tamanho/velocidade de carregamento.
 - Alterações preparadas em um único commit atômico para evitar caminhos quebrados entre commits.
 - Deploy Hostinger e validação visual no domínio continuam pendentes.
+
+
+## Padronização integral dos nomes dos arquivos de mídia — 16/11/2026
+
+- Segunda etapa da padronização: renomeados os arquivos de mídia restantes que ainda tinham nomes de exportação do WhatsApp, nomes com espaços ou nomenclatura inconsistente.
+- **Imagens:** 17 fotos de origem WhatsApp passaram a `foto-amadeu-01.jpeg` até `foto-amadeu-17.jpeg`; fundo de chroma passou a `fundo-verde-croma.png`.
+- **Vídeos:** os seis vídeos da pasta `public/videos/` passaram a `video-amadeu-brutus-01.mp4` até `video-amadeu-brutus-06.mp4`. A cópia idêntica mantida na raiz foi renomeada para `video-amadeu-brutus-original.mp4`; os bytes foram preservados.
+- **Áudios:** os três arquivos de áudio recebidos via WhatsApp passaram a `audio-amadeu-brutus-01.mp4` até `audio-amadeu-brutus-03.mp4`; a faixa usada pelo botão de música passou a `faixa-autoral-amadeu-brutus.mp4`.
+- **Identidade visual e interface:** padronizados nomes do recorte do artista, logotipos, textura do feixe, refletor, favicon e apple touch icon para nomes descritivos e sem espaços.
+- Atualizadas as referências operacionais em `index.html`, `shows.html` e `lancamentos.html`, inclusive imagens Open Graph, Twitter Cards, JSON-LD, CSS, cabeçalho, player de áudio e favicons.
+- Os arquivos de mídia foram movidos por referência ao mesmo blob Git: conteúdo binário e extensão foram preservados, sem recompressão ou conversão.
+- As fotos sem uso identificado no HTML receberam nomes neutros numerados (`foto-amadeu-XX`), sem atribuir conteúdo visual que não foi verificado.
+- Os registros históricos anteriores deste documento foram mantidos como histórico; os caminhos atuais são os listados no inventário do repositório.
+- Validação pendente após o commit: busca por referências antigas em todos os arquivos ativos e confirmação do deploy na Hostinger.
