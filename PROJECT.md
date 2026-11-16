@@ -264,3 +264,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `5baf28d7531d00d6243211816dd42682d854a174`.
 - A alteração está no GitHub `main`; publicação na Hostinger ainda não confirmada.
+
+
+## Correção de enquadramento da dobra “A carreira” — 16/11/2026
+
+- Subida da chamada “A carreira” e redução do espaço vertical entre chamada, título e narrativa.
+- Texto condensado e redistribuído em três parágrafos para caber melhor na dobra, preservando os marcos essenciais da trajetória e os nomes citados.
+- Ajustados tamanhos, entrelinhas e margens para desktop e mobile; a seção não cria área interna de rolagem.
+- Logotipo superior esquerdo orientado em diagonal para o centro; logotipo inferior direito corrigido para não ficar invertido e também direcionado para o centro. Animações ajustadas para movimentos sutis em direção ao miolo.
+- Arquivo alterado: `index.html`.
+- Commit: `e2f28f94b6a786dc0b56834c73e43bf68e555e5b`.
+- Código no GitHub `main`; deploy Hostinger e validação visual ainda pendentes.
