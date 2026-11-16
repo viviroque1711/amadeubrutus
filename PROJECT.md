@@ -335,3 +335,13 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `e197937603589682cdf9652b48b4e69aab35f077`.
 - Código atualizado no GitHub `main`; conferir visualmente após atualização da hospedagem.
+
+
+## Menu mobile — somente ícone hamburger — 16/11/2026
+
+- A pedido da proprietária, removido o texto visível “Menu” do botão mobile.
+- O botão agora exibe apenas o ícone hamburger (☰), mantendo nome acessível “Abrir menu” para leitores de tela e preservando `aria-expanded` e `aria-controls`.
+- Navegação desktop e comportamento de abrir/fechar o menu permanecem inalterados.
+- Arquivo alterado: `index.html`.
+- Commit: `c3f5f935fb5fc3c1728eea287edd8e652f039639`.
+- Código atualizado no GitHub `main`; confirmar a renderização no mobile após atualização da hospedagem.
