@@ -203,30 +203,37 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 }
 
 
-/* Composição central com marcas diagonais nos cantos */
-.career-fold{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;text-align:center;min-height:100svh;padding:clamp(120px,14vw,180px) clamp(22px,8vw,120px);overflow:hidden}
+/* Dobra A carreira — composição central compacta, sem rolagem interna */
+.career-fold{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;text-align:center;min-height:100svh;padding:76px clamp(22px,8vw,120px) 68px;overflow:hidden}
 .career-inner{position:relative;z-index:2;width:min(100%,940px);margin:0 auto;display:block}
 .career-copy{width:100%;min-width:0;text-align:center}
-.career-eyebrow{display:block;text-align:center;color:#e21f69;font-size:clamp(12px,1.15vw,15px);font-weight:500;letter-spacing:.12em;text-transform:uppercase}
-.career-copy h2{max-width:900px;margin:24px auto 38px;color:#f8f7f8;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,7.2vw,7rem);font-weight:400;line-height:.96;letter-spacing:-.025em;text-align:center;text-transform:uppercase}
-.career-story{max-width:790px;margin:0 auto;text-align:center}
-.career-story p{margin:0 auto 22px;color:#a9a6ae;font-family:Arial,Helvetica,sans-serif;font-size:clamp(15px,1.22vw,18px);font-weight:400;line-height:1.82;text-align:center}
+.career-eyebrow{display:block;text-align:center;color:#e21f69;font-size:clamp(12px,1.05vw,14px);font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.career-copy h2{max-width:900px;margin:15px auto 25px;color:#f8f7f8;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.2rem,6.5vw,6.2rem);font-weight:400;line-height:.94;letter-spacing:-.025em;text-align:center;text-transform:uppercase}
+.career-story{max-width:830px;margin:0 auto;text-align:center}
+.career-story p{margin:0 auto 15px;color:#a9a6ae;font-family:Arial,Helvetica,sans-serif;font-size:clamp(14px,1.08vw,16px);font-weight:400;line-height:1.58;text-align:center}
 .career-story strong{color:#f7f6f7;font-weight:700}
-.career-closing{max-width:790px;margin:30px auto 0;color:#f7f6f7;font-family:Arial,Helvetica,sans-serif;font-size:clamp(16px,1.35vw,19px);font-weight:700;line-height:1.6;text-align:center}
-.career-corner{position:absolute;z-index:1;display:block;width:clamp(145px,19vw,275px);height:auto;object-fit:contain;opacity:.88;pointer-events:none;filter:drop-shadow(0 12px 24px rgba(0,0,0,.5));will-change:transform}
-.career-corner--top{top:24px;left:24px;transform:rotate(35deg);transform-origin:center;animation:careerTopIn 8s ease-in-out infinite}
-.career-corner--bottom{right:24px;bottom:24px;transform:rotate(215deg);transform-origin:center;animation:careerBottomIn 8s ease-in-out infinite}
-@keyframes careerTopIn{0%,100%{transform:translate(0,0) rotate(35deg)}50%{transform:translate(8px,8px) rotate(39deg)}}
-@keyframes careerBottomIn{0%,100%{transform:translate(0,0) rotate(215deg)}50%{transform:translate(-8px,-8px) rotate(219deg)}}
+.career-closing{max-width:790px;margin:19px auto 0;color:#f7f6f7;font-family:Arial,Helvetica,sans-serif;font-size:clamp(15px,1.15vw,17px);font-weight:700;line-height:1.5;text-align:center}
+.career-corner{position:absolute;z-index:1;display:block;width:clamp(115px,14vw,195px);height:auto;object-fit:contain;opacity:.82;pointer-events:none;filter:drop-shadow(0 10px 20px rgba(0,0,0,.45));will-change:transform}
+.career-corner--top{top:18px;left:18px;transform:rotate(45deg);transform-origin:center;animation:careerTopIn 8s ease-in-out infinite}
+.career-corner--bottom{right:18px;bottom:18px;transform:rotate(-45deg);transform-origin:center;animation:careerBottomIn 8s ease-in-out infinite}
+@keyframes careerTopIn{0%,100%{transform:translate(0,0) rotate(45deg)}50%{transform:translate(7px,7px) rotate(48deg)}}
+@keyframes careerBottomIn{0%,100%{transform:translate(0,0) rotate(-45deg)}50%{transform:translate(-7px,-7px) rotate(-48deg)}}
 @media(max-width:760px){
- .career-fold{min-height:auto;padding:126px 8vw 150px}
+ .career-fold{min-height:100svh;padding:88px 7vw 92px}
  .career-inner{width:100%}
- .career-copy h2{font-size:clamp(3.1rem,13vw,5.2rem);margin:20px auto 28px;line-height:.94}
- .career-story p{font-size:15px;line-height:1.78;margin-bottom:19px}
- .career-closing{font-size:16px;margin-top:25px}
- .career-corner{width:clamp(105px,29vw,155px);opacity:.8}
- .career-corner--top{top:12px;left:4px}
- .career-corner--bottom{right:4px;bottom:12px}
+ .career-copy h2{font-size:clamp(2.65rem,11vw,4.5rem);margin:13px auto 21px;line-height:.94}
+ .career-story{max-width:620px}
+ .career-story p{font-size:clamp(13px,3.55vw,15px);line-height:1.48;margin-bottom:12px}
+ .career-closing{font-size:14px;margin-top:15px}
+ .career-corner{width:clamp(78px,21vw,118px);opacity:.78}
+ .career-corner--top{top:8px;left:2px;transform:rotate(45deg)}
+ .career-corner--bottom{right:2px;bottom:8px;transform:rotate(-45deg)}
+}
+@media(max-height:720px) and (min-width:761px){
+ .career-fold{padding-top:58px;padding-bottom:48px}
+ .career-copy h2{font-size:clamp(3rem,5.4vw,5rem);margin:12px auto 18px}
+ .career-story p{font-size:14px;line-height:1.45;margin-bottom:10px}
+ .career-closing{margin-top:12px}
 }
 @media(prefers-reduced-motion:reduce){.career-corner{animation:none!important}}
 
@@ -322,11 +329,9 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
       <span class="career-eyebrow">A carreira</span>
       <h2 id="career-title">Uma história de talento e esforço.</h2>
       <div class="career-story">
-        <p>Com raízes no <strong>pop e rock brasileiro</strong>, Amadeu Brutus começou a construir sua trajetória musical em meados dos anos 2000, à frente da banda <strong>Visionários S.A.</strong> Desde então, a música deixou de ser apenas uma paixão e se tornou parte essencial da sua vida.</p>
-        <p>Ao longo dos anos, entre apresentações, composições autorais e a experiência de compartilhar seu conhecimento musical como professor, Amadeu construiu uma carreira marcada pelo <strong>talento, esforço e dedicação aos palcos</strong>, além da conexão com o público.</p>
-        <p>Dos botecos e casas de shows de São Paulo aos palcos de grandes produções, sua voz e presença artística únicas foram conquistando espaço. Nessa caminhada, realizou aberturas de shows e dividiu experiências com importantes nomes da música brasileira, como <strong>Titãs, Ana Carolina e Roupa Nova</strong>.</p>
-        <p>Em 2026, uma nova oportunidade levou sua voz ainda mais longe. Amadeu chegou ao palco do <strong>The Voice Brasil</strong>, integrando o <strong>Time Lauana Prado</strong> e, na sequência, migrando para o <strong>Time Paulo Ricardo</strong>, apresentando seu talento a um público ainda maior.</p>
-        <p>Mas essa história não começou diante de grandes públicos. Ela vem de anos de esforço, dedicação, música, estrada e sonhos que nunca deixaram de ser perseguidos.</p>
+        <p>Com raízes no <strong>pop e rock brasileiro</strong>, Amadeu Brutus começou sua trajetória musical em meados dos anos 2000, à frente da banda <strong>Visionários S.A.</strong> Desde então, a música se tornou parte essencial da sua vida.</p>
+        <p>Entre apresentações, composições autorais e a experiência como professor de música, construiu uma carreira marcada por <strong>talento, esforço e dedicação</strong>. Dos botecos e casas de shows de São Paulo aos palcos de grandes produções, conquistou espaço com sua voz e presença artística. Nessa caminhada, realizou aberturas de shows e dividiu experiências com nomes como <strong>Titãs, Ana Carolina e Roupa Nova</strong>.</p>
+        <p>Em 2026, chegou ao palco do <strong>The Voice Brasil</strong>, integrando o <strong>Time Lauana Prado</strong> e, na sequência, migrando para o <strong>Time Paulo Ricardo</strong>. Uma nova etapa diante de um público ainda maior — mas uma história que vem de anos de música, estrada e sonhos que nunca deixaram de ser perseguidos.</p>
       </div>
       <p class="career-closing">E este é apenas o começo de um novo capítulo.</p>
     </div>
