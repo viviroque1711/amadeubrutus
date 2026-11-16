@@ -404,3 +404,51 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Commit: `fd8a67fe315d5a1c4a909373d160db16801411a6`.
 - Estado: alteração registrada no GitHub `main`. Ainda é necessário validar o HTML estruturado e metadados em ferramentas de inspeção, confirmar o deploy Hostinger e solicitar nova indexação no Google Search Console, se a propriedade estiver configurada.
 - Próximas etapas recomendadas: revisar conteúdo textual indexável das seções, conferir sitemap.xml e robots.txt, validar dados estruturados e acompanhar cobertura/indexação no Search Console.
+
+
+## Auditoria SEO técnico e semântico — 16/11/2026
+
+**Escopo:** revisão estática do repositório `main`, contemplando sitemap, robots.txt, semântica HTML, imagens, dados estruturados e preparação para Search Console. A inspeção do domínio publicado não foi concluída: as URLs públicas não puderam ser acessadas pelo verificador nesta sessão, e o registro operacional Hostinger ainda informa que a importação não foi executada.
+
+### 1. Sitemap.xml
+- Arquivo presente e XML com estrutura `urlset` e três URLs: home, `shows.html` e `lancamentos.html`.
+- As três URLs correspondem a páginas existentes e têm canonical próprio no código.
+- Não há `lastmod`; campo opcional. Recomendação: preencher apenas quando houver rotina confiável de atualização, sem datas artificiais.
+- Ponto de atenção: as páginas de shows e lançamentos são páginas de atualização/placeholder; avaliar se devem permanecer indexáveis e no sitemap até receberem conteúdo próprio substancial.
+
+### 2. Robots.txt
+- Arquivo presente, sem diretivas `Disallow` que bloqueiem o site.
+- Permite rastreamento para Googlebot, Bingbot, crawlers de IA e demais agentes por regra geral.
+- Declara sitemap em `https://www.amadeubrutus.com.br/sitemap.xml`.
+- A existência no repositório não comprova resposta HTTP 200 na hospedagem; validar após deploy.
+
+### 3. SEO semântico e estrutura HTML
+- Documento em `pt-BR`, um H1 na home (“Amadeu Brutus”) e hierarquia H2/H3 coerente nas seções e agenda.
+- Conteúdo editorial descreve trajetória, composição, apresentações e participação no The Voice Brasil 2026.
+- A descrição distingue corretamente “Uma viagem ao passado” (arquivo histórico) de “Últimos lançamentos” (espaço futuro para material atual).
+- O texto da seção de lançamentos na home e a página `lancamentos.html` permanecem genéricos/placeholder; enriquecer apenas com informações e lançamentos confirmados.
+- A agenda na home contém dias da semana e horários, sem datas de calendário; não gerar marcação Event/Concert enquanto datas e detalhes necessários não estiverem confirmados.
+
+### 4. SEO de imagens
+- Imagem principal tem ALT descritivo; fotos oficiais têm ALT específico.
+- Refletores e logotipos decorativos usam ALT vazio e `aria-hidden`, adequado para elementos decorativos.
+- A imagem Open Graph/Twitter utiliza arquivo existente no repositório.
+- Nomes de arquivos de imagem são majoritariamente nomes técnicos/WhatsApp; ALT e contexto textual ajudam, mas recomenda-se criar nomes amigáveis somente em futuras otimizações com atualização controlada de referências.
+- Revisar dimensões declaradas da imagem principal e dimensões intrínsecas para evitar deslocamento de layout (CLS); validar carregamento e compressão no domínio após deploy.
+
+### 5. Dados estruturados
+- JSON-LD da home parseado com sucesso; grafo contém `WebSite`, `Person` e `WebPage`.
+- Entidade Person declara nome, descrição, `jobTitle` (Cantor, Músico e Compositor), imagem e perfis oficiais Instagram, YouTube e Spotify.
+- JSON-LD das páginas `shows.html` e `lancamentos.html` também parseia corretamente e referencia a entidade do artista.
+- Não incluir dados de evento sem datas/locais e condições de participação confirmados.
+
+### 6. Google Search Console e indexação
+- Não foi possível verificar propriedade, cobertura, sitemap processado, páginas indexadas, ações manuais ou inspeção de URL, pois não há acesso ao Search Console nesta auditoria.
+- O domínio publicado e os endpoints `/robots.txt` e `/sitemap.xml` também precisam de confirmação HTTP pós-deploy.
+- Após publicação: validar HTTPS e domínio canônico, adicionar/enviar sitemap no Search Console, inspecionar a home e solicitar indexação; monitorar cobertura e consultas.
+
+### Resultado e pendências
+- Auditoria estática concluída nos seis tópicos; nenhum arquivo de site foi alterado nesta etapa.
+- Validações técnicas executadas: extração dos metadados das três páginas, contagem de H1, leitura de canonical, parsing dos três blocos JSON-LD, leitura do robots.txt e leitura das URLs do sitemap.
+- Pendências externas: deploy Hostinger, teste HTTP do domínio, acesso ao Google Search Console e validação visual/real de carregamento.
+- Prioridade recomendada: (1) confirmar deploy; (2) validar robots/sitemap no domínio; (3) decidir indexabilidade das páginas placeholder `shows.html` e `lancamentos.html`; (4) revisar dimensão/CLS das imagens; (5) enviar sitemap e acompanhar indexação.
