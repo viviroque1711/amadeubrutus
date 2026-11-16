@@ -212,3 +212,15 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Nenhum desses acessos deve direcionar para `shows.html` ou `lancamentos.html` a partir da navegação principal da home.
 - Arquivo alterado: `index.html`.
 - Commit: `563d6d16fe786a4ec62fe54afa4a6b5f1526eb97`.
+
+
+## Animação de entrada — Próximos Shows — 15/11/2026
+
+- Adicionada entrada horizontal sequencial aos itens `.show-item`: linhas ímpares deslizam da esquerda e pares da direita.
+- Animação é acionada quando cada apresentação entra na área visível, usando `IntersectionObserver`; cada item é revelado uma única vez.
+- Cadência escalonada de 130 ms entre itens, com transição suave de opacidade e deslocamento horizontal.
+- Em dispositivos com `prefers-reduced-motion: reduce`, os itens permanecem visíveis sem animação.
+- Sem suporte a IntersectionObserver ou sem JavaScript, os eventos continuam visíveis; a classe que oculta itens só é ativada quando a animação pode funcionar.
+- Arquivo alterado: `index.html`.
+- Commit: `fd222570b7fbcc1b159419c9edde4a57594270ed`.
+- Publicação visual na hospedagem ainda precisa ser confirmada.
