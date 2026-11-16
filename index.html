@@ -278,6 +278,31 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .official-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:42px 22px 18px;color:#fff;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;background:linear-gradient(transparent,rgba(0,0,0,.78))}
 @media(max-width:760px){.official-photos-fold{min-height:100svh;padding:82px 7vw 64px}.official-photos-heading{margin-bottom:25px}.official-photos-heading h2{font-size:clamp(3.2rem,13vw,5rem)}.official-photos-grid{grid-template-columns:1fr;gap:14px}.official-photo img{min-height:0;height:auto;aspect-ratio:4/5}.official-photo--portrait img{aspect-ratio:4/5}}
 
+
+/* Últimas notícias — cards editoriais com links para a imprensa oficial */
+.latest-news-fold{position:relative;isolation:isolate;overflow:hidden;min-height:78svh;padding:clamp(78px,9vw,116px) clamp(22px,7.5vw,110px);color:#f8f4fa;background:radial-gradient(ellipse at 88% 12%,rgba(232,35,126,.2),transparent 36%),linear-gradient(145deg,#08070c 0%,#17101b 55%,#09070d 100%)}
+.latest-news-fold:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.16;background:repeating-linear-gradient(135deg,transparent 0 42px,rgba(255,255,255,.045) 43px,transparent 44px)}
+.latest-news-inner{width:min(100%,1160px);margin:0 auto}
+.latest-news-heading{max-width:760px;margin:0 auto clamp(32px,5vw,58px);text-align:center}
+.latest-news-kicker{color:#ff4b9a;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase}
+.latest-news-heading h2{margin:18px 0 14px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:400;line-height:.9;letter-spacing:-.025em;text-transform:uppercase}
+.latest-news-heading h2 em{color:#d6a2d0;font-style:normal}
+.latest-news-heading p{max-width:640px;margin:0 auto;color:#c4bac8;font-size:clamp(14px,1.25vw,17px);line-height:1.7}
+.latest-news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.news-card{position:relative;display:flex;min-height:360px;flex-direction:column;overflow:hidden;border:1px solid rgba(239,197,226,.24);border-radius:18px;background:linear-gradient(145deg,rgba(48,24,48,.94),rgba(13,10,18,.97));box-shadow:0 22px 55px rgba(0,0,0,.3);transition:transform .25s,border-color .25s,box-shadow .25s}
+.news-card:hover{transform:translateY(-5px);border-color:rgba(255,75,154,.65);box-shadow:0 28px 65px rgba(0,0,0,.42),0 0 28px rgba(255,75,154,.09)}
+.news-card-topline{display:flex;align-items:center;justify-content:space-between;padding:17px 22px;border-bottom:1px solid rgba(255,255,255,.12);color:#f5b3d3;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.news-card-topline span:first-child{color:#ff4b9a;font-family:Impact,'Arial Narrow',sans-serif;font-size:25px;letter-spacing:0}
+.news-card-content{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:clamp(22px,3vw,34px)}
+.news-source{color:#d6a2d0;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.news-card h3{margin:15px 0 13px;color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.7rem,3vw,2.55rem);font-weight:400;line-height:1.02;letter-spacing:.005em;text-transform:uppercase}
+.news-card p{margin:0 0 25px;color:#c8bfca;font-size:14px;line-height:1.75}
+.news-card a{display:inline-flex;align-items:center;gap:10px;margin-top:auto;padding:13px 17px;border:1px solid #e63b91;border-radius:999px;color:#fff;text-decoration:none;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s}
+.news-card a:hover{transform:translateY(-2px);background:#e63b91;color:#fff}
+.latest-news-footnote{margin:24px 0 0;color:#958b99;text-align:center;font-size:11px;letter-spacing:.06em}
+@media(max-width:760px){.latest-news-fold{min-height:0;padding:82px 7vw 68px}.latest-news-heading{margin-bottom:28px;text-align:left}.latest-news-heading h2{font-size:clamp(3.2rem,13vw,5.2rem)}.latest-news-heading p{font-size:14px}.latest-news-grid{grid-template-columns:1fr;gap:15px}.news-card{min-height:0}.news-card-content{padding:24px}.news-card h3{font-size:clamp(1.8rem,8vw,2.45rem)}.latest-news-footnote{text-align:left;line-height:1.6}}
+@media(prefers-reduced-motion:reduce){.news-card,.news-card a{transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -368,10 +393,35 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <h2 id="latest-releases-title">Últimos lançamentos</h2>
   <p>As novidades musicais de Amadeu Brutus terão aqui seu próprio espaço.</p>
 </section>
-<section class="site-section latest-news-fold" id="ultimas-noticias" aria-labelledby="latest-news-title">
-  <span class="eyebrow">Imprensa & atualizações</span>
-  <h2 id="latest-news-title">Últimas notícias</h2>
-  <p>Novidades, notícias e momentos importantes da trajetória de Amadeu Brutus serão publicados aqui.</p>
+<section class="latest-news-fold" id="ultimas-noticias" aria-labelledby="latest-news-title">
+  <div class="latest-news-inner">
+    <header class="latest-news-heading">
+      <span class="latest-news-kicker">Na imprensa · The Voice Brasil 2026</span>
+      <h2 id="latest-news-title">Últimas <em>notícias</em></h2>
+      <p>Momentos marcantes da trajetória de Amadeu Brutus no palco do The Voice Brasil, em matérias oficiais do programa.</p>
+    </header>
+    <div class="latest-news-grid">
+      <article class="news-card">
+        <div class="news-card-topline"><span>01</span><span>Audições às Cegas</span></div>
+        <div class="news-card-content">
+          <span class="news-source">The Voice Brasil · SBT</span>
+          <h3>Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas</h3>
+          <p>Com a interpretação de “Ordinary”, Amadeu conquistou duas cadeiras e escolheu seguir na competição com Lauana Prado.</p>
+          <a href="https://thevoicebrasil.sbt.com.br/noticias/amadeu-brutus-conquista-diogo-e-lauana-nas-audicoes-as-cegas/" target="_blank" rel="noopener noreferrer" aria-label="Ler no site do The Voice Brasil: Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas">Ler notícia completa <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-card-topline"><span>02</span><span>As Batalhas</span></div>
+        <div class="news-card-content">
+          <span class="news-source">The Voice Brasil · SBT</span>
+          <h3>Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho</h3>
+          <p>Na interpretação de “Chão de Giz”, Amadeu recebeu uma nova oportunidade no programa e foi resgatado por Paulo Ricardo.</p>
+          <a href="https://thevoicebrasil.sbt.com.br/noticias/damatta-e-amadeu-brutus-dao-novas-vozes-ao-classico-de-ze-ramalho/" target="_blank" rel="noopener noreferrer" aria-label="Ler no site do The Voice Brasil: Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho">Ler notícia completa <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+    <p class="latest-news-footnote">Leia as matérias completas diretamente no portal oficial do The Voice Brasil.</p>
+  </div>
 </section>
 <section class="trajectory career-fold" id="trajetoria" aria-labelledby="career-title">
   <img class="career-corner career-corner--top" src="public/brand/amadeu-brutus-logo-oficial.png" alt="" aria-hidden="true" loading="lazy" decoding="async">

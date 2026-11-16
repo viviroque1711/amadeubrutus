@@ -512,3 +512,13 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Menu principal reorganizado e atualizado com o novo link “Últimas notícias”.
 - Arquivo alterado: `index.html`.
 - Validação técnica: verificar ordem dos IDs, unicidade dos IDs e destino dos links de navegação. A validação visual desktop/mobile e o deploy Hostinger permanecem pendentes.
+
+
+## Inclusão das matérias oficiais do The Voice Brasil — 16/11/2026
+
+- A seção `#ultimas-noticias` da home deixou de ser um texto provisório e passou a exibir dois cards editoriais responsivos com links externos para as matérias oficiais do SBT.
+- Matéria 1: “Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas”. Resumo: interpretação de “Ordinary”, conquista de duas cadeiras e escolha por seguir com Lauana Prado.
+- Matéria 2: “Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho”. Resumo: interpretação de “Chão de Giz” nas Batalhas e resgate de Amadeu por Paulo Ricardo.
+- Os títulos e resumos foram conferidos nas páginas indexadas do portal oficial The Voice Brasil/SBT. Os cards não reproduzem imagens externas nem inventam datas; cada CTA abre a matéria original em nova aba.
+- Direção visual: fundo escuro ameixa/preto, acentos magenta e lavanda, hierarquia tipográfica condensada, cartões com bordas sutis e interação hover; grade em duas colunas no desktop e coluna única no mobile.
+- Arquivo alterado: `index.html`. Deploy Hostinger e validação visual no domínio continuam pendentes.
