@@ -240,3 +240,15 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Refletores fora do menu: cantos de cima a 17% da altura, dois intermediários a 14%; ficam abaixo do cabeçalho e dos botões.
 - Feixes e clarão em prata (antes branco quente).
 - Celular: só os quatro refletores dos cantos (os do meio cobriam o rosto).
+
+
+## Dobra editorial — A carreira — 16/11/2026
+
+- A seção de trajetória após a agenda foi convertida na dobra editorial “A carreira”, preservando o identificador `#trajetoria` e os demais destinos de navegação.
+- Narrativa aprovada para revisão: início em meados dos anos 2000 com Visionários S.A.; apresentações, composições autorais e experiência como professor; aberturas de shows e referências a Titãs, Ana Carolina e Roupa Nova; participação no The Voice Brasil 2026, Time Lauana Prado e posterior migração para Time Paulo Ricardo.
+- Direção visual: chamada “A carreira” em magenta/vermelho, título condensado em caixa alta, corpo em sans-serif cinza, destaques pontuais em branco/negrito.
+- Logotipo existente `public/brand/amadeubrutus-logo.png` aplicado sem moldura, em diagonal, com flutuação lenta; animação desativada para `prefers-reduced-motion`.
+- Responsividade: texto e logotipo em colunas no desktop; narrativa seguida do logotipo no mobile.
+- Arquivo alterado: `index.html`.
+- Commit: `f901b81333e1e3afcd88f424b62de07da5f00a39`.
+- A alteração está registrada no GitHub `main`. A documentação de hospedagem ainda registra que a importação Hostinger não foi executada; portanto, não declarar o site publicado até confirmar o deploy na hospedagem.
