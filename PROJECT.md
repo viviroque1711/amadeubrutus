@@ -252,3 +252,15 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `f901b81333e1e3afcd88f424b62de07da5f00a39`.
 - A alteração está registrada no GitHub `main`. A documentação de hospedagem ainda registra que a importação Hostinger não foi executada; portanto, não declarar o site publicado até confirmar o deploy na hospedagem.
+
+
+## Refinamento visual da dobra “A carreira” — 16/11/2026
+
+- Texto integral centralizado: chamada, título, parágrafos, destaques e frase de encerramento.
+- Logotipo oficial duplicado em dois cantos: superior esquerdo e inferior direito, ambos inclinados em direções opostas para orientar a composição visual para o centro.
+- Os dois logotipos usam o mesmo asset transparente `public/brand/amadeubrutus-logo.png`, sem caixa ou fundo adicional, com movimento sutil em direção ao centro.
+- No mobile, a composição mantém o texto centralizado e reduz os logotipos para preservar a leitura.
+- Movimento desativado para usuários com preferência por movimento reduzido.
+- Arquivo alterado: `index.html`.
+- Commit: `5baf28d7531d00d6243211816dd42682d854a174`.
+- A alteração está no GitHub `main`; publicação na Hostinger ainda não confirmada.
