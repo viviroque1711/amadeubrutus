@@ -303,6 +303,16 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(max-width:760px){.latest-news-fold{min-height:0;padding:82px 7vw 68px}.latest-news-heading{margin-bottom:28px;text-align:left}.latest-news-heading h2{font-size:clamp(3.2rem,13vw,5.2rem)}.latest-news-heading p{font-size:14px}.latest-news-grid{grid-template-columns:1fr;gap:15px}.news-card{min-height:0}.news-card-content{padding:24px}.news-card h3{font-size:clamp(1.8rem,8vw,2.45rem)}.latest-news-footnote{text-align:left;line-height:1.6}}
 @media(prefers-reduced-motion:reduce){.news-card,.news-card a{transition:none!important}}
 
+
+/* Ajuste solicitado: notícias com fotografias reais do artista e fundo preto */
+.latest-news-fold{background:#000!important}
+.latest-news-fold:before{display:none}
+.news-card{background:#050505;border-color:rgba(255,255,255,.2)}
+.news-card-image{display:block;width:100%;height:clamp(190px,25vw,290px);object-fit:cover;object-position:center 32%;filter:saturate(.92);border-bottom:1px solid rgba(255,255,255,.16)}
+.news-card-content{background:#050505}
+.news-card-topline{background:#050505}
+@media(max-width:760px){.news-card-image{height:230px}}
+
 </style>
 </head>
 <body>
@@ -402,6 +412,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     </header>
     <div class="latest-news-grid">
       <article class="news-card">
+        <img class="news-card-image" src="public/images/amadeu-brutus-foto-oficial-destaque.jpeg" alt="Amadeu Brutus, artista e cantor" loading="lazy" decoding="async">
         <div class="news-card-topline"><span>01</span><span>Audições às Cegas</span></div>
         <div class="news-card-content">
           <span class="news-source">The Voice Brasil · SBT</span>
@@ -411,6 +422,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
         </div>
       </article>
       <article class="news-card">
+        <img class="news-card-image" src="public/brand/amadeu-brutus-apresentacao-ao-vivo.webp" alt="Amadeu Brutus em apresentação ao vivo" loading="lazy" decoding="async">
         <div class="news-card-topline"><span>02</span><span>As Batalhas</span></div>
         <div class="news-card-content">
           <span class="news-source">The Voice Brasil · SBT</span>

@@ -522,3 +522,12 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Os títulos e resumos foram conferidos nas páginas indexadas do portal oficial The Voice Brasil/SBT. Os cards não reproduzem imagens externas nem inventam datas; cada CTA abre a matéria original em nova aba.
 - Direção visual: fundo escuro ameixa/preto, acentos magenta e lavanda, hierarquia tipográfica condensada, cartões com bordas sutis e interação hover; grade em duas colunas no desktop e coluna única no mobile.
 - Arquivo alterado: `index.html`. Deploy Hostinger e validação visual no domínio continuam pendentes.
+
+
+## Ajuste visual das notícias — fotos do artista e fundo preto — 16/11/2026
+
+- A pedido da proprietária, os cards de “Últimas notícias” passaram a exibir fotografias existentes de Amadeu Brutus, em vez de cards apenas tipográficos.
+- Primeiro card utiliza `public/images/amadeu-brutus-foto-oficial-destaque.jpeg`; segundo utiliza `public/brand/amadeu-brutus-apresentacao-ao-vivo.webp`.
+- Fundo da seção e dos cards alterado para preto, removendo o fundo ameixa/gradiente anterior.
+- Mantidos títulos, resumos, acessibilidade (ALT das imagens), links oficiais do SBT e comportamento responsivo.
+- Arquivo alterado: `index.html`. Publicação na Hostinger e conferência visual no domínio ainda pendentes.
