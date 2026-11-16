@@ -174,3 +174,17 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - H1 continua com o texto "Amadeu Brutus" para buscadores e leitores de tela; logo da abertura é decorativo dentro do H1.
 - Sem JavaScript ou com movimento reduzido: cena final estática (fachos acesos na marca, logo visível).
 - Validação local: desktop 1440 px e celular 390 px, sem erros de JavaScript e sem rolagem horizontal.
+
+
+## Segunda dobra — Próximos Shows — 15/11/2026
+
+- Inserida a seção `#proximos-shows` imediatamente após a primeira dobra (`#inicio`) e antes da seção de trajetória.
+- A primeira dobra foi preservada; a alteração acrescenta CSS e markup da nova seção, sem modificar o conteúdo interno, as animações ou os controles da abertura.
+- Direção visual: fundo preto, título de alto contraste, acento magenta, fotografia vertical do Amadeu aplicada como imagem de fundo lateral com sobreposições escuras para manter a leitura.
+- Responsividade: composição desktop com fotografia concentrada à direita; em telas pequenas, fotografia em camada de fundo com contraste reforçado e lista em duas colunas compactas.
+- Agenda inicial transcrita do material visual fornecido pela proprietária: 8 apresentações, organizadas por dia da semana e horário. Não foram inferidas datas de calendário, pois o material não as informa.
+- Não foram criados links de ingressos, pois nenhum endereço de venda foi fornecido.
+- Manutenção semanal: atualizar os elementos `.show-item` dentro de `.shows-list`, mantendo os campos dia, horário, local e endereço. Remover eventos encerrados e inserir os novos na ordem cronológica; preservar CSS e estrutura.
+- Arquivo alterado: `index.html`.
+- Commit: `035d27f7071942d44d3d14061038993054c9003c`.
+- Estado: alteração gravada no GitHub `main`; confirmar implantação automática da Hostinger e fazer validação visual em desktop/mobile antes de considerar a dobra aprovada em produção.
