@@ -369,3 +369,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `018ae5a43ad25e0da3c3092e7b116c510323b77d`.
 - Código atualizado no GitHub `main`; validar a sequência e o espaçamento das dobras no desktop/mobile após atualização da hospedagem.
+
+
+## Separação entre arquivo musical e últimos lançamentos — 16/11/2026
+
+- Correção de conceito solicitada pela proprietária: o player/perfil Spotify enviado corresponde a material de uma fase anterior, não deve ser apresentado como “Últimos lançamentos” nem sugerir que representa a voz/formação artística atual.
+- A antiga dobra Spotify agora é “Uma viagem no tempo”, com título “Uma viagem ao passado”, mantendo a estética vintage e o embed do perfil informado.
+- O ID foi alterado para `#discografia`; o item de navegação correspondente foi renomeado para “Uma viagem no tempo”.
+- Criada uma dobra separada `#ultimos-lancamentos`, com o título “Últimos lançamentos”, reservada para os lançamentos atuais. O conteúdo musical dessa seção ainda depende de materiais/links oficiais fornecidos e não foi inventado.
+- Arquivo alterado: `index.html`.
+- Commit: `c95f855ea0151d173e56466cf4f6ddf9887e031e`.
+- Código atualizado no GitHub `main`; conferir visualmente após deploy.
