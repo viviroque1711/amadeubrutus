@@ -284,3 +284,9 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Arquivo alterado: `index.html`.
 - Commit: `e3853945e912a68c11c7e08e0765ae4472b1c668`.
 - Código atualizado no GitHub `main`. A captura fornecida orientou a correção; a versão publicada e a renderização pós-deploy ainda precisam ser conferidas no site.
+
+## Correção AMADEU no celular e luz mais intensa — 16/11/2026
+
+- Bug: no celular, a regra `.hero .amadeu{-webkit-text-stroke:1.8px}` redefinia a cor do contorno para a cor do texto (quase transparente), e a palavra AMADEU da entrada sumia. Corrigido para contorno branco de 2 px.
+- Animações de entrada sem `filter: blur` (Safari pode não desenhar texto contornado com filtro animado); AMADEU final com leve preenchimento e tamanho maior no celular.
+- Luz intensificada: feixe prata mais denso e mais largo, opacidade dos fachos e das lentes maior nas batidas e na cena final.
