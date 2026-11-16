@@ -531,3 +531,15 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Fundo da seção e dos cards alterado para preto, removendo o fundo ameixa/gradiente anterior.
 - Mantidos títulos, resumos, acessibilidade (ALT das imagens), links oficiais do SBT e comportamento responsivo.
 - Arquivo alterado: `index.html`. Publicação na Hostinger e conferência visual no domínio ainda pendentes.
+
+
+## Notícias oficiais — imagens originais do SBT e apresentação vertical — 16/11/2026
+
+- A proprietária reenviou os dois links oficiais das matérias do The Voice Brasil/SBT e esclareceu que deseja a apresentação editorial em coluna, uma notícia abaixo da outra.
+- As páginas oficiais foram abertas e inspecionadas. Foram preservados os títulos, subtítulos e textos descritivos publicados pelo SBT, sem resumir ou reescrever o conteúdo editorial.
+- Primeira matéria: imagem original de Amadeu Brutus cantando no palco nas Audições às Cegas, servida pelo domínio de assets do The Voice/SBT; crédito identificado no nome do arquivo como Ricardo Bufolin/SBT.
+- Segunda matéria: imagem original da Batalha entre Amadeu Brutus e Damatta, servida pelo domínio de assets do The Voice/SBT; crédito identificado no nome do arquivo como Ricardo Bufolin/SBT.
+- Substituídas as fotos do banco próprio pelas URLs diretas das imagens originais publicadas nas respectivas matérias oficiais.
+- Layout da seção atualizado para fundo preto e fluxo vertical (uma matéria por linha), com imagem em destaque, título, subtítulo, descrição integral e link para a matéria original. Responsividade mobile preservada.
+- Arquivo alterado: `index.html`. Documento de governança atualizado sem remover registros anteriores.
+- A atualização foi registrada no GitHub `main`; ainda é necessário conferir a renderização no domínio publicado após a atualização da hospedagem. As imagens são carregadas diretamente do servidor de mídia do SBT, portanto a exibição depende de disponibilidade externa desse servidor.

@@ -280,27 +280,26 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 
 
 /* Últimas notícias — cards editoriais com links para a imprensa oficial */
-.latest-news-fold{position:relative;isolation:isolate;overflow:hidden;min-height:78svh;padding:clamp(78px,9vw,116px) clamp(22px,7.5vw,110px);color:#f8f4fa;background:radial-gradient(ellipse at 88% 12%,rgba(232,35,126,.2),transparent 36%),linear-gradient(145deg,#08070c 0%,#17101b 55%,#09070d 100%)}
-.latest-news-fold:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.16;background:repeating-linear-gradient(135deg,transparent 0 42px,rgba(255,255,255,.045) 43px,transparent 44px)}
-.latest-news-inner{width:min(100%,1160px);margin:0 auto}
+.latest-news-fold{position:relative;isolation:isolate;overflow:hidden;min-height:78svh;padding:clamp(78px,9vw,116px) clamp(22px,7.5vw,110px);color:#f8f8f8;background:#000}
+.latest-news-inner{width:min(100%,980px);margin:0 auto}
 .latest-news-heading{max-width:760px;margin:0 auto clamp(32px,5vw,58px);text-align:center}
-.latest-news-kicker{color:#ff4b9a;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase}
+.latest-news-kicker{color:#d6a35d;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase}
 .latest-news-heading h2{margin:18px 0 14px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:400;line-height:.9;letter-spacing:-.025em;text-transform:uppercase}
-.latest-news-heading h2 em{color:#d6a2d0;font-style:normal}
-.latest-news-heading p{max-width:640px;margin:0 auto;color:#c4bac8;font-size:clamp(14px,1.25vw,17px);line-height:1.7}
-.latest-news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-.news-card{position:relative;display:flex;min-height:360px;flex-direction:column;overflow:hidden;border:1px solid rgba(239,197,226,.24);border-radius:18px;background:linear-gradient(145deg,rgba(48,24,48,.94),rgba(13,10,18,.97));box-shadow:0 22px 55px rgba(0,0,0,.3);transition:transform .25s,border-color .25s,box-shadow .25s}
-.news-card:hover{transform:translateY(-5px);border-color:rgba(255,75,154,.65);box-shadow:0 28px 65px rgba(0,0,0,.42),0 0 28px rgba(255,75,154,.09)}
-.news-card-topline{display:flex;align-items:center;justify-content:space-between;padding:17px 22px;border-bottom:1px solid rgba(255,255,255,.12);color:#f5b3d3;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
-.news-card-topline span:first-child{color:#ff4b9a;font-family:Impact,'Arial Narrow',sans-serif;font-size:25px;letter-spacing:0}
-.news-card-content{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:clamp(22px,3vw,34px)}
-.news-source{color:#d6a2d0;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
-.news-card h3{margin:15px 0 13px;color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.7rem,3vw,2.55rem);font-weight:400;line-height:1.02;letter-spacing:.005em;text-transform:uppercase}
-.news-card p{margin:0 0 25px;color:#c8bfca;font-size:14px;line-height:1.75}
-.news-card a{display:inline-flex;align-items:center;gap:10px;margin-top:auto;padding:13px 17px;border:1px solid #e63b91;border-radius:999px;color:#fff;text-decoration:none;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s}
-.news-card a:hover{transform:translateY(-2px);background:#e63b91;color:#fff}
-.latest-news-footnote{margin:24px 0 0;color:#958b99;text-align:center;font-size:11px;letter-spacing:.06em}
-@media(max-width:760px){.latest-news-fold{min-height:0;padding:82px 7vw 68px}.latest-news-heading{margin-bottom:28px;text-align:left}.latest-news-heading h2{font-size:clamp(3.2rem,13vw,5.2rem)}.latest-news-heading p{font-size:14px}.latest-news-grid{grid-template-columns:1fr;gap:15px}.news-card{min-height:0}.news-card-content{padding:24px}.news-card h3{font-size:clamp(1.8rem,8vw,2.45rem)}.latest-news-footnote{text-align:left;line-height:1.6}}
+.latest-news-heading h2 em{color:#d6a35d;font-style:normal}
+.latest-news-heading p{max-width:640px;margin:0 auto;color:#c4c4c4;font-size:clamp(14px,1.25vw,17px);line-height:1.7}
+.latest-news-grid{display:flex;flex-direction:column;gap:42px}
+.news-card{position:relative;display:flex;flex-direction:column;overflow:hidden;border:0;border-bottom:1px solid #ffffff35;border-radius:0;background:#000;box-shadow:none}
+.news-card-image{display:block;width:100%;height:auto;max-height:560px;aspect-ratio:16/9;object-fit:cover;object-position:center 38%;background:#111}
+.news-card-topline{display:flex;align-items:center;justify-content:space-between;padding:16px 0 8px;color:#d6a35d;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.news-card-topline span:first-child{font-family:Impact,'Arial Narrow',sans-serif;font-size:23px;letter-spacing:0}
+.news-card-content{display:flex;flex-direction:column;align-items:flex-start;padding:12px 0 34px}
+.news-source{color:#d6a35d;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.news-card h3{margin:14px 0 10px;color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;line-height:1.02;letter-spacing:.005em;text-transform:uppercase}
+.news-card p{max-width:850px;margin:0 0 12px;color:#d0d0d0;font-size:15px;line-height:1.8}
+.news-card a{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:13px 18px;border:1px solid #d6a35d;border-radius:2px;color:#fff;text-decoration:none;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;transition:background .2s,color .2s}
+.news-card a:hover{background:#d6a35d;color:#000}
+.latest-news-footnote{margin:24px 0 0;color:#999;text-align:center;font-size:11px;letter-spacing:.06em}
+@media(max-width:760px){.latest-news-fold{min-height:0;padding:82px 7vw 68px}.latest-news-heading{margin-bottom:28px;text-align:left}.latest-news-heading h2{font-size:clamp(3.2rem,13vw,5.2rem)}.latest-news-heading p{font-size:14px}.latest-news-grid{gap:30px}.news-card-image{aspect-ratio:4/3;max-height:none}.news-card-content{padding:10px 0 26px}.news-card h3{font-size:clamp(1.8rem,8vw,2.45rem)}.news-card p{font-size:14px}.latest-news-footnote{text-align:left;line-height:1.6}}
 @media(prefers-reduced-motion:reduce){.news-card,.news-card a{transition:none!important}}
 
 
@@ -412,22 +411,26 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     </header>
     <div class="latest-news-grid">
       <article class="news-card">
-        <img class="news-card-image" src="public/images/amadeu-brutus-foto-oficial-destaque.jpeg" alt="Amadeu Brutus, artista e cantor" loading="lazy" decoding="async">
+        <img class="news-card-image" src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg" alt="Amadeu Brutus cantando no palco do The Voice Brasil durante as Audições às Cegas. Foto: Ricardo Bufolin/SBT." loading="lazy" decoding="async">
         <div class="news-card-topline"><span>01</span><span>Audições às Cegas</span></div>
         <div class="news-card-content">
           <span class="news-source">The Voice Brasil · SBT</span>
           <h3>Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas</h3>
-          <p>Com a interpretação de “Ordinary”, Amadeu conquistou duas cadeiras e escolheu seguir na competição com Lauana Prado.</p>
+          <p class="news-subtitle">Cantor interpretou “Ordinary”, conquistou duas cadeiras e escolheu seguir na competição com Lauana Prado.</p>
+          <p>Amadeu Brutus subiu ao palco do The Voice Brasil 2026 para interpretar “Ordinary” e chamou a atenção dos técnicos com sua voz rouca e potente. Com uma apresentação marcante, o cantor mostrou personalidade nas Audições às Cegas e conquistou duas cadeiras.</p>
+          <p>Diogo Nogueira e Lauana Prado viraram para Amadeu, que teve a oportunidade de escolher entre os dois times. Ao final, ele decidiu seguir na competição com Lauana e passou a integrar o #TimeLauana.</p>
           <a href="https://thevoicebrasil.sbt.com.br/noticias/amadeu-brutus-conquista-diogo-e-lauana-nas-audicoes-as-cegas/" target="_blank" rel="noopener noreferrer" aria-label="Ler no site do The Voice Brasil: Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas">Ler notícia completa <span aria-hidden="true">↗</span></a>
         </div>
       </article>
       <article class="news-card">
-        <img class="news-card-image" src="public/brand/amadeu-brutus-apresentacao-ao-vivo.webp" alt="Amadeu Brutus em apresentação ao vivo" loading="lazy" decoding="async">
+        <img class="news-card-image" src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg" alt="Amadeu Brutus e Damatta durante a Batalha do The Voice Brasil. Foto: Ricardo Bufolin/SBT." loading="lazy" decoding="async">
         <div class="news-card-topline"><span>02</span><span>As Batalhas</span></div>
         <div class="news-card-content">
           <span class="news-source">The Voice Brasil · SBT</span>
           <h3>Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho</h3>
-          <p>Na interpretação de “Chão de Giz”, Amadeu recebeu uma nova oportunidade no programa e foi resgatado por Paulo Ricardo.</p>
+          <p class="news-subtitle">Participantes do Time Lauana encararam um dos grandes sucessos da música brasileira nas Batalhas.</p>
+          <p>Um clássico de Zé Ramalho ganhou espaço nas Batalhas do The Voice Brasil 2026 com a apresentação de Damatta e Amadeu Brutus. Representando o Time Lauana, os participantes dividiram os vocais em “Chão de Giz”, canção que atravessa gerações e faz parte da história da música popular brasileira.</p>
+          <p>Após acompanhar o duelo, Lauana Prado sofreu para escolher, mas decidiu continuar com Damatta em sua equipe. Amadeu Brutus, por sua vez, recebeu uma nova oportunidade no reality: Paulo Ricardo apertou o botão “Peguei!” e resgatou o cantor, que agora passa a integrar o time do técnico.</p>
           <a href="https://thevoicebrasil.sbt.com.br/noticias/damatta-e-amadeu-brutus-dao-novas-vozes-ao-classico-de-ze-ramalho/" target="_blank" rel="noopener noreferrer" aria-label="Ler no site do The Voice Brasil: Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho">Ler notícia completa <span aria-hidden="true">↗</span></a>
         </div>
       </article>
