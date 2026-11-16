@@ -196,3 +196,9 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Cena final: "AMADEU" contornado sobre "BRUTUS" sólido, como H1 em texto real.
 - Refletores: lentes brancas com halo e estrela de brilho em camada acima do cabeçalho; fachos com núcleo de luz mais intenso; cabeçalho sem faixa escura sobre o palco (menu com sombra no texto).
 - Validação local: desktop 1440 px e celular 390 px, sem erros de JavaScript e sem rolagem horizontal.
+
+## Troca da foto da primeira dobra — 15/11/2026
+
+- A pedido da proprietária, entre duas opções (cantando no palco do The Voice, em close; e tocando violão em palco escuro, de óculos), escolhida a foto cantando: rosto e emoção legíveis, luz de palco e ligação com The Voice Brasil 2026.
+- Arquivo: `public/images/WhatsApp Image 2026-11-15 at 11.35.46 AM (1).jpeg` recortado sem a barra de status do celular em `public/brand/amadeu-voz.webp` (original preservado). Bordas da foto se dissolvem no preto do palco.
+- Limite: a imagem tem 590 × 1280 px (captura de tela); no computador ela aparece ampliada. Uma versão em alta resolução da mesma foto melhora a nitidez.
