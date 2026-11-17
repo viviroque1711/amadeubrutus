@@ -283,6 +283,26 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(max-width:760px){.official-photos-fold{min-height:100svh;padding:82px 7vw 64px}.official-photos-heading{margin-bottom:25px}.official-photos-heading h2{font-size:clamp(3.2rem,13vw,5rem)}.official-photos-grid{grid-template-columns:1fr;gap:14px}.official-photo img{min-height:0;height:auto;aspect-ratio:4/5}.official-photo--portrait img{aspect-ratio:4/5}}
 
 
+/* Vídeos — capas oficiais fornecidas para reprodução incorporada do YouTube */
+.videos-fold{position:relative;isolation:isolate;min-height:100svh;display:flex;align-items:center;padding:clamp(78px,10vh,110px) clamp(20px,5vw,80px);color:#fff;background:radial-gradient(ellipse at 50% 0%,rgba(25,70,160,.16),transparent 48%),#050507}
+.videos-inner{width:min(100%,1160px);margin:0 auto}
+.videos-heading{margin:0 0 clamp(24px,4vh,42px)}
+.videos-kicker{color:#26a8ff;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase}
+.videos-heading h2{margin:10px 0 8px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:400;line-height:.9;text-transform:uppercase}
+.videos-heading p{margin:0;color:#bdbdc5;font-size:15px;line-height:1.6}
+.videos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,34px)}
+.video-card{min-width:0}
+.video-player{position:relative;overflow:hidden;aspect-ratio:16/9;background:#000;border:1px solid rgba(38,168,255,.36);box-shadow:0 18px 55px rgba(0,0,0,.42)}
+.video-player img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .55s ease,filter .3s}
+.video-card:hover .video-player img{transform:scale(1.025);filter:brightness(.78)}
+.video-play{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:76px;height:76px;border:2px solid #fff;border-radius:50%;background:rgba(255,25,55,.88);color:#fff;font-size:26px;cursor:pointer;box-shadow:0 0 30px rgba(255,20,60,.5);transition:transform .2s,background .2s}
+.video-play:hover,.video-play:focus-visible{transform:translate(-50%,-50%) scale(1.09);background:#ff173c}
+.video-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-card h3{margin:18px 0 5px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:400;letter-spacing:.025em;text-transform:uppercase}
+.video-card>p{margin:0;color:#aaa;font-size:13px;letter-spacing:.04em}
+@media(max-width:700px){.videos-fold{min-height:0;padding:78px 6vw 64px}.videos-heading h2{font-size:clamp(3.2rem,13vw,5rem)}.videos-grid{grid-template-columns:1fr;gap:28px}.video-play{width:62px;height:62px;font-size:22px}.video-card h3{margin-top:13px}}
+@media(prefers-reduced-motion:reduce){.video-player img,.video-play{transition:none}.video-card:hover .video-player img{transform:none}}
+
 /* Últimas notícias — duas matérias lado a lado, foto + texto, numa dobra só */
 .latest-news-fold{--vermelho:#ff263d;--azul:#168cff;position:relative;isolation:isolate;min-height:100svh;display:flex;align-items:center;padding:clamp(78px,10vh,110px) clamp(20px,5vw,80px) clamp(48px,6vh,72px);color:#f8f8f8;background:#000}
 .latest-news-inner{width:min(100%,1160px);margin:0 auto}
@@ -365,6 +385,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
     <a href="#proximos-shows">Próximos Shows</a>
     <a href="#ultimos-lancamentos">Últimos lançamentos</a>
+    <a href="#videos">Vídeos</a>
     <a href="#ultimas-noticias">Últimas notícias</a>
     <a href="#discografia">Uma viagem no tempo</a>
     <a href="#fotos-oficiais">Fotos oficiais</a>
@@ -449,6 +470,33 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <span class="eyebrow">Novidades</span>
   <h2 id="latest-releases-title">Últimos lançamentos</h2>
   <p>As novidades musicais de Amadeu Brutus terão aqui seu próprio espaço.</p>
+</section>
+<section class="videos-fold" id="videos" aria-labelledby="videos-title">
+  <div class="videos-inner">
+    <header class="videos-heading">
+      <span class="videos-kicker">No palco · Ao vivo</span>
+      <h2 id="videos-title">Vídeos</h2>
+      <p>Performances e interpretações de Amadeu Brutus.</p>
+    </header>
+    <div class="videos-grid">
+      <article class="video-card">
+        <div class="video-player" data-video-id="CD8VL1hZtwI">
+          <img src="public/images/Amadeu%20Brutus%20Last%20Kiss%20com%20Pearl%20Jam.png" alt="Arte oficial de Last Kiss — Amadeu Brutus &amp; Pearl Jam" loading="lazy" decoding="async">
+          <button class="video-play" type="button" aria-label="Reproduzir Last Kiss — Amadeu Brutus e Pearl Jam"><span aria-hidden="true">▶</span></button>
+        </div>
+        <h3>Last Kiss</h3>
+        <p>Amadeu Brutus &amp; Pearl Jam</p>
+      </article>
+      <article class="video-card">
+        <div class="video-player" data-video-id="HU2Gy0pi644">
+          <img src="public/images/Amadeu%20Brutus%20Cold%20Play%20Fix%20You.png" alt="Arte oficial de Fix You — Amadeu Brutus &amp; Coldplay" loading="lazy" decoding="async">
+          <button class="video-play" type="button" aria-label="Reproduzir Fix You — Amadeu Brutus e Coldplay"><span aria-hidden="true">▶</span></button>
+        </div>
+        <h3>Fix You</h3>
+        <p>Amadeu Brutus &amp; Coldplay</p>
+      </article>
+    </div>
+  </div>
 </section>
 <section class="latest-news-fold" id="ultimas-noticias" aria-labelledby="latest-news-title">
   <div class="latest-news-inner">
@@ -575,6 +623,22 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 const menuToggle=document.querySelector('.menu-toggle'),primaryNav=document.getElementById('primary-nav');
 menuToggle?.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')==='true';menuToggle.setAttribute('aria-expanded',String(!open));primaryNav.classList.toggle('is-open',!open);});
 primaryNav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{primaryNav.classList.remove('is-open');menuToggle?.setAttribute('aria-expanded','false');}));
+
+/* Vídeos: troca a arte de capa pelo player somente após o clique */
+document.querySelectorAll('.video-player').forEach(player=>{
+ const play=player.querySelector('.video-play');
+ play?.addEventListener('click',()=>{
+  const id=player.dataset.videoId;
+  if(!id)return;
+  const frame=document.createElement('iframe');
+  frame.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&rel=0';
+  frame.title=play.getAttribute('aria-label')||'Vídeo de Amadeu Brutus';
+  frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  frame.allowFullscreen=true;
+  frame.loading='lazy';
+  player.replaceChildren(frame);
+ });
+});
 
 /* Próximos Shows: cada apresentação entra lateralmente, em sequência, ao chegar à tela */
 (()=>{
