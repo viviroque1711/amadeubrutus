@@ -180,12 +180,15 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .shows-kicker{display:block;color:#ff2b78;font-size:clamp(11px,1.2vw,15px);font-weight:700;letter-spacing:.34em;text-transform:uppercase}
 .shows-title{margin:18px 0 clamp(34px,5vw,62px);font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.4rem,9.5vw,8.2rem);font-weight:400;line-height:.88;letter-spacing:-.025em;text-transform:uppercase}
 .shows-list{width:min(100%,850px);border-top:1px solid rgba(255,255,255,.24)}
-.show-item{display:grid;grid-template-columns:minmax(110px,160px) minmax(0,1fr);gap:clamp(18px,3vw,38px);align-items:center;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.2)}
-.show-when{display:flex;flex-direction:column;gap:5px}
-.show-day{color:#ff2b78;font-size:12px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
-.show-time{color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1}
-.show-info h3{margin:0 0 7px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.35rem,2.5vw,2rem);font-weight:400;letter-spacing:.035em;text-transform:uppercase}
-.show-info p{margin:0;color:#b7b7bc;font-size:clamp(13px,1.25vw,16px);line-height:1.55}
+.show-day-group{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.show-day-group.single{grid-template-columns:minmax(0,1fr)}
+.show-item{display:grid;grid-template-columns:minmax(88px,112px) minmax(0,1fr);gap:14px;align-items:center;min-width:0;padding:18px 14px;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:rgba(0,0,0,.28)}
+.show-when{display:flex;flex-direction:column;gap:7px;min-width:0}
+.show-day{color:#ff2b78;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.show-time{color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1}
+.show-info{min-width:0}
+.show-info h3{margin:0 0 7px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.15rem,1.8vw,1.65rem);font-weight:400;letter-spacing:.025em;text-transform:uppercase;overflow-wrap:anywhere}
+.show-info p{margin:0;color:#b7b7bc;font-size:clamp(12px,1vw,14px);line-height:1.5;overflow-wrap:anywhere}
 .shows-note{margin:26px 0 0;color:#aaa;font-size:12px;letter-spacing:.04em}
 
 /* Entrada lateral sequencial dos eventos ao entrar na área visível */
@@ -199,7 +202,8 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
  .shows-fold:before{width:100%;opacity:.38;background-position:58% 20%}
  .shows-fold:after{background:linear-gradient(180deg,rgba(0,0,0,.72),#000 34%,rgba(0,0,0,.94) 100%)}
  .shows-title{font-size:clamp(3.4rem,15vw,5.2rem);margin:16px 0 34px}
- .show-item{grid-template-columns:86px minmax(0,1fr);gap:16px;padding:20px 0}
+ .show-day-group,.show-day-group.single{grid-template-columns:minmax(0,1fr);gap:10px;padding:12px 0}
+ .show-item{grid-template-columns:86px minmax(0,1fr);gap:16px;padding:16px 12px}
  .show-day{font-size:10px;letter-spacing:.1em}
  .show-time{font-size:2.2rem}
  .show-info h3{font-size:1.35rem}
@@ -385,46 +389,58 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     <span class="shows-kicker">Agenda da semana</span>
     <h2 class="shows-title" id="shows-title">Próximos Shows</h2>
     <div class="shows-list">
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Terça-feira</span></div>
-        <div class="show-info"><h3>Black Rock Burger</h3><p>Av. Paulo Faccini, 2003</p></div>
-      </article>
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Quarta-feira</span></div>
-        <div class="show-info"><h3>Bar Aberto</h3><p>Av. Engenheiro Luís Carlos Berrini, 443</p></div>
-      </article>
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Quinta-feira</span><time class="show-time" datetime="12:00">12:00</time></div>
-        <div class="show-info"><h3>Rockfella</h3><p>R. do Rocio, 89</p></div>
-      </article>
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Quinta-feira</span><time class="show-time" datetime="20:00">20:00</time></div>
-        <div class="show-info"><h3>Blues &amp; Beer</h3><p>Rua Zacarias de Góis, 1094</p></div>
-      </article>
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Sexta-feira</span><time class="show-time" datetime="12:00">12:00</time></div>
-        <div class="show-info"><h3>Garden Tapajós</h3><p>Rua Tapajós, 274</p></div>
-      </article>
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Sexta-feira</span><time class="show-time" datetime="21:00">21:00</time></div>
-        <div class="show-info"><h3>Villa Velha Bar</h3><p>Rua Tapajós, 2</p></div>
-      </article>
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Sábado</span><time class="show-time" datetime="13:00">13:00</time></div>
-        <div class="show-info"><h3>Lagoon Castrobar</h3><p>Av. São Luiz, 822</p></div>
-      </article>
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Sábado</span><time class="show-time" datetime="19:00">19:00</time></div>
-        <div class="show-info"><h3>Bar do Cumpadi</h3><p>Rua Amoipira, 304</p></div>
-      </article>
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Domingo</span><time class="show-time" datetime="13:00">13:00</time></div>
-        <div class="show-info"><h3>Garden Tapajós</h3><p>Rua Tapajós, 274</p></div>
-      </article>
-      <article class="show-item">
-        <div class="show-when"><span class="show-day">Domingo</span><time class="show-time" datetime="17:00">17:00</time></div>
-        <div class="show-info"><h3>Bar do Alemão</h3><p>Shopping União de Osasco</p></div>
-      </article>
+      <div class="show-day-group single">
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Terça-feira</span></div>
+          <div class="show-info"><h3>Black Rock Burger</h3><p>Av. Paulo Faccini, 2003</p></div>
+        </article>
+      </div>
+      <div class="show-day-group single">
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Quarta-feira</span></div>
+          <div class="show-info"><h3>Bar Aberto</h3><p>Av. Engenheiro Luís Carlos Berrini, 443</p></div>
+        </article>
+      </div>
+      <div class="show-day-group">
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Quinta-feira</span><time class="show-time" datetime="12:00">12:00</time></div>
+          <div class="show-info"><h3>Rockfella</h3><p>R. do Rocio, 89</p></div>
+        </article>
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Quinta-feira</span><time class="show-time" datetime="20:00">20:00</time></div>
+          <div class="show-info"><h3>Blues &amp; Beer</h3><p>Rua Zacarias de Góis, 1094</p></div>
+        </article>
+      </div>
+      <div class="show-day-group">
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Sexta-feira</span><time class="show-time" datetime="12:00">12:00</time></div>
+          <div class="show-info"><h3>Garden Tapajós</h3><p>Rua Tapajós, 274</p></div>
+        </article>
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Sexta-feira</span><time class="show-time" datetime="21:00">21:00</time></div>
+          <div class="show-info"><h3>Villa Velha Bar</h3><p>Rua Tapajós, 2</p></div>
+        </article>
+      </div>
+      <div class="show-day-group">
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Sábado</span><time class="show-time" datetime="13:00">13:00</time></div>
+          <div class="show-info"><h3>Lagoon Castrobar</h3><p>Av. São Luiz, 822</p></div>
+        </article>
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Sábado</span><time class="show-time" datetime="19:00">19:00</time></div>
+          <div class="show-info"><h3>Bar do Cumpadi</h3><p>Rua Amoipira, 304</p></div>
+        </article>
+      </div>
+      <div class="show-day-group">
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Domingo</span><time class="show-time" datetime="13:00">13:00</time></div>
+          <div class="show-info"><h3>Garden Tapajós</h3><p>Rua Tapajós, 274</p></div>
+        </article>
+        <article class="show-item">
+          <div class="show-when"><span class="show-day">Domingo</span><time class="show-time" datetime="17:00">17:00</time></div>
+          <div class="show-info"><h3>Bar do Alemão</h3><p>Shopping União de Osasco</p></div>
+        </article>
+      </div>
     </div>
     <p class="shows-note">Agenda sujeita a atualizações. Consulte os canais oficiais para confirmações.</p>
   </div>
