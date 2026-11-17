@@ -73,13 +73,16 @@ Deno.serve(async (req) => {
 <p><b>Mensagem:</b><br>${escapar(mensagem).replace(/\n/g, "<br>")}</p>
 <p style="color:#888;font-size:12px">Enviado pelo formulário de amadeubrutus.com.br</p>`;
 
-  const avisado = await enviarEmail(DESTINO.split(",").map((x) => x.trim()).filter(Boolean), `[Site] ${assunto} — ${nome} ${sobrenome}`, html, email);
 
   const confirmacao = `<p>Olá, ${escapar(nome)}!</p>
 <p>Recebemos sua mensagem sobre <b>${escapar(assunto)}</b> pelo site de Amadeu Brutus. A equipe responde em breve por este e-mail ou pelo telefone informado.</p>
 <p style="color:#666">Sua mensagem:<br>${escapar(mensagem).replace(/\n/g, "<br>")}</p>
 <p>Equipe Amadeu Brutus<br><a href="https://www.amadeubrutus.com.br">amadeubrutus.com.br</a></p>`;
-  const confirmado = await enviarEmail([email], "Recebemos sua mensagem — Amadeu Brutus", confirmacao, DESTINO.split(",")[0].trim());
+  // Os dois e-mails saem ao mesmo tempo, para o visitante esperar menos.
+  const [avisado, confirmado] = await Promise.all([
+    enviarEmail(DESTINO.split(",").map((x) => x.trim()).filter(Boolean), `[Site] ${assunto} — ${nome} ${sobrenome}`, html, email),
+    enviarEmail([email], "Recebemos sua mensagem — Amadeu Brutus", confirmacao, DESTINO.split(",")[0].trim()),
+  ]);
 
   await supabase.from("contatos_site").update({
     email_notificacao_status: avisado ? "enviado" : "falhou",

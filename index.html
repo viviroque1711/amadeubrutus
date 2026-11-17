@@ -328,6 +328,13 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .contato-enviar:hover{transform:translateY(-2px);box-shadow:0 0 24px #ff263d66}.contato-enviar[disabled]{opacity:.6;cursor:wait;transform:none}
 .contato-aviso{margin:0;color:#7d7d89;font-size:12px}
 .contato-status{margin:0;min-height:1.4em;font-size:15px}.contato-status.ok{color:#5fd39a}.contato-status.falha{color:#ff6b7a}
+.contato-sucesso{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:clamp(28px,4vw,48px);border:1px solid #2f8f63;border-radius:4px;background:linear-gradient(160deg,#0f2a1f,#0d0d14 70%);outline:none}
+.contato-sucesso[hidden],.contato-form[hidden]{display:none}
+.sucesso-icone{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#5fd39a;color:#06150e;font-size:28px;font-weight:900}
+.contato-sucesso h3{margin:6px 0 0;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1;text-transform:uppercase}
+.contato-sucesso p{margin:0;color:#d2d2da;font-size:16px;line-height:1.6}.contato-sucesso .sucesso-dica{color:#8b8b97;font-size:13px}
+.sucesso-novo{margin-top:8px;padding:14px 22px;border:1px solid #ffffff55;border-radius:2px;background:transparent;color:#fff;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.sucesso-novo:hover{border-color:#fff}
 @media(max-width:860px){.contato-inner{grid-template-columns:1fr}.contato-form{grid-template-columns:1fr}}
 </style>
 </head>
@@ -528,6 +535,13 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
       </div>
       <p class="contato-status campo-largo" role="status" aria-live="polite"></p>
     </form>
+    <div class="contato-sucesso" id="contato-sucesso" tabindex="-1" role="status" aria-live="polite" hidden>
+      <span class="sucesso-icone" aria-hidden="true">✓</span>
+      <h3>Mensagem enviada<span class="sucesso-nome"></span>!</h3>
+      <p>Recebemos o seu contato e já enviamos uma confirmação para <strong class="sucesso-email"></strong>. A equipe do Amadeu Brutus responde em breve.</p>
+      <p class="sucesso-dica">Não encontrou o e-mail? Confira também a caixa de spam.</p>
+      <button type="button" class="sucesso-novo">Enviar outra mensagem</button>
+    </div>
   </div>
 </section>
 <section class="site-section" id="thevoicebrasil2026"><h2>The Voice Brasil 2026</h2><p>Espaço dedicado aos registros oficiais da participação de Amadeu Brutus no The Voice Brasil 2026.</p></section>
@@ -613,7 +627,8 @@ function respirar(){
 (()=>{
  const form=document.getElementById('contato-form');if(!form)return;
  const ENDPOINT='https://fwdqvhtsalgdohyfppsu.supabase.co/functions/v1/contato';
- const status=form.querySelector('.contato-status'),botao=form.querySelector('.contato-enviar');
+ const status=form.querySelector('.contato-status'),botao=form.querySelector('.contato-enviar'),sucesso=document.getElementById('contato-sucesso');
+ sucesso?.querySelector('.sucesso-novo')?.addEventListener('click',()=>{sucesso.hidden=true;form.hidden=false;form.querySelector('input')?.focus()});
  const avisar=(txt,tipo)=>{status.textContent=txt;status.className='contato-status campo-largo '+(tipo||'')};
  const marcar=campos=>{form.querySelectorAll('.campo').forEach(c=>c.classList.remove('erro'));campos.forEach(n=>form.querySelector('[name="'+n+'"]')?.closest('.campo')?.classList.add('erro'))};
  form.addEventListener('submit',async ev=>{
@@ -627,7 +642,7 @@ function respirar(){
   try{
    const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});
    const j=await r.json().catch(()=>({}));
-   if(r.ok){form.reset();marcar([]);avisar('Mensagem enviada! A equipe do Amadeu Brutus responde em breve.','ok')}
+   if(r.ok){const nome=String(d.nome||'').trim();form.reset();marcar([]);avisar('');form.hidden=true;sucesso.querySelector('.sucesso-nome').textContent=nome?', '+nome:'';sucesso.querySelector('.sucesso-email').textContent=d.email;sucesso.hidden=false;sucesso.scrollIntoView({block:'center',behavior:'smooth'});sucesso.focus()}
    else{marcar(j.campos||[]);avisar(j.erro||'Não foi possível enviar agora. Tente novamente.','falha')}
   }catch(e){avisar('Sem conexão no momento. Tente novamente em instantes.','falha')}
   finally{botao.disabled=false;botao.textContent='Enviar mensagem'}
