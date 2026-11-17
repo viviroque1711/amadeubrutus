@@ -305,6 +305,39 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(max-width:620px){.latest-news-fold{padding:76px 6vw 56px}.latest-news-heading p{font-size:13px}.news-card{grid-template-columns:1fr;min-height:0}.news-card .news-subtitle{-webkit-line-clamp:4}.news-card-image{height:auto;min-height:0;aspect-ratio:16/10}.news-card h3{font-size:clamp(1.5rem,7vw,2rem)}}
 @media(prefers-reduced-motion:reduce){.news-card,.news-card a{transition:none}.news-card:hover{transform:none}}
 
+
+/* CONTATO COMERCIAL — formulário responsivo */
+.contact-fold{position:relative;isolation:isolate;overflow:hidden;padding:clamp(82px,10vw,140px) clamp(22px,7vw,110px);background:#050507;color:#f7f7f7;border-top:1px solid #ffffff18}
+.contact-fold:before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 12% 20%,rgba(255,38,61,.10),transparent 45%),linear-gradient(120deg,#09090d,#030305 65%)}
+.contact-inner{width:min(100%,1160px);margin:0 auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(38px,7vw,100px);align-items:start}
+.contact-kicker{color:var(--red);font-size:11px;font-weight:800;letter-spacing:.3em;text-transform:uppercase}
+.contact-copy h2{margin:20px 0 22px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3rem,6.5vw,6.4rem);font-weight:400;line-height:.92;letter-spacing:-.025em;text-transform:uppercase}
+.contact-copy>p{max-width:440px;color:#c5c5c8;font-size:15px;line-height:1.85}
+.contact-direct{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:36px;color:#a8a8ad;font-size:12px}
+.contact-direct span{flex-basis:100%;letter-spacing:.08em;text-transform:uppercase}
+.contact-direct a{color:#fff;text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:5px}
+.contact-form{padding:clamp(22px,3.5vw,42px);background:#0d0d11;border:1px solid #ffffff24;box-shadow:0 24px 70px #0008}
+.contact-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-field{display:flex;flex-direction:column;gap:9px;min-width:0}
+.contact-field--full{grid-column:1/-1}
+.contact-field label{color:#e9e9eb;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.contact-field input,.contact-field select,.contact-field textarea{width:100%;min-width:0;border:1px solid #ffffff35;border-radius:0;background:#050507;color:#fff;padding:14px 15px;font:inherit;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}
+.contact-field input,.contact-field select{min-height:49px}
+.contact-field textarea{min-height:132px;resize:vertical;line-height:1.6}
+.contact-field input:focus,.contact-field select:focus,.contact-field textarea:focus{border-color:var(--red);box-shadow:0 0 0 2px #ff263d25}
+.contact-field input::placeholder,.contact-field textarea::placeholder{color:#777}
+.contact-field select:invalid{color:#999}
+.contact-submit{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;margin-top:24px;padding:17px 20px;border:1px solid var(--red);background:var(--red);color:#fff;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .2s,border-color .2s,opacity .2s}
+.contact-submit:hover{background:#d91f34;border-color:#d91f34}
+.contact-submit:disabled{opacity:.6;cursor:wait}
+.contact-feedback{min-height:22px;margin:14px 0 0;color:#d2d2d5;font-size:12px;line-height:1.5}
+.contact-feedback.is-error{color:#ff8793}
+.contact-feedback.is-success{color:#9be0b0}
+.contact-privacy{margin:10px 0 0;color:#88888e;font-size:11px;line-height:1.6}
+.contact-trap{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+@media(max-width:800px){.contact-inner{grid-template-columns:1fr;gap:36px}.contact-copy h2{max-width:620px}}
+@media(max-width:540px){.contact-fold{padding:76px 6vw}.contact-form{padding:22px 17px}.contact-form-grid{grid-template-columns:1fr;gap:17px}.contact-field--full{grid-column:auto}.contact-copy h2{font-size:clamp(3rem,13vw,4.5rem)}}
+
 </style>
 </head>
 <body>
@@ -481,7 +514,62 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     </figure>
   </div>
 </section>
-<section class="site-section" id="contato"><h2>Contato</h2><p>Para contato profissional, acompanhe os canais oficiais de Amadeu Brutus.</p><p><a href="https://www.instagram.com/amadeubrutus/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.youtube.com/@AmadeuBrutus" target="_blank" rel="noopener noreferrer">YouTube</a></p></section>
+<section class="contact-fold" id="contato" aria-labelledby="contact-title">
+  <div class="contact-inner">
+    <div class="contact-copy">
+      <span class="contact-kicker">Contato profissional</span>
+      <h2 id="contact-title">Vamos conversar sobre seu próximo evento.</h2>
+      <p>Para contratar um show, solicitar informações ou conversar sobre oportunidades profissionais, envie sua mensagem à equipe de Amadeu Brutus.</p>
+      <div class="contact-direct">
+        <span>Prefere acompanhar o artista?</span>
+        <a href="https://www.instagram.com/amadeubrutus/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.youtube.com/@AmadeuBrutus" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+      </div>
+    </div>
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="contact-form-grid">
+        <div class="contact-field">
+          <label for="contactNome">Nome *</label>
+          <input id="contactNome" name="nome" type="text" autocomplete="given-name" maxlength="100" required>
+        </div>
+        <div class="contact-field">
+          <label for="contactSobrenome">Sobrenome *</label>
+          <input id="contactSobrenome" name="sobrenome" type="text" autocomplete="family-name" maxlength="100" required>
+        </div>
+        <div class="contact-field">
+          <label for="contactEmail">E-mail *</label>
+          <input id="contactEmail" name="email" type="email" autocomplete="email" maxlength="254" required>
+        </div>
+        <div class="contact-field">
+          <label for="contactTelefone">Telefone / WhatsApp *</label>
+          <input id="contactTelefone" name="telefone" type="tel" autocomplete="tel" maxlength="30" required>
+        </div>
+        <div class="contact-field contact-field--full">
+          <label for="contactAssunto">Assunto *</label>
+          <select id="contactAssunto" name="assunto" required>
+            <option value="">Selecione o assunto</option>
+            <option value="Contratação de show">Contratação de show</option>
+            <option value="Informações comerciais">Informações comerciais</option>
+            <option value="Parcerias">Parcerias</option>
+            <option value="Imprensa">Imprensa</option>
+            <option value="Outro assunto">Outro assunto</option>
+          </select>
+        </div>
+        <div class="contact-field contact-field--full">
+          <label for="contactMensagem">Mensagem *</label>
+          <textarea id="contactMensagem" name="mensagem" rows="5" maxlength="5000" required></textarea>
+        </div>
+      </div>
+      <div class="contact-trap" aria-hidden="true">
+        <label for="contactWebsite">Não preencha este campo</label>
+        <input id="contactWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <button class="contact-submit" id="contactSubmit" type="submit">Enviar solicitação <span aria-hidden="true">↗</span></button>
+      <p class="contact-feedback" id="contactFeedback" role="status" aria-live="polite">* Campos obrigatórios.</p>
+      <p class="contact-privacy">Seus dados serão utilizados exclusivamente para responder à sua solicitação comercial.</p>
+    </form>
+  </div>
+</section>
 <section class="site-section" id="thevoicebrasil2026"><h2>The Voice Brasil 2026</h2><p>Espaço dedicado aos registros oficiais da participação de Amadeu Brutus no The Voice Brasil 2026.</p></section>
 </main>
 <footer><span>Amadeu Brutus · Música e presença de palco</span><a class="footer-credit" href="https://roquebusinessevolution.com/" target="_blank" rel="noopener noreferrer">Desenvolvido por <strong>Roque Business Evolution</strong></a></footer>
