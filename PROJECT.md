@@ -551,3 +551,11 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Correção: as imagens usam as versões redimensionadas que o próprio SBT publica (large_ 1000 px e medium_ 750 px) com `srcset`, largura/altura declaradas e, se o SBT falhar, troca automática por uma foto do Amadeu hospedada no site (`public/brand/amadeu-brutus-cantor-no-palco.webp`).
 - Novo layout (pedido da proprietária): duas matérias lado a lado numa única dobra no computador; cada card com a foto de um lado e o texto do outro; título da seção alinhado à esquerda. Paleta do Amadeu: número, chamada e botão em vermelho (#ff263d), selo "The Voice Brasil · SBT" em azul (#168cff); o dourado saiu. Texto do card reduzido a etapa, selo, título, subtítulo e link (as matérias completas ficam no site do SBT). Tablet: um card por linha, foto ao lado; celular: foto em cima, texto embaixo.
 - Ajuste seguinte (pedido): uma notícia embaixo da outra; cada card horizontal (foto à esquerda, texto à direita), etapa e selo na mesma linha, subtítulo em até 2 linhas, tudo cabendo numa dobra em 1440 × 900 e 1366 × 768. Celular: foto em cima, texto embaixo.
+
+## Formulário Contato / Imprensa — 16/11/2026 (branch `formulario-contato`, ainda não publicado)
+
+- Estrutura pedida pela proprietária (referência enviada): "Fale com a gente", "Contato/Imprensa", texto do departamento comercial; campos Nome, Sobrenome, Telefone, E-mail, Assunto (Imprensa/Booking/Outro), Mensagem.
+- Front-end na seção `#contato` da home (substitui o bloco provisório). Validação no navegador, mensagens de erro e sucesso, campo invisível contra robôs.
+- Back-end: Supabase, projeto `fwdqvhtsalgdohyfppsu`. Tabela `public.contatos` com RLS ligado e sem acesso público (`supabase/migrations/20261116_contatos.sql`). Função `contato` (`supabase/functions/contato/index.ts`) valida, limita 3 envios por e-mail/hora, grava a mensagem e envia aviso pelo Resend com responder-para o e-mail do visitante. Aceita só origens amadeubrutus.com.br.
+- Segredos a cadastrar no Supabase: `RESEND_API_KEY`, `CONTATO_DESTINO` (e-mail que recebe), `CONTATO_REMETENTE` (remetente de domínio verificado no Resend).
+- Pendente: acesso do conector do Supabase à organização do projeto; aplicar migração, publicar a função, cadastrar os segredos, testar envio real e só então juntar a branch ao `main`.

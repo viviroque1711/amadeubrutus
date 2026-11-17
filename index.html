@@ -305,6 +305,30 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(max-width:620px){.latest-news-fold{padding:76px 6vw 56px}.latest-news-heading p{font-size:13px}.news-card{grid-template-columns:1fr;min-height:0}.news-card .news-subtitle{-webkit-line-clamp:4}.news-card-image{height:auto;min-height:0;aspect-ratio:16/10}.news-card h3{font-size:clamp(1.5rem,7vw,2rem)}}
 @media(prefers-reduced-motion:reduce){.news-card,.news-card a{transition:none}.news-card:hover{transform:none}}
 
+/* Contato / Imprensa — formulário (envio pelo Supabase + Resend) */
+.contato-fold{--rosa:#ff2b78;--vermelho:#ff263d;padding:clamp(84px,11vh,130px) clamp(20px,5vw,80px) clamp(64px,9vh,110px);background:#0d0d14;color:#f5f4f2}
+.contato-inner{width:min(100%,1160px);margin:0 auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,90px);align-items:start}
+.contato-kicker{color:var(--rosa);font-size:clamp(13px,1.3vw,17px);letter-spacing:.04em;text-transform:uppercase}
+.contato-cabeca h2{margin:18px 0 22px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.2rem,5.4vw,5.6rem);font-weight:400;line-height:.95;text-transform:uppercase}
+.contato-cabeca p{margin:0 0 14px;color:#9a9aa6;font-size:clamp(16px,1.5vw,20px);line-height:1.55}
+.contato-cabeca .contato-canais{font-size:14px}.contato-canais a{color:#fff}
+.contato-form{display:grid;grid-template-columns:1fr 1fr;gap:22px 20px}
+.campo{display:flex;flex-direction:column;gap:9px;min-width:0}.campo-largo{grid-column:1/-1}
+.campo label{color:#b7b7c2;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.campo input,.campo select,.campo textarea{width:100%;padding:15px 18px;border:1px solid #33333f;border-radius:2px;background:#14141d;color:#fff;font:inherit;font-size:16px;line-height:1.4;transition:border-color .2s,box-shadow .2s}
+.campo select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#aaa 50%),linear-gradient(135deg,#aaa 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.campo select:invalid{color:#8b8b97}
+.campo textarea{resize:vertical;min-height:150px}
+.campo input::placeholder,.campo textarea::placeholder{color:#8b8b97}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--rosa);box-shadow:0 0 0 3px #ff2b7833}
+.campo.erro input,.campo.erro select,.campo.erro textarea{border-color:var(--vermelho)}
+.campo-oculto{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+.contato-acoes{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:4px}
+.contato-enviar{padding:17px 30px;border:1.5px solid var(--vermelho);border-radius:2px;background:var(--vermelho);color:#fff;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s,opacity .2s}
+.contato-enviar:hover{transform:translateY(-2px);box-shadow:0 0 24px #ff263d66}.contato-enviar[disabled]{opacity:.6;cursor:wait;transform:none}
+.contato-aviso{margin:0;color:#7d7d89;font-size:12px}
+.contato-status{margin:0;min-height:1.4em;font-size:15px}.contato-status.ok{color:#5fd39a}.contato-status.falha{color:#ff6b7a}
+@media(max-width:860px){.contato-inner{grid-template-columns:1fr}.contato-form{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -481,7 +505,31 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     </figure>
   </div>
 </section>
-<section class="site-section" id="contato"><h2>Contato</h2><p>Para contato profissional, acompanhe os canais oficiais de Amadeu Brutus.</p><p><a href="https://www.instagram.com/amadeubrutus/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.youtube.com/@AmadeuBrutus" target="_blank" rel="noopener noreferrer">YouTube</a></p></section>
+<section class="contato-fold" id="contato" aria-labelledby="contato-titulo">
+  <div class="contato-inner">
+    <div class="contato-cabeca">
+      <span class="contato-kicker">Fale com a gente</span>
+      <h2 id="contato-titulo">Contato/<br>Imprensa</h2>
+      <p>Para falar com o departamento comercial, preencha o formulário abaixo:</p>
+      <p class="contato-canais">Também nas redes: <a href="https://www.instagram.com/amadeubrutus/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.youtube.com/@AmadeuBrutus" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    </div>
+    <form class="contato-form" id="contato-form" novalidate>
+      <div class="campo"><label for="c-nome">Nome</label><input id="c-nome" name="nome" type="text" autocomplete="given-name" placeholder="Seu nome" required maxlength="80"></div>
+      <div class="campo"><label for="c-sobrenome">Sobrenome</label><input id="c-sobrenome" name="sobrenome" type="text" autocomplete="family-name" placeholder="Seu sobrenome" required maxlength="80"></div>
+      <div class="campo"><label for="c-telefone">Telefone</label><input id="c-telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(DDD) 99999 9999" required maxlength="30"></div>
+      <div class="campo"><label for="c-email">Endereço de e-mail</label><input id="c-email" name="email" type="email" autocomplete="email" placeholder="seu@email.com" required maxlength="160"></div>
+      <div class="campo campo-largo"><label for="c-assunto">Assunto</label>
+        <select id="c-assunto" name="assunto" required><option value="" selected disabled>Imprensa / Booking / Outro</option><option>Imprensa</option><option>Booking</option><option>Outro</option></select></div>
+      <div class="campo campo-largo"><label for="c-mensagem">Mensagem</label><textarea id="c-mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required maxlength="4000"></textarea></div>
+      <div class="campo-oculto" aria-hidden="true"><label for="c-site">Não preencha</label><input id="c-site" name="site" type="text" tabindex="-1" autocomplete="off"></div>
+      <div class="contato-acoes campo-largo">
+        <button type="submit" class="contato-enviar">Enviar mensagem</button>
+        <p class="contato-aviso">Seus dados são usados só para responder a este contato.</p>
+      </div>
+      <p class="contato-status campo-largo" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
 <section class="site-section" id="thevoicebrasil2026"><h2>The Voice Brasil 2026</h2><p>Espaço dedicado aos registros oficiais da participação de Amadeu Brutus no The Voice Brasil 2026.</p></section>
 </main>
 <footer><span>Amadeu Brutus · Música e presença de palco</span><a class="footer-credit" href="https://roquebusinessevolution.com/" target="_blank" rel="noopener noreferrer">Desenvolvido por <strong>Roque Business Evolution</strong></a></footer>
@@ -559,6 +607,31 @@ function respirar(){
   Object.keys(refl).forEach((k,i)=>{const a=angulo[k],t={duration:4200+i*500,direction:'alternate',iterations:Infinity,easing:'ease-in-out'};fx(k).animate([{rotate:(a-1.2)+'deg',opacity:.85},{rotate:(a+1.2)+'deg',opacity:1}],t);ap(k).animate([{rotate:(a-1.2+90)+'deg'},{rotate:(a+1.2+90)+'deg'}],t)});
   setInterval(()=>{if(document.hidden)return;['tl','tr','bl','br'].forEach((k,i)=>golpe(k,i*380,(i%2?-1:1)*12,1,.9,'none'))},9000);
 }
+})();
+
+/* Contato / Imprensa: envia para a função do Supabase, que grava a mensagem e avisa por e-mail (Resend) */
+(()=>{
+ const form=document.getElementById('contato-form');if(!form)return;
+ const ENDPOINT='https://fwdqvhtsalgdohyfppsu.supabase.co/functions/v1/contato';
+ const status=form.querySelector('.contato-status'),botao=form.querySelector('.contato-enviar');
+ const avisar=(txt,tipo)=>{status.textContent=txt;status.className='contato-status campo-largo '+(tipo||'')};
+ const marcar=campos=>{form.querySelectorAll('.campo').forEach(c=>c.classList.remove('erro'));campos.forEach(n=>form.querySelector('[name="'+n+'"]')?.closest('.campo')?.classList.add('erro'))};
+ form.addEventListener('submit',async ev=>{
+  ev.preventDefault();
+  const d=Object.fromEntries(new FormData(form));d.pagina=location.pathname;
+  const faltando=['nome','sobrenome','telefone','email','assunto','mensagem'].filter(n=>!String(d[n]||'').trim()||!form.querySelector('[name="'+n+'"]').checkValidity());
+  if(String(d.telefone||'').replace(/\D/g,'').length<10&&!faltando.includes('telefone'))faltando.push('telefone');
+  marcar(faltando);
+  if(faltando.length){avisar('Confira os campos destacados.','falha');form.querySelector('.campo.erro input,.campo.erro select,.campo.erro textarea')?.focus();return}
+  botao.disabled=true;botao.textContent='Enviando…';avisar('');
+  try{
+   const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});
+   const j=await r.json().catch(()=>({}));
+   if(r.ok){form.reset();marcar([]);avisar('Mensagem enviada! A equipe do Amadeu Brutus responde em breve.','ok')}
+   else{marcar(j.campos||[]);avisar(j.erro||'Não foi possível enviar agora. Tente novamente.','falha')}
+  }catch(e){avisar('Sem conexão no momento. Tente novamente em instantes.','falha')}
+  finally{botao.disabled=false;botao.textContent='Enviar mensagem'}
+ });
 })();
 </script>
 </body>
