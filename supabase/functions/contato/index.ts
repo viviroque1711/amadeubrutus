@@ -4,7 +4,7 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 
 const ORIGENS = ["https://amadeubrutus.com.br", "https://www.amadeubrutus.com.br"];
-const ASSUNTOS = ["Imprensa", "Booking", "Outro"];
+const ASSUNTOS = ["Shows e contratações", "Eventos particulares", "Eventos corporativos", "Imprensa e entrevistas", "The Voice Brasil", "Parcerias e publicidade", "Projetos musicais", "Fãs", "Outro assunto"];
 const DESTINO = Deno.env.get("CONTATO_DESTINO") ?? "contato@amadeubrutus.com.br";
 const REMETENTE = Deno.env.get("CONTATO_REMETENTE") ?? "Amadeu Brutus <contato@amadeubrutus.com.br>";
 
@@ -45,7 +45,7 @@ Deno.serve(async (req) => {
   const sobrenome = limpar(dados.sobrenome, 80);
   const telefone = limpar(dados.telefone, 30);
   const email = limpar(dados.email, 160).toLowerCase();
-  const assunto = limpar(dados.assunto, 20);
+  const assunto = limpar(dados.assunto, 60);
   const mensagem = String(dados.mensagem ?? "").trim().slice(0, 4000);
 
   const faltando: string[] = [];
