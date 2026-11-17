@@ -171,6 +171,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 /* Com JavaScript a abertura começa no escuro; sem ele (ou com movimento reduzido) a cena final já aparece pronta */
 .hero.anim .facho,.hero.anim .lente .brilho{opacity:0}
 .hero.anim .hero-artista,.hero.anim .hero-nome span{opacity:0}
+.hero.anim .hero-actions,.hero.anim .site-header,.hero.anim .scrollhint,.hero.anim .music-toggle{opacity:0;pointer-events:none}
 
 /* SEGUNDA DOBRA — agenda semanal de shows; conteúdo editável sem reconstruir o layout */
 .shows-fold{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;padding:clamp(76px,9vw,128px) clamp(22px,7vw,110px);background:#000;color:#f7f7f7}
@@ -371,7 +372,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 </head>
 <body>
 <main>
-<section class="fold hero" id="inicio" aria-label="Abertura de Amadeu Brutus">
+<section class="fold hero anim" id="inicio" aria-label="Abertura de Amadeu Brutus">
 <div class="ambiente" aria-hidden="true"></div>
 <div class="clarao" aria-hidden="true"></div>
 <i class="lente" data-l="tl" style="left:3%;top:17%" aria-hidden="true"><img src="public/brand/refletor-de-palco.webp" alt="" width="535" height="485"><i class="brilho"></i></i>
@@ -670,7 +671,7 @@ function mirar(){
   }
 }
 mirar();addEventListener('resize',mirar);if(!marca.complete)marca.addEventListener('load',mirar);
-if(matchMedia('(prefers-reduced-motion: reduce)').matches||!hero.animate)return;
+if(matchMedia('(prefers-reduced-motion: reduce)').matches||!hero.animate){hero.classList.remove('anim');return;}
 hero.classList.add('anim');
 const fx=k=>refl[k].querySelector('.facho'),ln=k=>hero.querySelector('.lente[data-l="'+k+'"] .brilho'),ap=k=>hero.querySelector('.lente[data-l="'+k+'"]'),clarao=hero.querySelector('.clarao');
 // Uma batida: o facho estoura, ainda desviado, e corrige a mira em direção à marca.
@@ -694,6 +695,11 @@ setTimeout(()=>{
   Object.keys(refl).forEach((k,i)=>golpe(k,i*40,(i%2?-1:1)*6,1,.9));
   marca.animate([{opacity:0},{opacity:1}],{duration:1100,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'});
   nome.forEach((el,i)=>el.animate([{opacity:0,translate:'0 18px'},{opacity:1,translate:'0 0'}],{duration:800,delay:250+i*220,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'}));
+  // A imagem do artista e seu nome entram primeiro; navegação e controles aparecem depois.
+  const header=hero.querySelector('.site-header'),hint=hero.querySelector('.scrollhint'),music=hero.querySelector('.music-toggle'),actions=hero.querySelector('.hero-actions');
+  [header,hint,music].forEach((el,i)=>{if(!el)return;el.animate([{opacity:0,translate:'0 10px'},{opacity:1,translate:'0 0'}],{duration:650,delay:1050+i*140,easing:'ease-out',fill:'forwards'});el.style.pointerEvents='auto';});
+  // Os dois botões principais são sempre os últimos elementos a aparecer.
+  setTimeout(()=>{if(actions){actions.animate([{opacity:0,translate:'-50% 14px'},{opacity:1,translate:'-50% 0'}],{duration:850,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'});actions.style.pointerEvents='auto';}},1900);
   setTimeout(respirar,900);
 },fim);
 // Depois, os fachos ficam na marca com leve balanço e, de tempos em tempos, voltam a bater.
