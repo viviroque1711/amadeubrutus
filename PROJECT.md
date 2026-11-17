@@ -551,3 +551,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Correção: as imagens usam as versões redimensionadas que o próprio SBT publica (large_ 1000 px e medium_ 750 px) com `srcset`, largura/altura declaradas e, se o SBT falhar, troca automática por uma foto do Amadeu hospedada no site (`public/brand/amadeu-brutus-cantor-no-palco.webp`).
 - Novo layout (pedido da proprietária): duas matérias lado a lado numa única dobra no computador; cada card com a foto de um lado e o texto do outro; título da seção alinhado à esquerda. Paleta do Amadeu: número, chamada e botão em vermelho (#ff263d), selo "The Voice Brasil · SBT" em azul (#168cff); o dourado saiu. Texto do card reduzido a etapa, selo, título, subtítulo e link (as matérias completas ficam no site do SBT). Tablet: um card por linha, foto ao lado; celular: foto em cima, texto embaixo.
 - Ajuste seguinte (pedido): uma notícia embaixo da outra; cada card horizontal (foto à esquerda, texto à direita), etapa e selo na mesma linha, subtítulo em até 2 linhas, tudo cabendo numa dobra em 1440 × 900 e 1366 × 768. Celular: foto em cima, texto embaixo.
+
+
+## Prévia — rodapé e privacidade (16/11/2026)
+
+- Na branch `backend/supabase-initial-setup`, a seção de contato com formulário foi retirada da prévia conforme decisão da proprietária de abortar essa implementação.
+- A seção de contato foi simplificada para direcionar aos canais oficiais confirmados: Instagram, YouTube e Spotify.
+- Rodapé atualizado com links para Instagram, YouTube e Spotify; link para Política de Privacidade; aviso `© 2026 Amadeu Brutus. Todos os direitos reservados.`; domínio `amadeubrutus.com.br`; crédito `Desenvolvido por Roque Business Evolution` preservado.
+- Criada `politica-de-privacidade.html` com aviso compatível com a versão atual sem formulário, descrevendo hospedagem, links/players de terceiros, cookies e direitos LGPD. Revisar se novas funcionalidades de coleta forem adicionadas.
+- `sitemap.xml` atualizado para incluir a página de Política de Privacidade.
+- TikTok não foi incluído porque o endereço oficial do perfil ainda não está confirmado na ficha do projeto. Não inventar URLs de Apple Music, Deezer ou Tidal.
+- Alterações ainda estão somente na branch de desenvolvimento; não houve merge em `main` nem publicação na Hostinger. Auditoria visual e validação final continuam pendentes.
