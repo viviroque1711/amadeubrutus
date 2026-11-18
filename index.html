@@ -116,6 +116,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .footer-credit{display:inline-flex;align-items:center;gap:6px;color:#aaa;text-decoration:none;letter-spacing:.12em;transition:color .2s}
 .footer-credit strong{color:#f5f4f2;font-weight:700}
 .footer-credit:hover{color:var(--yellow)}.footer-credit:hover strong{color:var(--yellow)}
+.site-footer{row-gap:14px}.footer-copyright{color:#aaa;letter-spacing:.1em}.footer-policy{color:#aaa;text-decoration:none;letter-spacing:.12em;transition:color .2s}.footer-policy:hover{color:var(--yellow)}
 @media(max-width:700px){.beam{width:34vw;margin-left:-17vw;filter:blur(16px)}footer{gap:12px;padding:24px 6vw}.topline{padding:18px 5vw;font-size:9px}.word{font-size:clamp(4rem,18vw,8rem)}.hero-caption{top:calc(50% + 78px);letter-spacing:.18em;margin-top:0}.beam{filter:blur(12px)}.music-toggle{right:14px;bottom:16px;padding:10px 12px;font-size:9px}.scrollhint{bottom:76px}.second{grid-template-columns:1fr}.second-photo{min-height:72svh;grid-row:1;background-position:center 30%}.second-photo:after{background:linear-gradient(0deg,#080809 0%,transparent 36%)}.second-copy{padding:10vw 8vw 16vw;min-height:48svh}.second-copy:before{top:0;bottom:auto;left:8vw;width:72px;height:1px;background:linear-gradient(90deg,#d6a35d99,transparent)}.second h2{font-size:clamp(3.8rem,15vw,6rem);margin:18px 0 22px}.second p{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.beam{animation:none!important;opacity:.28;transform:rotate(var(--angle))}*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
 
@@ -613,7 +614,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 </section>
 <section class="site-section" id="thevoicebrasil2026"><h2>The Voice Brasil 2026</h2><p>Espaço dedicado aos registros oficiais da participação de Amadeu Brutus no The Voice Brasil 2026.</p></section>
 </main>
-<footer><span>Amadeu Brutus · Música e presença de palco</span><a class="footer-credit" href="https://roquebusinessevolution.com/" target="_blank" rel="noopener noreferrer">Desenvolvido por <strong>Roque Business Evolution</strong></a></footer>
+<footer class="site-footer"><span>Amadeu Brutus · Música e presença de palco</span><span class="footer-copyright">© 2026 Amadeu Brutus. Todos os direitos reservados. amadeubrutus.com.br</span><a class="footer-policy" href="/politica-de-privacidade.html">Política de Privacidade</a><a class="footer-credit" href="https://roquebusinessevolution.com/" target="_blank" rel="noopener noreferrer">Desenvolvido por <strong>Roque Business Evolution</strong></a></footer>
 <script>
 const menuToggle=document.querySelector('.menu-toggle'),primaryNav=document.getElementById('primary-nav');
 menuToggle?.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')==='true';menuToggle.setAttribute('aria-expanded',String(!open));primaryNav.classList.toggle('is-open',!open);});
