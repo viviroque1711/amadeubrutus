@@ -563,3 +563,10 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - 16/11/2026: assuntos revistos a pedido da proprietária, ligados ao trabalho do artista: Shows e contratações; Eventos particulares; Eventos corporativos; Imprensa e entrevistas; The Voice Brasil; Parcerias e publicidade; Projetos musicais; Fãs; Outro assunto. Atualizados no site e na função (versão 2).
 - 16/11/2026 22h: teste da proprietária (Shows e contratações) gravado e e-mails enviados, mas a tela não deixava claro o sucesso e a espera foi longa. Ajustes: painel de sucesso grande (formulário some, mostra nome, e-mail de confirmação e dica do spam, botão para enviar outra) e os dois e-mails passam a sair em paralelo (função versão 3).
 - 16/11/2026 22h10: jornada por assunto aprovada pela proprietária. Resposta imediata própria para cada assunto (texto, pedido de informações, botão de WhatsApp wa.me/5511987422691 com mensagem pronta em Shows, Eventos particulares, Eventos corporativos e Parcerias; Instagram/YouTube em The Voice e Fãs), prazo de até 24 horas (exceto Fãs), assinatura Equipe Amadeu Brutus. Aviso interno com área no título: [Comercial], [Imprensa], [Fãs], [Geral]. Função versão 4, testada com Shows e Fãs.
+
+## Refletores vivos na primeira dobra — 18/11/2026
+
+- Pedido: refletores com movimento de show, não só o balanço leve.
+- Depois da entrada, um roteiro de luz contínuo (requestAnimationFrame) em ciclos de 24 s com quatro cenas de 6 s e transição suave entre elas: foco no artista; varredura em onda; cruzamento esquerda × direita; giro livre. Cada refletor tem fase própria, acompanha o ângulo do seu facho e balança levemente no suporte.
+- No começo de cada cena, batidas de luz em sequência entre os refletores (acende de uma vez e decai; no máximo 3 por segundo), com clarão suave no palco. Intensidade dos fachos e das lentes respira com a música visualmente.
+- Pausa quando a primeira dobra sai da tela ou a aba fica oculta. Com movimento reduzido no aparelho, nada disso roda.

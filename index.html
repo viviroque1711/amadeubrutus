@@ -715,10 +715,48 @@ setTimeout(()=>{
   }},1900);
   setTimeout(respirar,900);
 },fim);
-// Depois, os fachos ficam na marca com leve balanço e, de tempos em tempos, voltam a bater.
+// Depois da entrada, os refletores ganham vida como num show: cada um se move sozinho,
+// varre o palco, cruza com o do outro lado, volta para o artista e dá novas batidas de luz.
 function respirar(){
-  Object.keys(refl).forEach((k,i)=>{const a=angulo[k],t={duration:4200+i*500,direction:'alternate',iterations:Infinity,easing:'ease-in-out'};fx(k).animate([{rotate:(a-1.2)+'deg',opacity:.85},{rotate:(a+1.2)+'deg',opacity:1}],t);ap(k).animate([{rotate:(a-1.2+90)+'deg'},{rotate:(a+1.2+90)+'deg'}],t)});
-  setInterval(()=>{if(document.hidden)return;['tl','tr','bl','br'].forEach((k,i)=>golpe(k,i*380,(i%2?-1:1)*12,1,.9,'none'))},9000);
+  const ks=Object.keys(refl).filter(k=>getComputedStyle(refl[k]).display!=='none');
+  // Encerra as animações da entrada para o movimento contínuo assumir.
+  ks.forEach(k=>[fx(k),ln(k),ap(k)].forEach(el=>el.getAnimations().forEach(x=>x.cancel())));
+  const lado=k=>k.endsWith('l')?1:-1, fase=ks.map((_,i)=>i*1.37);
+  const suave=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
+  // Batida: acende de uma vez e decai (no máximo 3 por segundo).
+  const pulso=(t,t0)=>{const u=(t-t0)/.62;return u<0||u>1?0:u<.05?u/.05:u<.3?1:1-(u-.3)/.7};
+  // Roteiro de luz em ciclos de 24 s: foco no artista, varredura em onda, cruzamento e giro livre.
+  const CUE=6,CICLO=24;
+  const cues=[
+    (t,i,k)=>2.5*Math.sin(t*.8+fase[i]),
+    (t,i,k)=>24*Math.sin(t*1.15+i*.75),
+    (t,i,k)=>lado(k)*-20*Math.sin(t*.9)+3*Math.sin(t*2.1+fase[i]),
+    (t,i,k)=>16*Math.sin(t*1.5+fase[i]*1.6)*Math.cos(t*.45+i)];
+  const vis={on:true};
+  if('IntersectionObserver'in window)new IntersectionObserver(e=>vis.on=e[0].isIntersecting).observe(hero);
+  const t0=performance.now();
+  function quadro(agora){
+    requestAnimationFrame(quadro);
+    if(!vis.on||document.hidden)return;
+    const t=(agora-t0)/1000,c=t%CICLO,n=Math.floor(c/CUE),dentro=c-n*CUE,prox=(n+1)%cues.length;
+    const mistura=suave((dentro-(CUE-1.2))/1.2);
+    let flash=0;
+    ks.forEach((k,i)=>{
+      const a=angulo[k];
+      const off=cues[n](t,i,k)*(1-mistura)+cues[prox](t,i,k)*mistura;
+      // Batidas no começo de cada cena, em sequência entre os refletores.
+      const b=pulso(dentro,.15+i*.28);flash=Math.max(flash,b);
+      const intens=Math.min(1,.78+.14*Math.sin(t*1.7+fase[i]*2)+.3*b);
+      const f=fx(k),l=ap(k);
+      f.style.rotate=(a+off)+'deg';f.style.opacity=intens;
+      // O próprio refletor acompanha o facho e ainda balança levemente no suporte.
+      l.style.rotate=(a+off+90)+'deg';
+      l.style.translate=`-51.4% calc(-57.7% + ${(Math.sin(t*2.3+fase[i])*1.5).toFixed(2)}px)`;
+      ln(k).style.opacity=Math.min(1,.55+.45*intens+.4*b);
+    });
+    clarao.style.opacity=(flash*.3).toFixed(3);
+  }
+  requestAnimationFrame(quadro);
 }
 })();
 
