@@ -673,7 +673,12 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .ab-link{display:inline-flex;gap:10px;align-items:center;color:#fff;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;border-bottom:2px solid var(--ab-vermelho);padding-bottom:6px;transition:color .2s}
 .ab-link:hover{color:var(--ab-vermelho)}
 /* Agenda */
-.ab-agenda-foto{position:absolute;right:-4vw;bottom:0;height:min(96%,1100px);width:auto;opacity:.32;z-index:-1;filter:grayscale(.2);-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
+.ab-agenda{min-height:100svh}
+.ab-agenda::before{content:"";position:absolute;z-index:-2;inset:0 0 0 auto;width:min(61%,900px);background:url("public/images/amadeu-brutus-foto-agenda-de-shows.jpeg") center 24%/cover no-repeat;opacity:.64}
+.ab-agenda::after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(90deg,#050505 0%,rgba(5,5,5,.98) 28%,rgba(5,5,5,.84) 53%,rgba(5,5,5,.28) 100%),linear-gradient(0deg,#050505 0%,transparent 28%,rgba(5,5,5,.12) 100%)}
+@media(max-width:900px){.ab-agenda::before{width:100%;opacity:.38;background-position:58% 20%}.ab-agenda::after{background:linear-gradient(180deg,rgba(5,5,5,.72),#050505 34%,rgba(5,5,5,.94) 100%)}}
+.ab-pronto .ab-agenda .ab-show{transform:translateX(-76px);transition:opacity .62s ease,transform .72s cubic-bezier(.2,.75,.25,1);transition-delay:calc(var(--i,0)*130ms)}
+.ab-pronto .ab-agenda .ab-show:nth-child(even){transform:translateX(76px)}
 .ab-shows{list-style:none;margin:0;padding:0;border-top:1px solid var(--ab-linha);max-width:980px}
 .ab-show{display:grid;grid-template-columns:clamp(110px,13vw,170px) 1fr auto;gap:clamp(16px,3vw,44px);align-items:center;padding:clamp(18px,2.6vh,26px) 0;border-bottom:1px solid var(--ab-linha)}
 .ab-data strong{display:block;font-family:var(--ab-display);font-weight:400;font-size:clamp(2.1rem,3.6vw,3.3rem);line-height:1;color:var(--ab-vermelho)}
@@ -739,7 +744,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 /* Entrada suave ao rolar (sem efeito com movimento reduzido) */
 .ab-pronto .ab-show,.ab-pronto .ab-faixas li,.ab-pronto .ab-clipe,.ab-pronto .ab-materia,.ab-pronto .ab-yt li{opacity:0;transform:translateX(-46px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*70ms)}
 .ab-pronto .ab-visivel{opacity:1!important;transform:none!important}
-@media(max-width:900px){.ab-ouvir-grade,.ab-historia-grade,.ab-materia{grid-template-columns:1fr}.ab-clipes{grid-template-columns:1fr 1fr}.ab-clipes .ab-clipe:last-child{grid-column:1/-1;aspect-ratio:4/5}.ab-agenda-foto{opacity:.18}.ab-historia-foto{max-width:360px}}
+@media(max-width:900px){.ab-ouvir-grade,.ab-historia-grade,.ab-materia{grid-template-columns:1fr}.ab-clipes{grid-template-columns:1fr 1fr}.ab-clipes .ab-clipe:last-child{grid-column:1/-1;aspect-ratio:4/5}.ab-historia-foto{max-width:360px}}
 @media(max-width:560px){.ab-show{grid-template-columns:auto 1fr;row-gap:8px}.ab-hora{grid-column:2;font-size:1.5rem}.ab-yt a{grid-template-columns:1fr auto}.ab-yt small{grid-column:1;grid-row:2}.ab-clipes{grid-template-columns:1fr}.ab-clipes .ab-clipe{aspect-ratio:4/5}}
 @media(prefers-reduced-motion:reduce){.ab-clipe video{transition:none}}
 </style>
@@ -787,7 +792,6 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 </section>
 
 <section class="ab-sec ab-agenda" id="proximos-shows" aria-labelledby="agenda-titulo">
-  <img class="ab-agenda-foto" src="public/brand/recortes/amadeu-brutus-corpo-inteiro-preto.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="641" height="1208">
   <div class="ab-wrap">
     <p class="ab-kicker">Agenda da semana · 17 a 22 de novembro</p>
     <h2 class="ab-titulo" id="agenda-titulo">Próximos <em>shows</em></h2>
