@@ -580,3 +580,12 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - SEO: 10 shows marcados como MusicEvent no JSON-LD (cidade só onde conhecida).
 - Mídias preparadas (já no main): `public/brand/recortes/` (fotos de estúdio sem fundo), `public/videos/web/` (clipes, prévias e capas), vídeo da batalha Chão de Giz compactado (32 → 21 MB).
 - Pendente: nomes das faixas 3 e 4 do player; confirmar cidade do Bar do Cumpadi; aprovação da proprietária para juntar ao main.
+
+## 19/11/2026 — Redesenho, 2ª rodada (branch redesenho-identidade)
+- Agenda voltou com a foto original (amadeu-brutus-foto-agenda-de-shows.jpeg) e a entrada alternada esquerda/direita.
+- Nova dobra #the-voice: vídeo do palco (trechos de "Ordinary") em loop ao fundo; jornada em 5 vídeos que abrem com som numa tela por cima: pré-audição, Audições às Cegas ("Ordinary"), ensaio e Batalha ("Chão de Giz"), bastidores do Peguei. Versões web em public/videos/thevoice/.
+- Faixa de palco (duas fitas cruzadas correndo) antes do The Voice.
+- #videos: capas do YouTube de Last Kiss e Fix You (o player do YouTube só carrega no clique), clipes "Ao vivo na estrada" e botão "Ver todos no YouTube".
+- Imprensa: fotos servidas pelo próprio site (public/images/web/), sem depender do servidor do SBT.
+- Carreira: foto do barzinho em P&B com movimento lento ao fundo e 4 marcos (Visionários S.A., aberturas, professor, The Voice).
+- Pendente: vídeo "a eliminação" não entrou — aguardando a Viviane dizer como nomear a etapa.
