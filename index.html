@@ -26,58 +26,348 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://www.amadeubrutus.com.br/#website",
-      "url": "https://www.amadeubrutus.com.br/",
-      "name": "Amadeu Brutus",
-      "inLanguage": "pt-BR",
-      "publisher": {
-        "@id": "https://www.amadeubrutus.com.br/#artista"
-      }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://www.amadeubrutus.com.br/#artista",
-      "name": "Amadeu Brutus",
-      "url": "https://www.amadeubrutus.com.br/",
-      "description": "Cantor, músico e compositor brasileiro. Conheça sua trajetória artística, apresentações ao vivo e novidades musicais.",
-      "jobTitle": ["Cantor", "Músico", "Compositor"],
-      "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
-      "sameAs": [
-        "https://www.instagram.com/amadeubrutus/",
-        "https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg",
-        "https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo"
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.amadeubrutus.com.br/#webpage",
-      "url": "https://www.amadeubrutus.com.br/",
-      "name": "Amadeu Brutus | Cantor, Músico e Compositor",
-      "description": "Amadeu Brutus é cantor, músico e compositor brasileiro. Conheça sua trajetória, apresentações ao vivo, participação no The Voice Brasil 2026 e novidades musicais.",
-      "inLanguage": "pt-BR",
-      "isPartOf": {
-        "@id": "https://www.amadeubrutus.com.br/#website"
-      },
-      "about": {
-        "@id": "https://www.amadeubrutus.com.br/#artista"
-      }
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://www.amadeubrutus.com.br/#website",
+   "url": "https://www.amadeubrutus.com.br/",
+   "name": "Amadeu Brutus",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://www.amadeubrutus.com.br/#artista",
+   "name": "Amadeu Brutus",
+   "url": "https://www.amadeubrutus.com.br/",
+   "description": "Cantor, músico e compositor brasileiro. Conheça sua trajetória artística, apresentações ao vivo e novidades musicais.",
+   "jobTitle": [
+    "Cantor",
+    "Músico",
+    "Compositor"
+   ],
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "sameAs": [
+    "https://www.instagram.com/amadeubrutus/",
+    "https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg",
+    "https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://www.amadeubrutus.com.br/#webpage",
+   "url": "https://www.amadeubrutus.com.br/",
+   "name": "Amadeu Brutus | Cantor, Músico e Compositor",
+   "description": "Amadeu Brutus é cantor, músico e compositor brasileiro. Conheça sua trajetória, apresentações ao vivo, participação no The Voice Brasil 2026 e novidades musicais.",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://www.amadeubrutus.com.br/#website"
+   },
+   "about": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   }
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Black Rock Burger",
+   "startDate": "2026-11-17",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Black Rock Burger",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Av. Paulo Faccini, 2003",
+     "addressRegion": "SP",
+     "addressCountry": "BR",
+     "addressLocality": "Guarulhos"
     }
-  ]
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Black Rock Burger."
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Bar Aberto",
+   "startDate": "2026-11-18",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Bar Aberto",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Av. Engenheiro Luís Carlos Berrini, 443",
+     "addressRegion": "SP",
+     "addressCountry": "BR",
+     "addressLocality": "São Paulo"
+    }
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Bar Aberto."
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Rockfella",
+   "startDate": "2026-11-19T12:00:00-03:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Rockfella",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "R. do Rocio, 89",
+     "addressRegion": "SP",
+     "addressCountry": "BR",
+     "addressLocality": "São Paulo"
+    }
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Rockfella."
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Blues & Beer",
+   "startDate": "2026-11-19T20:00:00-03:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Blues & Beer",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Rua Zacarias de Góis, 1094",
+     "addressRegion": "SP",
+     "addressCountry": "BR",
+     "addressLocality": "São Paulo"
+    }
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Blues & Beer."
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Garden Tapajós",
+   "startDate": "2026-11-20T12:00:00-03:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Garden Tapajós",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Rua Tapajós, 274",
+     "addressRegion": "SP",
+     "addressCountry": "BR",
+     "addressLocality": "Guarulhos"
+    }
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Garden Tapajós."
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Villa Velha Bar",
+   "startDate": "2026-11-20T21:00:00-03:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Villa Velha Bar",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Rua Tapajós, 2",
+     "addressRegion": "SP",
+     "addressCountry": "BR",
+     "addressLocality": "Guarulhos"
+    }
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Villa Velha Bar."
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Lagoon Gastrobar",
+   "startDate": "2026-11-21T13:00:00-03:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Lagoon Gastrobar",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Av. São Luiz, 822",
+     "addressRegion": "SP",
+     "addressCountry": "BR",
+     "addressLocality": "Guarulhos"
+    }
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Lagoon Gastrobar."
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Bar do Cumpadi",
+   "startDate": "2026-11-21T19:00:00-03:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Bar do Cumpadi",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Rua Amoipira, 304",
+     "addressRegion": "SP",
+     "addressCountry": "BR"
+    }
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Bar do Cumpadi."
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Garden Tapajós",
+   "startDate": "2026-11-22T13:00:00-03:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Garden Tapajós",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Rua Tapajós, 274",
+     "addressRegion": "SP",
+     "addressCountry": "BR",
+     "addressLocality": "Guarulhos"
+    }
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Garden Tapajós."
+  },
+  {
+   "@type": "MusicEvent",
+   "name": "Amadeu Brutus ao vivo no Bar do Alemão",
+   "startDate": "2026-11-22T17:00:00-03:00",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+   "location": {
+    "@type": "Place",
+    "name": "Bar do Alemão",
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "Shopping União de Osasco",
+     "addressRegion": "SP",
+     "addressCountry": "BR",
+     "addressLocality": "Osasco"
+    }
+   },
+   "performer": {
+    "@id": "https://www.amadeubrutus.com.br/#artista"
+   },
+   "organizer": {
+    "@type": "Person",
+    "name": "Amadeu Brutus",
+    "url": "https://www.amadeubrutus.com.br/"
+   },
+   "image": "https://www.amadeubrutus.com.br/public/images/amadeu-brutus-foto-oficial-destaque.jpeg",
+   "description": "Show de Amadeu Brutus, cantor do The Voice Brasil 2026, no Bar do Alemão."
+  }
+ ]
 }
 </script>
+<link rel="preload" href="public/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'Anton';src:url(public/fonts/anton-400.woff2) format('woff2');font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+@font-face{font-family:'Anton';src:url(public/fonts/anton-400-ext.woff2) format('woff2');font-weight:400;font-display:swap;unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:'Inter';src:url(public/fonts/inter-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url(public/fonts/inter-600.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Inter';src:url(public/fonts/inter-800.woff2) format('woff2');font-weight:800;font-display:swap}
+
 :root{color-scheme:dark;--bg:#030305;--white:#f5f4f2;--gold:#d6a35d;--red:#ff263d;--blue:#168cff;--yellow:#ffd52a}
-*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--white);font-family:'Inter',Arial,Helvetica,sans-serif;overflow-x:hidden}
 .fold{position:relative;min-height:100svh;overflow:hidden;isolation:isolate}
 .hero{display:grid;place-items:center;background:#030305}
 .topline{position:absolute;z-index:6;top:0;left:0;width:100%;padding:26px 5vw;display:flex;justify-content:space-between;letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:#d9d9dc}
 .brand{font-weight:900;color:#fff}
 .sequence{position:relative;z-index:2;width:min(94vw,1300px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:0}
-.word{margin:0;font-family:Impact,'Arial Narrow',sans-serif;font-stretch:condensed;font-weight:1000;letter-spacing:-.055em;line-height:.78;font-size:clamp(5rem,18vw,17rem);white-space:nowrap}
+.word{margin:0;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-stretch:condensed;font-weight:1000;letter-spacing:-.055em;line-height:.78;font-size:clamp(5rem,18vw,17rem);white-space:nowrap}
 
 .hero-caption{position:absolute;z-index:5;top:calc(50% + clamp(90px,13vw,190px));margin-top:0;letter-spacing:.34em;text-transform:uppercase;font-size:clamp(9px,1.2vw,13px);color:#d9d9dc}
 @keyframes arrive{from{opacity:0;transform:translateY(24px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
@@ -94,12 +384,12 @@
 .ticker{border-top:1px solid var(--red);border-bottom:1px solid var(--blue);overflow:hidden;padding:20px 0;background:#08080d}
 .ticker-track{display:flex;width:max-content;animation:marquee 34s linear infinite;will-change:transform}
 .ticker-group{display:flex;align-items:center;gap:42px;padding-right:42px;white-space:nowrap}
-.ticker-item{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(22px,3vw,42px);letter-spacing:.04em;color:#f5f4f2;text-transform:uppercase}
+.ticker-item{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(22px,3vw,42px);letter-spacing:.04em;color:#f5f4f2;text-transform:uppercase}
 .ticker-item strong{color:var(--yellow);font-weight:900}.ticker-item em{font-style:normal;color:var(--red)}
 @keyframes marquee{to{transform:translateX(-50%)}}
 .trajectory-copy{max-width:1100px;margin:auto;padding:clamp(70px,10vw,140px) 7vw 40px}
 .trajectory-copy .eyebrow{color:var(--red)}
-.trajectory-copy h2{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3rem,8vw,8rem);line-height:.9;letter-spacing:-.035em;text-transform:uppercase;margin:22px 0;color:#fff;max-width:900px}
+.trajectory-copy h2{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(3rem,8vw,8rem);line-height:.9;letter-spacing:-.035em;text-transform:uppercase;margin:22px 0;color:#fff;max-width:900px}
 .trajectory-copy p{max-width:720px;color:#c5c5c8;line-height:1.9;font-size:clamp(14px,1.3vw,17px)}
 @media(max-width:700px){.hero-actions{top:calc(50% + 105px);gap:12px;margin-top:0}.hero-link{width:min(88vw,420px);min-width:0;padding:16px 18px;border-radius:16px}.trajectory-copy{padding:72px 8vw 30px}.ticker{padding:15px 0}.ticker-group{gap:28px;padding-right:28px}}
 @media(prefers-reduced-motion:reduce){.ticker-track{animation:none!important}}
@@ -109,7 +399,7 @@
 .second-copy{position:relative;display:flex;flex-direction:column;justify-content:center;padding:9vw 8vw 9vw 5vw}
 .second-copy:before{content:"";position:absolute;left:0;top:18%;bottom:18%;width:1px;background:linear-gradient(transparent,#d6a35d99,transparent)}
 .eyebrow{color:var(--gold);font-size:11px;letter-spacing:.34em;text-transform:uppercase}
-.second h2{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,7.2vw,7.6rem);line-height:.88;letter-spacing:-.04em;margin:24px 0 26px;text-transform:uppercase}
+.second h2{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,7.2vw,7.6rem);line-height:.88;letter-spacing:-.04em;margin:24px 0 26px;text-transform:uppercase}
 .second p{max-width:34rem;color:#c5c5c8;line-height:1.9;font-size:clamp(14px,1.25vw,17px);margin:0}
 .second .signature{margin-top:34px;color:#f5f4f2;font-size:10px;letter-spacing:.28em;text-transform:uppercase}
 footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:28px 5vw;background:#030305;color:#777;text-align:center;font-size:10px;letter-spacing:.16em;text-transform:uppercase;border-top:1px solid #ffffff12}
@@ -124,7 +414,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 
 /* Cabeçalho institucional e navegação responsiva */
 .site-header{position:absolute;z-index:20;top:0;left:0;width:100%;min-height:88px;padding:12px clamp(18px,4vw,64px);display:flex;align-items:center;justify-content:space-between;gap:24px;background:transparent;}
-.site-brand{display:flex;flex-direction:column;align-items:flex-start;gap:0;color:#fff;text-decoration:none;font-family:Impact,'Arial Narrow',sans-serif;line-height:.78;letter-spacing:.02em;flex:0 0 auto}
+.site-brand{display:flex;flex-direction:column;align-items:flex-start;gap:0;color:#fff;text-decoration:none;font-family:'Anton',Impact,'Arial Narrow',sans-serif;line-height:.78;letter-spacing:.02em;flex:0 0 auto}
 .site-brand img{display:block;height:clamp(48px,5vw,64px);width:auto}
 .primary-nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,2vw,30px)}
 .primary-nav a{text-shadow:0 1px 10px #000,0 0 2px #000;color:#f4f2ef;text-decoration:none;text-transform:uppercase;font-size:clamp(9px,.85vw,12px);font-weight:700;letter-spacing:.12em;white-space:nowrap;transition:color .2s ease,text-shadow .2s ease}
@@ -135,7 +425,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(min-width:901px) and (max-width:1100px){.primary-nav{gap:10px}.primary-nav a{letter-spacing:.07em;font-size:9px}}
 /* As âncoras do menu permanecem visíveis e acessíveis */
 .site-section{min-height:38vh;padding:90px 8vw;background:#080809;border-top:1px solid #ffffff12;scroll-margin-top:30px}
-.site-section h2{margin:0 0 16px;font:clamp(2.4rem,6vw,5rem) Impact,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:-.02em}
+.site-section h2{margin:0 0 16px;font:clamp(2.4rem,6vw,5rem) 'Anton',Impact,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:-.02em}
 .site-section p{max-width:650px;color:#c5c5c8;line-height:1.8}
 
 
@@ -153,13 +443,13 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .hero-intro{position:absolute;inset:0;z-index:4;pointer-events:none}
 .clarao{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;mix-blend-mode:screen;background:radial-gradient(40% 38% at 50% 38%,rgba(232,238,248,.4),transparent 70%)}
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.hero .word{position:absolute;left:50%;top:45%;translate:-50% -50%;margin:0;opacity:0;white-space:nowrap;line-height:.82;text-transform:uppercase;font-family:Impact,'Arial Narrow',sans-serif;font-weight:900}
+.hero .word{position:absolute;left:50%;top:45%;translate:-50% -50%;margin:0;opacity:0;white-space:nowrap;line-height:.82;text-transform:uppercase;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:900}
 .hero .amadeu{font-size:clamp(4.2rem,17vw,15rem);letter-spacing:-.03em;color:rgba(255,255,255,.08);-webkit-text-stroke:2.5px rgba(255,255,255,.98);text-shadow:0 0 26px rgba(255,240,215,.3)}
 .hero .brutus{font-size:clamp(4rem,18vw,18rem);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.25);
   background:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.05)),url('public/images/foto-amadeu-brutus-11.jpeg') center 42%/cover;-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 0 20px rgba(255,240,215,.25))}
 /* Cena final: o artista sob os holofotes e o nome completo */
 .hero-artista{position:absolute;z-index:2;left:50%;bottom:0;translate:-50% 0;height:100svh;width:auto;max-width:none;-webkit-mask-image:radial-gradient(ellipse 50% 62% at 52% 34%,#000 42%,rgba(0,0,0,.6) 70%,transparent 100%);mask-image:radial-gradient(ellipse 50% 62% at 52% 34%,#000 42%,rgba(0,0,0,.6) 70%,transparent 100%)}
-.hero-nome{position:absolute;z-index:5;left:50%;top:63%;translate:-50% -50%;margin:0;display:flex;flex-direction:column;align-items:center;text-transform:uppercase;font-family:Impact,'Arial Narrow',sans-serif;font-weight:900;line-height:.86;white-space:nowrap;pointer-events:none}
+.hero-nome{position:absolute;z-index:5;left:50%;top:63%;translate:-50% -50%;margin:0;display:flex;flex-direction:column;align-items:center;text-transform:uppercase;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:900;line-height:.86;white-space:nowrap;pointer-events:none}
 .hero-nome .nome-1{font-size:clamp(2.6rem,6.4vw,6.6rem);letter-spacing:.06em;color:rgba(255,255,255,.14);-webkit-text-stroke:1.6px #fff}
 @media(max-width:700px){.hero-nome .nome-1{font-size:13vw;-webkit-text-stroke:1.8px #fff}.hero-nome .nome-2{font-size:21vw}}
 .hero-nome .nome-2{font-size:clamp(3.6rem,11vw,11.5rem);letter-spacing:-.01em;color:#f6f0e6;text-shadow:0 0 30px rgba(255,236,205,.35),0 10px 40px rgba(0,0,0,.9)}
@@ -182,16 +472,16 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .shows-fold:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.98) 28%,rgba(0,0,0,.84) 53%,rgba(0,0,0,.28) 100%),linear-gradient(0deg,#000 0%,transparent 28%,rgba(0,0,0,.12) 100%)}
 .shows-inner{width:min(100%,1120px);margin:0 auto}
 .shows-kicker{display:block;color:#ff2b78;font-size:clamp(11px,1.2vw,15px);font-weight:700;letter-spacing:.34em;text-transform:uppercase}
-.shows-title{margin:18px 0 clamp(34px,5vw,62px);font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.4rem,9.5vw,8.2rem);font-weight:400;line-height:.88;letter-spacing:-.025em;text-transform:uppercase}
+.shows-title{margin:18px 0 clamp(34px,5vw,62px);font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(3.4rem,9.5vw,8.2rem);font-weight:400;line-height:.88;letter-spacing:-.025em;text-transform:uppercase}
 .shows-list{width:min(100%,850px);border-top:1px solid rgba(255,255,255,.24)}
 .show-day-group{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.2)}
 .show-day-group.single{grid-template-columns:minmax(0,1fr)}
 .show-item{display:grid;grid-template-columns:minmax(88px,112px) minmax(0,1fr);gap:14px;align-items:center;min-width:0;padding:18px 14px;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:rgba(0,0,0,.28)}
 .show-when{display:flex;flex-direction:column;gap:7px;min-width:0}
 .show-day{color:#ff2b78;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.show-time{color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1}
+.show-time{color:#fff;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1}
 .show-info{min-width:0}
-.show-info h3{margin:0 0 7px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.15rem,1.8vw,1.65rem);font-weight:400;letter-spacing:.025em;text-transform:uppercase;overflow-wrap:anywhere}
+.show-info h3{margin:0 0 7px;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(1.15rem,1.8vw,1.65rem);font-weight:400;letter-spacing:.025em;text-transform:uppercase;overflow-wrap:anywhere}
 .show-info p{margin:0;color:#b7b7bc;font-size:clamp(12px,1vw,14px);line-height:1.5;overflow-wrap:anywhere}
 .shows-note{margin:26px 0 0;color:#aaa;font-size:12px;letter-spacing:.04em}
 
@@ -220,7 +510,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .career-inner{position:relative;z-index:2;width:min(100%,940px);margin:0 auto;display:block}
 .career-copy{width:100%;min-width:0;text-align:center}
 .career-eyebrow{display:block;text-align:center;color:#e21f69;font-size:clamp(12px,1.05vw,14px);font-weight:500;letter-spacing:.12em;text-transform:uppercase}
-.career-copy h2{max-width:900px;margin:15px auto 25px;color:#f8f7f8;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.2rem,6.5vw,6.2rem);font-weight:400;line-height:.94;letter-spacing:-.025em;text-align:center;text-transform:uppercase}
+.career-copy h2{max-width:900px;margin:15px auto 25px;color:#f8f7f8;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(3.2rem,6.5vw,6.2rem);font-weight:400;line-height:.94;letter-spacing:-.025em;text-align:center;text-transform:uppercase}
 .career-story{max-width:830px;margin:0 auto;text-align:center}
 .career-story p{margin:0 auto 15px;color:#a9a6ae;font-family:Arial,Helvetica,sans-serif;font-size:clamp(14px,1.08vw,16px);font-weight:400;line-height:1.58;text-align:center}
 .career-story strong{color:#f7f6f7;font-weight:700}
@@ -255,7 +545,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .discography-fold:before{content:"";position:absolute;z-index:-1;inset:0;opacity:.12;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.08) 4px,transparent 5px);mix-blend-mode:screen}
 .discography-inner{position:relative;z-index:1;width:min(100%,1160px);margin:0 auto;display:grid;grid-template-columns:minmax(0,.88fr) minmax(380px,1.12fr);gap:clamp(34px,6vw,82px);align-items:center}
 .discography-kicker{display:block;color:#f02c91;font-size:clamp(11px,1.2vw,15px);font-weight:700;letter-spacing:.3em;text-transform:uppercase}
-.discography-copy h2{max-width:590px;margin:26px 0 24px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.8rem,7vw,7.1rem);font-weight:400;line-height:.91;letter-spacing:-.025em;text-transform:uppercase}
+.discography-copy h2{max-width:590px;margin:26px 0 24px;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(3.8rem,7vw,7.1rem);font-weight:400;line-height:.91;letter-spacing:-.025em;text-transform:uppercase}
 .discography-copy h2 em{display:block;color:#d6a2d0;font-style:normal}
 .discography-copy p{max-width:440px;margin:0;color:#bcb2c5;font-size:clamp(15px,1.3vw,18px);line-height:1.8}
 .spotify-cta{display:inline-flex;align-items:center;gap:13px;margin-top:34px;padding:17px 25px;border:1.5px solid #d72a9b;border-radius:18px;color:#f7dff3;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:.12em;background:rgba(20,8,30,.72);box-shadow:inset 0 0 0 4px rgba(215,42,155,.09),0 0 22px rgba(215,42,155,.18);transition:transform .2s,box-shadow .2s}
@@ -274,7 +564,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .official-photos-fold{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;padding:clamp(76px,9vw,116px) clamp(22px,7.5vw,110px);color:#f8f4fa;background:radial-gradient(ellipse at 12% 80%,rgba(111,29,101,.2),transparent 40%),linear-gradient(145deg,#09080d,#151018 58%,#08070b)}
 .official-photos-heading{width:min(100%,1160px);margin:0 auto 38px}
 .official-photos-kicker{color:#f02c91;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase}
-.official-photos-heading h2{margin:16px 0 10px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.4rem,7vw,6.5rem);line-height:.92;font-weight:400;text-transform:uppercase}
+.official-photos-heading h2{margin:16px 0 10px;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(3.4rem,7vw,6.5rem);line-height:.92;font-weight:400;text-transform:uppercase}
 .official-photos-heading h2 em{color:#d6a2d0;font-style:normal}
 .official-photos-heading p{margin:0;color:#bdb5c1;font-size:16px;line-height:1.6}
 .official-photos-grid{width:min(100%,1160px);margin:0 auto;display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:stretch}
@@ -292,7 +582,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .videos-inner{width:min(100%,1160px);margin:0 auto}
 .videos-heading{margin:0 0 clamp(24px,4vh,42px)}
 .videos-kicker{color:#26a8ff;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase}
-.videos-heading h2{margin:10px 0 8px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:400;line-height:.9;text-transform:uppercase}
+.videos-heading h2{margin:10px 0 8px;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(3.5rem,7vw,6.5rem);font-weight:400;line-height:.9;text-transform:uppercase}
 .videos-heading p{margin:0;color:#bdbdc5;font-size:15px;line-height:1.6}
 .videos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,34px)}
 .video-card{min-width:0}
@@ -302,7 +592,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .video-play{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:76px;height:76px;border:2px solid #fff;border-radius:50%;background:rgba(255,25,55,.88);color:#fff;font-size:26px;cursor:pointer;box-shadow:0 0 30px rgba(255,20,60,.5);transition:transform .2s,background .2s}
 .video-play:hover,.video-play:focus-visible{transform:translate(-50%,-50%) scale(1.09);background:#ff173c}
 .video-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.video-card h3{margin:18px 0 5px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:400;letter-spacing:.025em;text-transform:uppercase}
+.video-card h3{margin:18px 0 5px;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:400;letter-spacing:.025em;text-transform:uppercase}
 .video-card>p{margin:0;color:#aaa;font-size:13px;letter-spacing:.04em}
 .videos-all-link{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:16px;width:100%;margin:clamp(34px,5vh,54px) auto 0;padding:3px;border:0;border-radius:28px;background:linear-gradient(105deg,#168cff 0%,#773cff 34%,#ff168f 68%,#24e0b3 100%);color:#ff4db5;text-decoration:none;text-align:center;box-shadow:0 0 22px rgba(22,140,255,.12),0 0 24px rgba(255,22,143,.12);transition:filter .2s,transform .2s}
 .videos-all-link::before{content:"";position:absolute;z-index:-1;inset:8px;border:2px solid transparent;border-radius:21px;background:linear-gradient(#050507,#050507) padding-box,linear-gradient(105deg,#168cff,#773cff,#ff168f,#24e0b3) border-box;pointer-events:none}
@@ -319,7 +609,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .latest-news-inner{width:min(100%,1160px);margin:0 auto}
 .latest-news-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin:0 0 clamp(22px,3.5vh,36px);text-align:left}
 .latest-news-kicker{display:block;color:var(--vermelho);font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase}
-.latest-news-heading h2{margin:8px 0 0;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(2.6rem,min(5.6vw,8.5vh),5.4rem);font-weight:400;line-height:.9;letter-spacing:-.02em;text-transform:uppercase}
+.latest-news-heading h2{margin:8px 0 0;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(2.6rem,min(5.6vw,8.5vh),5.4rem);font-weight:400;line-height:.9;letter-spacing:-.02em;text-transform:uppercase}
 .latest-news-heading h2 em{color:var(--vermelho);font-style:normal}
 .latest-news-heading p{max-width:440px;margin:0;color:#bdbdbd;font-size:14px;line-height:1.6}
 .latest-news-grid{display:grid;grid-template-columns:1fr;gap:clamp(14px,2.2vh,22px)}
@@ -328,10 +618,10 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .news-card-image{display:block;width:100%;height:0;min-height:100%;object-fit:cover;object-position:center 35%;background:#111}
 .news-card-body{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:clamp(16px,2.2vh,26px) clamp(18px,2.4vw,34px)}
 .news-card-topline{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px}
-.news-card-topline .news-num{font-family:Impact,'Arial Narrow',sans-serif;font-size:26px;line-height:1;color:var(--vermelho)}
+.news-card-topline .news-num{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:26px;line-height:1;color:var(--vermelho)}
 .news-card-topline .news-etapa{color:#cfcfcf;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
 .news-source{display:inline-block;padding:6px 10px;border:1px solid var(--azul);border-radius:2px;color:#fff;background:rgba(22,140,255,.14);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-.news-card h3{margin:2px 0 0;color:#fff;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(1.3rem,min(2.2vw,3.6vh),2.2rem);font-weight:400;line-height:1.02;text-transform:uppercase}
+.news-card h3{margin:2px 0 0;color:#fff;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(1.3rem,min(2.2vw,3.6vh),2.2rem);font-weight:400;line-height:1.02;text-transform:uppercase}
 .news-card .news-subtitle{margin:0;color:#cfcfcf;font-size:14px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .news-card a{display:inline-flex;align-items:center;gap:10px;margin-top:auto;flex:none;padding:12px 16px;border:1px solid var(--vermelho);border-radius:2px;color:#fff;text-decoration:none;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;transition:background .2s}
 .news-card a:hover,.news-card a:focus-visible{background:var(--vermelho)}
@@ -344,7 +634,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .contato-fold{--rosa:#ff2b78;--vermelho:#ff263d;padding:clamp(84px,11vh,130px) clamp(20px,5vw,80px) clamp(64px,9vh,110px);background:#0d0d14;color:#f5f4f2}
 .contato-inner{width:min(100%,1160px);margin:0 auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,90px);align-items:start}
 .contato-kicker{color:var(--rosa);font-size:clamp(13px,1.3vw,17px);letter-spacing:.04em;text-transform:uppercase}
-.contato-cabeca h2{margin:18px 0 22px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(3.2rem,5.4vw,5.6rem);font-weight:400;line-height:.95;text-transform:uppercase}
+.contato-cabeca h2{margin:18px 0 22px;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(3.2rem,5.4vw,5.6rem);font-weight:400;line-height:.95;text-transform:uppercase}
 .contato-cabeca p{margin:0 0 14px;color:#9a9aa6;font-size:clamp(16px,1.5vw,20px);line-height:1.55}
 .contato-cabeca .contato-canais{font-size:14px}.contato-canais a{color:#fff}
 .contato-form{display:grid;grid-template-columns:1fr 1fr;gap:22px 20px}
@@ -366,11 +656,92 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .contato-sucesso{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:clamp(28px,4vw,48px);border:1px solid #2f8f63;border-radius:4px;background:linear-gradient(160deg,#0f2a1f,#0d0d14 70%);outline:none}
 .contato-sucesso[hidden],.contato-form[hidden]{display:none}
 .sucesso-icone{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#5fd39a;color:#06150e;font-size:28px;font-weight:900}
-.contato-sucesso h3{margin:6px 0 0;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1;text-transform:uppercase}
+.contato-sucesso h3{margin:6px 0 0;font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1;text-transform:uppercase}
 .contato-sucesso p{margin:0;color:#d2d2da;font-size:16px;line-height:1.6}.contato-sucesso .sucesso-dica{color:#8b8b97;font-size:13px}
 .sucesso-novo{margin-top:8px;padding:14px 22px;border:1px solid #ffffff55;border-radius:2px;background:transparent;color:#fff;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
 .sucesso-novo:hover{border-color:#fff}
 @media(max-width:860px){.contato-inner{grid-template-columns:1fr}.contato-form{grid-template-columns:1fr}}
+/* ===== IDENTIDADE AMADEU BRUTUS — preto de palco, luz prata, vermelho. Sem caixas. ===== */
+:root{--ab-preto:#050505;--ab-prata:#d9dde4;--ab-vermelho:#ff263d;--ab-texto:#f4f2ef;--ab-cinza:#a6a6ad;--ab-linha:rgba(255,255,255,.14);--ab-display:'Anton',Impact,'Arial Narrow',sans-serif;--ab-corpo:'Inter',Arial,Helvetica,sans-serif}
+.ab-sec{position:relative;isolation:isolate;overflow:hidden;background:var(--ab-preto);color:var(--ab-texto);font-family:var(--ab-corpo);padding:clamp(88px,13vh,150px) clamp(20px,6vw,96px)}
+.ab-sec::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(60% 50% at 15% 0%,rgba(217,221,228,.07),transparent 70%)}
+.ab-wrap{position:relative;width:min(100%,1200px);margin:0 auto}
+.ab-kicker{margin:0 0 18px;color:var(--ab-vermelho);font-size:12px;font-weight:800;letter-spacing:.32em;text-transform:uppercase}
+.ab-titulo{margin:0 0 clamp(36px,6vh,64px);font-family:var(--ab-display);font-weight:400;font-size:clamp(3.4rem,8.5vw,8.4rem);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;color:#fff}
+.ab-titulo em{font-style:normal;color:var(--ab-vermelho)}
+.ab-lead{margin:-28px 0 36px;max-width:46ch;color:var(--ab-cinza);font-size:clamp(16px,1.3vw,19px);line-height:1.6}
+.ab-link{display:inline-flex;gap:10px;align-items:center;color:#fff;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;border-bottom:2px solid var(--ab-vermelho);padding-bottom:6px;transition:color .2s}
+.ab-link:hover{color:var(--ab-vermelho)}
+/* Agenda */
+.ab-agenda-foto{position:absolute;right:-4vw;bottom:0;height:min(96%,1100px);width:auto;opacity:.32;z-index:-1;filter:grayscale(.2);-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
+.ab-shows{list-style:none;margin:0;padding:0;border-top:1px solid var(--ab-linha);max-width:980px}
+.ab-show{display:grid;grid-template-columns:clamp(110px,13vw,170px) 1fr auto;gap:clamp(16px,3vw,44px);align-items:center;padding:clamp(18px,2.6vh,26px) 0;border-bottom:1px solid var(--ab-linha)}
+.ab-data strong{display:block;font-family:var(--ab-display);font-weight:400;font-size:clamp(2.1rem,3.6vw,3.3rem);line-height:1;color:var(--ab-vermelho)}
+.ab-data span{display:block;margin-top:6px;color:var(--ab-cinza);font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+.ab-local h3{margin:0;font-family:var(--ab-display);font-weight:400;font-size:clamp(1.6rem,2.8vw,2.6rem);line-height:1;text-transform:uppercase;color:#fff;transition:color .25s}
+.ab-local p{margin:8px 0 0;color:#d6d6db;font-size:clamp(15px,1.25vw,18px)}
+.ab-hora{font-family:var(--ab-display);font-size:clamp(1.6rem,2.6vw,2.4rem);color:var(--ab-prata);white-space:nowrap}
+.ab-show:hover .ab-local h3{color:var(--ab-vermelho)}
+.ab-nota{margin:28px 0 0;color:var(--ab-cinza);font-size:14px}.ab-nota a{color:#fff}
+/* Ouvir */
+.ab-ouvir-grade{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.ab-ouvir-foto{margin:0}.ab-ouvir-foto img{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.8))}
+.ab-faixas{list-style:none;margin:0;padding:0;border-top:1px solid var(--ab-linha)}
+.ab-faixa{all:unset;box-sizing:border-box;display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:18px;width:100%;padding:20px 4px;border-bottom:1px solid var(--ab-linha);cursor:pointer;color:#fff}
+.ab-faixa:focus-visible{outline:2px solid var(--ab-vermelho);outline-offset:2px}
+.ab-n{font-family:var(--ab-display);font-size:22px;color:var(--ab-cinza)}
+.ab-nome{font-family:var(--ab-display);font-size:clamp(1.5rem,2.3vw,2.1rem);text-transform:uppercase;line-height:1}
+.ab-dur{color:var(--ab-cinza);font-size:14px;font-variant-numeric:tabular-nums}
+.ab-faixa:hover .ab-nome,.ab-faixa.tocando .ab-nome{color:var(--ab-vermelho)}
+.ab-faixa.tocando .ab-n{color:var(--ab-vermelho)}
+.ab-faixa.tocando .ab-n::before{content:"▶ "}
+.ab-barra{height:3px;margin:22px 0 30px;background:var(--ab-linha)}.ab-barra i{display:block;height:100%;width:0;background:var(--ab-vermelho);transition:width .25s linear}
+/* Ao vivo */
+.ab-clipes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.ab-clipe{position:relative;margin:0;aspect-ratio:9/14;overflow:hidden;background:#111}
+.ab-clipe video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.ab-clipe:hover video{transform:scale(1.03)}
+.ab-clipe::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,transparent 45%);pointer-events:none}
+.ab-clipe figcaption{position:absolute;left:18px;bottom:18px;z-index:2;font-family:var(--ab-display);font-size:clamp(1.3rem,2vw,1.9rem);text-transform:uppercase;color:#fff;line-height:1}
+.ab-som{position:absolute;right:14px;top:14px;z-index:2;padding:9px 13px;border:1px solid rgba(255,255,255,.6);background:rgba(0,0,0,.45);color:#fff;font:800 10px/1 var(--ab-corpo);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(4px)}
+.ab-som:hover{background:var(--ab-vermelho);border-color:var(--ab-vermelho)}
+.ab-clipe.com-som .ab-som{display:none}
+.ab-yt{list-style:none;margin:clamp(36px,6vh,60px) 0 0;padding:0;border-top:1px solid var(--ab-linha)}
+.ab-yt a{display:grid;grid-template-columns:1fr auto auto;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--ab-linha);color:#fff;text-decoration:none}
+.ab-yt span{font-family:var(--ab-display);font-size:clamp(1.5rem,2.4vw,2.2rem);text-transform:uppercase}
+.ab-yt small{color:var(--ab-cinza);font-size:14px}.ab-yt b{color:var(--ab-vermelho)}
+.ab-yt a:hover span{color:var(--ab-vermelho)}
+/* Imprensa */
+.ab-materias{display:grid;gap:clamp(36px,6vh,56px)}
+.ab-materia{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.ab-materia img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center 30%}
+.ab-etapa{margin:0 0 12px;color:var(--ab-vermelho);font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+.ab-materia h3{margin:0 0 14px;font-family:var(--ab-display);font-weight:400;font-size:clamp(1.8rem,3vw,2.8rem);line-height:1;text-transform:uppercase}
+.ab-materia p{margin:0 0 22px;color:#cfcfd4;font-size:16px;line-height:1.6;max-width:52ch}
+/* Carreira */
+.ab-historia-grade{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,96px);align-items:end}
+.ab-historia-foto{margin:0}.ab-historia-foto img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(0deg,transparent,#000 22%);mask-image:linear-gradient(0deg,transparent,#000 22%)}
+.ab-historia-texto p{margin:0 0 18px;color:#cfcfd4;font-size:clamp(16px,1.25vw,18px);line-height:1.7;max-width:60ch}
+.ab-historia-texto strong{color:#fff;font-weight:600}
+.ab-historia-texto .ab-frase{margin-top:30px;font-family:var(--ab-display);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.05;color:var(--ab-vermelho);text-transform:uppercase}
+/* Contato no mesmo idioma visual: campos sem caixa, só linha */
+.ab-contato .contato-inner{width:min(100%,1200px);margin:0 auto}
+.ab-contato .contato-kicker{color:var(--ab-vermelho);font-size:12px;font-weight:800;letter-spacing:.32em}
+.ab-contato .contato-cabeca h2{font-family:var(--ab-display);color:#fff}
+.ab-contato .campo input,.ab-contato .campo select,.ab-contato .campo textarea{background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.28);border-radius:0;padding:14px 2px;font-family:var(--ab-corpo)}
+.ab-contato .campo select{background-image:linear-gradient(45deg,transparent 50%,#aaa 50%),linear-gradient(135deg,#aaa 50%,transparent 50%);background-position:calc(100% - 14px) 50%,calc(100% - 8px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.ab-contato .campo select option{background:#111}
+.ab-contato .campo input:focus,.ab-contato .campo select:focus,.ab-contato .campo textarea:focus{box-shadow:none;border-bottom-color:var(--ab-vermelho)}
+.ab-contato .campo textarea{border:1px solid rgba(255,255,255,.18);padding:14px}
+.ab-contato{background:var(--ab-preto)}
+.site-footer{font-family:var(--ab-corpo)}
+.hero .hero-link.secondary{border-color:var(--ab-prata)!important;color:#fff!important}
+/* Entrada suave ao rolar (sem efeito com movimento reduzido) */
+.ab-pronto .ab-show,.ab-pronto .ab-faixas li,.ab-pronto .ab-clipe,.ab-pronto .ab-materia,.ab-pronto .ab-yt li{opacity:0;transform:translateX(-46px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*70ms)}
+.ab-pronto .ab-visivel{opacity:1!important;transform:none!important}
+@media(max-width:900px){.ab-ouvir-grade,.ab-historia-grade,.ab-materia{grid-template-columns:1fr}.ab-clipes{grid-template-columns:1fr 1fr}.ab-clipes .ab-clipe:last-child{grid-column:1/-1;aspect-ratio:4/5}.ab-agenda-foto{opacity:.18}.ab-historia-foto{max-width:360px}}
+@media(max-width:560px){.ab-show{grid-template-columns:auto 1fr;row-gap:8px}.ab-hora{grid-column:2;font-size:1.5rem}.ab-yt a{grid-template-columns:1fr auto}.ab-yt small{grid-column:1;grid-row:2}.ab-clipes{grid-template-columns:1fr}.ab-clipes .ab-clipe{aspect-ratio:4/5}}
+@media(prefers-reduced-motion:reduce){.ab-clipe video{transition:none}}
 </style>
 </head>
 <body>
@@ -394,13 +765,13 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <a class="site-brand" href="index.html" aria-label="Amadeu Brutus — página inicial"><img src="public/brand/amadeu-brutus-logo-cabecalho.png" alt="Amadeu Brutus" width="203" height="194"></a>
   <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-nav"><span aria-hidden="true">☰</span></button>
   <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
-    <a href="#proximos-shows">Próximos Shows</a>
-    <a href="#ultimos-lancamentos">Últimos lançamentos</a>
-    <a href="#videos">Vídeos</a>
-    <a href="#ultimas-noticias">Últimas notícias</a>
-    <a href="#discografia">Uma viagem no tempo</a>
+    <a href="#proximos-shows">Agenda</a>
+    <a href="#ouvir">Ouvir</a>
+    <a href="#videos">Ao vivo</a>
+    <a href="#ultimas-noticias">Imprensa</a>
+    <a href="#trajetoria">Carreira</a>
     <a href="#contato">Contato</a>
-    <a class="voice-link" href="#thevoicebrasil2026">The Voice Brasil 2026</a>
+    <a class="voice-link" href="#ultimas-noticias">The Voice Brasil 2026</a>
   </nav>
 </header>
 <img class="hero-artista" src="public/brand/amadeu-brutus-cantor-no-palco.webp" alt="Amadeu Brutus cantando no palco" width="590" height="1170" fetchpriority="high">
@@ -408,179 +779,103 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 <h1 class="hero-nome"><span class="nome-1">Amadeu</span> <span class="nome-2">Brutus</span></h1>
 <nav class="hero-actions" aria-label="Acessos principais">
 <a class="hero-link" href="#proximos-shows">★ Próximos Shows</a>
-<a class="hero-link secondary" href="#ultimos-lancamentos">Últimos lançamentos　›</a>
+<a class="hero-link secondary" href="#ouvir">♪ Ouvir agora</a>
 </nav>
 <div class="scrollhint">Conheça o artista ↓</div>
 <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">♪ Ativar música</button>
 <audio id="siteMusic" preload="none" loop src="public/audio/faixa-autoral-amadeu-brutus.mp4"></audio>
 </section>
 
-<section class="shows-fold" id="proximos-shows" aria-labelledby="shows-title">
-  <div class="shows-inner">
-    <span class="shows-kicker">Agenda da semana</span>
-    <h2 class="shows-title" id="shows-title">Próximos Shows</h2>
-    <div class="shows-list">
-      <div class="show-day-group single">
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Terça-feira</span></div>
-          <div class="show-info"><h3>Black Rock Burger</h3><p>Av. Paulo Faccini, 2003</p></div>
-        </article>
-      </div>
-      <div class="show-day-group single">
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Quarta-feira</span></div>
-          <div class="show-info"><h3>Bar Aberto</h3><p>Av. Engenheiro Luís Carlos Berrini, 443</p></div>
-        </article>
-      </div>
-      <div class="show-day-group">
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Quinta-feira</span><time class="show-time" datetime="12:00">12:00</time></div>
-          <div class="show-info"><h3>Rockfella</h3><p>R. do Rocio, 89</p></div>
-        </article>
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Quinta-feira</span><time class="show-time" datetime="20:00">20:00</time></div>
-          <div class="show-info"><h3>Blues &amp; Beer</h3><p>Rua Zacarias de Góis, 1094</p></div>
-        </article>
-      </div>
-      <div class="show-day-group">
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Sexta-feira</span><time class="show-time" datetime="12:00">12:00</time></div>
-          <div class="show-info"><h3>Garden Tapajós</h3><p>Rua Tapajós, 274</p></div>
-        </article>
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Sexta-feira</span><time class="show-time" datetime="21:00">21:00</time></div>
-          <div class="show-info"><h3>Villa Velha Bar</h3><p>Rua Tapajós, 2</p></div>
-        </article>
-      </div>
-      <div class="show-day-group">
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Sábado</span><time class="show-time" datetime="13:00">13:00</time></div>
-          <div class="show-info"><h3>Lagoon Castrobar</h3><p>Av. São Luiz, 822</p></div>
-        </article>
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Sábado</span><time class="show-time" datetime="19:00">19:00</time></div>
-          <div class="show-info"><h3>Bar do Cumpadi</h3><p>Rua Amoipira, 304</p></div>
-        </article>
-      </div>
-      <div class="show-day-group">
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Domingo</span><time class="show-time" datetime="13:00">13:00</time></div>
-          <div class="show-info"><h3>Garden Tapajós</h3><p>Rua Tapajós, 274</p></div>
-        </article>
-        <article class="show-item">
-          <div class="show-when"><span class="show-day">Domingo</span><time class="show-time" datetime="17:00">17:00</time></div>
-          <div class="show-info"><h3>Bar do Alemão</h3><p>Shopping União de Osasco</p></div>
-        </article>
-      </div>
-    </div>
-    <p class="shows-note">Agenda sujeita a atualizações. Consulte os canais oficiais para confirmações.</p>
+<section class="ab-sec ab-agenda" id="proximos-shows" aria-labelledby="agenda-titulo">
+  <img class="ab-agenda-foto" src="public/brand/recortes/amadeu-brutus-corpo-inteiro-preto.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="641" height="1208">
+  <div class="ab-wrap">
+    <p class="ab-kicker">Agenda da semana · 17 a 22 de novembro</p>
+    <h2 class="ab-titulo" id="agenda-titulo">Próximos <em>shows</em></h2>
+    <ol class="ab-shows">
+      <li class="ab-show"><div class="ab-data"><strong>17/11</strong><span>Terça</span></div><div class="ab-local"><h3>Black Rock Burger</h3><p>Av. Paulo Faccini, 2003</p></div><time class="ab-hora">Ao vivo</time></li>
+      <li class="ab-show"><div class="ab-data"><strong>18/11</strong><span>Quarta</span></div><div class="ab-local"><h3>Bar Aberto</h3><p>Av. Engenheiro Luís Carlos Berrini, 443</p></div><time class="ab-hora">Ao vivo</time></li>
+      <li class="ab-show"><div class="ab-data"><strong>19/11</strong><span>Quinta</span></div><div class="ab-local"><h3>Rockfella</h3><p>R. do Rocio, 89</p></div><time class="ab-hora" datetime="2026-11-19T12:00">12:00</time></li>
+      <li class="ab-show"><div class="ab-data"><strong>19/11</strong><span>Quinta</span></div><div class="ab-local"><h3>Blues &amp; Beer</h3><p>Rua Zacarias de Góis, 1094</p></div><time class="ab-hora" datetime="2026-11-19T20:00">20:00</time></li>
+      <li class="ab-show"><div class="ab-data"><strong>20/11</strong><span>Sexta</span></div><div class="ab-local"><h3>Garden Tapajós</h3><p>Rua Tapajós, 274</p></div><time class="ab-hora" datetime="2026-11-20T12:00">12:00</time></li>
+      <li class="ab-show"><div class="ab-data"><strong>20/11</strong><span>Sexta</span></div><div class="ab-local"><h3>Villa Velha Bar</h3><p>Rua Tapajós, 2</p></div><time class="ab-hora" datetime="2026-11-20T21:00">21:00</time></li>
+      <li class="ab-show"><div class="ab-data"><strong>21/11</strong><span>Sábado</span></div><div class="ab-local"><h3>Lagoon Gastrobar</h3><p>Av. São Luiz, 822</p></div><time class="ab-hora" datetime="2026-11-21T13:00">13:00</time></li>
+      <li class="ab-show"><div class="ab-data"><strong>21/11</strong><span>Sábado</span></div><div class="ab-local"><h3>Bar do Cumpadi</h3><p>Rua Amoipira, 304</p></div><time class="ab-hora" datetime="2026-11-21T19:00">19:00</time></li>
+      <li class="ab-show"><div class="ab-data"><strong>22/11</strong><span>Domingo</span></div><div class="ab-local"><h3>Garden Tapajós</h3><p>Rua Tapajós, 274</p></div><time class="ab-hora" datetime="2026-11-22T13:00">13:00</time></li>
+      <li class="ab-show"><div class="ab-data"><strong>22/11</strong><span>Domingo</span></div><div class="ab-local"><h3>Bar do Alemão</h3><p>Shopping União de Osasco</p></div><time class="ab-hora" datetime="2026-11-22T17:00">17:00</time></li>
+    </ol>
+    <p class="ab-nota">Agenda sujeita a alterações. Para contratar um show, <a href="#contato">fale com a produção</a>.</p>
   </div>
 </section>
-<section class="site-section latest-releases-fold" id="ultimos-lancamentos" aria-labelledby="latest-releases-title">
-  <span class="eyebrow">Novidades</span>
-  <h2 id="latest-releases-title">Últimos lançamentos</h2>
-  <p>As novidades musicais de Amadeu Brutus terão aqui seu próprio espaço.</p>
-</section>
-<section class="videos-fold" id="videos" aria-labelledby="videos-title">
-  <div class="videos-inner">
-    <header class="videos-heading">
-      <span class="videos-kicker">No palco · Ao vivo</span>
-      <h2 id="videos-title">Vídeos</h2>
-      <p>Performances e interpretações de Amadeu Brutus.</p>
-    </header>
-    <div class="videos-grid">
-      <article class="video-card">
-        <div class="video-player" data-video-id="CD8VL1hZtwI">
-          <img src="public/images/Amadeu%20Brutus%20Last%20Kiss%20com%20Pearl%20Jam.png" alt="Arte oficial de Last Kiss — Amadeu Brutus &amp; Pearl Jam" loading="lazy" decoding="async">
-          <button class="video-play" type="button" aria-label="Reproduzir Last Kiss — Amadeu Brutus e Pearl Jam"><span aria-hidden="true">▶</span></button>
-        </div>
-        <h3>Last Kiss</h3>
-        <p>Amadeu Brutus &amp; Pearl Jam</p>
-      </article>
-      <article class="video-card">
-        <div class="video-player" data-video-id="HU2Gy0pi644">
-          <img src="public/images/Amadeu%20Brutus%20Cold%20Play%20Fix%20You.png" alt="Arte oficial de Fix You — Amadeu Brutus &amp; Coldplay" loading="lazy" decoding="async">
-          <button class="video-play" type="button" aria-label="Reproduzir Fix You — Amadeu Brutus e Coldplay"><span aria-hidden="true">▶</span></button>
-        </div>
-        <h3>Fix You</h3>
-        <p>Amadeu Brutus &amp; Coldplay</p>
-      </article>
-    </div>
-    <a class="videos-all-link" href="https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg" target="_blank" rel="noopener noreferrer" aria-label="Ver todos os vídeos no canal oficial de Amadeu Brutus no YouTube">
-      <span>Ver todos</span><span class="videos-all-arrow" aria-hidden="true">›</span>
-    </a>
-  </div>
-</section>
-<section class="latest-news-fold" id="ultimas-noticias" aria-labelledby="latest-news-title">
-  <div class="latest-news-inner">
-    <header class="latest-news-heading">
-      <div><span class="latest-news-kicker">Na imprensa · The Voice Brasil 2026</span>
-      <h2 id="latest-news-title">Últimas <em>notícias</em></h2></div>
-      <p>Momentos marcantes da trajetória de Amadeu Brutus no palco do The Voice Brasil, em matérias oficiais do programa.</p>
-    </header>
-    <div class="latest-news-grid">
-      <article class="news-card">
-        <img class="news-card-image" src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg" srcset="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/medium_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg 750w, https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg 1000w" sizes="(max-width: 620px) 88vw, 42vw" width="1000" height="666" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'" alt="Amadeu Brutus cantando no palco do The Voice Brasil durante as Audições às Cegas. Foto: Ricardo Bufolin/SBT." loading="lazy" decoding="async">
-        <div class="news-card-body"><div class="news-card-topline"><span class="news-num">01</span><span class="news-etapa">Audições às Cegas</span><span class="news-source">The Voice Brasil · SBT</span></div>
-          <h3>Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas</h3>
-          <p class="news-subtitle">Cantor interpretou “Ordinary”, conquistou duas cadeiras e escolheu seguir na competição com Lauana Prado.</p>
-          <a href="https://thevoicebrasil.sbt.com.br/noticias/amadeu-brutus-conquista-diogo-e-lauana-nas-audicoes-as-cegas/" target="_blank" rel="noopener noreferrer" aria-label="Ler no site do The Voice Brasil: Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas">Ler notícia completa <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
-      <article class="news-card">
-        <img class="news-card-image" src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg" srcset="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/medium_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg 750w, https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg 1000w" sizes="(max-width: 620px) 88vw, 42vw" width="1000" height="667" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'" alt="Amadeu Brutus e Damatta durante a Batalha do The Voice Brasil. Foto: Ricardo Bufolin/SBT." loading="lazy" decoding="async">
-        <div class="news-card-body"><div class="news-card-topline"><span class="news-num">02</span><span class="news-etapa">As Batalhas</span><span class="news-source">The Voice Brasil · SBT</span></div>
-          <h3>Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho</h3>
-          <p class="news-subtitle">Participantes do Time Lauana encararam um dos grandes sucessos da música brasileira nas Batalhas.</p>
-          <a href="https://thevoicebrasil.sbt.com.br/noticias/damatta-e-amadeu-brutus-dao-novas-vozes-ao-classico-de-ze-ramalho/" target="_blank" rel="noopener noreferrer" aria-label="Ler no site do The Voice Brasil: Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho">Ler notícia completa <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
-    </div>
-    <p class="latest-news-footnote">Leia as matérias completas diretamente no portal oficial do The Voice Brasil.</p>
-  </div>
-</section>
-<section class="trajectory career-fold" id="trajetoria" aria-labelledby="career-title">
-  <img class="career-corner career-corner--top" src="public/brand/amadeu-brutus-logo-oficial.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
-  <img class="career-corner career-corner--bottom" src="public/brand/amadeu-brutus-logo-oficial.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
-  <div class="career-inner">
-    <div class="career-copy">
-      <span class="career-eyebrow">A carreira</span>
-      <h2 id="career-title">Uma história de talento e esforço.</h2>
-      <div class="career-story">
-        <p>Com raízes no <strong>pop e rock brasileiro</strong>, Amadeu Brutus começou sua trajetória musical em meados dos anos 2000, à frente da banda <strong>Visionários S.A.</strong> Desde então, a música se tornou parte essencial da sua vida.</p>
-        <p>Entre apresentações, composições autorais e a experiência como professor de música, construiu uma carreira marcada por <strong>talento, esforço e dedicação</strong>. Dos botecos e casas de shows de São Paulo aos palcos de grandes produções, conquistou espaço com sua voz e presença artística. Nessa caminhada, realizou aberturas de shows e dividiu experiências com nomes como <strong>Titãs, Ana Carolina e Roupa Nova</strong>.</p>
-        <p>Em 2026, chegou ao palco do <strong>The Voice Brasil</strong>, integrando o <strong>Time Lauana Prado</strong> e, na sequência, migrando para o <strong>Time Paulo Ricardo</strong>. Uma nova etapa diante de um público ainda maior — mas uma história que vem de anos de música, estrada e sonhos que nunca deixaram de ser perseguidos.</p>
-      </div>
-      <p class="career-closing">E este é apenas o começo de um novo capítulo.</p>
+
+<section class="ab-sec ab-ouvir" id="ouvir" aria-labelledby="ouvir-titulo">
+  <div class="ab-wrap ab-ouvir-grade">
+    <figure class="ab-ouvir-foto"><img src="public/brand/recortes/amadeu-brutus-violao-ombro.webp" alt="Amadeu Brutus com o violão no ombro" loading="lazy" decoding="async" width="1406" height="987"></figure>
+    <div class="ab-ouvir-texto">
+      <p class="ab-kicker">Ouvir</p>
+      <h2 class="ab-titulo" id="ouvir-titulo">A voz de <em>Amadeu</em></h2>
+      <p class="ab-lead">Interpretações gravadas por Amadeu Brutus. Aperte o play e ouça direto aqui.</p>
+      <ol class="ab-faixas" id="ab-faixas">
+        <li><button type="button" class="ab-faixa" data-src="public/audio/web/audio-amadeu-brutus-01.m4a"><span class="ab-n">01</span><span class="ab-nome">Human</span><span class="ab-dur">2:10</span></button></li>
+        <li><button type="button" class="ab-faixa" data-src="public/audio/web/audio-amadeu-brutus-03.m4a"><span class="ab-n">02</span><span class="ab-nome">Stuck on You</span><span class="ab-dur">3:24</span></button></li>
+        <li><button type="button" class="ab-faixa" data-src="public/audio/web/audio-amadeu-brutus-02.m4a"><span class="ab-n">03</span><span class="ab-nome" data-confirmar>Faixa 3</span><span class="ab-dur">2:53</span></button></li>
+        <li><button type="button" class="ab-faixa" data-src="public/audio/web/faixa-autoral-amadeu-brutus.m4a"><span class="ab-n">04</span><span class="ab-nome" data-confirmar>Faixa autoral</span><span class="ab-dur">5:14</span></button></li>
+      </ol>
+      <div class="ab-barra" aria-hidden="true"><i id="ab-progresso"></i></div>
+      <audio id="ab-player" preload="none"></audio>
+      <a class="ab-link" href="https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo" target="_blank" rel="noopener noreferrer">Mais músicas no Spotify <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
 
-<section class="discography-fold" id="discografia" aria-labelledby="discography-title">
-  <div class="discography-inner">
-    <div class="discography-copy">
-      <span class="discography-kicker">Uma viagem no tempo</span>
-      <h2 id="discography-title">Uma viagem ao <em>passado</em></h2>
-      <p>Registros de uma fase anterior da música de Amadeu Brutus. Um resgate sonoro para revisitar outras épocas, outras interpretações e o caminho percorrido até aqui.</p>
-      <a class="spotify-cta" href="https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo" target="_blank" rel="noopener noreferrer">
-        <span class="spotify-mark" aria-hidden="true">●</span> Ouvir no Spotify <span aria-hidden="true">↗</span>
-      </a>
+<section class="ab-sec ab-aovivo" id="videos" aria-labelledby="aovivo-titulo">
+  <div class="ab-wrap">
+    <p class="ab-kicker">No palco</p>
+    <h2 class="ab-titulo" id="aovivo-titulo">Ao <em>vivo</em></h2>
+    <div class="ab-clipes">
+      <figure class="ab-clipe"><video muted loop playsinline preload="none" poster="public/videos/web/ao-vivo-voz-e-violao-capa.jpg" data-previa="public/videos/web/ao-vivo-voz-e-violao-previa.mp4" data-completo="public/videos/web/ao-vivo-voz-e-violao.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Voz e violão</figcaption></figure>
+      <figure class="ab-clipe"><video muted loop playsinline preload="none" poster="public/videos/web/ao-vivo-no-palco-capa.jpg" data-previa="public/videos/web/ao-vivo-no-palco-previa.mp4" data-completo="public/videos/web/ao-vivo-no-palco.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Show com banda</figcaption></figure>
+      <figure class="ab-clipe"><video muted loop playsinline preload="none" poster="public/videos/web/ao-vivo-abertura-liga-joe-capa.jpg" data-previa="public/videos/web/ao-vivo-abertura-liga-joe-previa.mp4" data-completo="public/videos/web/ao-vivo-abertura-liga-joe.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Abertura de show · Terra SP</figcaption></figure>
     </div>
-    <div class="spotify-frame-wrap">
-      <div class="spotify-frame-label">Perfil oficial · Amadeu Brutus</div>
-      <iframe
-        class="spotify-embed"
-        title="Arquivo musical de Amadeu Brutus no Spotify"
-        src="https://open.spotify.com/embed/artist/0eRoINMstkO2cT60xL0uzo?utm_source=generator"
-        width="100%" height="500" frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
+    <ul class="ab-yt">
+      <li><a href="https://www.youtube.com/watch?v=CD8VL1hZtwI" target="_blank" rel="noopener noreferrer"><span>Last Kiss</span><small>Pearl Jam · interpretação de Amadeu Brutus</small><b aria-hidden="true">↗</b></a></li>
+      <li><a href="https://www.youtube.com/watch?v=HU2Gy0pi644" target="_blank" rel="noopener noreferrer"><span>Fix You</span><small>Coldplay · interpretação de Amadeu Brutus</small><b aria-hidden="true">↗</b></a></li>
+      <li><a href="https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg" target="_blank" rel="noopener noreferrer"><span>Canal no YouTube</span><small>Todos os vídeos</small><b aria-hidden="true">↗</b></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="ab-sec ab-imprensa" id="ultimas-noticias" aria-labelledby="imprensa-titulo">
+  <div class="ab-wrap">
+    <p class="ab-kicker">Na imprensa · The Voice Brasil 2026</p>
+    <h2 class="ab-titulo" id="imprensa-titulo">Últimas <em>notícias</em></h2>
+    <div class="ab-materias">
+      <article class="ab-materia">
+        <img src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg" alt="Amadeu Brutus nas Audições às Cegas do The Voice Brasil" width="1000" height="666" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'">
+        <div><p class="ab-etapa">Audições às Cegas</p><h3>Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas</h3><p>Cantor interpretou “Ordinary”, conquistou duas cadeiras e escolheu seguir na competição com Lauana Prado.</p><a class="ab-link" href="https://thevoicebrasil.sbt.com.br/noticias/amadeu-brutus-conquista-diogo-e-lauana-nas-audicoes-as-cegas/" target="_blank" rel="noopener noreferrer">Ler no The Voice Brasil <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="ab-materia">
+        <img src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg" alt="Damatta e Amadeu Brutus nas Batalhas do The Voice Brasil" width="1000" height="667" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'">
+        <div><p class="ab-etapa">As Batalhas</p><h3>Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho</h3><p>Participantes do Time Lauana encararam um dos grandes sucessos da música brasileira nas Batalhas.</p><a class="ab-link" href="https://thevoicebrasil.sbt.com.br/noticias/damatta-e-amadeu-brutus-dao-novas-vozes-ao-classico-de-ze-ramalho/" target="_blank" rel="noopener noreferrer">Ler no The Voice Brasil <span aria-hidden="true">↗</span></a></div>
+      </article>
     </div>
   </div>
-  <span class="discography-equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
 </section>
-<section class="official-photos-fold" id="fotos-olabelledby="contato-titulo">
+
+<section class="ab-sec ab-historia" id="trajetoria" aria-labelledby="historia-titulo">
+  <div class="ab-wrap ab-historia-grade">
+    <figure class="ab-historia-foto"><img src="public/brand/recortes/amadeu-brutus-retrato-pb.webp" alt="Retrato em preto e branco de Amadeu Brutus" loading="lazy" decoding="async" width="430" height="845"></figure>
+    <div class="ab-historia-texto">
+      <p class="ab-kicker">A carreira</p>
+      <h2 class="ab-titulo" id="historia-titulo">Uma história de talento e <em>estrada</em></h2>
+      <p>Com raízes no <strong>pop e rock brasileiro</strong>, Amadeu Brutus começou sua trajetória musical em meados dos anos 2000, à frente da banda <strong>Visionários S.A.</strong> Desde então, a música se tornou parte essencial da sua vida.</p>
+      <p>Entre apresentações, composições autorais e a experiência como professor de música, construiu uma carreira marcada por talento, esforço e dedicação. Dos botecos e casas de shows de São Paulo aos palcos de grandes produções, abriu shows e dividiu experiências com <strong>Titãs, Ana Carolina e Roupa Nova</strong>.</p>
+      <p>Em 2026, chegou ao palco do <strong>The Voice Brasil</strong>, no <strong>Time Lauana Prado</strong> e, na sequência, no <strong>Time Paulo Ricardo</strong>: uma nova etapa diante de um público ainda maior.</p>
+      <p class="ab-frase">E este é apenas o começo de um novo capítulo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ab-sec ab-contato" id="contato" aria-labelledby="contato-titulo">
   <div class="contato-inner">
     <div class="contato-cabeca">
       <span class="contato-kicker">Fale com a gente</span>
@@ -612,7 +907,6 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     </div>
   </div>
 </section>
-<section class="site-section" id="thevoicebrasil2026"><h2>The Voice Brasil 2026</h2><p>Espaço dedicado aos registros oficiais da participação de Amadeu Brutus no The Voice Brasil 2026.</p></section>
 </main>
 <footer class="site-footer"><span>Amadeu Brutus · Música e presença de palco</span><span class="footer-copyright">© 2026 Amadeu Brutus. Todos os direitos reservados. amadeubrutus.com.br</span><a class="footer-policy" href="/politica-de-privacidade.html">Política de Privacidade</a><a class="footer-credit" href="https://roquebusinessevolution.com/" target="_blank" rel="noopener noreferrer">Desenvolvido por <strong>Roque Business Evolution</strong></a></footer>
 <script>
@@ -738,7 +1032,7 @@ function respirar(){
   function quadro(agora){
     requestAnimationFrame(quadro);
     if(!vis.on||document.hidden)return;
-    const t=(agora-t0)/1000,c=t%CICLO,n=Math.floor(c/CUE),dentro=c-n*CUE,prox=(n+1)%cues.length;
+    const t=Math.max(0,(agora-t0)/1000),c=t%CICLO,n=Math.floor(c/CUE),dentro=c-n*CUE,prox=(n+1)%cues.length;
     const mistura=suave((dentro-(CUE-1.2))/1.2);
     let flash=0;
     ks.forEach((k,i)=>{
@@ -784,6 +1078,47 @@ function respirar(){
   }catch(e){avisar('Sem conexão no momento. Tente novamente em instantes.','falha')}
   finally{botao.disabled=false;botao.textContent='Enviar mensagem'}
  });
+})();
+
+/* Ouvir: player próprio com as faixas do Amadeu */
+(()=>{
+ const player=document.getElementById('ab-player'),barra=document.getElementById('ab-progresso');if(!player)return;
+ const faixas=[...document.querySelectorAll('.ab-faixa')];let atual=null;
+ const musicaFundo=document.getElementById('siteMusic'),botaoFundo=document.getElementById('musicToggle');
+ faixas.forEach(f=>f.addEventListener('click',()=>{
+  if(atual===f&&!player.paused){player.pause();f.classList.remove('tocando');return}
+  if(musicaFundo&&!musicaFundo.paused){musicaFundo.pause();botaoFundo&&(botaoFundo.textContent='♪ Ativar música',botaoFundo.setAttribute('aria-pressed','false'))}
+  document.querySelectorAll('.ab-clipe video').forEach(v=>{v.muted=true});
+  if(atual!==f){player.src=f.dataset.src;atual=f}
+  faixas.forEach(x=>x.classList.toggle('tocando',x===f));player.play().catch(()=>{});
+ }));
+ player.addEventListener('timeupdate',()=>{barra.style.width=(player.duration?player.currentTime/player.duration*100:0)+'%'});
+ player.addEventListener('ended',()=>{const i=faixas.indexOf(atual);faixas.forEach(x=>x.classList.remove('tocando'));if(faixas[i+1])faixas[i+1].click()});
+})();
+/* Ao vivo: prévias sem som tocam quando aparecem; "Ouvir com som" abre o vídeo completo */
+(()=>{
+ const clipes=[...document.querySelectorAll('.ab-clipe')];if(!clipes.length)return;
+ const reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ clipes.forEach(c=>{const v=c.querySelector('video');
+  c.querySelector('.ab-som').addEventListener('click',()=>{
+   clipes.forEach(o=>{if(o!==c){const ov=o.querySelector('video');ov.muted=true;}});
+   document.getElementById('ab-player')?.pause();
+   v.src=v.dataset.completo;v.muted=false;v.loop=false;v.controls=true;c.classList.add('com-som');v.play().catch(()=>{});
+  });
+ });
+ if(reduz||!('IntersectionObserver'in window))return;
+ const io=new IntersectionObserver(es=>es.forEach(e=>{const c=e.target,v=c.querySelector('video');if(c.classList.contains('com-som'))return;
+  if(e.isIntersecting){if(!v.src)v.src=v.dataset.previa;v.play().catch(()=>{})}else v.pause()}),{threshold:.35});
+ clipes.forEach(c=>io.observe(c));
+})();
+/* Entrada das listas ao rolar, como na agenda */
+(()=>{
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window))return;
+ const itens=document.querySelectorAll('.ab-show,.ab-faixas li,.ab-clipe,.ab-materia,.ab-yt li');
+ itens.forEach((el,i)=>el.style.setProperty('--i',[...el.parentElement.children].indexOf(el)%6));
+ document.documentElement.classList.add('ab-pronto');
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ab-visivel');io.unobserve(e.target)}}),{threshold:.12});
+ itens.forEach(el=>io.observe(el));
 })();
 </script>
 </body>
