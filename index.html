@@ -711,11 +711,6 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .ab-som{position:absolute;right:14px;top:14px;z-index:2;padding:9px 13px;border:1px solid rgba(255,255,255,.6);background:rgba(0,0,0,.45);color:#fff;font:800 10px/1 var(--ab-corpo);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(4px)}
 .ab-som:hover{background:var(--ab-vermelho);border-color:var(--ab-vermelho)}
 .ab-clipe.com-som .ab-som{display:none}
-.ab-yt{list-style:none;margin:clamp(36px,6vh,60px) 0 0;padding:0;border-top:1px solid var(--ab-linha)}
-.ab-yt a{display:grid;grid-template-columns:1fr auto auto;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--ab-linha);color:#fff;text-decoration:none}
-.ab-yt span{font-family:var(--ab-display);font-size:clamp(1.5rem,2.4vw,2.2rem);text-transform:uppercase}
-.ab-yt small{color:var(--ab-cinza);font-size:14px}.ab-yt b{color:var(--ab-vermelho)}
-.ab-yt a:hover span{color:var(--ab-vermelho)}
 /* Imprensa */
 .ab-materias{display:grid;gap:clamp(36px,6vh,56px)}
 .ab-materia{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center}
@@ -724,8 +719,6 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .ab-materia h3{margin:0 0 14px;font-family:var(--ab-display);font-weight:400;font-size:clamp(1.8rem,3vw,2.8rem);line-height:1;text-transform:uppercase}
 .ab-materia p{margin:0 0 22px;color:#cfcfd4;font-size:16px;line-height:1.6;max-width:52ch}
 /* Carreira */
-.ab-historia-grade{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,96px);align-items:end}
-.ab-historia-foto{margin:0}.ab-historia-foto img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(0deg,transparent,#000 22%);mask-image:linear-gradient(0deg,transparent,#000 22%)}
 .ab-historia-texto p{margin:0 0 18px;color:#cfcfd4;font-size:clamp(16px,1.25vw,18px);line-height:1.7;max-width:60ch}
 .ab-historia-texto strong{color:#fff;font-weight:600}
 .ab-historia-texto .ab-frase{margin-top:30px;font-family:var(--ab-display);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.05;color:var(--ab-vermelho);text-transform:uppercase}
@@ -742,11 +735,90 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .site-footer{font-family:var(--ab-corpo)}
 .hero .hero-link.secondary{border-color:var(--ab-prata)!important;color:#fff!important}
 /* Entrada suave ao rolar (sem efeito com movimento reduzido) */
-.ab-pronto .ab-show,.ab-pronto .ab-faixas li,.ab-pronto .ab-clipe,.ab-pronto .ab-materia,.ab-pronto .ab-yt li{opacity:0;transform:translateX(-46px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*70ms)}
+.ab-pronto .ab-show,.ab-pronto .ab-faixas li,.ab-pronto .ab-clipe,.ab-pronto .ab-materia,.ab-pronto .ab-yt-card,.ab-pronto .ab-cap,.ab-pronto .ab-marcos li{opacity:0;transform:translateX(-46px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*70ms)}
 .ab-pronto .ab-visivel{opacity:1!important;transform:none!important}
-@media(max-width:900px){.ab-ouvir-grade,.ab-historia-grade,.ab-materia{grid-template-columns:1fr}.ab-clipes{grid-template-columns:1fr 1fr}.ab-clipes .ab-clipe:last-child{grid-column:1/-1;aspect-ratio:4/5}.ab-historia-foto{max-width:360px}}
-@media(max-width:560px){.ab-show{grid-template-columns:auto 1fr;row-gap:8px}.ab-hora{grid-column:2;font-size:1.5rem}.ab-yt a{grid-template-columns:1fr auto}.ab-yt small{grid-column:1;grid-row:2}.ab-clipes{grid-template-columns:1fr}.ab-clipes .ab-clipe{aspect-ratio:4/5}}
+@media(max-width:900px){.ab-ouvir-grade,.ab-materia{grid-template-columns:1fr}.ab-clipes{grid-template-columns:1fr 1fr}.ab-clipes .ab-clipe:last-child{grid-column:1/-1;aspect-ratio:4/5}}
+@media(max-width:560px){.ab-show{grid-template-columns:auto 1fr;row-gap:8px}.ab-hora{grid-column:2;font-size:1.5rem}.ab-clipes{grid-template-columns:1fr}.ab-clipes .ab-clipe{aspect-ratio:4/5}}
 @media(prefers-reduced-motion:reduce){.ab-clipe video{transition:none}}
+
+/* Faixa de palco: duas fitas cruzadas correndo */
+.ab-faixa-palco{position:relative;height:clamp(120px,16vw,200px);background:var(--ab-preto);overflow:hidden;z-index:2}
+.ab-fita{position:absolute;left:-5%;width:110%;top:50%;overflow:hidden;padding:14px 0;font-family:var(--ab-display);font-size:clamp(22px,3.2vw,44px);text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.ab-fita-a{background:var(--ab-vermelho);color:#050505;transform:translateY(-50%) rotate(-3deg);z-index:2;box-shadow:0 18px 40px rgba(0,0,0,.6)}
+.ab-fita-b{background:transparent;color:transparent;-webkit-text-stroke:1.2px rgba(217,221,228,.75);border-block:1px solid rgba(217,221,228,.35);transform:translateY(-50%) rotate(2.4deg)}
+.ab-fita-trilho{display:flex;width:max-content;animation:ab-corre 38s linear infinite}
+.ab-fita-b .ab-fita-trilho{animation-direction:reverse;animation-duration:46s}
+@keyframes ab-corre{to{transform:translateX(-50%)}}
+/* The Voice: vídeo do palco como fundo */
+.ab-tv{min-height:100svh;display:flex;align-items:flex-end;padding-top:clamp(120px,20vh,220px)}
+.ab-tv::before{display:none}
+.ab-tv-fundo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05)}
+.ab-tv::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,5,5,.55) 0%,rgba(5,5,5,.35) 30%,rgba(5,5,5,.88) 66%,#050505 100%),radial-gradient(70% 60% at 50% 40%,transparent,rgba(5,5,5,.6))}
+.ab-tv-titulo{font-size:clamp(4rem,11vw,11rem);margin-bottom:20px;text-shadow:0 10px 50px rgba(0,0,0,.6)}
+.ab-tv-lead{max-width:62ch;margin:0 0 clamp(36px,6vh,60px);color:#e9e9ee;font-size:clamp(16px,1.35vw,20px);line-height:1.65}
+.ab-tv-lead strong{color:#fff;font-weight:700}
+.ab-tv-chamada{margin:0 0 18px;font-size:12px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--ab-prata)}
+.ab-caps{list-style:none;margin:0 calc(50% - 50vw) 0 0;padding:0 clamp(20px,6vw,96px) 10px 0;display:grid;grid-auto-flow:column;grid-auto-columns:clamp(220px,22vw,300px);gap:clamp(12px,1.4vw,20px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--ab-vermelho) transparent}
+.ab-cap{scroll-snap-align:start}
+.ab-cap-btn{all:unset;box-sizing:border-box;position:relative;display:block;width:100%;aspect-ratio:3/4;overflow:hidden;cursor:pointer;background:#111;outline-offset:3px}
+.ab-cap-btn:focus-visible{outline:2px solid var(--ab-vermelho)}
+.ab-cap-btn img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .4s;filter:brightness(.8)}
+.ab-cap-btn:hover img{transform:scale(1.07);filter:brightness(1)}
+.ab-cap-btn::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.2) 55%,transparent);pointer-events:none}
+.ab-cap-n{position:absolute;top:10px;left:14px;z-index:2;font-family:var(--ab-display);font-size:clamp(2.6rem,4vw,3.6rem);line-height:1;color:transparent;-webkit-text-stroke:1.4px #fff}
+.ab-cap-txt{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;display:grid;gap:6px;color:#fff}
+.ab-cap-txt small{color:var(--ab-vermelho);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.ab-cap-txt strong{font-family:var(--ab-display);font-weight:400;font-size:clamp(1.3rem,1.8vw,1.7rem);line-height:1.02;text-transform:uppercase}
+.ab-cap-txt em{font-style:normal;color:var(--ab-cinza);font-size:13px;font-variant-numeric:tabular-nums}
+.ab-play{position:absolute;z-index:3;left:50%;top:44%;display:grid;place-items:center;width:clamp(56px,6vw,76px);aspect-ratio:1;border-radius:50%;background:var(--ab-vermelho);color:#fff;font-size:clamp(18px,1.8vw,24px);padding-left:4px;box-sizing:border-box;transform:translate(-50%,-50%) scale(.9);box-shadow:0 0 0 0 rgba(255,38,61,.55);transition:transform .3s;animation:ab-pulso 2.4s ease-out infinite}
+.ab-cap-btn:hover .ab-play,.ab-yt-play:hover .ab-play{transform:translate(-50%,-50%) scale(1.05)}
+@keyframes ab-pulso{0%{box-shadow:0 0 0 0 rgba(255,38,61,.55)}70%{box-shadow:0 0 0 22px rgba(255,38,61,0)}100%{box-shadow:0 0 0 0 rgba(255,38,61,0)}}
+/* Tela de vídeo */
+.ab-tela{width:min(96vw,1200px);max-height:94vh;padding:0;border:0;background:#000;color:#fff;overflow:visible}
+.ab-tela::backdrop{background:rgba(0,0,0,.9);backdrop-filter:blur(6px)}
+.ab-tela-video{aspect-ratio:16/9;background:#000}.ab-tela-video video,.ab-tela-video iframe{display:block;width:100%;height:100%;max-height:84vh;border:0;object-fit:contain;background:#000}
+.ab-tela-titulo{margin:0;padding:14px 56px 14px 18px;font-family:var(--ab-display);font-size:clamp(1.1rem,2vw,1.6rem);text-transform:uppercase;background:#050505}
+.ab-tela-fechar{position:absolute;right:8px;top:6px;z-index:2;width:42px;height:42px;border:0;background:transparent;color:#fff;font-size:22px;cursor:pointer}
+.ab-tela-fechar:hover{color:var(--ab-vermelho)}
+/* Vídeos: capas do YouTube */
+.ab-yt-grade{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,34px);margin-bottom:clamp(60px,9vh,100px)}
+.ab-yt-card h3{margin:18px 0 4px;font-family:var(--ab-display);font-weight:400;font-size:clamp(1.8rem,3vw,2.8rem);line-height:1;text-transform:uppercase}
+.ab-yt-card p{margin:0;color:var(--ab-cinza);font-size:14px;letter-spacing:.04em}
+.ab-yt-play{all:unset;box-sizing:border-box;position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden;cursor:pointer;background:#000}
+.ab-yt-play:focus-visible{outline:2px solid var(--ab-vermelho);outline-offset:3px}
+.ab-yt-play img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .4s}
+.ab-yt-play:hover img{transform:scale(1.04);filter:brightness(.8)}
+.ab-yt-play .ab-play{left:auto;top:auto;right:18px;bottom:18px;transform:none}.ab-yt-play:hover .ab-play{transform:scale(1.08)}
+.ab-yt-play iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ab-subtitulo{margin:0 0 26px;font-family:var(--ab-display);font-weight:400;font-size:clamp(2.2rem,4.4vw,4rem);line-height:.95;text-transform:uppercase;color:#fff}
+.ab-subtitulo em{font-style:normal;color:var(--ab-vermelho)}
+.ab-botao{display:inline-flex;align-items:center;gap:14px;margin-top:clamp(40px,6vh,60px);padding:18px 30px;background:var(--ab-vermelho);color:#fff;text-decoration:none;font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;transition:transform .25s,box-shadow .25s}
+.ab-botao span{font-size:22px;line-height:0;transition:transform .25s}
+.ab-botao:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(255,38,61,.35)}.ab-botao:hover span{transform:translateX(5px)}
+/* Imprensa com movimento */
+.ab-materia{position:relative}
+.ab-materia>img{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.ab-materia:hover>img{transform:scale(1.03)}
+/* Carreira: foto do bar em movimento lento ao fundo */
+.ab-historia{min-height:100svh}
+.ab-historia::before{display:none}
+.ab-historia-fundo{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.ab-historia-fundo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:grayscale(1) contrast(1.15) brightness(.55);transform:scale(1.08);animation:ab-kenburns 26s ease-in-out infinite alternate}
+@keyframes ab-kenburns{from{transform:scale(1.08) translate3d(-1.5%,0,0)}to{transform:scale(1.2) translate3d(1.5%,-2%,0)}}
+.ab-historia::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.82) 45%,rgba(5,5,5,.45) 100%),linear-gradient(0deg,#050505 0%,transparent 30%,transparent 80%,#050505 100%)}
+.ab-historia-texto{max-width:64ch}
+.ab-historia-texto p{margin:0 0 18px;color:#d6d6db;font-size:clamp(16px,1.25vw,18px);line-height:1.75}
+.ab-historia-texto strong{color:#fff;font-weight:600}
+.ab-marcos{list-style:none;margin:clamp(44px,7vh,72px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ab-vermelho)}
+.ab-marcos li{position:relative;padding:28px 22px 0 0}
+.ab-marcos li::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:var(--ab-vermelho);box-shadow:0 0 0 6px rgba(255,38,61,.18)}
+.ab-marcos span{display:block;margin-bottom:10px;color:var(--ab-vermelho);font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+.ab-marcos strong{display:block;font-family:var(--ab-display);font-weight:400;font-size:clamp(1.3rem,1.9vw,1.8rem);line-height:1.05;text-transform:uppercase;color:#fff}
+.ab-marcos p{margin:8px 0 0;color:var(--ab-cinza);font-size:14px;line-height:1.5}
+.ab-historia .ab-frase{margin-top:clamp(44px,7vh,70px);font-family:var(--ab-display);font-size:clamp(2rem,4vw,3.6rem);line-height:1;color:#fff;text-transform:uppercase}
+@media(max-width:900px){.ab-marcos{grid-template-columns:1fr 1fr;row-gap:34px;border-top:0}.ab-marcos li{border-top:2px solid var(--ab-vermelho)}.ab-historia::after{background:linear-gradient(180deg,rgba(5,5,5,.7),rgba(5,5,5,.9) 40%,#050505)}}
+@media(max-width:560px){.ab-yt-grade{grid-template-columns:1fr}.ab-caps{grid-auto-columns:72vw}.ab-tv-titulo{font-size:clamp(3.4rem,17vw,5rem)}.ab-marcos{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.ab-fita-trilho,.ab-historia-fundo img,.ab-play{animation:none}}
 </style>
 </head>
 <body>
@@ -772,11 +844,12 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
     <a href="#proximos-shows">Agenda</a>
     <a href="#ouvir">Ouvir</a>
-    <a href="#videos">Ao vivo</a>
+    <a href="#the-voice">The Voice</a>
+    <a href="#videos">Vídeos</a>
     <a href="#ultimas-noticias">Imprensa</a>
     <a href="#trajetoria">Carreira</a>
     <a href="#contato">Contato</a>
-    <a class="voice-link" href="#ultimas-noticias">The Voice Brasil 2026</a>
+    <a class="voice-link" href="#the-voice">The Voice Brasil 2026</a>
   </nav>
 </header>
 <img class="hero-artista" src="public/brand/amadeu-brutus-cantor-no-palco.webp" alt="Amadeu Brutus cantando no palco" width="590" height="1170" fetchpriority="high">
@@ -831,20 +904,60 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   </div>
 </section>
 
+<div class="ab-faixa-palco" aria-hidden="true">
+  <div class="ab-fita ab-fita-a"><div class="ab-fita-trilho"><span>The Voice Brasil 2026 ★ Time Lauana Prado ★ Time Paulo Ricardo ★ “Ordinary” ★ “Chão de Giz” ★ Ao vivo em São Paulo ★&nbsp;</span><span>The Voice Brasil 2026 ★ Time Lauana Prado ★ Time Paulo Ricardo ★ “Ordinary” ★ “Chão de Giz” ★ Ao vivo em São Paulo ★&nbsp;</span></div></div>
+  <div class="ab-fita ab-fita-b"><div class="ab-fita-trilho"><span>Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦ Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦&nbsp;</span><span>Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦ Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦&nbsp;</span></div></div>
+</div>
+
+<section class="ab-sec ab-tv" id="the-voice" aria-labelledby="tv-titulo">
+  <video class="ab-tv-fundo" autoplay muted loop playsinline preload="metadata" poster="public/videos/thevoice/fundo-palco-the-voice.jpg" aria-hidden="true"><source src="public/videos/thevoice/fundo-palco-the-voice.mp4" type="video/mp4"></video>
+  <div class="ab-wrap">
+    <p class="ab-kicker">The Voice Brasil 2026 · SBT e Disney+</p>
+    <h2 class="ab-titulo ab-tv-titulo" id="tv-titulo">Duas cadeiras <em>viradas</em></h2>
+    <p class="ab-tv-lead">Nas Audições às Cegas, Amadeu Brutus cantou <strong>“Ordinary”</strong> e conquistou <strong>Diogo Nogueira</strong> e <strong>Lauana Prado</strong>. Escolheu o Time Lauana, levou <strong>“Chão de Giz”</strong> para as Batalhas e seguiu no <strong>Time Paulo Ricardo</strong>.</p>
+    <p class="ab-tv-chamada">Assista à jornada <span aria-hidden="true">→</span></p>
+    <ol class="ab-caps">
+      <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/pre-audicao.mp4" data-titulo="Pré-audição · Antes de subir ao palco" aria-label="Assistir Pré-audição: Antes de subir ao palco"><img src="public/videos/thevoice/pre-audicao-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">01</span><span class="ab-cap-txt"><small>Pré-audição</small><strong>Antes de subir ao palco</strong><em>0:44</em></span></button></li>
+      <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/audicao-as-cegas-ordinary.mp4" data-titulo="Audições às Cegas · “Ordinary”" aria-label="Assistir Audições às Cegas: Ordinary"><img src="public/videos/thevoice/audicao-as-cegas-ordinary-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">02</span><span class="ab-cap-txt"><small>Audições às Cegas</small><strong>“Ordinary”</strong><em>1:27</em></span></button></li>
+      <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/ensaio-chao-de-giz.mp4" data-titulo="Ensaio · “Chão de Giz”" aria-label="Assistir Ensaio: Chão de Giz"><img src="public/videos/thevoice/ensaio-chao-de-giz-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">03</span><span class="ab-cap-txt"><small>Ensaio</small><strong>“Chão de Giz”</strong><em>0:10</em></span></button></li>
+      <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/amadeu-brutus-chao-de-giz-batalha.mp4" data-titulo="As Batalhas · “Chão de Giz”, com Damatta" aria-label="Assistir As Batalhas: Chão de Giz, com Damatta"><img src="public/videos/thevoice/batalha-chao-de-giz-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">04</span><span class="ab-cap-txt"><small>As Batalhas</small><strong>“Chão de Giz”, com Damatta</strong><em>3:08</em></span></button></li>
+      <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/bastidores-peguei.mp4" data-titulo="Bastidores · Depois do Peguei" aria-label="Assistir Bastidores: Depois do Peguei"><img src="public/videos/thevoice/bastidores-peguei-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">05</span><span class="ab-cap-txt"><small>Bastidores</small><strong>Depois do Peguei</strong><em>0:19</em></span></button></li>
+    </ol>
+  </div>
+</section>
+<dialog class="ab-tela" id="ab-tela" aria-label="Vídeo">
+  <button type="button" class="ab-tela-fechar" aria-label="Fechar vídeo">✕</button>
+  <p class="ab-tela-titulo"></p>
+  <div class="ab-tela-video"></div>
+</dialog>
+
 <section class="ab-sec ab-aovivo" id="videos" aria-labelledby="aovivo-titulo">
   <div class="ab-wrap">
-    <p class="ab-kicker">No palco</p>
-    <h2 class="ab-titulo" id="aovivo-titulo">Ao <em>vivo</em></h2>
+    <p class="ab-kicker">Performances e interpretações</p>
+    <h2 class="ab-titulo" id="aovivo-titulo">Ví<em>deos</em></h2>
+    <div class="ab-yt-grade">
+      <article class="ab-yt-card">
+        <button type="button" class="ab-yt-play" data-yt="CD8VL1hZtwI" aria-label="Assistir Last Kiss — Amadeu Brutus e Pearl Jam">
+          <img src="public/images/web/amadeu-brutus-last-kiss-pearl-jam.webp" alt="Capa de Last Kiss — Amadeu Brutus &amp; Pearl Jam" width="1280" height="721" loading="lazy" decoding="async">
+          <span class="ab-play" aria-hidden="true">▶</span>
+        </button>
+        <h3>Last Kiss</h3><p>Amadeu Brutus &amp; Pearl Jam</p>
+      </article>
+      <article class="ab-yt-card">
+        <button type="button" class="ab-yt-play" data-yt="HU2Gy0pi644" aria-label="Assistir Fix You — Amadeu Brutus e Coldplay">
+          <img src="public/images/web/amadeu-brutus-fix-you-coldplay.webp" alt="Capa de Fix You — Amadeu Brutus &amp; Coldplay" width="1280" height="722" loading="lazy" decoding="async">
+          <span class="ab-play" aria-hidden="true">▶</span>
+        </button>
+        <h3>Fix You</h3><p>Amadeu Brutus &amp; Coldplay</p>
+      </article>
+    </div>
+    <h3 class="ab-subtitulo">Ao vivo na <em>estrada</em></h3>
     <div class="ab-clipes">
       <figure class="ab-clipe"><video muted loop playsinline preload="none" poster="public/videos/web/ao-vivo-voz-e-violao-capa.jpg" data-previa="public/videos/web/ao-vivo-voz-e-violao-previa.mp4" data-completo="public/videos/web/ao-vivo-voz-e-violao.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Voz e violão</figcaption></figure>
       <figure class="ab-clipe"><video muted loop playsinline preload="none" poster="public/videos/web/ao-vivo-no-palco-capa.jpg" data-previa="public/videos/web/ao-vivo-no-palco-previa.mp4" data-completo="public/videos/web/ao-vivo-no-palco.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Show com banda</figcaption></figure>
       <figure class="ab-clipe"><video muted loop playsinline preload="none" poster="public/videos/web/ao-vivo-abertura-liga-joe-capa.jpg" data-previa="public/videos/web/ao-vivo-abertura-liga-joe-previa.mp4" data-completo="public/videos/web/ao-vivo-abertura-liga-joe.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Abertura de show · Terra SP</figcaption></figure>
     </div>
-    <ul class="ab-yt">
-      <li><a href="https://www.youtube.com/watch?v=CD8VL1hZtwI" target="_blank" rel="noopener noreferrer"><span>Last Kiss</span><small>Pearl Jam · interpretação de Amadeu Brutus</small><b aria-hidden="true">↗</b></a></li>
-      <li><a href="https://www.youtube.com/watch?v=HU2Gy0pi644" target="_blank" rel="noopener noreferrer"><span>Fix You</span><small>Coldplay · interpretação de Amadeu Brutus</small><b aria-hidden="true">↗</b></a></li>
-      <li><a href="https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg" target="_blank" rel="noopener noreferrer"><span>Canal no YouTube</span><small>Todos os vídeos</small><b aria-hidden="true">↗</b></a></li>
-    </ul>
+    <a class="ab-botao" href="https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg" target="_blank" rel="noopener noreferrer" aria-label="Ver todos os vídeos no canal oficial de Amadeu Brutus no YouTube">Ver todos no YouTube <span aria-hidden="true">›</span></a>
   </div>
 </section>
 
@@ -854,11 +967,11 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     <h2 class="ab-titulo" id="imprensa-titulo">Últimas <em>notícias</em></h2>
     <div class="ab-materias">
       <article class="ab-materia">
-        <img src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_100926_The_Voice_Brasil_EP_03_Amadeu_Brutus_Foto_Ricardo_Bufolin_Formata_SBT_186_64e017f1c5.jpg" alt="Amadeu Brutus nas Audições às Cegas do The Voice Brasil" width="1000" height="666" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'">
+         <img src="public/images/web/amadeu-brutus-the-voice-audicao-ordinary.webp" alt="Amadeu Brutus cantando “Ordinary” nas Audições às Cegas do The Voice Brasil" width="1280" height="590" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'">
         <div><p class="ab-etapa">Audições às Cegas</p><h3>Amadeu Brutus conquista Diogo e Lauana nas Audições às Cegas</h3><p>Cantor interpretou “Ordinary”, conquistou duas cadeiras e escolheu seguir na competição com Lauana Prado.</p><a class="ab-link" href="https://thevoicebrasil.sbt.com.br/noticias/amadeu-brutus-conquista-diogo-e-lauana-nas-audicoes-as-cegas/" target="_blank" rel="noopener noreferrer">Ler no The Voice Brasil <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="ab-materia">
-        <img src="https://thevoice-assets-prd.s3.us-east-1.amazonaws.com/large_091026_The_Voice_Brasil_EP_09_Amadeu_Brutus_x_Damatta_Foto_Ricardo_Bufolin_Formata_SBT_323_2bb1272f45.jpg" alt="Damatta e Amadeu Brutus nas Batalhas do The Voice Brasil" width="1000" height="667" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'">
+         <img src="public/images/web/amadeu-brutus-the-voice-batalha-chao-de-giz.jpg" alt="Amadeu Brutus cantando “Chão de Giz” nas Batalhas do The Voice Brasil" width="960" height="540" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='public/brand/amadeu-brutus-cantor-no-palco.webp'">
         <div><p class="ab-etapa">As Batalhas</p><h3>Damatta e Amadeu Brutus dão novas vozes ao clássico de Zé Ramalho</h3><p>Participantes do Time Lauana encararam um dos grandes sucessos da música brasileira nas Batalhas.</p><a class="ab-link" href="https://thevoicebrasil.sbt.com.br/noticias/damatta-e-amadeu-brutus-dao-novas-vozes-ao-classico-de-ze-ramalho/" target="_blank" rel="noopener noreferrer">Ler no The Voice Brasil <span aria-hidden="true">↗</span></a></div>
       </article>
     </div>
@@ -866,16 +979,22 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 </section>
 
 <section class="ab-sec ab-historia" id="trajetoria" aria-labelledby="historia-titulo">
-  <div class="ab-wrap ab-historia-grade">
-    <figure class="ab-historia-foto"><img src="public/brand/recortes/amadeu-brutus-retrato-pb.webp" alt="Retrato em preto e branco de Amadeu Brutus" loading="lazy" decoding="async" width="430" height="845"></figure>
+  <div class="ab-historia-fundo" aria-hidden="true"><img src="public/images/Amadeu%20Brutus%20no%20barzinho.jpeg" alt="" loading="lazy" decoding="async" width="1280" height="590"></div>
+  <div class="ab-wrap">
+    <p class="ab-kicker">A carreira</p>
+    <h2 class="ab-titulo" id="historia-titulo">Uma história de talento e <em>estrada</em></h2>
     <div class="ab-historia-texto">
-      <p class="ab-kicker">A carreira</p>
-      <h2 class="ab-titulo" id="historia-titulo">Uma história de talento e <em>estrada</em></h2>
       <p>Com raízes no <strong>pop e rock brasileiro</strong>, Amadeu Brutus começou sua trajetória musical em meados dos anos 2000, à frente da banda <strong>Visionários S.A.</strong> Desde então, a música se tornou parte essencial da sua vida.</p>
       <p>Entre apresentações, composições autorais e a experiência como professor de música, construiu uma carreira marcada por talento, esforço e dedicação. Dos botecos e casas de shows de São Paulo aos palcos de grandes produções, abriu shows e dividiu experiências com <strong>Titãs, Ana Carolina e Roupa Nova</strong>.</p>
       <p>Em 2026, chegou ao palco do <strong>The Voice Brasil</strong>, no <strong>Time Lauana Prado</strong> e, na sequência, no <strong>Time Paulo Ricardo</strong>: uma nova etapa diante de um público ainda maior.</p>
-      <p class="ab-frase">E este é apenas o começo de um novo capítulo.</p>
     </div>
+    <ol class="ab-marcos">
+      <li><span>Anos 2000</span><strong>Visionários S.A.</strong><p>A primeira banda, à frente do microfone.</p></li>
+      <li><span>Palcos grandes</span><strong>Titãs · Ana Carolina · Roupa Nova</strong><p>Aberturas de show e experiências divididas.</p></li>
+      <li><span>Sala de aula</span><strong>Professor de música</strong><p>A música ensinada, não só cantada.</p></li>
+      <li><span>2026</span><strong>The Voice Brasil</strong><p>Time Lauana Prado e Time Paulo Ricardo.</p></li>
+    </ol>
+    <p class="ab-frase">E este é apenas o começo de um novo capítulo.</p>
   </div>
 </section>
 
@@ -1115,10 +1234,34 @@ function respirar(){
   if(e.isIntersecting){if(!v.src)v.src=v.dataset.previa;v.play().catch(()=>{})}else v.pause()}),{threshold:.35});
  clipes.forEach(c=>io.observe(c));
 })();
+/* The Voice e Vídeos: abrir vídeo com som numa tela por cima; YouTube só carrega no clique */
+(()=>{
+ const tela=document.getElementById('ab-tela');if(!tela)return;
+ const caixa=tela.querySelector('.ab-tela-video'),tit=tela.querySelector('.ab-tela-titulo');
+ const fechar=()=>{caixa.innerHTML='';if(tela.open)tela.close()};
+ document.querySelectorAll('.ab-cap-btn').forEach(b=>b.addEventListener('click',()=>{
+  const v=document.createElement('video');v.src=b.dataset.video;v.controls=true;v.autoplay=true;v.playsInline=true;
+  caixa.innerHTML='';caixa.appendChild(v);tit.textContent=b.dataset.titulo;
+  document.querySelectorAll('video').forEach(x=>{if(x!==v&&!x.classList.contains('ab-tv-fundo'))x.pause()});
+  const ap=document.getElementById('ab-player');if(ap)ap.pause();
+  tela.showModal();v.play().catch(()=>{});
+ }));
+ tela.querySelector('.ab-tela-fechar').addEventListener('click',fechar);
+ tela.addEventListener('close',()=>{caixa.innerHTML=''});
+ tela.addEventListener('click',e=>{if(e.target===tela)fechar()});
+ document.querySelectorAll('.ab-yt-play').forEach(b=>b.addEventListener('click',()=>{
+  const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0';
+  f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;
+  b.querySelector('.ab-play')?.remove();b.appendChild(f);
+ },{once:true}));
+ const fundo=document.querySelector('.ab-tv-fundo');
+ if(fundo){if(matchMedia('(prefers-reduced-motion: reduce)').matches){fundo.removeAttribute('autoplay');fundo.pause()}
+  else new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?fundo.play().catch(()=>{}):fundo.pause())).observe(fundo)}
+})();
 /* Entrada das listas ao rolar, como na agenda */
 (()=>{
  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window))return;
- const itens=document.querySelectorAll('.ab-show,.ab-faixas li,.ab-clipe,.ab-materia,.ab-yt li');
+ const itens=document.querySelectorAll('.ab-show,.ab-faixas li,.ab-clipe,.ab-materia,.ab-yt-card,.ab-cap,.ab-marcos li');
  itens.forEach((el,i)=>el.style.setProperty('--i',[...el.parentElement.children].indexOf(el)%6));
  document.documentElement.classList.add('ab-pronto');
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ab-visivel');io.unobserve(e.target)}}),{threshold:.12});
