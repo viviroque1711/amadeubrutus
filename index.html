@@ -940,7 +940,6 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
       </ol>
       <div class="ab-barra" aria-hidden="true"><i id="ab-progresso"></i></div>
       <audio id="ab-player" preload="none"></audio>
-      <a class="ab-link" href="https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo" target="_blank" rel="noopener noreferrer">Mais músicas no Spotify <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
@@ -1172,17 +1171,20 @@ function golpe(k,atraso,desvio,pico=.95,fica=0,fill='forwards'){
   ap(k).animate([{rotate:(a+desvio*.3+90)+'deg'},{rotate:(a+90)+'deg'}],{duration:620,delay:atraso,easing:'cubic-bezier(.2,.7,.2,1)',fill});
   clarao.animate([{opacity:0},{opacity:.35,offset:.04},{opacity:0}],{duration:520,delay:atraso});
 }
+// Os refletores já entram em movimento: as batidas da abertura acontecem enquanto eles varrem o palco.
 const ordem=['tl','br','tr','bl','ml','mr','tl','tr'];
-ordem.forEach((k,i)=>golpe(k,300+i*360,(i%2?-1:1)*22*(1-i/ordem.length)));
+const batidas={};ordem.forEach((k,i)=>(batidas[k]=batidas[k]||[]).push(.3+i*.36));
+const intro=hero.querySelector('.hero-intro');
 const entra=[{opacity:0,scale:.86},{opacity:1,scale:1}],sai=[{opacity:1,scale:1},{opacity:0,scale:1.05}];
 amadeu.animate(entra,{duration:650,delay:500,easing:'ease-out',fill:'forwards'});
 amadeu.animate(sai,{duration:420,delay:1900,easing:'ease-in',fill:'forwards'});
 brutus.animate(entra,{duration:650,delay:2100,easing:'ease-out',fill:'forwards'});
-brutus.animate(sai,{duration:420,delay:3350,easing:'ease-in',fill:'forwards'});
+// BRUTUS sai antes da foto entrar e a camada da abertura é removida (no celular ela ficava marcada sobre a foto).
+brutus.animate(sai,{duration:380,delay:3050,easing:'ease-in',fill:'forwards'}).onfinish=()=>{brutus.style.visibility='hidden';amadeu.style.visibility='hidden';if(intro)intro.style.display='none'};
+respirar();
 // Todos os holofotes acertam juntos e a marca AMADEU BRUTUS fica em cena.
 const fim=3500;
 setTimeout(()=>{
-  Object.keys(refl).forEach((k,i)=>golpe(k,i*40,(i%2?-1:1)*6,1,.9));
   marca.animate([{opacity:0},{opacity:1}],{duration:1100,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'});
   nome.forEach((el,i)=>el.animate([{opacity:0,translate:'0 18px'},{opacity:1,translate:'0 0'}],{duration:800,delay:250+i*220,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'}));
   // A imagem do artista e seu nome entram primeiro; navegação e controles aparecem depois.
@@ -1195,14 +1197,12 @@ setTimeout(()=>{
     actions.style.pointerEvents='auto';
     actions.animate([{opacity:0,translate:'-50% 14px'},{opacity:1,translate:'-50% 0'}],{duration:850,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'});
   }},1900);
-  setTimeout(respirar,900);
 },fim);
 // Depois da entrada, os refletores ganham vida como num show: cada um se move sozinho,
 // varre o palco, cruza com o do outro lado, volta para o artista e dá novas batidas de luz.
 function respirar(){
   const ks=Object.keys(refl).filter(k=>getComputedStyle(refl[k]).display!=='none');
   // Encerra as animações da entrada para o movimento contínuo assumir.
-  ks.forEach(k=>[fx(k),ln(k),ap(k)].forEach(el=>el.getAnimations().forEach(x=>x.cancel())));
   const lado=k=>k.endsWith('l')?1:-1, fase=ks.map((_,i)=>i*1.37);
   const suave=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
   // Batida: acende de uma vez e decai (no máximo 3 por segundo).
@@ -1220,21 +1220,28 @@ function respirar(){
   function quadro(agora){
     requestAnimationFrame(quadro);
     if(!vis.on||document.hidden)return;
-    const t=Math.max(0,(agora-t0)/1000),c=t%CICLO,n=Math.floor(c/CUE),dentro=c-n*CUE,prox=(n+1)%cues.length;
+    const t=Math.max(0,(agora-t0)/1000),ENT=fim/1000,c=t%CICLO,n=Math.floor(c/CUE),dentro=c-n*CUE,prox=(n+1)%cues.length;
     const mistura=suave((dentro-(CUE-1.2))/1.2);
     let flash=0;
     ks.forEach((k,i)=>{
       const a=angulo[k];
       const off=cues[n](t,i,k)*(1-mistura)+cues[prox](t,i,k)*mistura;
+      const varre=t<ENT+1.2?(i%2?-1:1)*26*Math.sin(t*2.1+fase[i])*(1-suave((t-ENT+1)/2.2)):0;
       // Batidas no começo de cada cena, em sequência entre os refletores.
       const b=pulso(dentro,.15+i*.28);flash=Math.max(flash,b);
-      const intens=Math.min(1,.78+.14*Math.sin(t*1.7+fase[i]*2)+.3*b);
+      let intens=Math.min(1,.78+.14*Math.sin(t*1.7+fase[i]*2)+.3*b);
+      // Abertura: cada refletor só acende nas suas batidas (sempre em movimento) e todos acertam juntos no fim.
+      if(t<ENT+.7){
+        const bat=(batidas[k]||[]).reduce((m,x)=>Math.max(m,pulso(t,x)),0);
+        const todos=suave((t-ENT-i*.04)/.12);
+        intens=Math.max(bat*.95,todos*intens);flash=Math.max(flash,bat);
+      }
       const f=fx(k),l=ap(k);
-      f.style.rotate=(a+off)+'deg';f.style.opacity=intens;
+      f.style.rotate=(a+off+varre)+'deg';f.style.opacity=intens;
       // O próprio refletor acompanha o facho e ainda balança levemente no suporte.
-      l.style.rotate=(a+off+90)+'deg';
+      l.style.rotate=(a+off+varre+90)+'deg';
       l.style.translate=`-51.4% calc(-57.7% + ${(Math.sin(t*2.3+fase[i])*1.5).toFixed(2)}px)`;
-      ln(k).style.opacity=Math.min(1,.55+.45*intens+.4*b);
+      ln(k).style.opacity=t<ENT?Math.max(.35,intens):Math.min(1,.55+.45*intens+.4*b);
     });
     clarao.style.opacity=(flash*.3).toFixed(3);
   }
