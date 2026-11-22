@@ -589,3 +589,9 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Imprensa: fotos servidas pelo próprio site (public/images/web/), sem depender do servidor do SBT.
 - Carreira: foto do barzinho em P&B com movimento lento ao fundo e 4 marcos (Visionários S.A., aberturas, professor, The Voice).
 - Pendente: vídeo "a eliminação" não entrou — aguardando a Viviane dizer como nomear a etapa.
+
+## 22/11/2026 — Ajustes aprovados e publicação
+- A voz de Amadeu: faixas com "Amadeu Brutus – nome da música" (Human, Livin' on a Prayer, Stuck on You, Até onde meus olhos podem ver — autoral), áudios dos arquivos nomeados enviados pela Viviane; foto com violão como pano de fundo da dobra.
+- Uma viagem ao passado: dobra mantida, cores trocadas de roxo para preto/prata/vermelho; Spotify em tema escuro.
+- Vídeos: retirado o clipe "abertura de show · Terra SP" (repetia o de voz e violão).
+- Branch redesenho-identidade publicada na main a pedido da Viviane.
