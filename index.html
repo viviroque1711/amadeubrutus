@@ -689,8 +689,8 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .ab-show:hover .ab-local h3{color:var(--ab-vermelho)}
 .ab-nota{margin:28px 0 0;color:var(--ab-cinza);font-size:14px}.ab-nota a{color:#fff}
 /* Ouvir */
-.ab-ouvir-grade{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
-.ab-ouvir-foto{margin:0}.ab-ouvir-foto img{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.8))}
+.ab-ouvir-grade{display:grid;grid-template-columns:1fr minmax(0,560px);align-items:center}
+
 .ab-faixas{list-style:none;margin:0;padding:0;border-top:1px solid var(--ab-linha)}
 .ab-faixa{all:unset;box-sizing:border-box;display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:18px;width:100%;padding:20px 4px;border-bottom:1px solid var(--ab-linha);cursor:pointer;color:#fff}
 .ab-faixa:focus-visible{outline:2px solid var(--ab-vermelho);outline-offset:2px}
@@ -737,7 +737,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 /* Entrada suave ao rolar (sem efeito com movimento reduzido) */
 .ab-pronto .ab-show,.ab-pronto .ab-faixas li,.ab-pronto .ab-clipe,.ab-pronto .ab-materia,.ab-pronto .ab-yt-card,.ab-pronto .ab-cap,.ab-pronto .ab-marcos li{opacity:0;transform:translateX(-46px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*70ms)}
 .ab-pronto .ab-visivel{opacity:1!important;transform:none!important}
-@media(max-width:900px){.ab-ouvir-grade,.ab-materia{grid-template-columns:1fr}.ab-clipes{grid-template-columns:1fr 1fr}.ab-clipes .ab-clipe:last-child{grid-column:1/-1;aspect-ratio:4/5}}
+@media(max-width:900px){.ab-materia{grid-template-columns:1fr}.ab-clipes{grid-template-columns:1fr 1fr}.ab-clipes .ab-clipe:last-child{grid-column:1/-1;aspect-ratio:4/5}}
 @media(max-width:560px){.ab-show{grid-template-columns:auto 1fr;row-gap:8px}.ab-hora{grid-column:2;font-size:1.5rem}.ab-clipes{grid-template-columns:1fr}.ab-clipes .ab-clipe{aspect-ratio:4/5}}
 @media(prefers-reduced-motion:reduce){.ab-clipe video{transition:none}}
 
@@ -819,6 +819,44 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(max-width:900px){.ab-marcos{grid-template-columns:1fr 1fr;row-gap:34px;border-top:0}.ab-marcos li{border-top:2px solid var(--ab-vermelho)}.ab-historia::after{background:linear-gradient(180deg,rgba(5,5,5,.7),rgba(5,5,5,.9) 40%,#050505)}}
 @media(max-width:560px){.ab-yt-grade{grid-template-columns:1fr}.ab-caps{grid-auto-columns:72vw}.ab-tv-titulo{font-size:clamp(3.4rem,17vw,5rem)}.ab-marcos{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.ab-fita-trilho,.ab-historia-fundo img,.ab-play{animation:none}}
+
+/* A voz de Amadeu: a foto vira o palco por trás do player */
+.ab-ouvir{min-height:100svh;display:flex;align-items:center}
+.ab-ouvir::before{display:none}
+.ab-ouvir-palco{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.ab-ouvir-palco::before{content:"";position:absolute;left:-10%;top:8%;width:75%;height:90%;background:radial-gradient(closest-side,rgba(255,38,61,.30),rgba(255,38,61,.08) 55%,transparent);transition:opacity .8s;animation:ab-respira 7s ease-in-out infinite}
+.ab-ouvir-feixe{position:absolute;left:4%;top:-12%;width:min(62vw,900px);height:auto;opacity:.32;mix-blend-mode:screen;transform-origin:50% 0;animation:ab-feixe 12s ease-in-out infinite alternate;filter:grayscale(1)}
+.ab-ouvir-foto{position:absolute;left:-13%;bottom:0;height:92%;width:auto;max-width:none;filter:contrast(1.08) brightness(.92);-webkit-mask-image:linear-gradient(90deg,#000 50%,rgba(0,0,0,.55) 68%,transparent 88%),linear-gradient(0deg,transparent 0,#000 18%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,#000 50%,rgba(0,0,0,.55) 68%,transparent 88%),linear-gradient(0deg,transparent 0,#000 18%);mask-composite:intersect;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.ab-ouvir.tocando .ab-ouvir-foto{transform:scale(1.025)}
+.ab-ouvir.tocando .ab-ouvir-palco::before{animation-duration:1.6s}
+@keyframes ab-respira{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+@keyframes ab-feixe{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+.ab-ouvir-texto{grid-column:2;position:relative}
+.ab-ouvir-palco::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 40%,rgba(5,5,5,.55) 56%,rgba(5,5,5,.9) 70%),linear-gradient(0deg,#050505 0,transparent 16%,transparent 88%,#050505 100%)}
+.ab-nome small{display:block;margin-bottom:3px;font-family:Inter,system-ui,sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--ab-vermelho)}
+.ab-traco{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.ab-autoral{display:inline-block;margin-left:10px;padding:3px 8px;border:1px solid var(--ab-prata);font-family:Inter,system-ui,sans-serif;font-style:normal;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;vertical-align:middle;color:var(--ab-prata)}
+@media(max-width:900px){
+ .ab-ouvir{align-items:flex-end;padding-top:min(78vw,520px)}
+ .ab-ouvir-grade{grid-template-columns:1fr}.ab-ouvir-texto{grid-column:1}
+ .ab-ouvir-foto{left:50%;top:0;bottom:auto;height:auto;width:min(150vw,900px);transform:translateX(-46%);-webkit-mask-image:linear-gradient(180deg,#000 45%,transparent 88%);mask-image:linear-gradient(180deg,#000 45%,transparent 88%)}
+ .ab-ouvir.tocando .ab-ouvir-foto{transform:translateX(-46%) scale(1.025)}
+ .ab-ouvir-feixe{left:-10%;width:120vw}
+ .ab-ouvir-palco::before{left:-20%;top:0;width:140%;height:60%}
+ .ab-ouvir-palco::after{background:linear-gradient(180deg,transparent 30%,rgba(5,5,5,.7) 52%,#050505 70%)}
+}
+@media(prefers-reduced-motion:reduce){.ab-ouvir-palco::before,.ab-ouvir-feixe{animation:none}}
+/* Uma viagem ao passado: mesma dobra, nas cores do Amadeu */
+.discography-fold{background:radial-gradient(ellipse at 78% 18%,rgba(255,38,61,.16),transparent 42%),radial-gradient(ellipse at 10% 90%,rgba(217,221,228,.06),transparent 40%),linear-gradient(135deg,#0b0b0c 0%,#050505 55%,#000 100%);color:#f5f4f2}
+.discography-kicker{color:var(--ab-vermelho)}
+.discography-copy h2 em{color:var(--ab-vermelho)}
+.discography-copy p{color:#b9b9bf}
+.spotify-cta{border-color:var(--ab-vermelho);border-radius:0;color:#fff;background:rgba(5,5,5,.7);box-shadow:none}
+.spotify-cta:hover{box-shadow:0 14px 36px rgba(255,38,61,.3)}
+.spotify-frame-wrap{border:1px solid rgba(217,221,228,.22);border-radius:0;background:linear-gradient(145deg,rgba(217,221,228,.06),rgba(5,5,5,.9));box-shadow:0 22px 70px rgba(0,0,0,.5)}
+.spotify-frame-label{color:var(--ab-prata)}
+.spotify-embed{background:#121212}
+.discography-equalizer i{background:linear-gradient(var(--ab-vermelho),rgba(217,221,228,.6))}
 </style>
 </head>
 <body>
@@ -885,17 +923,20 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 </section>
 
 <section class="ab-sec ab-ouvir" id="ouvir" aria-labelledby="ouvir-titulo">
+  <div class="ab-ouvir-palco" aria-hidden="true">
+    <img class="ab-ouvir-feixe" src="public/brand/efeito-feixe-luz-palco.webp" alt="" loading="lazy" decoding="async">
+    <img class="ab-ouvir-foto" src="public/brand/recortes/amadeu-brutus-violao-ombro-fundo.webp" alt="" loading="lazy" decoding="async" width="1406" height="987">
+  </div>
   <div class="ab-wrap ab-ouvir-grade">
-    <figure class="ab-ouvir-foto"><img src="public/brand/recortes/amadeu-brutus-violao-ombro.webp" alt="Amadeu Brutus com o violão no ombro" loading="lazy" decoding="async" width="1406" height="987"></figure>
     <div class="ab-ouvir-texto">
       <p class="ab-kicker">Ouvir</p>
       <h2 class="ab-titulo" id="ouvir-titulo">A voz de <em>Amadeu</em></h2>
-      <p class="ab-lead">Interpretações gravadas por Amadeu Brutus. Aperte o play e ouça direto aqui.</p>
+      <p class="ab-lead">Interpretações gravadas por Amadeu Brutus e a sua música autoral. Aperte o play e ouça direto aqui.</p>
       <ol class="ab-faixas" id="ab-faixas">
-        <li><button type="button" class="ab-faixa" data-src="public/audio/web/audio-amadeu-brutus-01.mp3"><span class="ab-n">01</span><span class="ab-nome">Human</span><span class="ab-dur">2:10</span></button></li>
-        <li><button type="button" class="ab-faixa" data-src="public/audio/web/audio-amadeu-brutus-03.mp3"><span class="ab-n">02</span><span class="ab-nome">Stuck on You</span><span class="ab-dur">3:24</span></button></li>
-        <li><button type="button" class="ab-faixa" data-src="public/audio/web/audio-amadeu-brutus-02.mp3"><span class="ab-n">03</span><span class="ab-nome" data-confirmar>Faixa 3</span><span class="ab-dur">2:53</span></button></li>
-        <li><button type="button" class="ab-faixa" data-src="public/audio/web/faixa-autoral-amadeu-brutus.mp3"><span class="ab-n">04</span><span class="ab-nome" data-confirmar>Faixa autoral</span><span class="ab-dur">5:14</span></button></li>
+        <li><button type="button" class="ab-faixa" data-src="public/audio/web/amadeu-brutus-human.mp3"><span class="ab-n">01</span><span class="ab-nome"><small>Amadeu Brutus <span class="ab-traco">–</span></small> Human</span><span class="ab-dur">2:05</span></button></li>
+        <li><button type="button" class="ab-faixa" data-src="public/audio/web/amadeu-brutus-livin-on-a-prayer.mp3"><span class="ab-n">02</span><span class="ab-nome"><small>Amadeu Brutus <span class="ab-traco">–</span></small> Livin' on a Prayer</span><span class="ab-dur">2:53</span></button></li>
+        <li><button type="button" class="ab-faixa" data-src="public/audio/web/amadeu-brutus-stuck-on-you.mp3"><span class="ab-n">03</span><span class="ab-nome"><small>Amadeu Brutus <span class="ab-traco">–</span></small> Stuck on You</span><span class="ab-dur">3:22</span></button></li>
+        <li><button type="button" class="ab-faixa" data-src="public/audio/web/amadeu-brutus-ate-onde-meus-olhos-podem-ver.mp3"><span class="ab-n">04</span><span class="ab-nome"><small>Amadeu Brutus <span class="ab-traco">–</span></small> Até onde meus olhos podem ver <em class="ab-autoral">Autoral</em></span><span class="ab-dur">5:10</span></button></li>
       </ol>
       <div class="ab-barra" aria-hidden="true"><i id="ab-progresso"></i></div>
       <audio id="ab-player" preload="none"></audio>
@@ -996,6 +1037,31 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     </ol>
     <p class="ab-frase">E este é apenas o começo de um novo capítulo.</p>
   </div>
+</section>
+
+<section class="discography-fold" id="discografia" aria-labelledby="discography-title">
+  <div class="discography-inner">
+    <div class="discography-copy">
+      <span class="discography-kicker">Uma viagem no tempo</span>
+      <h2 id="discography-title">Uma viagem ao <em>passado</em></h2>
+      <p>Registros de uma fase anterior da música de Amadeu Brutus. Um resgate sonoro para revisitar outras épocas, outras interpretações e o caminho percorrido até aqui.</p>
+      <a class="spotify-cta" href="https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo" target="_blank" rel="noopener noreferrer">
+        <span class="spotify-mark" aria-hidden="true">●</span> Ouvir no Spotify <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <div class="spotify-frame-wrap">
+      <div class="spotify-frame-label">Perfil oficial · Amadeu Brutus</div>
+      <iframe
+        class="spotify-embed"
+        title="Arquivo musical de Amadeu Brutus no Spotify"
+        src="https://open.spotify.com/embed/artist/0eRoINMstkO2cT60xL0uzo?utm_source=generator&amp;theme=0"
+        width="100%" height="452" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+  <span class="discography-equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
 </section>
 
 <section class="ab-sec ab-contato" id="contato" aria-labelledby="contato-titulo">
@@ -1215,6 +1281,7 @@ function respirar(){
   if(atual!==f){player.src=f.dataset.src;atual=f}
   faixas.forEach(x=>x.classList.toggle('tocando',x===f));player.play().catch(()=>{});
  }));
+ const secOuvir=document.getElementById('ouvir');['play','pause','ended'].forEach(ev=>player.addEventListener(ev,()=>secOuvir&&secOuvir.classList.toggle('tocando',!player.paused)));
  player.addEventListener('timeupdate',()=>{barra.style.width=(player.duration?player.currentTime/player.duration*100:0)+'%'});
  player.addEventListener('ended',()=>{const i=faixas.indexOf(atual);faixas.forEach(x=>x.classList.remove('tocando'));if(faixas[i+1])faixas[i+1].click()});
 })();
