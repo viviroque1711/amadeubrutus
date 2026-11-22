@@ -570,3 +570,28 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Depois da entrada, um roteiro de luz contínuo (requestAnimationFrame) em ciclos de 24 s com quatro cenas de 6 s e transição suave entre elas: foco no artista; varredura em onda; cruzamento esquerda × direita; giro livre. Cada refletor tem fase própria, acompanha o ângulo do seu facho e balança levemente no suporte.
 - No começo de cada cena, batidas de luz em sequência entre os refletores (acende de uma vez e decai; no máximo 3 por segundo), com clarão suave no palco. Intensidade dos fachos e das lentes respira com a música visualmente.
 - Pausa quando a primeira dobra sai da tela ou a aba fica oculta. Com movimento reduzido no aparelho, nada disso roda.
+
+## Redesenho da identidade — branch `redesenho-identidade` (prévia, ainda não publicado) — 19/11/2026
+
+- Motivo: feedback do artista ("amador", "quadrados"). Diagnóstico: caixas em tudo, seções vazias, quadrado branco do Spotify, fonte Impact inexistente no celular, cores diferentes por seção (roxo, neon), imagens fracas.
+- Identidade: preto de palco, luz prata e vermelho (#ff263d) como único destaque; Anton (títulos) e Inter (texto) embutidas em `public/fonts`; listas separadas por linha, sem caixas; logo só no cabeçalho/rodapé. Primeira dobra mantida (assinatura do site), agora com Anton.
+- Seções: Agenda (com datas 17 a 22/11 em vermelho), Ouvir (player próprio com 4 faixas em `public/audio/web/*.mp3`, volume equalizado), Ao vivo (3 clipes reais sem figurinhas: prévia sem som ao aparecer, "Ouvir com som" abre o vídeo completo; links do YouTube), Imprensa (2 matérias SBT), Carreira (retrato P&B recortado), Contato (campos em linha).
+- Removidas: "Últimos lançamentos" (vazia), "Uma viagem ao passado" (iframe do Spotify em branco; o Spotify virou link no Ouvir), "The Voice Brasil 2026" (vazia). Corrigida a seção de contato que estava com id quebrado.
+- SEO: 10 shows marcados como MusicEvent no JSON-LD (cidade só onde conhecida).
+- Mídias preparadas (já no main): `public/brand/recortes/` (fotos de estúdio sem fundo), `public/videos/web/` (clipes, prévias e capas), vídeo da batalha Chão de Giz compactado (32 → 21 MB).
+- Pendente: nomes das faixas 3 e 4 do player; confirmar cidade do Bar do Cumpadi; aprovação da proprietária para juntar ao main.
+
+## 19/11/2026 — Redesenho, 2ª rodada (branch redesenho-identidade)
+- Agenda voltou com a foto original (amadeu-brutus-foto-agenda-de-shows.jpeg) e a entrada alternada esquerda/direita.
+- Nova dobra #the-voice: vídeo do palco (trechos de "Ordinary") em loop ao fundo; jornada em 5 vídeos que abrem com som numa tela por cima: pré-audição, Audições às Cegas ("Ordinary"), ensaio e Batalha ("Chão de Giz"), bastidores do Peguei. Versões web em public/videos/thevoice/.
+- Faixa de palco (duas fitas cruzadas correndo) antes do The Voice.
+- #videos: capas do YouTube de Last Kiss e Fix You (o player do YouTube só carrega no clique), clipes "Ao vivo na estrada" e botão "Ver todos no YouTube".
+- Imprensa: fotos servidas pelo próprio site (public/images/web/), sem depender do servidor do SBT.
+- Carreira: foto do barzinho em P&B com movimento lento ao fundo e 4 marcos (Visionários S.A., aberturas, professor, The Voice).
+- Pendente: vídeo "a eliminação" não entrou — aguardando a Viviane dizer como nomear a etapa.
+
+## 22/11/2026 — Ajustes aprovados e publicação
+- A voz de Amadeu: faixas com "Amadeu Brutus – nome da música" (Human, Livin' on a Prayer, Stuck on You, Até onde meus olhos podem ver — autoral), áudios dos arquivos nomeados enviados pela Viviane; foto com violão como pano de fundo da dobra.
+- Uma viagem ao passado: dobra mantida, cores trocadas de roxo para preto/prata/vermelho; Spotify em tema escuro.
+- Vídeos: retirado o clipe "abertura de show · Terra SP" (repetia o de voz e violão).
+- Branch redesenho-identidade publicada na main a pedido da Viviane.
