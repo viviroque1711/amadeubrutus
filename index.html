@@ -718,7 +718,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .ab-ouvir-palco{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
 .ab-ouvir-palco::before{content:"";position:absolute;left:-10%;top:8%;width:75%;height:90%;background:radial-gradient(closest-side,rgba(255,38,61,.30),rgba(255,38,61,.08) 55%,transparent);transition:opacity .8s;animation:ab-respira 7s ease-in-out infinite}
 .ab-ouvir-feixe{position:absolute;left:4%;top:-12%;width:min(62vw,900px);height:auto;opacity:.32;mix-blend-mode:screen;transform-origin:50% 0;animation:ab-feixe 12s ease-in-out infinite alternate;filter:grayscale(1)}
-.ab-ouvir-foto{position:absolute;left:-13%;bottom:0;height:92%;width:auto;max-width:none;filter:contrast(1.08) brightness(.92);-webkit-mask-image:linear-gradient(90deg,#000 50%,rgba(0,0,0,.55) 68%,transparent 88%),linear-gradient(0deg,transparent 0,#000 18%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,#000 50%,rgba(0,0,0,.55) 68%,transparent 88%),linear-gradient(0deg,transparent 0,#000 18%);mask-composite:intersect;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.ab-ouvir-foto{position:absolute;left:-13%;bottom:0;height:min(92%,860px);width:auto;max-width:none;filter:contrast(1.08) brightness(.92);-webkit-mask-image:linear-gradient(90deg,#000 50%,rgba(0,0,0,.55) 68%,transparent 88%),linear-gradient(0deg,transparent 0,#000 18%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,#000 50%,rgba(0,0,0,.55) 68%,transparent 88%),linear-gradient(0deg,transparent 0,#000 18%);mask-composite:intersect;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
 .ab-ouvir.tocando .ab-ouvir-foto{transform:scale(1.025)}
 .ab-ouvir.tocando .ab-ouvir-palco::before{animation-duration:1.6s}
 @keyframes ab-respira{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
@@ -869,6 +869,8 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .ab-faq-item[open] summary::after{transform:rotate(45deg)}
 .ab-faq-item h3{margin:0;font-family:var(--ab-display);font-weight:400;font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.05;text-transform:uppercase;color:#fff}
 .ab-faq-item p{margin:0 0 26px;max-width:68ch;color:#d6d6db;font-size:clamp(16px,1.2vw,18px);line-height:1.7}
+
+.ab-ondas{display:block;width:100%;height:70px;margin:18px 0 6px}
 </style>
 </head>
 <body>
@@ -930,6 +932,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
         <li><button type="button" class="ab-faixa" data-src="public/audio/web/amadeu-brutus-stuck-on-you.mp3"><span class="ab-n">03</span><span class="ab-nome"><small>Amadeu Brutus <span class="ab-traco">–</span></small> Stuck on You</span><span class="ab-dur">3:22</span></button></li>
         <li><button type="button" class="ab-faixa" data-src="public/audio/web/amadeu-brutus-ate-onde-meus-olhos-podem-ver.mp3"><span class="ab-n">04</span><span class="ab-nome"><small>Amadeu Brutus <span class="ab-traco">–</span></small> Até onde meus olhos podem ver <em class="ab-autoral">Autoral</em><span class="ab-cred">Música autoral de Amadeu Brutus</span></span><span class="ab-dur">5:10</span></button></li>
       </ol>
+      <canvas class="ab-ondas" id="ab-ondas" width="1120" height="140" aria-hidden="true"></canvas>
       <div class="ab-barra" aria-hidden="true"><i id="ab-progresso"></i></div>
       <a class="ab-link ab-ver-todas" href="/lancamentos.html">Ver todas as músicas <span aria-hidden="true">›</span></a>
       <audio id="ab-player" preload="none"></audio>
@@ -1407,6 +1410,28 @@ document.querySelectorAll('[data-assunto]').forEach(a=>a.addEventListener('click
  const sel=document.getElementById('c-assunto');if(!sel)return;sel.value=a.dataset.assunto;sel.dispatchEvent(new Event('change',{bubbles:true}));
  setTimeout(()=>document.getElementById('c-nome')?.focus({preventScroll:true}),700);
 }));
+/* A voz de Amadeu: ondas sonoras desenhadas em código, reagindo à música que toca */
+(()=>{
+ const cv=document.getElementById('ab-ondas'),player=document.getElementById('ab-player');if(!cv||!player)return;
+ const ctx=cv.getContext('2d'),reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let ac=null,an=null,dados=null,raf=0,visivel=true,t=0;
+ const W=cv.width,H=cv.height,N=64;
+ const desenha=(vals)=>{ctx.clearRect(0,0,W,H);const bw=W/N;
+  for(let i=0;i<N;i++){const v=vals[i];const h=Math.max(3,v*H*.92);const x=i*bw+bw*.18,y=(H-h)/2;
+   const g=ctx.createLinearGradient(0,y,0,y+h);g.addColorStop(0,'rgba(255,38,61,.95)');g.addColorStop(1,'rgba(217,221,228,.55)');ctx.fillStyle=g;ctx.fillRect(x,y,bw*.64,h)}};
+ const repouso=()=>{const v=[];for(let i=0;i<N;i++)v.push(.05+.03*Math.sin(i*.5));desenha(v)};
+ const quadro=()=>{raf=0;if(player.paused||!visivel){repouso();return}
+  let v=[];
+  let soma=0;if(an){an.getByteFrequencyData(dados);for(let i=0;i<N;i++){const k=Math.floor(Math.pow(i/N,1.6)*dados.length*.7);v.push(dados[k]/255);soma+=dados[k]}}
+  if(!an||soma===0){v=[];t+=.06;for(let i=0;i<N;i++)v.push(.25+.35*Math.abs(Math.sin(t*1.7+i*.33))*Math.abs(Math.cos(t*.9+i*.11)))}
+  desenha(v);raf=requestAnimationFrame(quadro)};
+ const liga=()=>{if(reduz){repouso();return}
+  if(!ac){try{ac=new (window.AudioContext||window.webkitAudioContext)();const src=ac.createMediaElementSource(player);an=ac.createAnalyser();an.fftSize=256;an.smoothingTimeConstant=.82;dados=new Uint8Array(an.frequencyBinCount);src.connect(an);an.connect(ac.destination)}catch(e){an=null}}
+  if(ac&&ac.state==='suspended')ac.resume();if(!raf)raf=requestAnimationFrame(quadro)};
+ player.addEventListener('play',liga);player.addEventListener('pause',repouso);player.addEventListener('ended',repouso);
+ new IntersectionObserver(es=>{visivel=es[0].isIntersecting;if(visivel&&!player.paused&&!raf)raf=requestAnimationFrame(quadro)}).observe(cv);
+ repouso();
+})();
 /* Entrada das listas ao rolar, como na agenda */
 (()=>{
  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window))return;
