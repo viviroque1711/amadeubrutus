@@ -473,7 +473,9 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 /* The Voice: vídeo do palco como fundo */
 .ab-tv{min-height:100svh;display:flex;align-items:flex-end;padding-top:clamp(120px,20vh,220px)}
 .ab-tv::before{display:none}
-.ab-tv-fundo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05)}
+.ab-tv-fundos{position:absolute;inset:0;z-index:-2;overflow:hidden;background:#050505}
+.ab-tv-fundo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05);opacity:0;transform:scale(1.06);transition:opacity 1.1s ease,transform 6s ease-out}
+.ab-tv-fundo.ativo{opacity:1;transform:scale(1)}
 .ab-tv::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,5,5,.55) 0%,rgba(5,5,5,.35) 30%,rgba(5,5,5,.88) 66%,#050505 100%),radial-gradient(70% 60% at 50% 40%,transparent,rgba(5,5,5,.6))}
 .ab-tv-titulo{font-size:clamp(4rem,11vw,11rem);margin-bottom:20px;text-shadow:0 10px 50px rgba(0,0,0,.6)}
 .ab-tv-lead{max-width:62ch;margin:0 0 clamp(36px,6vh,60px);color:#e9e9ee;font-size:clamp(16px,1.35vw,20px);line-height:1.65}
@@ -701,13 +703,17 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 </div>
 
 <section class="ab-sec ab-tv" id="the-voice" aria-labelledby="tv-titulo">
-  <video class="ab-tv-fundo" autoplay muted loop playsinline preload="metadata" poster="public/videos/thevoice/fundo-palco-the-voice.jpg" aria-hidden="true"><source src="public/videos/thevoice/fundo-palco-the-voice.mp4" type="video/mp4"></video>
+  <div class="ab-tv-fundos" aria-hidden="true">
+    <video class="ab-tv-fundo ativo" muted loop playsinline preload="metadata" poster="public/videos/thevoice/fundo-palco-the-voice.jpg" src="public/videos/thevoice/fundo-palco-the-voice.mp4"></video>
+    <video class="ab-tv-fundo" muted loop playsinline preload="none" poster="public/videos/thevoice/fundo-batalha-chao-de-giz.jpg" data-src="public/videos/thevoice/fundo-batalha-chao-de-giz.mp4"></video>
+    <video class="ab-tv-fundo" muted loop playsinline preload="none" poster="public/videos/thevoice/fundo-rodada-de-fogo-human.jpg" data-src="public/videos/thevoice/fundo-rodada-de-fogo-human.mp4"></video>
+  </div>
   <div class="ab-wrap">
     <p class="ab-kicker">The Voice Brasil 2026 · SBT e Disney+</p>
-    <h2 class="ab-titulo ab-tv-titulo" id="tv-titulo"><span class="sr-only">Duas cadeiras viradas: do Time Lauana Prado ao Time Paulo Ricardo</span><span class="ab-virada" aria-hidden="true">
+    <h2 class="ab-titulo ab-tv-titulo" id="tv-titulo"><span class="sr-only">Duas cadeiras viradas com “Ordinary”, “Chão de Giz” nas Batalhas e “Human” na Rodada de Fogo</span><span class="ab-virada" aria-hidden="true">
       <span class="ab-vira ativo"><small>Audições às Cegas · “Ordinary”</small>Duas cadeiras <em>viradas</em></span>
-      <span class="ab-vira"><small>A escolha</small>Time <em>Lauana Prado</em></span>
-      <span class="ab-vira"><small>Nas Batalhas, o Peguei</small>Agora, Time <em>Paulo Ricardo</em></span>
+      <span class="ab-vira"><small>As Batalhas · Time Lauana Prado</small>“Chão de <em>Giz</em>”</span>
+      <span class="ab-vira"><small>Rodada de Fogo · Time Paulo Ricardo</small>“<em>Human</em>”</span>
     </span></h2>
     <div class="ab-virada-pontos" aria-hidden="true"><i class="ativo"></i><i></i><i></i></div>
     <p class="ab-tv-lead">Nas Audições às Cegas, Amadeu Brutus cantou <strong>“Ordinary”</strong> e conquistou <strong>Diogo Nogueira</strong> e <strong>Lauana Prado</strong>. Escolheu o Time Lauana, levou <strong>“Chão de Giz”</strong> para as Batalhas, seguiu no <strong>Time Paulo Ricardo</strong> e chegou à <strong>Rodada de Fogo</strong> cantando <strong>“Human”</strong>.</p>
@@ -1101,22 +1107,21 @@ function respirar(){
   f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;
   b.querySelector('.ab-play')?.remove();b.appendChild(f);
  },{once:true}));
- const fundo=document.querySelector('.ab-tv-fundo');
- if(fundo){if(matchMedia('(prefers-reduced-motion: reduce)').matches){fundo.removeAttribute('autoplay');fundo.pause()}
-  else new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?fundo.play().catch(()=>{}):fundo.pause())).observe(fundo)}
 })();
 /* The Voice: o título gira como a cadeira, em três viradas */
 (()=>{
  const sec=document.getElementById('the-voice');if(!sec)return;
- const vs=[...sec.querySelectorAll('.ab-vira')],ps=[...sec.querySelectorAll('.ab-virada-pontos i')];
- if(vs.length<2||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const DUR=3600;let i=0,timer=null,visivel=false;
+ const vs=[...sec.querySelectorAll('.ab-vira')],ps=[...sec.querySelectorAll('.ab-virada-pontos i')],fs=[...sec.querySelectorAll('.ab-tv-fundo')];
+ const carrega=v=>{if(v&&v.dataset.src&&!v.src){v.src=v.dataset.src}};
+ const fundo=n=>{fs.forEach((v,k)=>{v.classList.toggle('ativo',k===n);if(k===n){carrega(v);v.currentTime=0;v.play().catch(()=>{})}else setTimeout(()=>{if(!v.classList.contains('ativo'))v.pause()},1200)})};
+ if(vs.length<2||matchMedia('(prefers-reduced-motion: reduce)').matches){new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const v=fs[0];v&&v.pause()}})).observe(sec);return}
+ const DUR=4600;let i=0,timer=null,visivel=false;
  const ir=n=>{const a=vs[i];a.classList.remove('ativo');a.classList.add('sai');setTimeout(()=>a.classList.remove('sai'),800);
-  i=n%vs.length;vs[i].classList.add('ativo');ps.forEach((p,k)=>{p.classList.remove('ativo');void p.offsetWidth;if(k===i)p.classList.add('ativo')});
+  i=n%vs.length;vs[i].classList.add('ativo');fundo(i);ps.forEach((p,k)=>{p.classList.remove('ativo');void p.offsetWidth;if(k===i)p.classList.add('ativo')});
   sec.classList.remove('virou');void sec.offsetWidth;sec.classList.add('virou')};
  const rodar=()=>{clearInterval(timer);timer=setInterval(()=>ir(i+1),DUR)};
  sec.style.setProperty('--dur',DUR/1000+'s');
- new IntersectionObserver(es=>es.forEach(e=>{visivel=e.isIntersecting;if(visivel){ps[i]?.classList.add('ativo');rodar()}else clearInterval(timer)}),{threshold:.3}).observe(sec);
+ new IntersectionObserver(es=>es.forEach(e=>{visivel=e.isIntersecting;if(visivel){ps[i]?.classList.add('ativo');fs.forEach(carrega);fs[i]?.play().catch(()=>{});rodar()}else{clearInterval(timer);fs.forEach(v=>v.pause())}}),{threshold:.3}).observe(sec);
 })();
 /* Carreira: contador de 1 a mais de 1.000 shows */
 (()=>{
