@@ -616,3 +616,4 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Redes: faixa "Ouça e siga Amadeu Brutus" antes do rodapé (YouTube com inscrição, Instagram, TikTok, Spotify, Apple Music, Deezer — Deezer resolvido do link curto para deezer.com/br/artist/191828317), mesmos links no contato e no sameAs do JSON-LD; botão "Inscreva-se no canal" ao lado de "Ver todos no YouTube".
 - Vídeos: subtítulo "Ao vivo na estrada" trocado por "The Best of Amadeu Brutus".
 - Agenda sem datas desceu para antes do Contato (menu e botão do topo: "Contratar show"). Quando houver datas, volta para logo depois da primeira dobra.
+- Human: trocado pelo vídeo oficial Disney/SBT ("Amadeu Brutus Rodada de Fogo Human Ragnbone.mp4", vertical 1:09) no fundo da virada (versão paisagem com laterais desfocadas e versão vertical para celular), no vídeo 07 da jornada e na notícia. Tela de vídeo se ajusta a vídeo vertical.

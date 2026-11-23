@@ -636,6 +636,8 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 .ab-botao-claro{background:transparent;border:1px solid rgba(255,255,255,.5)}.ab-botao-claro:hover{border-color:var(--ab-vermelho);box-shadow:none}
 @media(max-width:900px){.ab-redes-lista{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.ab-redes-lista{grid-template-columns:1fr}}
+
+.ab-tela.vertical{width:min(96vw,calc(82vh*9/16))}.ab-tela.vertical .ab-tela-video{aspect-ratio:9/16}
 </style>
 </head>
 <body>
@@ -712,7 +714,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <div class="ab-tv-fundos" aria-hidden="true">
     <video class="ab-tv-fundo ativo" muted loop playsinline preload="metadata" poster="public/videos/thevoice/fundo-palco-the-voice.jpg" src="public/videos/thevoice/fundo-palco-the-voice.mp4"></video>
     <video class="ab-tv-fundo" muted loop playsinline preload="none" poster="public/videos/thevoice/fundo-batalha-chao-de-giz.jpg" data-src="public/videos/thevoice/fundo-batalha-chao-de-giz.mp4"></video>
-    <video class="ab-tv-fundo" muted loop playsinline preload="none" poster="public/videos/thevoice/fundo-rodada-de-fogo-human.jpg" data-src="public/videos/thevoice/fundo-rodada-de-fogo-human.mp4"></video>
+    <video class="ab-tv-fundo" muted loop playsinline preload="none" poster="public/videos/thevoice/fundo-rodada-de-fogo-human.jpg" data-src="public/videos/thevoice/fundo-rodada-de-fogo-human.mp4" data-src-vertical="public/videos/thevoice/fundo-rodada-de-fogo-human-vertical.mp4"></video>
   </div>
   <div class="ab-wrap">
     <p class="ab-kicker">The Voice Brasil 2026 · SBT e Disney+</p>
@@ -731,7 +733,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
       <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/amadeu-brutus-chao-de-giz-batalha.mp4" data-titulo="As Batalhas · “Chão de Giz”, com Damatta" aria-label="Assistir As Batalhas: Chão de Giz, com Damatta"><img src="public/videos/thevoice/batalha-chao-de-giz-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">04</span><span class="ab-cap-txt"><small>As Batalhas</small><strong>“Chão de Giz”, com Damatta</strong><em>3:08</em></span></button></li>
       <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/decisao-batalha-peguei.mp4" data-titulo="As Batalhas · A decisão e o Peguei" aria-label="Assistir As Batalhas: a decisão e o Peguei"><img src="public/videos/thevoice/decisao-batalha-peguei-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">05</span><span class="ab-cap-txt"><small>As Batalhas</small><strong>A decisão e o Peguei</strong><em>2:58</em></span></button></li>
       <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/bastidores-peguei.mp4" data-titulo="Bastidores · Depois do Peguei" aria-label="Assistir Bastidores: Depois do Peguei"><img src="public/videos/thevoice/bastidores-peguei-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">06</span><span class="ab-cap-txt"><small>Bastidores</small><strong>Depois do Peguei</strong><em>0:19</em></span></button></li>
-      <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/rodada-de-fogo-apresentacao.mp4" data-titulo="Rodada de Fogo · “Human”" aria-label="Assistir Rodada de Fogo: Human"><img src="public/videos/thevoice/rodada-de-fogo-apresentacao-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">07</span><span class="ab-cap-txt"><small>Rodada de Fogo</small><strong>“Human”</strong><em>3:06</em></span></button></li>
+      <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/rodada-de-fogo-human.mp4" data-titulo="Rodada de Fogo · “Human”" aria-label="Assistir Rodada de Fogo: Human"><img src="public/videos/thevoice/rodada-de-fogo-human-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">07</span><span class="ab-cap-txt"><small>Rodada de Fogo</small><strong>“Human”</strong><em>1:09</em></span></button></li>
       <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/rodada-de-fogo-resultado.mp4" data-titulo="Rodada de Fogo · O resultado" aria-label="Assistir Rodada de Fogo: o resultado"><img src="public/videos/thevoice/rodada-de-fogo-resultado-capa.jpg" alt="" loading="lazy" decoding="async"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">08</span><span class="ab-cap-txt"><small>Rodada de Fogo</small><strong>O resultado</strong><em>2:20</em></span></button></li>
       <li class="ab-cap"><button type="button" class="ab-cap-btn" data-video="public/videos/thevoice/rodada-de-fogo-historia-contada.mp4" data-titulo="Rodada de Fogo · A história contada" aria-label="Assistir Rodada de Fogo: a história contada"><img src="public/videos/thevoice/rodada-de-fogo-historia-contada-capa.jpg" alt="" loading="lazy" decoding="async" style="object-position:85% 35%"><span class="ab-play" aria-hidden="true">▶</span><span class="ab-cap-n">09</span><span class="ab-cap-txt"><small>Rodada de Fogo</small><strong>A história contada</strong><em>0:48</em></span></button></li>
     </ol>
@@ -778,11 +780,11 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     <h2 class="ab-titulo" id="imprensa-titulo">Últimas <em>notícias</em></h2>
     <div class="ab-materias">
       <article class="ab-materia ab-materia-video">
-        <button type="button" class="ab-yt-play ab-abre-video" data-video="public/videos/thevoice/rodada-de-fogo-apresentacao.mp4" data-titulo="Rodada de Fogo · “Human”" aria-label="Assistir: Amadeu Brutus canta Human na Rodada de Fogo do The Voice Brasil">
-          <img src="public/videos/thevoice/rodada-de-fogo-apresentacao-capa.jpg" alt="Amadeu Brutus cantando “Human” no palco da Rodada de Fogo do The Voice Brasil" width="1024" height="576" loading="lazy" decoding="async">
+        <button type="button" class="ab-yt-play ab-abre-video" data-video="public/videos/thevoice/rodada-de-fogo-human.mp4" data-titulo="Rodada de Fogo · “Human”" aria-label="Assistir: Amadeu Brutus canta Human na Rodada de Fogo do The Voice Brasil">
+          <img src="public/videos/thevoice/rodada-de-fogo-human-capa.jpg" alt="Amadeu Brutus cantando “Human” no palco da Rodada de Fogo do The Voice Brasil" width="576" height="1024" style="object-position:50% 45%" loading="lazy" decoding="async">
           <span class="ab-play" aria-hidden="true">▶</span>
         </button>
-        <div><p class="ab-etapa">Rodada de Fogo · Novo</p><h3>Amadeu Brutus canta “Human”, de Rag’n’Bone Man, na Rodada de Fogo</h3><p>Pelo Time Paulo Ricardo, Amadeu Brutus levou “Human” ao palco em chamas da Rodada de Fogo do The Voice Brasil. Assista à apresentação completa aqui no site.</p><button type="button" class="ab-link ab-link-botao ab-abre-video" data-video="public/videos/thevoice/rodada-de-fogo-apresentacao.mp4" data-titulo="Rodada de Fogo · “Human”">Assistir agora <span aria-hidden="true">▶</span></button></div>
+        <div><p class="ab-etapa">Rodada de Fogo · Novo</p><h3>Amadeu Brutus canta “Human”, de Rag’n’Bone Man, na Rodada de Fogo</h3><p>Pelo Time Paulo Ricardo, Amadeu Brutus levou “Human” ao palco em chamas da Rodada de Fogo do The Voice Brasil. Assista aqui no site, em imagem oficial do The Voice Brasil.</p><button type="button" class="ab-link ab-link-botao ab-abre-video" data-video="public/videos/thevoice/rodada-de-fogo-human.mp4" data-titulo="Rodada de Fogo · “Human”">Assistir agora <span aria-hidden="true">▶</span></button></div>
       </article>
       <article class="ab-materia ab-materia-video">
         <button type="button" class="ab-yt-play" data-yt="LbHnoRtgBmk" aria-label="Assistir: Minha audição às cegas no The Voice Brasil, no canal de Amadeu Brutus">
@@ -1125,7 +1127,7 @@ function respirar(){
  const fechar=()=>{caixa.innerHTML='';if(tela.open)tela.close()};
  document.querySelectorAll('.ab-cap-btn,.ab-abre-video').forEach(b=>b.addEventListener('click',()=>{
   const v=document.createElement('video');v.src=b.dataset.video;v.controls=true;v.autoplay=true;v.playsInline=true;
-  caixa.innerHTML='';caixa.appendChild(v);tit.textContent=b.dataset.titulo;
+  caixa.innerHTML='';caixa.appendChild(v);tit.textContent=b.dataset.titulo;tela.classList.remove('vertical');v.addEventListener('loadedmetadata',()=>tela.classList.toggle('vertical',v.videoHeight>v.videoWidth),{once:true});
   document.querySelectorAll('video').forEach(x=>{if(x!==v&&!x.classList.contains('ab-tv-fundo'))x.pause()});
   const ap=document.getElementById('ab-player');if(ap)ap.pause();
   tela.showModal();v.play().catch(()=>{});
@@ -1143,7 +1145,8 @@ function respirar(){
 (()=>{
  const sec=document.getElementById('the-voice');if(!sec)return;
  const vs=[...sec.querySelectorAll('.ab-vira')],ps=[...sec.querySelectorAll('.ab-virada-pontos i')],fs=[...sec.querySelectorAll('.ab-tv-fundo')];
- const carrega=v=>{if(v&&v.dataset.src&&!v.src){v.src=v.dataset.src}};
+ const retrato=matchMedia('(max-aspect-ratio: 4/5)').matches;
+ const carrega=v=>{if(v&&v.dataset.src&&!v.getAttribute('src')){v.src=(retrato&&v.dataset.srcVertical)||v.dataset.src}};
  const fundo=n=>{fs.forEach((v,k)=>{v.classList.toggle('ativo',k===n);if(k===n){carrega(v);v.currentTime=0;v.play().catch(()=>{})}else setTimeout(()=>{if(!v.classList.contains('ativo'))v.pause()},1200)})};
  if(vs.length<2||matchMedia('(prefers-reduced-motion: reduce)').matches){new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const v=fs[0];v&&v.pause()}})).observe(sec);return}
  const DUR=4600;let i=0,timer=null,visivel=false;
