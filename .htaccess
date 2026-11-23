@@ -1,6 +1,28 @@
-# Amadeu Brutus — o HTML sempre é conferido de novo, para ninguém ficar com a página antiga guardada no navegador.
+# Amadeu Brutus — regras do servidor (Hostinger)
+
+# 1) Um endereço só: https://www.amadeubrutus.com.br (301, mesmo caminho)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^amadeubrutus\.com\.br$ [NC]
+  RewriteRule ^(.*)$ https://www.amadeubrutus.com.br/$1 [R=301,L]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^(.*)$ https://www.amadeubrutus.com.br/$1 [R=301,L]
+  # /index.html vira a raiz
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ https://www.amadeubrutus.com.br/ [R=301,L]
+</IfModule>
+
+# 2) Página 404 em português
+ErrorDocument 404 /404.html
+
+# 3) Cache: HTML sempre conferido; imagens, fontes, áudio e vídeo por 1 ano
+#    (arquivo de mídia trocado sempre ganha nome novo)
 <IfModule mod_headers.c>
-  <FilesMatch "\.(html)$">
+  <FilesMatch "\.(html|txt|xml)$">
     Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpe?g|png|svg|ico|woff2|mp3|mp4|m4a)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>
