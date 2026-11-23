@@ -607,3 +607,8 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Jornada do The Voice ganhou 07 Rodada de Fogo · A apresentação, 08 · O resultado, 09 · A história contada (vídeos enviados em 23/11, tratados). Texto da dobra: "...e chegou à Rodada de Fogo" (resultado não descrito por falta de confirmação).
 - Jornada em linhas centralizadas (6 por linha no computador, 3 no tablet).
 - Pendente: agenda ainda mostra 17–22/11 (já passou) — aguardando novas datas; nome da música da Rodada de Fogo; cidade do Bar do Cumpadi.
+
+## 23/11/2026 — Agenda sem datas, Human nas notícias
+- Agenda: lista de 17–22/11 retirada (e os 10 MusicEvent do JSON-LD). Dobra mostra "Novas datas em breve" com botão principal "Pedir orçamento de show" (leva ao formulário já com o assunto "Shows e contratações") e link secundário de WhatsApp (11 98742-2691). Decisão: formulário como principal (histórico + triagem + resposta automática, que já traz o botão de WhatsApp); WhatsApp como alternativa rápida.
+- Últimas notícias em ordem da mais recente: 1) Human na Rodada de Fogo (toca no próprio site), 2) Minha audição às cegas (YouTube), 3) Damatta e Amadeu, 4) Amadeu conquista Diogo e Lauana. Regra: a notícia mais nova entra sempre em primeiro.
+- Jornada: card 07 agora "Rodada de Fogo · “Human”".
