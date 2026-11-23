@@ -595,3 +595,10 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Uma viagem ao passado: dobra mantida, cores trocadas de roxo para preto/prata/vermelho; Spotify em tema escuro.
 - Vídeos: retirado o clipe "abertura de show · Terra SP" (repetia o de voz e violão).
 - Branch redesenho-identidade publicada na main a pedido da Viviane.
+
+## 22/11/2026 (noite) — The Voice, notícias, carreira e vídeos tratados (publicado na main)
+- The Voice: vídeo 05 "As Batalhas · A decisão e o Peguei" (arquivo original "Amadeu Brutus a eliminação" — não usar a palavra eliminação). Tela da TV recortada/endireitada quadro a quadro (OpenCV), estabilizada, som limpo. Bastidores virou 06. Jornada centralizada (6 col. desktop, 3 tablet, trilho centralizado no celular).
+- Título da dobra gira como a cadeira: Duas cadeiras viradas → Time Lauana Prado → Agora, Time Paulo Ricardo (3,6 s cada, com barrinhas de progresso).
+- Últimas notícias: vídeo "Minha audição às cegas no The Voice Brasil" (youtu.be/LbHnoRtgBmk, canal oficial), toca no próprio site.
+- Carreira: Visionários S.A. → Sala de aula → +1.000 shows (contador de 1 a 1.000, inclui aberturas Titãs/Ana Carolina/Roupa Nova) → The Voice.
+- Vídeos tratados (ruído, nitidez, cor, som): pré-audição sem marca do TikTok, Ordinary ampliado para 1280, ensaio, batalha, bastidores, clipes ao vivo.
