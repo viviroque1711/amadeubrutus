@@ -623,3 +623,14 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Causa 2: a montagem paisagem (vídeo vertical à direita com laterais desfocadas) ampliava o vídeo e o deixava no canto.
 - Correção: fundo = fundo-human-oficial.mp4 (vertical original, 576×1024), centralizado no tamanho dele (altura da tela, máx. 1024 px), sem esticar, igual no computador e no celular. Vídeo 07 e notícia usam rodada-de-fogo-human.mp4 (oficial, 1:09) e abrem numa tela vertical.
 - .htaccess: HTML com "no-cache" para o navegador sempre buscar a página atual.
+
+## 23/11/2026 — Correção de direitos autorais, SEO, GEO e desempenho (lista da Viviane)
+Feito e publicado:
+- The Voice: sem nenhum vídeo/imagem da TV. Jornada em 4 atos (Audições, Batalhas, Rodada de Fogo, Semifinal) com vídeos oficiais incorporados só no clique (YouTube UJ-K_vaYQ4s e nYu585TXzeI; Instagram Dfxv8JlOgUN e DgD3ReupNrp), crédito "Vídeo oficial: The Voice Brasil (SBT/Disney+)" com link; luz de palco feita em código com cor por fase (azul, âmbar, vermelho, dourado); título que vira com Semifinal.
+- Notícias: texto próprio, data, links para matéria/post; sem fotos do SBT.
+- Música de fundo ("Ativar música") usa a autoral em mp3; créditos de composição nas interpretações; ondas sonoras em código reagindo ao player.
+- 301 sem-www/http → https://www; /index.html → /; 404 própria; shows.html e lancamentos.html refeitos (H1 com espaço, conteúdo da home, links na home); logo em "/"; sitemap com lastmod e política; /llms.txt; .htaccess com cache longo para mídia e sem cache para HTML.
+- JSON-LD: Person (semifinalista, gênero), MusicRecording da autoral, VideoObject (4 oficiais + Last Kiss e Fix You do canal dele), FAQPage idêntico ao FAQ visível; MusicEvent só com show confirmado.
+- Sem a palavra "oficial" no site (só no crédito dos vídeos). Foto de destaque renomeada para amadeu-brutus-foto-destaque.jpeg.
+- Política de privacidade atualizada (players do YouTube/Instagram e formulário). Botão "Enviar mensagem" corrigido (cor não aparecia: variável inexistente). Formulário testado em 23/11: gravou e enviou os dois e-mails.
+Pendente (respostas da Viviane): 4 vídeos (pré-audição, bastidores, ensaio, história contada), origem das fotos (inclui textura do nome na abertura: foto-amadeu-brutus-11), versão da autoral (5:10 x 3:51), caminho das interpretações e vídeos ao vivo, Stuck on You (Lionel Richie ou Elvis), limpeza do histórico do Git, São Paulo como cidade, "+1.000 shows" e "24 horas" (também no e-mail automático). Apagar arquivos só depois de ela guardar os originais (lista entregue).
