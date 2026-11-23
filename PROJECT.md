@@ -602,3 +602,8 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Últimas notícias: vídeo "Minha audição às cegas no The Voice Brasil" (youtu.be/LbHnoRtgBmk, canal oficial), toca no próprio site.
 - Carreira: Visionários S.A. → Sala de aula → +1.000 shows (contador de 1 a 1.000, inclui aberturas Titãs/Ana Carolina/Roupa Nova) → The Voice.
 - Vídeos tratados (ruído, nitidez, cor, som): pré-audição sem marca do TikTok, Ordinary ampliado para 1280, ensaio, batalha, bastidores, clipes ao vivo.
+
+## 23/11/2026 — Rodada de Fogo
+- Jornada do The Voice ganhou 07 Rodada de Fogo · A apresentação, 08 · O resultado, 09 · A história contada (vídeos enviados em 23/11, tratados). Texto da dobra: "...e chegou à Rodada de Fogo" (resultado não descrito por falta de confirmação).
+- Jornada em linhas centralizadas (6 por linha no computador, 3 no tablet).
+- Pendente: agenda ainda mostra 17–22/11 (já passou) — aguardando novas datas; nome da música da Rodada de Fogo; cidade do Bar do Cumpadi.
