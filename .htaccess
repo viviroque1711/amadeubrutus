@@ -1,0 +1,6 @@
+# Amadeu Brutus — o HTML sempre é conferido de novo, para ninguém ficar com a página antiga guardada no navegador.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

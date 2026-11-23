@@ -638,6 +638,10 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(max-width:520px){.ab-redes-lista{grid-template-columns:1fr}}
 
 .ab-tela.vertical{width:min(96vw,calc(82vh*9/16))}.ab-tela.vertical .ab-tela-video{aspect-ratio:9/16}
+
+/* Fundo do Human: vídeo oficial vertical, centralizado no tamanho dele, sem esticar */
+.ab-tv-fundo.ab-tv-fundo-vertical{inset:0 auto auto 50%;width:auto;height:min(100svh,1024px);aspect-ratio:9/16;object-fit:contain;transform:translateX(-50%);box-shadow:0 0 120px 40px rgba(255,38,61,.12)}
+.ab-tv-fundo.ab-tv-fundo-vertical.ativo{transform:translateX(-50%)}
 </style>
 </head>
 <body>
@@ -714,7 +718,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <div class="ab-tv-fundos" aria-hidden="true">
     <video class="ab-tv-fundo ativo" muted loop playsinline preload="metadata" poster="public/videos/thevoice/fundo-palco-the-voice.jpg" src="public/videos/thevoice/fundo-palco-the-voice.mp4"></video>
     <video class="ab-tv-fundo" muted loop playsinline preload="none" poster="public/videos/thevoice/fundo-batalha-chao-de-giz.jpg" data-src="public/videos/thevoice/fundo-batalha-chao-de-giz.mp4"></video>
-    <video class="ab-tv-fundo" muted loop playsinline preload="none" poster="public/videos/thevoice/fundo-rodada-de-fogo-human.jpg" data-src="public/videos/thevoice/fundo-rodada-de-fogo-human.mp4" data-src-vertical="public/videos/thevoice/fundo-rodada-de-fogo-human-vertical.mp4"></video>
+    <video class="ab-tv-fundo ab-tv-fundo-vertical" muted loop playsinline preload="none" poster="public/videos/thevoice/fundo-human-oficial.jpg" data-src="public/videos/thevoice/fundo-human-oficial.mp4"></video>
   </div>
   <div class="ab-wrap">
     <p class="ab-kicker">The Voice Brasil 2026 · SBT e Disney+</p>

@@ -617,3 +617,9 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Vídeos: subtítulo "Ao vivo na estrada" trocado por "The Best of Amadeu Brutus".
 - Agenda sem datas desceu para antes do Contato (menu e botão do topo: "Contratar show"). Quando houver datas, volta para logo depois da primeira dobra.
 - Human: trocado pelo vídeo oficial Disney/SBT ("Amadeu Brutus Rodada de Fogo Human Ragnbone.mp4", vertical 1:09) no fundo da virada (versão paisagem com laterais desfocadas e versão vertical para celular), no vídeo 07 da jornada e na notícia. Tela de vídeo se ajusta a vídeo vertical.
+
+## 23/11/2026 — Auditoria do Human
+- Causa 1: o fundo do Human foi substituído mantendo o MESMO nome de arquivo (fundo-rodada-de-fogo-human.mp4); o navegador continuou mostrando a versão antiga guardada (gravação da TV, 960 px). Regra a partir de agora: arquivo de mídia trocado ganha nome novo.
+- Causa 2: a montagem paisagem (vídeo vertical à direita com laterais desfocadas) ampliava o vídeo e o deixava no canto.
+- Correção: fundo = fundo-human-oficial.mp4 (vertical original, 576×1024), centralizado no tamanho dele (altura da tela, máx. 1024 px), sem esticar, igual no computador e no celular. Vídeo 07 e notícia usam rodada-de-fogo-human.mp4 (oficial, 1:09) e abrem numa tela vertical.
+- .htaccess: HTML com "no-cache" para o navegador sempre buscar a página atual.
