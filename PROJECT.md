@@ -613,3 +613,5 @@ Construir presença digital oficial para apresentar o artista, sua música, traj
 - Últimas notícias em ordem da mais recente: 1) Human na Rodada de Fogo (toca no próprio site), 2) Minha audição às cegas (YouTube), 3) Damatta e Amadeu, 4) Amadeu conquista Diogo e Lauana. Regra: a notícia mais nova entra sempre em primeiro.
 - Jornada: card 07 agora "Rodada de Fogo · “Human”".
 - The Voice: a virada do título acompanha as músicas — 1) Audições às Cegas · “Ordinary” → Duas cadeiras viradas, 2) As Batalhas · Time Lauana Prado → “Chão de Giz”, 3) Rodada de Fogo · Time Paulo Ricardo → “Human” — e o vídeo de fundo troca junto (trechos de cada apresentação, em public/videos/thevoice/fundo-*.mp4). 4,6 s por virada.
+- Redes: faixa "Ouça e siga Amadeu Brutus" antes do rodapé (YouTube com inscrição, Instagram, TikTok, Spotify, Apple Music, Deezer — Deezer resolvido do link curto para deezer.com/br/artist/191828317), mesmos links no contato e no sameAs do JSON-LD; botão "Inscreva-se no canal" ao lado de "Ver todos no YouTube".
+- Vídeos: subtítulo "Ao vivo na estrada" trocado por "The Best of Amadeu Brutus".
