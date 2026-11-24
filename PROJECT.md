@@ -634,3 +634,6 @@ Feito e publicado:
 - Sem a palavra "oficial" no site (só no crédito dos vídeos). Foto de destaque renomeada para amadeu-brutus-foto-destaque.jpeg.
 - Política de privacidade atualizada (players do YouTube/Instagram e formulário). Botão "Enviar mensagem" corrigido (cor não aparecia: variável inexistente). Formulário testado em 23/11: gravou e enviou os dois e-mails.
 Pendente (respostas da Viviane): 4 vídeos (pré-audição, bastidores, ensaio, história contada), origem das fotos (inclui textura do nome na abertura: foto-amadeu-brutus-11), versão da autoral (5:10 x 3:51), caminho das interpretações e vídeos ao vivo, Stuck on You (Lionel Richie ou Elvis), limpeza do histórico do Git, São Paulo como cidade, "+1.000 shows" e "24 horas" (também no e-mail automático). Apagar arquivos só depois de ela guardar os originais (lista entregue).
+
+## 24/11/2026 — Agenda de 24 a 29/11
+- Agenda volta para logo depois da abertura com 9 apresentações (fonte: public/images/Amadeu Brutus Agenda De Shows de 23 a 29 de novembro.jpeg); sábado 28/11 = dois eventos fechados (sem MusicEvent). Shows que já passaram somem sozinhos e o do dia ganha a marca Hoje. shows.html com a mesma agenda. 8 MusicEvent no JSON-LD.
