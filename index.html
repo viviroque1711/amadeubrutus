@@ -1168,6 +1168,47 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @keyframes tv-respira{from{opacity:.42}to{opacity:.6}}
 @media(max-width:700px){.tv-luz[data-k="ce"],.tv-luz[data-k="cd"]{display:none}.tv-lente{width:58px}}
 @media(prefers-reduced-motion:reduce){.ab-tv-rig .tv-facho{opacity:.6;animation:none}.ab-tv-rig .tv-lente{filter:none}}
+
+/* 26/11 — rodada 2: página enxuta, uma cor só, largura toda, "Contrate o Amadeu" */
+/* uma cor só no The Voice e nas notícias */
+.ab-tv,.ab-tv[data-luz]{--luz:var(--ab-vermelho)!important}
+.ab-ato,.ab-ato[data-luz]{--c:var(--ab-vermelho)!important}
+.ab-nota[data-luz]{--c:#ff4a5d!important}.ab-nota[data-luz="cinza"]{--c:#d9dde4!important}
+/* prova em uma linha */
+.ab-prova{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid rgba(255,255,255,.12);background:#070708}
+.ab-prova p{margin:0;padding:clamp(20px,2.6vw,32px) clamp(18px,3vw,48px);text-align:center;color:#c9c9cf;font-size:clamp(14px,1.15vw,17px);line-height:1.45}
+.ab-prova p+p{border-left:1px solid rgba(255,255,255,.12)}
+.ab-prova strong{display:block;margin-bottom:6px;font-family:var(--ab-display);font-weight:400;font-size:clamp(1.5rem,2.3vw,2.3rem);line-height:1;text-transform:uppercase;color:#fff}
+@media(max-width:760px){.ab-prova{grid-template-columns:1fr}.ab-prova p+p{border-left:0;border-top:1px solid rgba(255,255,255,.12)}.ab-prova p{padding:18px 6vw}}
+/* discografia dentro do Ouvir */
+.ab-ouvir-spotify{margin-top:clamp(40px,6vh,64px)}
+.ab-ouvir-spotify h3{margin:0 0 6px;font-family:var(--ab-display);font-weight:400;font-size:clamp(1.8rem,2.6vw,2.6rem);line-height:1;text-transform:uppercase;color:#fff}
+.ab-ouvir-spotify>p{margin:0 0 18px;color:#b9b9bf;font-size:15px}
+.ab-ouvir-spotify .ab-spotify-palco{min-height:352px}
+.ab-ouvir-spotify .spotify-frame-label{display:none}
+.ab-ouvir-spotify .spotify-frame-wrap{padding:0;border:0;background:none;box-shadow:none}
+/* vídeos: uma grade que ocupa a largura toda */
+.ab-videos-grade{grid-template-columns:minmax(0,1.25fr) repeat(2,minmax(0,1fr));grid-template-areas:"lk va vb" "fy va vb";align-items:stretch;margin-bottom:clamp(36px,6vh,60px)}
+.ab-videos-grade>.ab-yt-card:nth-child(1){grid-area:lk}.ab-videos-grade>.ab-yt-card:nth-child(2){grid-area:fy}
+.ab-videos-grade .ab-clipe-a{grid-area:va}.ab-videos-grade .ab-clipe-b{grid-area:vb}
+.ab-videos-grade .ab-clipe{aspect-ratio:auto;height:100%;min-height:420px}
+.ab-videos-grade .ab-yt-card h3{margin-top:14px}
+@media(max-width:900px){.ab-videos-grade{grid-template-columns:1fr 1fr;grid-template-areas:"lk lk" "fy fy" "va vb"}.ab-videos-grade .ab-clipe{min-height:0;aspect-ratio:9/14;height:auto}}
+/* notícias em duas colunas */
+@media(min-width:1000px){.ab-materias.ab-notas{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(40px,5vw,80px)}}
+/* Contrate o Amadeu */
+#contato-titulo em{font-style:normal;color:var(--ab-vermelho)}
+.nav-contratar{background:var(--ab-vermelho)!important;border-color:var(--ab-vermelho)!important;color:#fff!important}
+.ab-fixo{display:none}
+@media(max-width:760px){.ab-fixo{position:fixed;z-index:60;left:12px;right:12px;bottom:12px;display:block;padding:16px;text-align:center;background:var(--ab-vermelho);color:#fff;font:800 13px/1 var(--ab-corpo);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;box-shadow:0 12px 30px rgba(0,0,0,.55);transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+ .ab-fixo.ativo{transform:none}}
+/* perguntas frequentes mais discretas */
+.ab-faq .ab-titulo{font-size:clamp(2.4rem,4.4vw,4rem)}
+.ab-faq-item summary h3{font-size:clamp(1.15rem,1.6vw,1.5rem)!important}
+
+@media(min-width:1000px){.ab-materias.ab-notas .ab-nota h3{font-size:clamp(1.6rem,2.2vw,2.2rem)!important}}
+@media(min-width:1000px){.ab-faq .ab-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);column-gap:clamp(40px,6vw,100px);align-items:start}
+ .ab-faq .ab-kicker{grid-column:1;grid-row:1}.ab-faq .ab-titulo{grid-column:1;grid-row:2;margin-top:0}.ab-faq-lista{grid-column:2;grid-row:1/span 3;max-width:none!important;width:100%}}
 </style>
 </head>
 <body>
@@ -1193,8 +1234,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     <a href="#videos">Vídeos</a>
     <a href="#ultimas-noticias">Imprensa</a>
     <a href="#trajetoria">Carreira</a>
-    <a href="#contato">Contato</a>
-    <a class="voice-link" href="#the-voice">The Voice Brasil 2026</a>
+    <a class="voice-link nav-contratar" href="#contato" data-assunto="Shows e contratações">Contratar show</a>
   </nav>
 </header>
 <img class="hero-artista" src="public/brand/amadeu-brutus-cantor-no-palco.webp" alt="Amadeu Brutus cantando no palco" width="590" height="1170" fetchpriority="high">
@@ -1209,6 +1249,12 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">♪ Ativar música</button>
 <audio id="siteMusic" preload="none" loop src="public/audio/web/amadeu-brutus-ate-onde-meus-olhos-podem-ver.mp3"></audio>
 </section>
+
+<div class="ab-prova" aria-label="Destaques da carreira">
+  <p><strong>Semifinalista</strong> do The Voice Brasil 2026</p>
+  <p><strong>+1.000 shows</strong> em bares, casas de show e eventos</p>
+  <p><strong>Abriu shows</strong> de Titãs, Ana Carolina e Roupa Nova</p>
+</div>
 
 <section class="ab-sec ab-agenda" id="proximos-shows" aria-labelledby="agenda-titulo">
   <div class="ab-wrap">
@@ -1253,14 +1299,25 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
       <div class="ab-barra" aria-hidden="true"><i id="ab-progresso"></i></div>
       <a class="ab-link ab-ver-todas" href="/lancamentos.html">Ver todas as músicas <span aria-hidden="true">›</span></a>
       <audio id="ab-player" preload="none"></audio>
+      <div class="ab-ouvir-spotify" id="discografia">
+        <h3>Discografia completa</h3>
+        <p>Registros de outras fases da música de Amadeu Brutus, no Spotify.</p>
+        <div class="spotify-frame-wrap ab-spotify">
+      <div class="spotify-frame-label">Amadeu Brutus no Spotify</div>
+      <div class="ab-spotify-palco"><span class="ab-disco-vinil" aria-hidden="true"><span class="ab-disco-selo">Amadeu<br>Brutus</span></span>
+      <iframe
+        class="spotify-embed"
+        title="Amadeu Brutus no Spotify"
+        src="https://open.spotify.com/embed/artist/0eRoINMstkO2cT60xL0uzo?utm_source=generator&amp;theme=0"
+        width="100%" height="452" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy" onload="this.classList.add('ok')">
+      </iframe></div>
+    </div>
+      </div>
     </div>
   </div>
 </section>
-
-<div class="ab-faixa-palco" aria-hidden="true">
-  <div class="ab-fita ab-fita-a"><div class="ab-fita-trilho"><span>The Voice Brasil 2026 ★ Time Lauana Prado ★ Time Paulo Ricardo ★ “Ordinary” ★ “Chão de Giz” ★ Ao vivo em São Paulo ★&nbsp;</span><span>The Voice Brasil 2026 ★ Time Lauana Prado ★ Time Paulo Ricardo ★ “Ordinary” ★ “Chão de Giz” ★ Ao vivo em São Paulo ★&nbsp;</span></div></div>
-  <div class="ab-fita ab-fita-b"><div class="ab-fita-trilho"><span>Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦ Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦&nbsp;</span><span>Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦ Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦&nbsp;</span></div></div>
-</div>
 
 <section class="ab-sec ab-tv" id="the-voice" aria-labelledby="tv-titulo" data-luz="azul">
   <div class="ab-tv-rig" aria-hidden="true"><span class="tv-luz" data-k="e" style="left:4%;top:78px"><i class="tv-facho"></i><img class="tv-lente" src="public/brand/amadeu-brutus-refletor-de-palco.webp" alt="" width="535" height="485" loading="lazy" decoding="async"></span><span class="tv-luz" data-k="ce" style="left:28%;top:56px"><i class="tv-facho"></i><img class="tv-lente" src="public/brand/amadeu-brutus-refletor-de-palco.webp" alt="" width="535" height="485" loading="lazy" decoding="async"></span><span class="tv-luz" data-k="cd" style="left:72%;top:56px"><i class="tv-facho"></i><img class="tv-lente" src="public/brand/amadeu-brutus-refletor-de-palco.webp" alt="" width="535" height="485" loading="lazy" decoding="async"></span><span class="tv-luz" data-k="d" style="left:96%;top:78px"><i class="tv-facho"></i><img class="tv-lente" src="public/brand/amadeu-brutus-refletor-de-palco.webp" alt="" width="535" height="485" loading="lazy" decoding="async"></span></div>
@@ -1299,7 +1356,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <div class="ab-wrap">
     <p class="ab-kicker">Performances e interpretações</p>
     <h2 class="ab-titulo" id="aovivo-titulo">Ví<em>deos</em></h2>
-    <div class="ab-yt-grade">
+    <div class="ab-yt-grade ab-videos-grade">
       <article class="ab-yt-card">
         <button type="button" class="ab-yt-play" data-yt="CD8VL1hZtwI" aria-label="Assistir Last Kiss, cover de Pearl Jam">
           <img src="public/images/web/amadeu-brutus-last-kiss-pearl-jam.webp" alt="Capa de Last Kiss, cover de Pearl Jam por Amadeu Brutus" width="1280" height="721" loading="lazy" decoding="async">
@@ -1314,11 +1371,8 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
         </button>
         <h3>Fix You</h3><p>Cover de Coldplay, na voz de Amadeu Brutus</p>
       </article>
-    </div>
-    <h3 class="ab-subtitulo">The Best of <em>Amadeu Brutus</em></h3>
-    <div class="ab-clipes">
-      <figure class="ab-clipe"><video muted loop playsinline preload="none" poster="public/videos/web/amadeu-brutus-ao-vivo-voz-e-violao-capa.webp" data-previa="public/videos/web/amadeu-brutus-ao-vivo-voz-e-violao-previa.mp4" data-completo="public/videos/web/amadeu-brutus-ao-vivo-voz-e-violao.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Voz e violão</figcaption></figure>
-      <figure class="ab-clipe"><video muted loop playsinline preload="none" poster="public/videos/web/amadeu-brutus-ao-vivo-no-palco-capa.webp" data-previa="public/videos/web/amadeu-brutus-ao-vivo-no-palco-previa.mp4" data-completo="public/videos/web/amadeu-brutus-ao-vivo-no-palco.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Show com banda</figcaption></figure>
+      <figure class="ab-clipe ab-clipe-a"><video muted loop playsinline preload="none" poster="public/videos/web/amadeu-brutus-ao-vivo-voz-e-violao-capa.webp" data-previa="public/videos/web/amadeu-brutus-ao-vivo-voz-e-violao-previa.mp4" data-completo="public/videos/web/amadeu-brutus-ao-vivo-voz-e-violao.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Voz e violão</figcaption></figure>
+      <figure class="ab-clipe ab-clipe-b"><video muted loop playsinline preload="none" poster="public/videos/web/amadeu-brutus-ao-vivo-no-palco-capa.webp" data-previa="public/videos/web/amadeu-brutus-ao-vivo-no-palco-previa.mp4" data-completo="public/videos/web/amadeu-brutus-ao-vivo-no-palco.mp4"></video><button type="button" class="ab-som">▶ Ouvir com som</button><figcaption>Show com banda</figcaption></figure>
     </div>
     <div class="ab-botoes"><a class="ab-botao" href="https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg" target="_blank" rel="noopener noreferrer" >Ver todos no YouTube <span aria-hidden="true">›</span></a><a class="ab-botao ab-botao-claro" href="https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Inscreva-se no canal <span aria-hidden="true">+</span></a></div>
   </div>
@@ -1373,51 +1427,13 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   </div>
 </section>
 
-<section class="discography-fold" id="discografia" aria-labelledby="discography-title">
-  <div class="discography-inner">
-    <div class="discography-copy">
-      <span class="discography-kicker">Uma viagem no tempo</span>
-      <h2 id="discography-title">Uma viagem ao <em>passado</em></h2>
-      <p>Registros de uma fase anterior da música de Amadeu Brutus. Um resgate sonoro para revisitar outras épocas, outras interpretações e o caminho percorrido até aqui.</p>
-      <a class="spotify-cta" href="https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo" target="_blank" rel="noopener noreferrer">
-        <span class="spotify-mark" aria-hidden="true">●</span> Ouvir no Spotify <span aria-hidden="true">↗</span>
-      </a>
-    </div>
-    <div class="spotify-frame-wrap ab-spotify">
-      <div class="spotify-frame-label">Amadeu Brutus no Spotify</div>
-      <div class="ab-spotify-palco"><span class="ab-disco-vinil" aria-hidden="true"><span class="ab-disco-selo">Amadeu<br>Brutus</span></span>
-      <iframe
-        class="spotify-embed"
-        title="Amadeu Brutus no Spotify"
-        src="https://open.spotify.com/embed/artist/0eRoINMstkO2cT60xL0uzo?utm_source=generator&amp;theme=0"
-        width="100%" height="452" frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy" onload="this.classList.add('ok')">
-      </iframe></div>
-    </div>
-  </div>
-  <span class="discography-equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-</section>
 
-<section class="ab-sec ab-faq" id="perguntas-frequentes" aria-labelledby="faq-titulo">
-  <div class="ab-wrap">
-    <p class="ab-kicker">Perguntas frequentes</p>
-    <h2 class="ab-titulo" id="faq-titulo">Sobre <em>Amadeu Brutus</em></h2>
-    <div class="ab-faq-lista">
-      <details class="ab-faq-item" open><summary><h3>Quem é Amadeu Brutus?</h3></summary><p>Amadeu Brutus é cantor, músico e compositor brasileiro de pop e rock, semifinalista do The Voice Brasil 2026 pelo Time Paulo Ricardo. Começou a carreira em meados dos anos 2000 à frente da banda Visionários S.A., foi professor de música e abriu shows de Titãs, Ana Carolina e Roupa Nova.</p></details>
-      <details class="ab-faq-item"><summary><h3>Em qual time do The Voice Brasil 2026 Amadeu Brutus está?</h3></summary><p>Amadeu Brutus está no Time Paulo Ricardo. Depois das Audições às Cegas ele seguiu no Time Lauana Prado; nas Batalhas foi salvo por Paulo Ricardo e passou para o time dele, pelo qual foi escolhido para a Semifinal em 22 de novembro de 2026.</p></details>
-      <details class="ab-faq-item"><summary><h3>Quais músicas Amadeu Brutus cantou no The Voice Brasil?</h3></summary><p>Amadeu Brutus cantou “Ordinary” nas Audições às Cegas, “Chão de Giz”, de Zé Ramalho, com Damatta nas Batalhas e “Human”, de Rag’n’Bone Man, na Rodada de Fogo.</p></details>
-      <details class="ab-faq-item"><summary><h3>Amadeu Brutus tem músicas autorais?</h3></summary><p>Sim. “Até onde meus olhos podem ver” é música autoral de Amadeu Brutus. Ela pode ser ouvida aqui no site, na seção “A voz de Amadeu”, e também no Spotify e no Deezer.</p></details>
-      <details class="ab-faq-item"><summary><h3>Como contratar Amadeu Brutus para shows e eventos?</h3></summary><p>Para contratar Amadeu Brutus, envie um pedido pelo formulário de contato do site escolhendo o assunto “Shows e contratações”, ou fale com a produção pelo WhatsApp +55 11 98742-2691.</p></details>
-    </div>
-  </div>
-</section>
 <section class="ab-sec ab-contato" id="contato" aria-labelledby="contato-titulo">
   <div class="contato-inner">
     <div class="contato-cabeca">
-      <span class="contato-kicker">Fale com a gente</span>
-      <h2 id="contato-titulo">Contato/<br>Imprensa</h2>
-      <p>Para falar com o departamento comercial, preencha o formulário abaixo:</p>
+      <span class="contato-kicker">Shows, eventos e imprensa</span>
+      <h2 id="contato-titulo">Contrate o <em>Amadeu</em></h2>
+      <p>Conte a data, a cidade e o tipo de evento. A equipe do Amadeu responde com disponibilidade e orçamento.</p>
       <p class="contato-canais">Também nas redes: <a href="https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="https://www.instagram.com/amadeubrutus/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.tiktok.com/@amadeubrutus" target="_blank" rel="noopener noreferrer">TikTok</a> · <a href="https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo" target="_blank" rel="noopener noreferrer">Spotify</a> · <a href="https://music.apple.com/us/artist/amadeu-brutus/1657144260" target="_blank" rel="noopener noreferrer">Apple Music</a> · <a href="https://www.deezer.com/br/artist/191828317" target="_blank" rel="noopener noreferrer">Deezer</a></p>
     </div>
     <form class="contato-form" id="contato-form" novalidate>
@@ -1444,6 +1460,19 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     </div>
   </div>
 </section>
+<section class="ab-sec ab-faq" id="perguntas-frequentes" aria-labelledby="faq-titulo">
+  <div class="ab-wrap">
+    <p class="ab-kicker">Perguntas frequentes</p>
+    <h2 class="ab-titulo" id="faq-titulo">Sobre <em>Amadeu Brutus</em></h2>
+    <div class="ab-faq-lista">
+      <details class="ab-faq-item"><summary><h3>Quem é Amadeu Brutus?</h3></summary><p>Amadeu Brutus é cantor, músico e compositor brasileiro de pop e rock, semifinalista do The Voice Brasil 2026 pelo Time Paulo Ricardo. Começou a carreira em meados dos anos 2000 à frente da banda Visionários S.A., foi professor de música e abriu shows de Titãs, Ana Carolina e Roupa Nova.</p></details>
+      <details class="ab-faq-item"><summary><h3>Em qual time do The Voice Brasil 2026 Amadeu Brutus está?</h3></summary><p>Amadeu Brutus está no Time Paulo Ricardo. Depois das Audições às Cegas ele seguiu no Time Lauana Prado; nas Batalhas foi salvo por Paulo Ricardo e passou para o time dele, pelo qual foi escolhido para a Semifinal em 22 de novembro de 2026.</p></details>
+      <details class="ab-faq-item"><summary><h3>Quais músicas Amadeu Brutus cantou no The Voice Brasil?</h3></summary><p>Amadeu Brutus cantou “Ordinary” nas Audições às Cegas, “Chão de Giz”, de Zé Ramalho, com Damatta nas Batalhas e “Human”, de Rag’n’Bone Man, na Rodada de Fogo.</p></details>
+      <details class="ab-faq-item"><summary><h3>Amadeu Brutus tem músicas autorais?</h3></summary><p>Sim. “Até onde meus olhos podem ver” é música autoral de Amadeu Brutus. Ela pode ser ouvida aqui no site, na seção “A voz de Amadeu”, e também no Spotify e no Deezer.</p></details>
+      <details class="ab-faq-item"><summary><h3>Como contratar Amadeu Brutus para shows e eventos?</h3></summary><p>Para contratar Amadeu Brutus, envie um pedido pelo formulário de contato do site escolhendo o assunto “Shows e contratações”, ou fale com a produção pelo WhatsApp +55 11 98742-2691.</p></details>
+    </div>
+  </div>
+</section>
 <section class="ab-redes" aria-labelledby="redes-titulo">
   <div class="ab-wrap">
     <h2 id="redes-titulo">Ouça e siga <em>Amadeu Brutus</em></h2>
@@ -1458,6 +1487,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   </div>
 </section>
 </main>
+<a class="ab-fixo" href="#contato" data-assunto="Shows e contratações">Contratar show</a>
 <footer class="site-footer"><span>Amadeu Brutus · Música e presença de palco</span><span class="footer-copyright">© 2026 Amadeu Brutus. Todos os direitos reservados. amadeubrutus.com.br</span><a class="footer-policy" href="/politica-de-privacidade.html">Política de Privacidade</a><a class="footer-credit" href="https://roquebusinessevolution.com/" target="_blank" rel="noopener noreferrer">Desenvolvido por <strong>Roque Business Evolution</strong></a></footer>
 <script>
 const menuToggle=document.querySelector('.menu-toggle'),primaryNav=document.getElementById('primary-nav');
@@ -1781,6 +1811,13 @@ document.querySelectorAll('[data-assunto]').forEach(b=>b.addEventListener('click
   setTimeout(()=>rig.classList.add('acesa'),120+luzes.length*260+300);
  };
  if('IntersectionObserver'in window){const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){mirar();acender();io.disconnect()}},{threshold:.25});io.observe(rig)}else acender();
+})();
+
+/* Botão fixo "Contratar show" no celular: aparece depois do topo e some no formulário */
+(()=>{const b=document.querySelector('.ab-fixo'),topo=document.querySelector('.hero'),form=document.getElementById('contato');if(!b||!topo||!form||!('IntersectionObserver'in window))return;
+ let foraTopo=false,noForm=false;const at=()=>b.classList.toggle('ativo',foraTopo&&!noForm);
+ new IntersectionObserver(e=>{foraTopo=!e[0].isIntersecting;at()}).observe(topo);
+ new IntersectionObserver(e=>{noForm=e[0].isIntersecting;at()},{threshold:.15}).observe(form);
 })();
 </script>
 </body>
