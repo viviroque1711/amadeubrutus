@@ -223,10 +223,34 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "Amadeu Brutus é semifinalista do The Voice Brasil 2026?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Amadeu Brutus é semifinalista do The Voice Brasil 2026 pelo Time Paulo Ricardo. Ele chegou à Semifinal depois de cantar “Human”, de Rag'n'Bone Man, na Rodada de Fogo, quando Paulo Ricardo o escolheu para a primeira vaga do time."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Quem é Amadeu Brutus?",
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Amadeu Brutus é cantor, músico e compositor brasileiro de pop e rock, semifinalista do The Voice Brasil 2026 pelo Time Paulo Ricardo. Começou a carreira em meados dos anos 2000 à frente da banda Visionários S.A., foi professor de música e abriu shows de Titãs, Ana Carolina e Roupa Nova."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Onde assistir ao The Voice Brasil 2026?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O The Voice Brasil 2026 vai ao ar aos domingos, às 18h (horário de Brasília), no SBT, com transmissão simultânea no Disney+. Os episódios também ficam disponíveis no Disney+ para assistir quando quiser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quem são os técnicos do The Voice Brasil 2026?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Os técnicos do The Voice Brasil 2026 são Diogo Nogueira, Lauana Prado, Matheus & Kauan e Paulo Ricardo. A apresentação é de Tiago Leifert, com Gaby Cabrini nos bastidores. Amadeu Brutus está no Time Paulo Ricardo."
      }
     },
     {
@@ -247,10 +271,34 @@
     },
     {
      "@type": "Question",
+     "name": "Como torcer e votar no Amadeu Brutus no The Voice Brasil?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Acompanhe o programa no SBT e no Disney+ e siga Amadeu Brutus no Instagram (@amadeubrutus) e no YouTube para saber das próximas apresentações. Quando a votação do público for aberta, ela acontece pelos canais oficiais do programa: na temporada 2025, a final foi decidida por votação no site do SBT."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Amadeu Brutus tem músicas autorais?",
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Sim. “Até onde meus olhos podem ver” é música autoral de Amadeu Brutus. Ela pode ser ouvida aqui no site, na seção “A voz de Amadeu”, e também no Spotify e no Deezer."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Onde ouvir as músicas de Amadeu Brutus?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "As músicas de Amadeu Brutus estão no Spotify, no Apple Music, no Deezer e no YouTube. No site, a seção Ouvir toca interpretações e a autoral “Até onde meus olhos podem ver”."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Onde ver Amadeu Brutus ao vivo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Amadeu Brutus faz shows toda semana em bares, casas de show e eventos de São Paulo e da Grande São Paulo. A agenda atualizada fica na seção Próximos shows deste site e na página de agenda."
      }
     },
     {
@@ -1209,6 +1257,29 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @media(min-width:1000px){.ab-materias.ab-notas .ab-nota h3{font-size:clamp(1.6rem,2.2vw,2.2rem)!important}}
 @media(min-width:1000px){.ab-faq .ab-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);column-gap:clamp(40px,6vw,100px);align-items:start}
  .ab-faq .ab-kicker{grid-column:1;grid-row:1}.ab-faq .ab-titulo{grid-column:1;grid-row:2;margin-top:0}.ab-faq-lista{grid-column:2;grid-row:1/span 3;max-width:none!important;width:100%}}
+
+/* 26/11 — rodada 3: destaques em vermelho com contagem, WhatsApp, assinatura da Roque */
+.ab-prova span{color:var(--ab-vermelho);font-weight:600}
+.ab-conta{font:inherit;color:inherit;font-variant-numeric:tabular-nums}
+.ab-prova{perspective:900px}
+.ab-prova-anima p{opacity:0;transform:rotateX(-80deg);transform-origin:50% 0;transition:opacity .5s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.ab-prova-anima.virou p{opacity:1;transform:none}
+.ab-prova-anima.virou p:nth-child(2){transition-delay:.18s}.ab-prova-anima.virou p:nth-child(3){transition-delay:.36s}
+.ab-pronto .ab-agenda .ab-show{transition-delay:calc(var(--i,0)*160ms)}
+.ab-whats{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:14px 20px;border:1px solid #25d366;color:#fff;text-decoration:none;font:800 12px/1 var(--ab-corpo);letter-spacing:.12em;text-transform:uppercase;transition:background .3s}
+.ab-whats svg{color:#25d366}.ab-whats:hover{background:rgba(37,211,102,.12)}
+.site-footer{flex-wrap:wrap;align-items:center}
+.footer-roque{display:inline-flex;align-items:center;gap:12px;margin:10px auto 0;padding:8px 18px 8px 8px;border:1px solid rgba(192,138,30,.35);border-radius:999px;text-decoration:none;background:radial-gradient(120% 140% at 0 50%,rgba(192,138,30,.14),transparent 60%);transition:border-color .4s,box-shadow .4s}
+.footer-roque:hover{border-color:#C08A1E;box-shadow:0 0 34px rgba(192,138,30,.28)}
+.roque-globo{width:56px;height:56px;display:block}
+.roque-txt{display:grid;line-height:1.1;text-align:left}
+.roque-txt small{font:600 9px/1.3 var(--ab-corpo);letter-spacing:.2em;text-transform:uppercase;color:#9aa3b2}
+.roque-txt b{font:800 17px/1.1 var(--ab-corpo);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.roque-txt em{font:600 9px/1.2 var(--ab-corpo);font-style:normal;letter-spacing:.22em;text-transform:uppercase;color:#C08A1E}
+.site-footer{justify-content:center}.site-footer::after{content:"";flex-basis:100%;order:8}
+.footer-roque{order:9;margin:22px auto 4px;padding:10px 26px 10px 10px}
+.roque-globo{width:72px;height:72px}.roque-txt b{font-size:22px}.roque-txt small{font-size:10px}.roque-txt em{font-size:10px}
+@media(max-width:760px){.site-footer{padding-bottom:84px}}
 </style>
 </head>
 <body>
@@ -1251,9 +1322,9 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 </section>
 
 <div class="ab-prova" aria-label="Destaques da carreira">
-  <p><strong>Semifinalista</strong> do The Voice Brasil 2026</p>
-  <p><strong>+1.000 shows</strong> em bares, casas de show e eventos</p>
-  <p><strong>Abriu shows</strong> de Titãs, Ana Carolina e Roupa Nova</p>
+  <p><strong>Semifinalista</strong> <span>do The Voice Brasil 2026</span></p>
+  <p><strong><b class="ab-conta" data-ate="1000">+1.000</b> shows</strong> <span>em bares, casas de show e eventos</span></p>
+  <p><strong>Abriu shows</strong> <span>de Titãs, Ana Carolina e Roupa Nova</span></p>
 </div>
 
 <section class="ab-sec ab-agenda" id="proximos-shows" aria-labelledby="agenda-titulo">
@@ -1432,8 +1503,9 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
   <div class="contato-inner">
     <div class="contato-cabeca">
       <span class="contato-kicker">Shows, eventos e imprensa</span>
-      <h2 id="contato-titulo">Contrate o <em>Amadeu</em></h2>
+      <h2 id="contato-titulo">Contato para <em>shows</em></h2>
       <p>Conte a data, a cidade e o tipo de evento. A equipe do Amadeu responde com disponibilidade e orçamento.</p>
+      <a class="ab-whats" href="https://wa.me/5511987422691?text=Ol%C3%A1!%20Quero%20contratar%20um%20show%20do%20Amadeu%20Brutus." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>Falar com a produção no WhatsApp</a>
       <p class="contato-canais">Também nas redes: <a href="https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="https://www.instagram.com/amadeubrutus/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.tiktok.com/@amadeubrutus" target="_blank" rel="noopener noreferrer">TikTok</a> · <a href="https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo" target="_blank" rel="noopener noreferrer">Spotify</a> · <a href="https://music.apple.com/us/artist/amadeu-brutus/1657144260" target="_blank" rel="noopener noreferrer">Apple Music</a> · <a href="https://www.deezer.com/br/artist/191828317" target="_blank" rel="noopener noreferrer">Deezer</a></p>
     </div>
     <form class="contato-form" id="contato-form" novalidate>
@@ -1465,10 +1537,16 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     <p class="ab-kicker">Perguntas frequentes</p>
     <h2 class="ab-titulo" id="faq-titulo">Sobre <em>Amadeu Brutus</em></h2>
     <div class="ab-faq-lista">
+      <details class="ab-faq-item"><summary><h3>Amadeu Brutus é semifinalista do The Voice Brasil 2026?</h3></summary><p>Sim. Amadeu Brutus é semifinalista do The Voice Brasil 2026 pelo Time Paulo Ricardo. Ele chegou à Semifinal depois de cantar “Human”, de Rag'n'Bone Man, na Rodada de Fogo, quando Paulo Ricardo o escolheu para a primeira vaga do time.</p></details>
       <details class="ab-faq-item"><summary><h3>Quem é Amadeu Brutus?</h3></summary><p>Amadeu Brutus é cantor, músico e compositor brasileiro de pop e rock, semifinalista do The Voice Brasil 2026 pelo Time Paulo Ricardo. Começou a carreira em meados dos anos 2000 à frente da banda Visionários S.A., foi professor de música e abriu shows de Titãs, Ana Carolina e Roupa Nova.</p></details>
+      <details class="ab-faq-item"><summary><h3>Onde assistir ao The Voice Brasil 2026?</h3></summary><p>O The Voice Brasil 2026 vai ao ar aos domingos, às 18h (horário de Brasília), no SBT, com transmissão simultânea no Disney+. Os episódios também ficam disponíveis no Disney+ para assistir quando quiser.</p></details>
+      <details class="ab-faq-item"><summary><h3>Quem são os técnicos do The Voice Brasil 2026?</h3></summary><p>Os técnicos do The Voice Brasil 2026 são Diogo Nogueira, Lauana Prado, Matheus & Kauan e Paulo Ricardo. A apresentação é de Tiago Leifert, com Gaby Cabrini nos bastidores. Amadeu Brutus está no Time Paulo Ricardo.</p></details>
       <details class="ab-faq-item"><summary><h3>Em qual time do The Voice Brasil 2026 Amadeu Brutus está?</h3></summary><p>Amadeu Brutus está no Time Paulo Ricardo. Depois das Audições às Cegas ele seguiu no Time Lauana Prado; nas Batalhas foi salvo por Paulo Ricardo e passou para o time dele, pelo qual foi escolhido para a Semifinal em 22 de novembro de 2026.</p></details>
       <details class="ab-faq-item"><summary><h3>Quais músicas Amadeu Brutus cantou no The Voice Brasil?</h3></summary><p>Amadeu Brutus cantou “Ordinary” nas Audições às Cegas, “Chão de Giz”, de Zé Ramalho, com Damatta nas Batalhas e “Human”, de Rag’n’Bone Man, na Rodada de Fogo.</p></details>
+      <details class="ab-faq-item"><summary><h3>Como torcer e votar no Amadeu Brutus no The Voice Brasil?</h3></summary><p>Acompanhe o programa no SBT e no Disney+ e siga Amadeu Brutus no Instagram (@amadeubrutus) e no YouTube para saber das próximas apresentações. Quando a votação do público for aberta, ela acontece pelos canais oficiais do programa: na temporada 2025, a final foi decidida por votação no site do SBT.</p></details>
       <details class="ab-faq-item"><summary><h3>Amadeu Brutus tem músicas autorais?</h3></summary><p>Sim. “Até onde meus olhos podem ver” é música autoral de Amadeu Brutus. Ela pode ser ouvida aqui no site, na seção “A voz de Amadeu”, e também no Spotify e no Deezer.</p></details>
+      <details class="ab-faq-item"><summary><h3>Onde ouvir as músicas de Amadeu Brutus?</h3></summary><p>As músicas de Amadeu Brutus estão no Spotify, no Apple Music, no Deezer e no YouTube. No site, a seção Ouvir toca interpretações e a autoral “Até onde meus olhos podem ver”.</p></details>
+      <details class="ab-faq-item"><summary><h3>Onde ver Amadeu Brutus ao vivo?</h3></summary><p>Amadeu Brutus faz shows toda semana em bares, casas de show e eventos de São Paulo e da Grande São Paulo. A agenda atualizada fica na seção Próximos shows deste site e na página de agenda.</p></details>
       <details class="ab-faq-item"><summary><h3>Como contratar Amadeu Brutus para shows e eventos?</h3></summary><p>Para contratar Amadeu Brutus, envie um pedido pelo formulário de contato do site escolhendo o assunto “Shows e contratações”, ou fale com a produção pelo WhatsApp +55 11 98742-2691.</p></details>
     </div>
   </div>
@@ -1488,7 +1566,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 </section>
 </main>
 <a class="ab-fixo" href="#contato" data-assunto="Shows e contratações">Contratar show</a>
-<footer class="site-footer"><span>Amadeu Brutus · Música e presença de palco</span><span class="footer-copyright">© 2026 Amadeu Brutus. Todos os direitos reservados. amadeubrutus.com.br</span><a class="footer-policy" href="/politica-de-privacidade.html">Política de Privacidade</a><a class="footer-credit" href="https://roquebusinessevolution.com/" target="_blank" rel="noopener noreferrer">Desenvolvido por <strong>Roque Business Evolution</strong></a></footer>
+<footer class="site-footer"><span>Amadeu Brutus · Música e presença de palco</span><span class="footer-copyright">© 2026 Amadeu Brutus. Todos os direitos reservados. amadeubrutus.com.br</span><a class="footer-policy" href="/politica-de-privacidade.html">Política de Privacidade</a><a class="footer-roque" href="https://roquebusinessevolution.com/?utm_source=amadeubrutus.com.br&amp;utm_medium=referral&amp;utm_campaign=assinatura-site" target="_blank" rel="noopener" aria-label="Site desenvolvido por Roque Business Evolution"><canvas class="roque-globo" width="144" height="144" aria-hidden="true"></canvas><span class="roque-txt"><small>Site desenvolvido por</small><b>Roque</b><em>Business Evolution</em></span></a></footer>
 <script>
 const menuToggle=document.querySelector('.menu-toggle'),primaryNav=document.getElementById('primary-nav');
 menuToggle?.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')==='true';menuToggle.setAttribute('aria-expanded',String(!open));primaryNav.classList.toggle('is-open',!open);});
@@ -1736,16 +1814,19 @@ function respirar(){
  const DUR=4200;sec.style.setProperty('--dur',DUR/1000+'s');
  new IntersectionObserver(es=>es.forEach(e=>{clearInterval(timer);if(e.isIntersecting){ps[i]?.classList.add('ativo');timer=setInterval(()=>ir(i+1),DUR)}}),{threshold:.2}).observe(sec.querySelector('.ab-tv-titulo'));
 })();
-/* Carreira: contador de 1 a mais de 1.000 shows */
+/* Contadores de 1 a mais de 1.000 shows (faixa de destaques e carreira) */
 (()=>{
- const c=document.querySelector('.ab-contador');if(!c)return;
- const ate=+c.dataset.ate||1000,fmt=n=>n.toLocaleString('pt-BR');
+ const cs=[...document.querySelectorAll('.ab-contador,.ab-conta')];if(!cs.length)return;
  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window))return;
- c.textContent='1';
- const io=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;io.disconnect();const t0=performance.now(),D=1700;
-  const passo=t=>{const u=Math.min(1,(t-t0)/D),e=1-Math.pow(1-u,3);c.textContent=(u>=1?'+':'')+fmt(Math.max(1,Math.round(1+(ate-1)*e)));if(u<1)requestAnimationFrame(passo)};requestAnimationFrame(passo)},{threshold:.6});
- io.observe(c);
+ const fmt=n=>n.toLocaleString('pt-BR');
+ cs.forEach(c=>{const ate=+c.dataset.ate||1000;c.textContent='1';
+  const io=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;io.disconnect();const t0=performance.now(),D=1900;
+   const passo=t=>{const u=Math.min(1,(t-t0)/D),e=1-Math.pow(1-u,3);c.textContent=(u>=1?'+':'')+fmt(Math.max(1,Math.round(1+(ate-1)*e)));if(u<1)requestAnimationFrame(passo)};requestAnimationFrame(passo)},{threshold:.6});
+  io.observe(c)});
 })();
+/* Faixa de destaques: os três blocos viram um a um quando aparecem */
+(()=>{const f=document.querySelector('.ab-prova');if(!f||!('IntersectionObserver'in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ f.classList.add('ab-prova-anima');const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){f.classList.add('virou');io.disconnect()}},{threshold:.4});io.observe(f)})();
 /* Agenda: botão de orçamento já leva o assunto escolhido para o formulário */
 document.querySelectorAll('[data-assunto]').forEach(a=>a.addEventListener('click',()=>{
  const sel=document.getElementById('c-assunto');if(!sel)return;sel.value=a.dataset.assunto;sel.dispatchEvent(new Event('change',{bubbles:true}));
@@ -1783,9 +1864,9 @@ document.querySelectorAll('[data-assunto]').forEach(a=>a.addEventListener('click
 (()=>{
  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window))return;
  const itens=document.querySelectorAll('.ab-show,.ab-faixas li,.ab-clipe,.ab-materia,.ab-yt-card,.ab-marcos li');
- itens.forEach((el,i)=>el.style.setProperty('--i',[...el.parentElement.children].indexOf(el)%6));
+ itens.forEach(el=>{const irmaos=[...el.parentElement.children].filter(x=>!x.classList.contains('passou'));el.style.setProperty('--i',Math.max(0,irmaos.indexOf(el))%8)});
  document.documentElement.classList.add('ab-pronto');
- const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ab-visivel');io.unobserve(e.target)}}),{rootMargin:'0px 0px 18% 0px',threshold:0});
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ab-visivel');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:0});
  itens.forEach(el=>io.observe(el));
 })();
 
@@ -1818,6 +1899,31 @@ document.querySelectorAll('[data-assunto]').forEach(b=>b.addEventListener('click
  let foraTopo=false,noForm=false;const at=()=>b.classList.toggle('ativo',foraTopo&&!noForm);
  new IntersectionObserver(e=>{foraTopo=!e[0].isIntersecting;at()}).observe(topo);
  new IntersectionObserver(e=>{noForm=e[0].isIntersecting;at()},{threshold:.15}).observe(form);
+})();
+
+/* Assinatura da Roque Business Evolution: a rede de nós do logo girando em 3D */
+(()=>{const cv=document.querySelector('.roque-globo');if(!cv)return;const g=cv.getContext('2d');
+ const red=matchMedia('(prefers-reduced-motion: reduce)').matches,dpr=Math.min(2,devicePixelRatio||1);
+ const N=[[166.6,172.8,7.8],[175.1,235.7,5.8],[190.8,190.4,8.0],[210.9,226.4,5.7],[216.8,161.0,8.2],[219.2,115.6,8.1],[225.0,193.7,11.0],[225.0,245.0,5.8],[241.1,132.3,4.1],[249.3,276.8,11.0],[253.4,205.5,4.0],[255.1,160.9,5.8],[264.0,113.0,2.8],[266.4,132.2,4.0],[266.4,226.5,5.4],[273.5,190.4,4.0],[277.5,146.8,4.0],[294.0,125.0,2.2],[302.4,172.9,5.4],[302.4,218.6,5.4],[307.0,143.0,2.2],[310.3,247.4,7.8],[329.9,195.9,4.1],[337.9,165.3,4.1]];
+ const E=[[0,1],[0,4],[0,5],[1,2],[1,3],[1,7],[1,9],[2,3],[2,4],[2,6],[3,6],[3,10],[4,5],[4,8],[4,11],[4,15],[5,8],[6,10],[6,11],[7,9],[7,10],[8,11],[9,10],[9,14],[9,21],[10,14],[10,15],[11,16],[15,16],[15,18],[15,19],[16,18],[18,19],[19,21],[19,22]];
+ const pts=N.map(([x,y,r])=>{let nx=(x-252)/92,ny=(y-195)/92;const d=Math.hypot(nx,ny);if(d>.97){nx*=.97/d;ny*=.97/d}return{x:nx,y:ny,z:Math.sqrt(Math.max(0,1-nx*nx-ny*ny)),r}});
+ const ring=[];for(let k=0;k<80;k++){const t=k/80*Math.PI*2;ring.push({x:Math.cos(t),y:0,z:Math.sin(t)})}
+ const W=72;cv.width=W*dpr;cv.height=W*dpr;let ang=0,tx=0,ty=0,tiltX=0,tiltY=0,ativo=true,ultimo=performance.now(),t0=ultimo;
+ const a=cv.closest('a');a&&a.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();tx=((e.clientY-r.top)/r.height-.5)*.5;ty=((e.clientX-r.left)/r.width-.5)*.8});a&&a.addEventListener('pointerleave',()=>{tx=0;ty=0});
+ function quadro(now){const dt=Math.min(.05,(now-ultimo)/1000);ultimo=now;const intro=red?1:Math.min(1,(now-t0)/2200),ease=1-Math.pow(1-intro,3);
+  if(!red)ang+=Math.PI*2/14*dt;tiltX+=(tx-tiltX)*.06;tiltY+=(ty-tiltY)*.06;
+  const ay=ang+tiltY,ax=-.14+tiltX,ca=Math.cos(ay),sa=Math.sin(ay),cb=Math.cos(ax),sb=Math.sin(ax),S=W*.4*dpr,o=W*dpr/2;
+  const pr=p=>{let x=p.x*ca+p.z*sa,z=-p.x*sa+p.z*ca,y=p.y*cb-z*sb;z=p.y*sb+z*cb;const k=1/(1-z*.3);return{X:o+x*S*k,Y:o+y*S*k,z,k}};
+  g.clearRect(0,0,cv.width,cv.height);
+  const hl=g.createRadialGradient(o,o,S*.2,o,o,S*1.3);hl.addColorStop(0,'rgba(192,138,30,.16)');hl.addColorStop(1,'rgba(192,138,30,0)');g.fillStyle=hl;g.fillRect(0,0,cv.width,cv.height);
+  g.lineWidth=dpr;g.strokeStyle='rgba(192,138,30,'+(.55*ease)+')';g.beginPath();g.arc(o,o,S*1.05,Math.PI*.55,Math.PI*.55+Math.PI*2*ease);g.stroke();
+  g.beginPath();ring.forEach((p,i)=>{const q=pr(p);i?g.lineTo(q.X,q.Y):g.moveTo(q.X,q.Y)});g.closePath();g.strokeStyle='rgba(143,163,191,'+(.2*ease)+')';g.stroke();
+  const P=pts.map(pr);
+  E.forEach(([i,j],n)=>{const A=P[i],B=P[j],dp=((A.z+B.z)/2+1)/2,l=Math.min(1,Math.max(0,ease*E.length*1.15-n*.5));if(l<=0)return;g.strokeStyle='rgba(192,138,30,'+((.2+.65*dp)*l)+')';g.lineWidth=(.5+.8*dp)*dpr;g.beginPath();g.moveTo(A.X,A.Y);g.lineTo(A.X+(B.X-A.X)*l,A.Y+(B.Y-A.Y)*l);g.stroke()});
+  pts.map((p,i)=>({p,q:P[i]})).sort((u,v)=>u.q.z-v.q.z).forEach(({p,q})=>{const f=(q.z+1)/2,rr=Math.max(.9*dpr,p.r/92*S*.6*q.k)*(.55+.45*ease);g.fillStyle='rgba('+Math.round(150+80*f)+','+Math.round(100+70*f)+','+Math.round(10+40*f)+','+((.35+.65*f)*ease)+')';g.beginPath();g.arc(q.X,q.Y,rr,0,Math.PI*2);g.fill()});
+  if(ativo&&!red)requestAnimationFrame(quadro)}
+ if('IntersectionObserver'in window){new IntersectionObserver(es=>{const v=es[0].isIntersecting;if(v&&!ativo){ativo=true;ultimo=performance.now();requestAnimationFrame(quadro)}else if(!v)ativo=false}).observe(cv)}
+ requestAnimationFrame(quadro);
 })();
 </script>
 </body>
