@@ -1302,6 +1302,11 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 @keyframes ab-semi-varre{from{rotate:-14deg}to{rotate:14deg}}
 .ab-prova-semi::after{content:"";position:absolute;inset:auto 18% 0;height:2px;background:linear-gradient(90deg,transparent,var(--ab-vermelho),transparent);animation:ab-respira 2.4s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.ab-semi-txt,.ab-semi-luz,.ab-prova-semi::after{animation:none}.ab-semi-txt{color:#fff}}
+
+/* 26/11 rodada 5 — acento do PRÓXIMOS com folga, foto do Ouvir centralizada, faixa de palco de volta */
+.ab-agenda .ab-kicker{margin-bottom:30px}
+.ab-agenda .ab-titulo{padding-top:.12em}
+@media(min-width:901px){.ab-ouvir-foto{bottom:auto;top:50%;transform:translateY(-46%)}.ab-ouvir.tocando .ab-ouvir-foto{transform:translateY(-46%) scale(1.025)}}
 </style>
 </head>
 <body>
@@ -1333,7 +1338,7 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
 <img class="hero-artista" src="public/brand/amadeu-brutus-cantor-no-palco.webp" alt="Amadeu Brutus cantando no palco" width="590" height="1170" fetchpriority="high">
 <div class="hero-intro" aria-hidden="true"><span class="word amadeu">AMADEU</span><span class="word brutus">BRUTUS</span></div>
 <h1 class="hero-nome"><span class="nome-1">Amadeu</span> <span class="nome-2">Brutus</span></h1>
-<p class="hero-sub"><span>Cantor de pop e rock</span> <span class="sub-ponto" aria-hidden="true">·</span> <span>Semifinalista do The Voice Brasil 2026</span></p>
+<p class="hero-sub"><span>Cantor de pop e rock</span> <span class="sub-ponto" aria-hidden="true">·</span> <span>Shows ao vivo em São Paulo</span></p>
 <nav class="hero-actions" aria-label="Acessos principais">
 <a class="hero-link hero-cta" href="#contato" data-assunto="Shows e contratações">Contratar show</a>
 <a class="hero-link secondary" href="#ouvir">Ouvir agora</a>
@@ -1417,6 +1422,11 @@ footer{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap
     </div>
   </div>
 </section>
+
+<div class="ab-faixa-palco" aria-hidden="true">
+  <div class="ab-fita ab-fita-a"><div class="ab-fita-trilho"><span>Ao vivo em São Paulo ★ “Ordinary” ★ “Chão de Giz” ★ “Human” ★ Pop e rock ★ Voz e violão ★ Shows e eventos ★&nbsp;</span><span>Ao vivo em São Paulo ★ “Ordinary” ★ “Chão de Giz” ★ “Human” ★ Pop e rock ★ Voz e violão ★ Shows e eventos ★&nbsp;</span></div></div>
+  <div class="ab-fita ab-fita-b"><div class="ab-fita-trilho"><span>Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦ Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦&nbsp;</span><span>Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦ Amadeu Brutus ✦ Voz ✦ Violão ✦ Pop e rock brasileiro ✦&nbsp;</span></div></div>
+</div>
 
 <section class="ab-sec ab-tv" id="the-voice" aria-labelledby="tv-titulo" data-luz="azul">
   <div class="ab-tv-rig" aria-hidden="true"><span class="tv-luz" data-k="e" style="left:4%;top:78px"><i class="tv-facho"></i><img class="tv-lente" src="public/brand/amadeu-brutus-refletor-de-palco.webp" alt="" width="535" height="485" loading="lazy" decoding="async"></span><span class="tv-luz" data-k="ce" style="left:28%;top:56px"><i class="tv-facho"></i><img class="tv-lente" src="public/brand/amadeu-brutus-refletor-de-palco.webp" alt="" width="535" height="485" loading="lazy" decoding="async"></span><span class="tv-luz" data-k="cd" style="left:72%;top:56px"><i class="tv-facho"></i><img class="tv-lente" src="public/brand/amadeu-brutus-refletor-de-palco.webp" alt="" width="535" height="485" loading="lazy" decoding="async"></span><span class="tv-luz" data-k="d" style="left:96%;top:78px"><i class="tv-facho"></i><img class="tv-lente" src="public/brand/amadeu-brutus-refletor-de-palco.webp" alt="" width="535" height="485" loading="lazy" decoding="async"></span></div>
