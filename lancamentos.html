@@ -27,16 +27,45 @@ h1{margin:0 0 22px;font-family:Anton,Impact,sans-serif;font-weight:400;font-size
 .em-breve{display:inline-block;padding:4px 10px;border:1px solid rgba(217,221,228,.4);color:var(--prata);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
 nav.mapa{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:36px}nav.mapa a{color:#fff;font-weight:600}
 footer{max-width:1100px;margin:auto;padding:30px clamp(16px,6vw,60px) 50px;color:var(--cinza);font-size:13px;border-top:1px solid rgba(217,221,228,.12)}footer a{color:#fff}
+
+/* 27/11 rodada 6 — logo, assinatura Roque, acentos com folga */
+.marca img{display:block;width:50px;height:auto}
+h1{padding-top:.14em}.kicker{margin-bottom:18px}
+footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.footer-roque{display:inline-flex;align-items:center;gap:12px;padding:8px 22px 8px 8px;border:1px solid rgba(192,138,30,.35);border-radius:999px;text-decoration:none;background:radial-gradient(120% 140% at 0 50%,rgba(192,138,30,.14),transparent 60%);transition:border-color .4s,box-shadow .4s}
+.footer-roque:hover{border-color:#C08A1E;box-shadow:0 0 34px rgba(192,138,30,.28)}
+.roque-globo{width:56px;height:56px;display:block}.roque-txt{display:grid;line-height:1.1;text-align:left}
+.roque-txt small{font:600 9px/1.3 Inter,system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#9aa3b2}
+.roque-txt b{font:800 17px/1.1 Inter,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.roque-txt em{font:600 9px/1.2 Inter,system-ui,sans-serif;font-style:normal;letter-spacing:.22em;text-transform:uppercase;color:#C08A1E}
+@media(max-width:600px){footer{justify-content:center;text-align:center}}
+
+.player{display:flex;align-items:center;gap:16px;max-width:560px}
+.tocar{flex:none;width:52px;height:52px;border:0;border-radius:50%;background:var(--vermelho);cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 26px rgba(255,38,61,.35);transition:transform .2s}
+.tocar:hover{transform:scale(1.06)}.tocar span{width:0;height:0;border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.tocar.on span{width:14px;height:16px;border:0;margin:0;background:linear-gradient(90deg,#fff 0 35%,transparent 35% 65%,#fff 65%)}
+.barra{flex:1;height:4px;background:rgba(217,221,228,.18);cursor:pointer;position:relative}.barra i{position:absolute;inset:0 auto 0 0;width:0;background:var(--vermelho)}
+.player time{min-width:44px;color:var(--cinza);font-size:13px;font-variant-numeric:tabular-nums}
+.faixas li.tocando h2{color:var(--vermelho)}
 </style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.amadeubrutus.com.br/lancamentos.html#webpage", "url": "https://www.amadeubrutus.com.br/lancamentos.html", "name": "Músicas | Amadeu Brutus", "description": "Músicas de Amadeu Brutus: a autoral “Até onde meus olhos podem ver” e as interpretações gravadas por ele.", "inLanguage": "pt-BR", "about": {"@id": "https://www.amadeubrutus.com.br/#artista"}}</script>
 </head><body>
-<header class="topo"><a class="marca" href="/">Amadeu <em>Brutus</em></a><a class="voltar" href="/">← Voltar ao site</a></header>
+<header class="topo"><a class="marca" href="/" aria-label="Amadeu Brutus — página inicial"><img src="/public/brand/amadeu-brutus-logo-cabecalho-100.webp" alt="Amadeu Brutus" width="50" height="48"></a><a class="voltar" href="/">← Voltar ao site</a></header>
 <main>
 <p class="kicker">Ouvir</p>
 <h1>A voz de <em>Amadeu</em></h1>
 <p class="lead">A música autoral de Amadeu Brutus e as interpretações gravadas por ele.</p>
-<ol class="faixas"><li><small>Amadeu Brutus · Autoral</small><h2>Até onde meus olhos podem ver</h2><p>Música autoral de Amadeu Brutus.</p><audio controls preload="none" src="/public/audio/web/amadeu-brutus-ate-onde-meus-olhos-podem-ver.mp3"></audio></li><li><small>Amadeu Brutus</small><h2>Human</h2><p>Interpretação. Original de Rag’n’Bone Man; composição de Rory Graham e Jamie Hartman.</p><audio controls preload="none" src="/public/audio/web/amadeu-brutus-human.mp3"></audio></li><li><small>Amadeu Brutus</small><h2>Livin' on a Prayer</h2><p>Interpretação. Original de Bon Jovi; composição de Jon Bon Jovi, Richie Sambora e Desmond Child.</p><audio controls preload="none" src="/public/audio/web/amadeu-brutus-livin-on-a-prayer.mp3"></audio></li><li><small>Amadeu Brutus</small><h2>Stuck on You</h2><p>Interpretação.</p><audio controls preload="none" src="/public/audio/web/amadeu-brutus-stuck-on-you.mp3"></audio></li></ol>
+<ol class="faixas"><li><small>Amadeu Brutus · Autoral</small><h2>Até onde meus olhos podem ver</h2><p>Música autoral de Amadeu Brutus.</p><div class="player"><button class="tocar" type="button" aria-label="Tocar"><span></span></button><div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div><time>0:00</time><audio preload="none" src="/public/audio/web/amadeu-brutus-ate-onde-meus-olhos-podem-ver.mp3"></audio></div></li><li><small>Amadeu Brutus</small><h2>Human</h2><p>Interpretação. Original de Rag’n’Bone Man; composição de Rory Graham e Jamie Hartman.</p><div class="player"><button class="tocar" type="button" aria-label="Tocar"><span></span></button><div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div><time>0:00</time><audio preload="none" src="/public/audio/web/amadeu-brutus-human.mp3"></audio></div></li><li><small>Amadeu Brutus</small><h2>Livin' on a Prayer</h2><p>Interpretação. Original de Bon Jovi; composição de Jon Bon Jovi, Richie Sambora e Desmond Child.</p><div class="player"><button class="tocar" type="button" aria-label="Tocar"><span></span></button><div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div><time>0:00</time><audio preload="none" src="/public/audio/web/amadeu-brutus-livin-on-a-prayer.mp3"></audio></div></li><li><small>Amadeu Brutus</small><h2>Stuck on You</h2><p>Interpretação.</p><div class="player"><button class="tocar" type="button" aria-label="Tocar"><span></span></button><div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div><time>0:00</time><audio preload="none" src="/public/audio/web/amadeu-brutus-stuck-on-you.mp3"></audio></div></li></ol>
 <div class="acoes" style="margin-top:30px"><a class="link" href="https://open.spotify.com/artist/0eRoINMstkO2cT60xL0uzo" target="_blank" rel="noopener noreferrer">Spotify</a><a class="link" href="https://music.apple.com/us/artist/amadeu-brutus/1657144260" target="_blank" rel="noopener noreferrer">Apple Music</a><a class="link" href="https://www.deezer.com/br/artist/191828317" target="_blank" rel="noopener noreferrer">Deezer</a><a class="link" href="https://www.youtube.com/channel/UCOeXkpuNk-MxaWfkHGA1NNg?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YouTube</a></div>
 <nav class="mapa" aria-label="Mais do site"><a href="/shows.html">Ver agenda</a><a href="/#the-voice">The Voice Brasil 2026</a><a href="/#contato">Contato</a></nav>
 </main>
-<footer>© 2026 Amadeu Brutus · <a href="/#contato">Contato</a> · <a href="/politica-de-privacidade.html">Política de privacidade</a></footer>
-</body></html>
+<footer><span>© 2026 Amadeu Brutus · <a href="/#contato">Contato</a> · <a href="/politica-de-privacidade.html">Política de privacidade</a></span><a class="footer-roque" href="https://roquebusinessevolution.com/?utm_source=amadeubrutus.com.br&amp;utm_medium=referral&amp;utm_campaign=assinatura-site" target="_blank" rel="noopener" aria-label="Site desenvolvido por Roque Business Evolution"><canvas class="roque-globo" width="144" height="144" aria-hidden="true"></canvas><span class="roque-txt"><small>Site desenvolvido por</small><b>Roque</b><em>Business Evolution</em></span></a></footer>
+<script src="/public/js/amadeu-brutus-assinatura-roque.js" defer></script>
+<script>
+(()=>{const fmt=t=>{t=Math.floor(t||0);return Math.floor(t/60)+':'+String(t%60).padStart(2,'0')};
+document.querySelectorAll('.player').forEach(p=>{const a=p.querySelector('audio'),b=p.querySelector('.tocar'),bar=p.querySelector('.barra'),fill=bar.querySelector('i'),tm=p.querySelector('time'),li=p.closest('li');
+b.addEventListener('click',()=>{if(a.paused){document.querySelectorAll('.player audio').forEach(o=>{if(o!==a)o.pause()});a.play()}else a.pause()});
+a.addEventListener('play',()=>{b.classList.add('on');b.setAttribute('aria-label','Pausar');li&&li.classList.add('tocando')});
+a.addEventListener('pause',()=>{b.classList.remove('on');b.setAttribute('aria-label','Tocar');li&&li.classList.remove('tocando')});
+a.addEventListener('timeupdate',()=>{const pc=a.duration?a.currentTime/a.duration*100:0;fill.style.width=pc+'%';bar.setAttribute('aria-valuenow',Math.round(pc));tm.textContent=fmt(a.currentTime)});
+bar.addEventListener('click',e=>{if(!a.duration)return;const r=bar.getBoundingClientRect();a.currentTime=(e.clientX-r.left)/r.width*a.duration})})})();
+</script></body></html>

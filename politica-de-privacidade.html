@@ -8,29 +8,54 @@
   <title>Política de Privacidade | Amadeu Brutus</title>
   <meta name="description" content="Saiba como o site de Amadeu Brutus trata os dados pessoais enviados pelo formulário de contato e utiliza serviços de terceiros.">
   <link rel="canonical" href="https://www.amadeubrutus.com.br/politica-de-privacidade.html">
-  <style>
-    :root{color-scheme:dark;--bg:#030305;--panel:#0b0b10;--text:#f5f4f2;--muted:#c5c5c8;--gold:#d6a35d;--line:#ffffff20}
-    *{box-sizing:border-box}
-    body{margin:0;background:radial-gradient(ellipse at top,#17120f 0%,var(--bg) 48%);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.75}
-    main{width:min(900px,calc(100% - 40px));margin:0 auto;padding:64px 0 80px}
-    .brand{color:var(--gold);font-size:11px;letter-spacing:.3em;text-transform:uppercase}
-    h1{margin:14px 0 8px;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(2.8rem,8vw,5.6rem);font-weight:400;line-height:.95;text-transform:uppercase;letter-spacing:-.02em}
-    .updated{color:#999;font-size:13px;margin:0 0 38px}
-    article{background:var(--panel);border:1px solid var(--line);padding:clamp(22px,5vw,42px)}
-    h2{margin:30px 0 8px;color:var(--gold);font-size:18px;line-height:1.3}
-    h2:first-child{margin-top:0}
-    p,li{color:var(--muted);font-size:15px}
-    ul{padding-left:22px}
-    a{color:#f0d3a8;text-underline-offset:3px}
-    .back{display:inline-block;margin-top:28px;color:var(--gold);text-decoration:none;font-size:12px;letter-spacing:.15em;text-transform:uppercase}
-    footer{border-top:1px solid var(--line);padding:22px;text-align:center;color:#888;font-size:11px;letter-spacing:.08em}
-  </style>
+  <style>@font-face{font-family:'Anton';src:url(/public/fonts/amadeu-brutus-anton-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url(/public/fonts/amadeu-brutus-inter-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url(/public/fonts/amadeu-brutus-inter-800.woff2) format('woff2');font-weight:800;font-display:swap}
+:root{color-scheme:dark;--preto:#050505;--prata:#d9dde4;--vermelho:#ff263d;--cinza:#b8b8c0}
+*{box-sizing:border-box}html{background:var(--preto)}body{margin:0;background:radial-gradient(70% 50% at 80% 0%,rgba(255,38,61,.16),transparent 60%),var(--preto);color:#f5f4f2;font-family:Inter,system-ui,sans-serif;min-height:100vh;line-height:1.6}
+.topo{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1100px;margin:auto;padding:22px clamp(16px,6vw,60px)}
+.topo a{color:#fff;text-decoration:none}.marca{font-family:Anton,Impact,sans-serif;font-size:22px;letter-spacing:.04em;text-transform:uppercase}.marca em{font-style:normal;color:var(--vermelho)}
+.voltar{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.4)}
+main{max-width:1100px;margin:auto;padding:clamp(30px,8vh,80px) clamp(16px,6vw,60px) 90px}
+.kicker{margin:0 0 10px;color:var(--vermelho);font-size:12px;font-weight:800;letter-spacing:.26em;text-transform:uppercase}
+h1{margin:0 0 22px;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(3.2rem,10vw,7.5rem);line-height:.9;text-transform:uppercase}h1 em{font-style:normal;color:var(--vermelho)}
+.lead{max-width:56ch;color:#d6d6db;font-size:clamp(17px,1.4vw,20px)}
+.botao{display:inline-flex;align-items:center;gap:12px;margin-top:28px;padding:18px 28px;background:var(--vermelho);color:#fff;text-decoration:none;font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.link{color:#fff;font-size:14px;font-weight:600;text-underline-offset:4px}
+.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:18px 30px}
+.faixas{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid rgba(217,221,228,.16)}
+.faixas li{padding:22px 0;border-bottom:1px solid rgba(217,221,228,.16)}
+.faixas h2{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);text-transform:uppercase;line-height:1}
+.faixas small{display:block;margin-bottom:4px;color:var(--vermelho);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.faixas p{margin:8px 0 12px;color:var(--cinza);font-size:14px}.faixas audio{width:100%;max-width:520px}
+.em-breve{display:inline-block;padding:4px 10px;border:1px solid rgba(217,221,228,.4);color:var(--prata);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+nav.mapa{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:36px}nav.mapa a{color:#fff;font-weight:600}
+footer{max-width:1100px;margin:auto;padding:30px clamp(16px,6vw,60px) 50px;color:var(--cinza);font-size:13px;border-top:1px solid rgba(217,221,228,.12)}footer a{color:#fff}
+.agenda{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid rgba(217,221,228,.16)}.agenda li{display:grid;grid-template-columns:90px 1fr;column-gap:20px;padding:18px 0;border-bottom:1px solid rgba(217,221,228,.16)}.agenda b{grid-row:span 3;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:2.2rem;color:var(--vermelho);line-height:1}.agenda span{color:var(--cinza);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.agenda h2{margin:2px 0;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(1.4rem,3vw,2rem);text-transform:uppercase;line-height:1.05}.agenda p{margin:0;color:var(--cinza);font-size:14px}.agenda li.passou{display:none}
+/* 27/11 rodada 6 — logo, assinatura Roque, acentos com folga */
+.marca img{display:block;width:50px;height:auto}
+h1{padding-top:.14em}.kicker{margin-bottom:18px}
+footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.footer-roque{display:inline-flex;align-items:center;gap:12px;padding:8px 22px 8px 8px;border:1px solid rgba(192,138,30,.35);border-radius:999px;text-decoration:none;background:radial-gradient(120% 140% at 0 50%,rgba(192,138,30,.14),transparent 60%);transition:border-color .4s,box-shadow .4s}
+.footer-roque:hover{border-color:#C08A1E;box-shadow:0 0 34px rgba(192,138,30,.28)}
+.roque-globo{width:56px;height:56px;display:block}.roque-txt{display:grid;line-height:1.1;text-align:left}
+.roque-txt small{font:600 9px/1.3 Inter,system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#9aa3b2}
+.roque-txt b{font:800 17px/1.1 Inter,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.roque-txt em{font:600 9px/1.2 Inter,system-ui,sans-serif;font-style:normal;letter-spacing:.22em;text-transform:uppercase;color:#C08A1E}
+@media(max-width:600px){footer{justify-content:center;text-align:center}}
+
+article{max-width:780px;margin-top:40px}
+article h2{margin:42px 0 10px;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.1;text-transform:uppercase;color:#fff}
+article h2:first-child{margin-top:0}article p,article li{color:#cfcfd4;font-size:16px;line-height:1.75}article a{color:#fff}
+.atualizada{color:var(--cinza);font-size:14px;margin:0}
+</style>
 </head>
 <body>
+<header class="topo"><a class="marca" href="/" aria-label="Amadeu Brutus — página inicial"><img src="/public/brand/amadeu-brutus-logo-cabecalho-100.webp" alt="Amadeu Brutus" width="50" height="48"></a><a class="voltar" href="/">← Voltar ao site</a></header>
   <main>
-    <div class="brand">Amadeu Brutus</div>
-    <h1>Política de Privacidade</h1>
-    <p class="updated">Última atualização: 23 de novembro de 2026</p>
+    <p class="kicker">Privacidade</p>
+    <h1>Política de <em>privacidade</em></h1>
+    <p class="atualizada">Última atualização: 23 de novembro de 2026</p>
     <article>
       <h2>1. Compromisso com a sua privacidade</h2>
       <p>Esta Política explica como o site de Amadeu Brutus trata os dados pessoais informados por visitantes, especialmente por meio do formulário de contato. O tratamento observa a legislação brasileira aplicável, incluindo a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).</p>
@@ -64,8 +89,8 @@
       <h2>9. Atualizações desta Política</h2>
       <p>Esta Política poderá ser atualizada para refletir mudanças no site, nos serviços utilizados ou nas exigências legais. A versão vigente estará disponível nesta página, com a data da última atualização indicada no início do documento.</p>
     </article>
-    <a class="back" href="/">← Voltar ao site</a>
   </main>
-  <footer>© 2026 Amadeu Brutus · amadeubrutus.com.br</footer>
+  <footer><span>© 2026 Amadeu Brutus · <a href="/#contato">Contato</a> · <a href="/politica-de-privacidade.html">Política de privacidade</a></span><a class="footer-roque" href="https://roquebusinessevolution.com/?utm_source=amadeubrutus.com.br&amp;utm_medium=referral&amp;utm_campaign=assinatura-site" target="_blank" rel="noopener" aria-label="Site desenvolvido por Roque Business Evolution"><canvas class="roque-globo" width="144" height="144" aria-hidden="true"></canvas><span class="roque-txt"><small>Site desenvolvido por</small><b>Roque</b><em>Business Evolution</em></span></a></footer>
+<script src="/public/js/amadeu-brutus-assinatura-roque.js" defer></script>
 </body>
 </html>
