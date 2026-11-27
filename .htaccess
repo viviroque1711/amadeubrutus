@@ -13,6 +13,43 @@
   RewriteRule ^index\.html$ https://www.amadeubrutus.com.br/ [R=301,L]
 </IfModule>
 
+# 1b) Mídia captada da TV: acesso bloqueado (403) até a remoção definitiva do repositório.
+#     Os originais estão guardados no Drive. Para desfazer, apague este bloco.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^public/videos/thevoice/ - [F,L]
+  RewriteRule ^amadeu-brutus-video-original\.mp4$ - [F,L]
+  RewriteRule ^public/images/foto-amadeu-brutus-11\.jpeg$ - [F,L]
+  RewriteRule ^public/images/foto-amadeu-brutus-12\.jpeg$ - [F,L]
+  RewriteRule ^public/images/foto-amadeu-brutus-16\.jpeg$ - [F,L]
+  RewriteRule ^public/images/foto-amadeu-brutus-17\.jpeg$ - [F,L]
+  RewriteRule ^public/videos/amadeu-brutus-video-06\.mp4$ - [F,L]
+  RewriteRule ^Amadeu\x20Brutus\x20a\x20eliminação\.mp4$ - [F,L]
+  RewriteRule ^public/images/Amadeu\x20Brutus\x20\x20The\x20voice\x20brasil\x202026\x20IV\.jpeg$ - [F,L]
+  RewriteRule ^public/images/Amadeu\x20Brutus\x20\x20The\x20voice\x20brasil\x202026\.jpeg$ - [F,L]
+  RewriteRule ^public/images/Amadeu\x20Brutus\x20\x20The\x20voice\x20brasil\x202026_I\.jpeg$ - [F,L]
+  RewriteRule ^public/images/Amadeu\x20Brutus\x20audição\x20às\x20cegas\x20foto\x20I\.jpeg$ - [F,L]
+  RewriteRule ^public/images/Amadeu\x20Brutus\x20audição\x20às\x20cegas\x20foto\x20II\.jpeg$ - [F,L]
+  RewriteRule ^public/images/Amadeu\x20Brutus\x20audição\x20às\x20cegas\x20foto\x20III\.jpeg$ - [F,L]
+  RewriteRule ^public/images/Amadeu\x20Brutus\x20audição\x20às\x20cegas\x20foto\x20IV\.jpeg$ - [F,L]
+  RewriteRule ^public/images/Amadeu\x20Brutus\x20audição\x20às\x20cegas\x20foto\x20V\.jpeg$ - [F,L]
+  RewriteRule ^public/images/Amadeu\x20Brutus\x20peguei\.jpeg$ - [F,L]
+  RewriteRule ^public/images/web/amadeu-brutus-the-voice-audicao-ordinary\.webp$ - [F,L]
+  RewriteRule ^public/images/web/amadeu-brutus-the-voice-batalha-chao-de-giz\.jpg$ - [F,L]
+  RewriteRule ^public/images/web/amadeu-brutus-the-voice-peguei\.webp$ - [F,L]
+  RewriteRule ^public/videos/Amadeu\x20Brutus\x20Rodada\x20de\x20Fogo\x20Human\x20Ragnbone\.mp4$ - [F,L]
+  RewriteRule ^public/videos/Amadeu\x20Brutus\x20The\x20Voice\x20Brasil\x202026\x20a\x20apresentação\.mp4$ - [F,L]
+  RewriteRule ^public/videos/Amadeu\x20Brutus\x20a\x20eliminação\.mp4$ - [F,L]
+  RewriteRule ^public/videos/Amadeu\x20Brutus\x20ordinary\x20audição\x20às\x20cegas\.mp4$ - [F,L]
+  RewriteRule ^public/videos/Amadeu\x20Brutus\x20pré\x20audição\x20às\x20cegas\.mp4$ - [F,L]
+  RewriteRule ^public/videos/Amadeu\x20Brutus\x20pós\x20peguei\.mp4$ - [F,L]
+  RewriteRule ^public/videos/Amadeu\x20Brutus\x20rodada\x20de\x20fogo\x20a\x20história\x20contada\.mp4$ - [F,L]
+  RewriteRule ^public/videos/Amadeu\x20Brutus\x20the\x20voice\x20brasil\x202026\x20rodada\x20de\x20fogo\.mp4$ - [F,L]
+  RewriteRule ^public/videos/Chão\x20de\x20Giz\x20o\x20ensaio\.mp4$ - [F,L]
+  RewriteRule ^public/videos/amadeu-brutus-chao-de-giz-batalha\.mp4$ - [F,L]
+  RewriteRule ^public/videos/amadeu-brutus-video-05\.mp4$ - [F,L]
+</IfModule>
+
 # 2) Página 404 em português
 ErrorDocument 404 /404.html
 
