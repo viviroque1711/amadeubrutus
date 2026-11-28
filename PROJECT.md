@@ -637,3 +637,9 @@ Pendente (respostas da Viviane): 4 vídeos (pré-audição, bastidores, ensaio, 
 
 ## 24/11/2026 — Agenda de 24 a 29/11
 - Agenda (23 a 29/11; segunda 23 no Lagoon Gastrobar, sem horário) volta para logo depois da abertura com 10 apresentações (fonte: public/images/Amadeu Brutus Agenda De Shows de 23 a 29 de novembro.jpeg); sábado 28/11 = dois eventos fechados (sem MusicEvent). Shows que já passaram somem sozinhos e o do dia ganha a marca Hoje. shows.html com a mesma agenda. 8 MusicEvent no JSON-LD.
+
+## 28/11/2026 — Dados estruturados (Search Console)
+
+- Eventos (MusicEvent): cada show passa a ter `description` e `endDate` (início + 3 h, quando o horário de término não é informado). Ao atualizar a agenda toda segunda-feira, manter esses dois campos em cada show novo.
+- `offers` fica de fora até haver informação real de entrada (gratuita, couvert ou ingresso); o Google trata a ausência como sugestão, não como erro.
+- Vídeos (VideoObject): removidas as marcações dos dois Reels do Instagram, que não têm miniatura pública estável nem horário de publicação; os vídeos continuam na página. Os quatro vídeos do YouTube seguem marcados, com miniatura e data com fuso horário.
